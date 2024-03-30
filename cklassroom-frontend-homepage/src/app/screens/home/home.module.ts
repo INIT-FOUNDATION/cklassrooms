@@ -8,11 +8,13 @@ import { StarRatingModule } from 'angular-star-rating';
 import { FormsModule } from '@angular/forms';
 import {PopoverModule} from "ngx-smart-popover";
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
+import { WhatWeOfferComponent } from './components/what-we-offer/what-we-offer.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    WhatWeOfferComponent
   ],
   imports: [
     CommonModule,
