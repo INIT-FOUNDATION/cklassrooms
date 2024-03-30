@@ -14,3 +14,19 @@ body {
 .text-green {
   color: $themeSecondary;
 }
+
+.header-text:after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -1rem;
+  width: clamp(10rem, 40vw, 30rem);
+  height: 0.1rem;
+  margin-left: 11rem;
+  background-color: var(--themeSecondary);
+  border-radius: 1rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

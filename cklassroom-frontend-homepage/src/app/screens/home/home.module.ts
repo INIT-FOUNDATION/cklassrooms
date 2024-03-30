@@ -7,10 +7,12 @@ import { SharedModule } from 'src/app/modules/shared/shared.module';
 import { StarRatingModule } from 'angular-star-rating';
 import { FormsModule } from '@angular/forms';
 import {PopoverModule} from "ngx-smart-popover";
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    TestimonialComponent
   ],
   imports: [
     CommonModule,
