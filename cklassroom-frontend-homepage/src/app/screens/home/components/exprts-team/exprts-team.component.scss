@@ -1,0 +1,20 @@
+@import "../../../../../theme/color";
+
+.header-text:after {
+  width: clamp(3rem, 26vw, 30rem);
+  margin-left: 15rem;
+}
+
+.bg-expert-cards {
+  background-color: #161b21;
+}
+
+.exprt-image {
+  top: -2rem;
+  left: 0rem;
+}
+
+.social-logo i:hover {
+  transform: translateY(-3px);
+  color: #04cd91;
+}

@@ -11,6 +11,30 @@ body {
   letter-spacing: 0.04rem;
 }
 
+:root * {
+  &::-webkit-scrollbar {
+    height: 0.4rem;
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 0.4rem;
+    border-radius: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0.4rem;
+    border-radius: 0.4rem;
+    background: rgba(142, 142, 142, 0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+  &::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(187, 187, 187, 0.4);
+  }
+}
+
 .bg-gray-cards {
   background-color: $themeGray;
 }
@@ -26,7 +50,6 @@ body {
   top: -1rem;
   width: clamp(10rem, 40vw, 30rem);
   height: 0.1rem;
-  margin-left: 12rem;
   background-color: var(--themeSecondary);
   border-radius: 1rem;
 }

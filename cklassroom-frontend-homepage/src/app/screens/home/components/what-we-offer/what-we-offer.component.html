@@ -6,9 +6,9 @@
       style="width: 25rem"
     />
     <div class="text-right text-slate-400">
-      <span class="text-green mb-2">Skills Development</span>
+      <span class="text-green mb-2 font-medium">Skills Development</span>
       <div
-        class="bg-gray-cards text-white p-4 leading-7 rounded text-start mb-3"
+        class="bg-gray-cards text-white p-4 leading-7 rounded text-start mb-3 shadow-md"
       >
         Tailored training, workshops, and practical experiences to equip
         individuals with technical, soft, and professional skills essential for
@@ -21,7 +21,9 @@
 
   <div class="flex items-center flex-col-reverse md:flex-row my-16">
     <div class="text-right md:text-left text-slate-400">
-      <span class="text-green mb-2">Career Guidance and Counselling</span>
+      <span class="text-green mb-2 font-medium"
+        >Career Guidance and Counselling</span
+      >
       <div class="bg-gray-cards text-white p-4 leading-7 rounded mb-3">
         Personalised support in identifying strengths, interests, and career
         goals, alongside assistance in resume writing, interview preparation,
@@ -46,7 +48,7 @@
       style="width: 22rem"
     />
     <div class="text-right text-slate-400 md:ml-3">
-      <span class="text-green mb-2">Job Placements</span>
+      <span class="text-green mb-2 font-medium">Job Placements</span>
       <div
         class="bg-gray-cards text-white p-4 leading-7 rounded text-start mb-3"
       >
@@ -69,13 +71,13 @@
     <div
       *ngFor="let item of moreOffering"
       [id]="item?.id"
-      class="flex flex-col justify-center items-center border-2 border-zinc-800 drop-shadow-md rounded-md p-3 md:mb-8"
+      class="flex flex-col justify-center items-center border-2 more-offering-card rounded-md p-3 md:mb-8"
     >
       <img
         src="assets/images/whatWeOffer/{{ item?.img }}.svg"
         style="width: 20rem"
       />
-      <div class="text-green font-bold my-3">{{ item?.label }}</div>
+      <div class="text-green font-medium my-3">{{ item?.label }}</div>
       <span class="text-center leading-7">{{ item?.description }}</span>
     </div>
   </div>

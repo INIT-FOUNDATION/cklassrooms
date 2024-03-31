@@ -3,9 +3,27 @@
     <span class="text-green font-bold">CK</span>
     <span>lassrooms</span>
   </div>
-  <div class="hidden md:block">
+  <div class="hidden md:flex items-center">
     <span>Home</span>
     <span class="mx-4">About</span>
     <span>Courses</span>
+    <div
+      class="ms-4 toggle-switch-container border-2 border-zinc-400 px-10 rounded-3xl"
+    >
+      <input
+        (change)="switchTheme()"
+        type="checkbox"
+        id="themeCheckbox"
+        class="opacity-0 absolute"
+      />
+      <label
+        for="themeCheckbox"
+        class="toggle-body relative cursor-pointer rounded-3xl shadow"
+      >
+        <span class="toggle-button absolute rounded-2xl"> </span>
+        <span class="absolute toggle-image-light"></span>
+        <span class="absolute toggle-image-dark"></span>
+      </label>
+    </div>
   </div>
 </div>

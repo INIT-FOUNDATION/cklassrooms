@@ -1,0 +1,51 @@
+.toggle-body {
+  transition: 500ms;
+  top: -1.1rem;
+}
+
+.toggle-switch-container {
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+
+.toggle-button {
+  top: 0.1rem;
+  right: 0.4rem;
+  width: 2rem;
+  height: 2rem;
+  background: #112d4e;
+  transition: all 500ms ease-in-out;
+}
+
+.toggle-image-light {
+  background-image: url("/assets/images/header/lightThemeToggle.svg");
+  left: 0.7rem;
+  width: 2rem;
+  height: 1.6rem;
+  top: 0.5rem;
+  background-repeat: no-repeat;
+  transition: transform 600ms linear;
+}
+
+#themeCheckbox:checked + .toggle-body {
+  background: #2e3647;
+}
+
+#themeCheckbox:checked + .toggle-body .toggle-button {
+  background: #fff;
+  transform: translateX(2.8rem);
+}
+
+#themeCheckbox:checked + .toggle-body .toggle-image-dark {
+  background-image: url("/assets/images/header/darkThemeToggle.svg");
+  right: 0.2rem;
+  width: 1.6rem;
+  height: 1.7rem;
+  top: 0.5rem;
+  background-repeat: no-repeat;
+  transition: transform 600ms linear;
+}
+
+#themeCheckbox:checked + .toggle-body .toggle-image-light {
+  width: 0rem;
+}

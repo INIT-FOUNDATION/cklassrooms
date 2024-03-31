@@ -9,12 +9,14 @@ import { FormsModule } from '@angular/forms';
 import {PopoverModule} from "ngx-smart-popover";
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { WhatWeOfferComponent } from './components/what-we-offer/what-we-offer.component';
+import { ExprtsTeamComponent } from './components/exprts-team/exprts-team.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     TestimonialComponent,
-    WhatWeOfferComponent
+    WhatWeOfferComponent,
+    ExprtsTeamComponent
   ],
   imports: [
     CommonModule,

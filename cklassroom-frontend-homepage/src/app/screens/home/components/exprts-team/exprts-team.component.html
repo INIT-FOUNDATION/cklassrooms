@@ -1,0 +1,30 @@
+<div class="mb-5 text-2xl header-text">Meet our Experts</div>
+<div class="mb-10 grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
+  <div
+    class="grid grid-cols-2 gap-4 bg-expert-cards rounded-md flex items-end flex-col relative p-4"
+    *ngFor="let item of expertTeam"
+  >
+    <img
+      src="assets/images/experts/{{ item?.img }}"
+      class="exprt-image"
+      style="width: 10rem"
+    />
+    <div class="mb-4">
+      <div class="mb-1 text-sm md:text-lg">
+        {{ item?.name }}
+        <span class="text-xs text-green block mt-1">{{ item?.positon }}</span>
+      </div>
+      <span class="text-xs md:text-sm leading-5"
+        >I am an expert and a developer with 7+ years of experience.</span
+      >
+      <div class="flex items-center mt-2">
+        <a [href]="item?.githubURL" class="mr-4 social-logo" target="_blank"
+          ><i class="fa-brands fa-github text-sm"></i
+        ></a>
+        <a [href]="item?.instargramURL" class="social-logo" target="_blank">
+          <i class="fa-brands fa-instagram text-sm"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</div>
