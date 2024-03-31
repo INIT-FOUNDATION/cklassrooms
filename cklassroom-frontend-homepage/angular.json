@@ -49,10 +49,11 @@
               "node_modules/flag-icons/css/flag-icons.min.css",
               "./node_modules/video.js/dist/video-js.css",
               "./node_modules/@ctrl/ngx-emoji-mart/picker.css",
+              "../node_modules/aos/dist/aos.css",
               "src/styles.scss"
             ],
             "scripts": [
-             
+              "./node_modules/aos/dist/aos.js",
               "./node_modules/video.js/dist/video.min.js",
               "./node_modules/flv.js/dist/flv.min.js",
               "./node_modules/dashjs/dist/dash.all.min.js",
