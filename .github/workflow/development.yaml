@@ -1,4 +1,4 @@
-name: Prod Deployment
+name: Dev Deployment
 
 on:
   workflow_dispatch:
@@ -12,14 +12,14 @@ jobs:
     name: Build and Push Services
     runs-on: ubuntu-latest
     env:
-      IMAGE_TAG_SUFFIX_ENV: prod
-      NODE_ENV: Production
-      FRONTEND_BUILD_ENV: production
+      IMAGE_TAG_SUFFIX_ENV: dev
+      NODE_ENV: Development
+      FRONTEND_BUILD_ENV: dev
       DEPLOYMENTS_PROJECT: TechknowkraftAI/init-deployments
-      DEPLOYMENTS_PROJECT_BRANCH: prod_release
+      DEPLOYMENTS_PROJECT_BRANCH: dev_release
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Login to Container Registry
@@ -69,7 +69,7 @@ jobs:
             echo "Creating Build for $service"
 
             cd $service
-
+            
             port=$(jq -r '.nodemonConfig.env.PORT' package.json)
             jq --arg port "$port" --arg service "$service" '
               .nodemonConfig.env = {
@@ -79,6 +79,13 @@ jobs:
                 "HOST": "localhost"
               }
             ' package.json > package-temp.json && mv package-temp.json package.json
+
+            if grep -q "$COMMON_SERVICE_NAME" "package.json"; then
+              jq --arg common "$COMMON_SERVICE_NAME" '
+                .dependencies[$common] = "./\($common)"
+              ' package.json > package-temp.json && mv package-temp.json package.json
+              rm -rf $COMMON_SERVICE_NAME; cp -a ../$COMMON_SERVICE_NAME .
+            fi
 
             docker_registry_name=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
             short_sha=$(git rev-parse --short ${{ github.sha }})
@@ -154,6 +161,5 @@ jobs:
           git add "docker-compose/$DOCKER_COMPOSE"
 
           git commit -m "Deploying Services ${servicesToBeDeployed}"
-
                     
           git push origin "$DEPLOYMENTS_PROJECT_BRANCH"
