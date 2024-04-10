@@ -25,7 +25,7 @@ export class WhatWeOfferComponent implements OnInit {
       id: 3,
       img: 'corporateCulture',
       description:
-        'Provide freshers with corporate-style training, offering guidance from actual corporate teams to equip them with real-world skills and prepare them effectively.',
+        'Provide freshers with corporate-style training, offering guidance from actual corporate teams to equip them with real-world skills.',
       label: 'Corporate Culture',
     },
     {
