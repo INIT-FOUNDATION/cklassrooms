@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
-import { NewMeetingService } from 'src/app/modules/shared/services/new-meeting.service';
 import { ThemeService } from 'src/app/modules/shared/theme/theme.service';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
