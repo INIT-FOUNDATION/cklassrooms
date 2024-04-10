@@ -13,20 +13,29 @@
       <span class="font-semibold mb-1">{{ item?.name }}</span>
       <span>{{ item?.position }}</span>
     </div>
-    <div class="absolute bg-no-repeat bg-cover bottom-0 w-52 h-80 expert-img"
-      [ngStyle]="{'background-image': item.img ? 'url(assets/images/experts/'+item.img+'.png)' : ''}"></div>
+    <div
+      class="absolute bg-no-repeat bg-cover bottom-0 w-52 h-80 expert-img"
+      [ngStyle]="{
+        'background-image': item.img
+          ? 'url(assets/images/experts/' + item.img + '.png)'
+          : ''
+      }"
+    ></div>
     <div
       class="overlay absolute w-full h-full items-end pb-5 justify-center hidden"
     >
-      <i class="fa-brands fa-github text-4xl me-5"
-        [ngStyle]="{ color: item?.bgColor }"
-        (click)="openUrl(item.githubURL)">
-      </i>
-      <i
-        class="fa-brands fa-linkedin text-4xl"
-        [ngStyle]="{ color: item?.bgColor }"
-        (click)="openUrl(item.linkedinProfile)">
-      </i>
+      <a [href]="item?.githubURL" target="_blank">
+        <i
+          class="fa-brands fa-github text-4xl me-5"
+          [ngStyle]="{ color: item?.bgColor }"
+        ></i
+      ></a>
+      <a [href]="item?.linkedinURL" target="_blank">
+        <i
+          class="fa-brands fa-linkedin text-4xl"
+          [ngStyle]="{ color: item?.bgColor }"
+        ></i>
+      </a>
     </div>
   </div>
 </div>
