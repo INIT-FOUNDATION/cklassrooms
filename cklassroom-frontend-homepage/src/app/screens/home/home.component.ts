@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { NewMeetingService } from 'src/app/modules/shared/services/new-meeting.service';
+import { ThemeService } from 'src/app/modules/shared/theme/theme.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,14 @@ import { NewMeetingService } from 'src/app/modules/shared/services/new-meeting.s
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(private themeService: ThemeService) {}
 
-  ngOnInit(): void {}
+  learningPhaseImg = 'LearningPhasesLight';
+
+  ngOnInit(): void {
+    this.themeService.getActiveTheme.subscribe((res: string) => {
+      this.learningPhaseImg =
+        res === 'light_theme' ? 'LearningPhasesLight' : 'LearningPhasesDark';
+    });
+  }
 }

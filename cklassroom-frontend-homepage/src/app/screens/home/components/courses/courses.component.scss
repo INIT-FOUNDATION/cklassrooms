@@ -1,0 +1,10 @@
+@import "../../../../../theme/color";
+
+.header-text:after {
+  width: clamp(3rem, 26vw, 30rem);
+  margin-left: 13rem;
+}
+
+.courses-card {
+  border: 1px solid $themeBoxShadow;
+}

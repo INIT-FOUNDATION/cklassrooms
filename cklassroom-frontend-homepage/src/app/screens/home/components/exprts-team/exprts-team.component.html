@@ -1,30 +1,37 @@
 <div class="mb-5 text-2xl header-text">Meet our Experts</div>
-<div class="mb-10 grid grid-cols-1 md:grid-cols-2 gap-4 mt-14">
+<div
+  class="mb-10 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-5 lg:gap-10"
+>
   <div
-    class="grid grid-cols-2 gap-4 bg-expert-cards rounded-md flex items-end flex-col relative p-4"
+    class="px-4 rounded-full custom-height relative flex justify-center items-start text-sm overflow-hidden cursor-pointer"
+    [ngStyle]="{ 'background-color': item?.bgColor }"
     *ngFor="let item of expertTeam"
   >
-    <img
-      src="assets/images/experts/{{ item?.img }}"
-      class="exprt-image"
-      style="width: 10rem"
-    />
-    <div class="mb-4">
-      <div class="mb-1 text-sm md:text-lg">
-        {{ item?.name }}
-        <span class="text-xs text-green block mt-1">{{ item?.positon }}</span>
-      </div>
-      <span class="text-xs md:text-sm leading-5"
-        >I am an expert and a developer with 7+ years of experience.</span
-      >
-      <div class="flex items-center mt-2">
-        <a [href]="item?.githubURL" class="mr-4 social-logo" target="_blank"
-          ><i class="fa-brands fa-github text-sm"></i
-        ></a>
-        <a [href]="item?.instargramURL" class="social-logo" target="_blank">
-          <i class="fa-brands fa-instagram text-sm"></i
-        ></a>
-      </div>
+    <div
+      class="absolute pt-16 flex flex-col items-center text-center text-sky-950"
+    >
+      <span class="font-semibold mb-1">{{ item?.name }}</span>
+      <span>{{ item?.position }}</span>
+    </div>
+    <div
+      class="absolute bg-no-repeat bg-cover bottom-0 w-52 h-80 expert-img"
+      [style.background-image]="
+        'url(' +
+        (item?.img ? 'assets/images/experts/' + item.img + '.png' : '') +
+        ')'
+      "
+    ></div>
+    <div
+      class="overlay absolute w-full h-full items-end pb-5 justify-center hidden"
+    >
+      <i
+        class="fa-brands fa-github text-4xl me-5"
+        [ngStyle]="{ color: item?.bgColor }"
+      ></i>
+      <i
+        class="fa-brands fa-instagram text-4xl"
+        [ngStyle]="{ color: item?.bgColor }"
+      ></i>
     </div>
   </div>
 </div>

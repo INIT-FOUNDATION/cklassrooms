@@ -1,0 +1,46 @@
+<div class="my-8 md:my-24">
+  <div class="mb-5 text-2xl header-text">What we offer</div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div
+      class="courses-card relative overflow-hidden shadow-md rounded-xl"
+      *ngFor="let item of getCourseList"
+    >
+      <div class="flex items-center justify-center flex-col">
+        <img
+          class="w-60 h-40 pt-3"
+          src="assets/images/courses/{{ item?.img }}.svg"
+        />
+        <div
+          class="py-2 my-2 self-start font-semibold w-full px-5 text-white text-center text-md"
+          [ngStyle]="{ background: item?.color }"
+        >
+          {{ item?.courseName }}
+        </div>
+        <div class="pb-2 font-medium text-sm leading-6 px-5">
+          {{ item?.desc }}
+        </div>
+      </div>
+      <div
+        class="overlay absolute w-full h-full top-0 right-full z-10 p-5 flex flex-col text-white text-xs"
+        [ngStyle]="{ background: item?.color }"
+      >
+        <div class="flex items-start">
+          <i class="fa-solid fa-circle pe-3 mt-1"></i>
+          <div>{{ item?.h1 }}</div>
+        </div>
+        <div class="flex items-start py-3">
+          <i class="fa-solid fa-circle pe-3 mt-1"></i>
+          <div>{{ item?.h2 }}</div>
+        </div>
+        <div class="flex items-start">
+          <i class="fa-solid fa-circle pe-3 mt-1"></i>
+          <div>{{ item?.h3 }}</div>
+        </div>
+        <div class="flex items-start pt-3">
+          <i class="fa-solid fa-circle pe-3 mt-1"></i>
+          <div>{{ item?.h4 }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

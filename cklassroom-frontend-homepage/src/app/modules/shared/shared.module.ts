@@ -1,15 +1,13 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { NgxSpinnerModule } from 'ngx-spinner';
-
 import { ToastrModule } from 'ngx-toastr';
 import { MAT_DATE_FORMATS } from '@angular/material/core';
 import { LoaderComponent } from './components/loader/loader.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MatIconModule } from '@angular/material/icon';
 
 const MY_FORMATS = {
   parse: {
@@ -30,6 +28,7 @@ const export_material_modules = [
   FormsModule,
   RouterModule,
   ReactiveFormsModule,
+  MatIconModule,
 ];
 
 @NgModule({
