@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MAT_DATE_FORMATS } from '@angular/material/core';
 import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
+import { FooterComponent } from './components/footer/footer.component';
 
 const MY_FORMATS = {
   parse: {
@@ -18,7 +19,7 @@ const MY_FORMATS = {
   },
 };
 
-const export_components = [HeaderComponent];
+const export_components = [HeaderComponent, FooterComponent];
 
 const export_material_modules = [
   CommonModule,
@@ -29,10 +30,8 @@ const export_material_modules = [
 ];
 
 @NgModule({
-  declarations: [...export_components],
-  imports: [
-    ...export_material_modules,
-  ],
+  declarations: [...export_components, FooterComponent],
+  imports: [...export_material_modules],
   exports: [
     FormsModule,
     ReactiveFormsModule,
