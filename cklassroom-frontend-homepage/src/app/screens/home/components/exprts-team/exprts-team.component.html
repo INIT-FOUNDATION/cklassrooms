@@ -15,11 +15,11 @@
     </div>
     <div
       class="absolute bg-no-repeat bg-cover bottom-0 w-52 h-80 expert-img"
-      [style.background-image]="
-        'url(' +
-        (item?.img ? 'assets/images/experts/' + item.img + '.png' : '') +
-        ')'
-      "
+      [ngStyle]="{
+        'background-image': item.img
+          ? 'url(assets/images/experts/' + item.img + '.png)'
+          : ''
+      }"
     ></div>
     <div
       class="overlay absolute w-full h-full items-end pb-5 justify-center hidden"

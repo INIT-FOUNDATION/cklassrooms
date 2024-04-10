@@ -9,9 +9,6 @@ export class ExprtsTeamComponent implements OnInit {
   expertTeam: any = [
     {
       id: 1,
-      projects: 20,
-      experience: 5,
-      skills: 15,
       name: 'Ketan Tawde',
       position: 'Solution Architect',
       img: 'ketan',
@@ -22,9 +19,6 @@ export class ExprtsTeamComponent implements OnInit {
 
     {
       id: 2,
-      projects: 20,
-      experience: 5,
-      skills: 15,
       name: 'Siddhesh Bait',
       position: 'Data Architect',
       img: 'siddhesh',
@@ -45,9 +39,6 @@ export class ExprtsTeamComponent implements OnInit {
 
     {
       id: 4,
-      projects: 20,
-      experience: 5,
-      skills: 15,
       name: 'Narsima Chilkuri',
       position: 'Dev ops expert',
       img: 'narsima',
@@ -58,9 +49,6 @@ export class ExprtsTeamComponent implements OnInit {
 
     {
       id: 5,
-      projects: 20,
-      experience: 5,
-      skills: 15,
       name: 'Sachin Mogaveera',
       position: 'Technical Lead',
       img: 'sachin',
@@ -74,4 +62,8 @@ export class ExprtsTeamComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  openUrl(url: string) {
+    window.open(url, '_blank');
+  }
 }

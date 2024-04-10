@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Router, NavigationExtras } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { ErrorCodes } from './error-codes.module';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -18,7 +17,6 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class ErrorHandlerInterceptor implements HttpInterceptor {
   constructor(
-    private toastr: ToastrService,
     private router: Router,
     private appPreferences: AppPreferencesService,
     private dialog:  MatDialog
@@ -84,27 +82,27 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
                     // this.authService.userId = userId;
                     this.router.navigate(['/login/updatepassword']);
                   } else if (errmsg.errorCode === 'USRAUT0005') {
-                    this.toastr.error(errmsg.error, 'Error');
+                    // this.toastr.error(errmsg.error, 'Error');
                     setTimeout(() => {
                       this.router.navigate(['/login/forget']);
                     }, 100);
                   } else if (errmsg.errorCode === 'USRAUT0006') {
                     const userId = errmsg.userId;
                     // this.authService.userId = userId;
-                    this.toastr.error(errmsg.error, 'Error');
+                    // this.toastr.error(errmsg.error, 'Error');
                     setTimeout(() => {
                       this.router.navigate(['/login/updatepassword']);
                     }, 100);
                   } else if (errmsg.errorCode === 'USRAUT0006' || errmsg.errorCode === 'USRAUT0007') {
                     const userId = errmsg.userId;
                     // this.authService.userId = userId;
-                    this.toastr.error(errmsg.error, 'Error');
+                    // this.toastr.error(errmsg.error, 'Error');
                     setTimeout(() => {
                       this.router.navigate(['/login/updatepassword']);
                     }, 100);
                   }
                 } else if (errmsg.errorCode == 'CONFIG0001') {
-                  this.toastr.error(errmsg.error, 'Error');
+                  // this.toastr.error(errmsg.error, 'Error');
 
                   // this.openPopupForConfig(errmsg.user_name)
                 } else {
@@ -112,16 +110,16 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
                     let errorCode: any = errmsg.errorCode;
                     const errorMessage: any = ErrorCodes[errorCode];
                     if (errorMessage) {
-                      this.toastr.error(errorMessage, 'Error');
+                      // this.toastr.error(errorMessage, 'Error');
                     } else {
-                      this.toastr.error(errmsg.error, 'Error');
+                      // this.toastr.error(errmsg.error, 'Error');
                     }
                   } else {
-                    this.toastr.error(response.error, 'Error');
+                    // this.toastr.error(response.error, 'Error');
                   }
                 }
               } else {
-                this.toastr.error(response.error, 'Error');
+                // this.toastr.error(response.error, 'Error');
               }
             } else if (response.error.errorCode) {
               if (response.error.errorCode === 'MEET000117') {
@@ -131,29 +129,29 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
                 };
                 this.router.navigate(['/waiting'], navigationExtras);
               }else if (response.error.errorCode === 'MEET000124') {
-                this.toastr.error(response.error.error, 'Error');
+                // this.toastr.error(response.error.error, 'Error');
               }else if (response.error.errorCode !== 'ADMROL0002') {
-                this.toastr.error(`${response.error.error}`, 'Error');
+                // this.toastr.error(`${response.error.error}`, 'Error');
               }
 
             } else {
               try{
-                this.toastr.error(response.error.message, 'Error');
+                // this.toastr.error(response.error.message, 'Error');
               } catch (e) {
                 console.error('Error!!! ', e);
               }
             }
           } else {
-            this.toastr.error(response.error, 'Error');
+            // this.toastr.error(response.error, 'Error');
           }
 
           break;
         case 0:
           if (window.navigator.onLine){
-            this.toastr.error('Something went wrong. Please try again!', 'Error');
+            // this.toastr.error('Something went wrong. Please try again!', 'Error');
             break;
           } else if (!window.navigator.onLine) {
-            this.toastr.error('Something went wrong. Please try again!', 'Error');
+            // this.toastr.error('Something went wrong. Please try again!', 'Error');
             break;
           }
           else {
