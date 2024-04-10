@@ -1,4 +1,11 @@
+@import "../../../../../theme/color";
+
 .hover-card:hover {
   scale: (1.1);
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.hover-card {
+  background-color: $themeGray;
+  color: $themeFontColor;
 }

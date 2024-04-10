@@ -3,7 +3,7 @@ export const themes = {
     '--themePrimary': '#F9F7F7',
     '--themeSecondary': '#11b685',
     '--themeFontColor': '#112D4E',
-    '--themeGray': '#3f3d56',
+    '--themeGray': '#ffffff',
     '--themeBoxShadow': '#eee',
     '--themeHoverBoxShadow': '#e3dddd',
   },

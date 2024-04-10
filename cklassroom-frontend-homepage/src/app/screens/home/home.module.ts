@@ -6,17 +6,18 @@ import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/modules/shared/shared.module';
 import { StarRatingModule } from 'angular-star-rating';
 import { FormsModule } from '@angular/forms';
-import {PopoverModule} from "ngx-smart-popover";
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { WhatWeOfferComponent } from './components/what-we-offer/what-we-offer.component';
 import { ExprtsTeamComponent } from './components/exprts-team/exprts-team.component';
+import { CoursesComponent } from './components/courses/courses.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     TestimonialComponent,
     WhatWeOfferComponent,
-    ExprtsTeamComponent
+    ExprtsTeamComponent,
+    CoursesComponent
   ],
   imports: [
     CommonModule,
