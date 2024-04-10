@@ -62,8 +62,4 @@ export class ExprtsTeamComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  openUrl(url: string) {
-    window.open(url, '_blank');
-  }
 }
