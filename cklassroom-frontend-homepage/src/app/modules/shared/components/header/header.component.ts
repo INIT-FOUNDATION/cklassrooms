@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../theme/theme.service';
 import { CookieService } from '../../services/cookies.service';
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
 
 @Component({
   selector: 'app-header',
@@ -14,7 +17,13 @@ export class HeaderComponent implements OnInit {
     private cookieService: CookieService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    gsap.registerPlugin(ScrollToPlugin);
+  }
+
+  scrollToTarget(target: string) {
+    gsap.to(window, { duration: 2, scrollTo: { y:  `#${target}` } });
+  }
 
   switchTheme() {
     if (this.active_theme == 'light_theme') {
