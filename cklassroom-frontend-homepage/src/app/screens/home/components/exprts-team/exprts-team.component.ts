@@ -8,42 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class ExprtsTeamComponent implements OnInit {
   expertTeam: any = [
     {
-      id: 3,
+      id: 1,
       projects: 20,
       experience: 5,
       skills: 15,
       name: 'Ketan Tawde',
       position: 'Solution Architect',
       img: 'ketan',
-      githubURL: 'https://github.com/narsimachilkuri45',
-      instargramURL:
-        'https://www.instagram.com/narsimachilkuri?igsh=M2tmNnh1bzB2eGQ3',
+      githubURL: 'https://github.com/ketanwork',
+      linkedinURL: 'https://www.linkedin.com/in/ketan-tawade-8731832a/',
       bgColor: '#e5dbd2',
-    },
-
-    {
-      id: 4,
-      projects: 20,
-      experience: 5,
-      skills: 15,
-      name: 'Siddhesh Bait',
-      position: 'Data Architect',
-      img: 'siddhesh',
-      githubURL: 'https://github.com/narsimachilkuri45',
-      instargramURL:
-        'https://www.instagram.com/narsimachilkuri?igsh=M2tmNnh1bzB2eGQ3',
-      bgColor: '#ffc930',
-    },
-
-    {
-      id: 1,
-      name: 'Sudhir Allada',
-      position: 'Software Architect',
-      img: 'sudhir',
-      githubURL: 'https://github.com/Sudhirkumarrao',
-      instargramURL:
-        'https://www.instagram.com/sudhir_allada?igsh=MXhnbHgzamo2bTBrcg==',
-      bgColor: '#feb9ce',
     },
 
     {
@@ -51,12 +25,34 @@ export class ExprtsTeamComponent implements OnInit {
       projects: 20,
       experience: 5,
       skills: 15,
+      name: 'Siddhesh Bait',
+      position: 'Data Architect',
+      img: 'siddhesh',
+      githubURL: 'https://github.com/sidbait',
+      linkedinURL: 'https://www.linkedin.com/in/baitsid/',
+      bgColor: '#ffc930',
+    },
+
+    {
+      id: 3,
+      name: 'Sudhir Allada',
+      position: 'Software Architect',
+      img: 'sudhir',
+      githubURL: 'https://github.com/Sudhirkumarrao',
+      linkedinURL: 'https://www.linkedin.com/in/sudhirkumarraoallada/',
+      bgColor: '#feb9ce',
+    },
+
+    {
+      id: 4,
+      projects: 20,
+      experience: 5,
+      skills: 15,
       name: 'Narsima Chilkuri',
       position: 'Dev ops expert',
       img: 'narsima',
       githubURL: 'https://github.com/narsimachilkuri45',
-      instargramURL:
-        'https://www.instagram.com/narsimachilkuri?igsh=M2tmNnh1bzB2eGQ3',
+      linkedinURL: 'https://www.linkedin.com/in/narsima-chilkuri-63431a106/',
       bgColor: '#cbd5d4',
     },
 
@@ -68,9 +64,9 @@ export class ExprtsTeamComponent implements OnInit {
       name: 'Sachin Mogaveera',
       position: 'Technical Lead',
       img: 'sachin',
-      githubURL: 'https://github.com/narsimachilkuri45',
-      instargramURL:
-        'https://www.instagram.com/narsimachilkuri?igsh=M2tmNnh1bzB2eGQ3',
+      githubURL: 'https://github.com/sachinmogaveera',
+      linkedinURL:
+        'https://www.linkedin.com/in/sachinkumar-mogaveera-02679a148/',
       bgColor: '#30ff5e85',
     },
   ];

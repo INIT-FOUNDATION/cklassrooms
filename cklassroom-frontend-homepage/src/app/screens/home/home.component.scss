@@ -1,3 +1,5 @@
+@import "../../../theme/color";
+
 .banner-image {
   -webkit-animation: profile 8s ease-in-out infinite;
   animation: profile 8s ease-in-out infinite;
@@ -16,4 +18,8 @@
   100% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
+}
+
+.fa-brands:hover {
+  color: $themeSecondary;
 }

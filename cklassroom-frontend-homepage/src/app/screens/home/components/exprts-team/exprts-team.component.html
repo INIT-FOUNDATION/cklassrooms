@@ -24,14 +24,18 @@
     <div
       class="overlay absolute w-full h-full items-end pb-5 justify-center hidden"
     >
-      <i
-        class="fa-brands fa-github text-4xl me-5"
-        [ngStyle]="{ color: item?.bgColor }"
-      ></i>
-      <i
-        class="fa-brands fa-instagram text-4xl"
-        [ngStyle]="{ color: item?.bgColor }"
-      ></i>
+      <a [href]="item?.githubURL" target="_blank">
+        <i
+          class="fa-brands fa-github text-4xl me-5"
+          [ngStyle]="{ color: item?.bgColor }"
+        ></i
+      ></a>
+      <a [href]="item?.linkedinURL" target="_blank">
+        <i
+          class="fa-brands fa-linkedin text-4xl"
+          [ngStyle]="{ color: item?.bgColor }"
+        ></i>
+      </a>
     </div>
   </div>
 </div>
