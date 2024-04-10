@@ -27,11 +27,11 @@
     "@videogular/ngx-videogular": "~5.0.1",
     "angular-star-rating": "~5.1.0",
     "aos": "^2.3.4",
-    
     "font-awesome": "^4.7.0",
     "gsap": "^3.12.5",
     "jquery": "^3.6.4",
     "moment": "^2.29.4",
+    "ngx-device-detector": "^4.0.1",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -40,7 +40,6 @@
     "@angular-devkit/build-angular": "~13.1.2",
     "@angular/cli": "~13.1.2",
     "@angular/compiler-cli": "~13.1.0",
-    
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.20.55",
     "autoprefixer": "^10.4.19",
@@ -50,7 +49,6 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.1",
     "typescript": "~4.5.2"
