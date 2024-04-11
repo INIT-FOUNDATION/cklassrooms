@@ -9,27 +9,21 @@ export class TestimonialComponent implements OnInit {
   getTestimonials: any = [
     {
       id: 1,
-      img: 'fa-folder',
-      value: '04+',
-      label: 'Our Online Course',
+      img: 'fa-code',
+      value: '10+',
+      label: 'Academic/Online Programs',
     },
     {
       id: 2,
-      img: 'fa-code',
-      value: '10+',
-      label: 'Academic Programs',
-    },
-    {
-      id: 3,
       img: 'fa-graduation-cap',
-      value: '08+',
+      value: '100+',
       label: 'Certified Students',
     },
     {
-      id: 4,
+      id: 3,
       img: 'fa-users',
-      value: '10+',
-      label: 'Exrolled Students',
+      value: '100+',
+      label: 'Enrolled Students',
     },
   ];
 

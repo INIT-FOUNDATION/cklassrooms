@@ -9,7 +9,7 @@ export const themes = {
   },
   dark_theme: {
     '--themePrimary': '#1b1f24',
-    '--themeSecondary': '#04cd91',
+    '--themeSecondary': '#64ffda',
     '--themeFontColor': '#ffffff',
     '--themeGray': '#3f3d56',
     '--themeBoxShadow': '#27272a',

@@ -10,6 +10,7 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
 import { WhatWeOfferComponent } from './components/what-we-offer/what-we-offer.component';
 import { ExprtsTeamComponent } from './components/exprts-team/exprts-team.component';
 import { CoursesComponent } from './components/courses/courses.component';
+import { JobPlacementsComponent } from './components/job-placements/job-placements.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CoursesComponent } from './components/courses/courses.component';
     TestimonialComponent,
     WhatWeOfferComponent,
     ExprtsTeamComponent,
-    CoursesComponent
+    CoursesComponent,
+    JobPlacementsComponent
   ],
   imports: [
     CommonModule,
