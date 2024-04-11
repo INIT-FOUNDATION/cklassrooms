@@ -1,75 +1,9 @@
 <div class="my-8 md:my-24">
   <div class="mb-5 text-2xl header-text">What we offer</div>
-  <div class="flex items-center flex-col md:flex-row">
-    <div class="">
-      <img
-        src="assets/images/whatWeOffer/skillsDevelopment.svg"
-        style="width: 40rem"
-      />
-    </div>
-    <div class="text-right text-slate-400">
-      <span class="text-green mb-2 font-medium">Skills Development</span>
-      <div
-        class="bg-gray-cards text-white p-4 leading-7 rounded text-start mb-3 shadow-md"
-      >
-        Tailored training, workshops, and practical experiences to equip
-        individuals with technical, soft, and professional skills essential for
-        success in their carrier.
-      </div>
-      <span class="mr-4 text-xs md:text-sm lg:text-base">Online Courses</span>
-      <span class="text-xs md:text-sm lg:text-base">Personal Tranings</span>
-    </div>
-  </div>
 
-  <div class="flex items-center flex-col-reverse md:flex-row my-16">
-    <div class="mt-2 md:mt-0 text-slate-400">
-      <span class="text-green mb-2 font-medium"
-        >Career Guidance and Counselling</span
-      >
-      <div
-        class="bg-gray-cards text-white p-4 leading-7 rounded mb-3 shadow-md"
-      >
-        Personalised support in identifying strengths, interests, and career
-        goals, alongside assistance in resume writing, interview preparation,
-        and networking strategies for career success.
-      </div>
-      <span class="mr-4 text-xs md:text-sm lg:text-base"
-        >Strength Enhancement</span
-      >
-      <span class="text-xs md:text-sm lg:text-base"
-        >One-to-One Counselling</span
-      >
-    </div>
-    <div class="">
-      <img
-        src="assets/images/whatWeOffer/guidelineAndCounselling.svg"
-        style="width: 40rem"
-      />
-    </div>
-  </div>
-
-  <div class="flex items-center flex-col md:flex-row">
-    <div class="">
-      <img
-        src="assets/images/whatWeOffer/jobPlacement.svg"
-        style="width: 35rem"
-      />
-    </div>
-    <div class="text-right text-slate-400 md:ml-3">
-      <span class="text-green mb-2 font-medium">Job Placements</span>
-      <div
-        class="bg-gray-cards text-white p-4 leading-7 rounded text-start mb-3 shadow-md"
-      >
-        Facilitating connections with employers, identifying job openings, and
-        providing support in application processes, interview preparation, and
-        negotiation techniques for successful employment outcomes.
-      </div>
-      <span class="mr-4 text-xs md:text-sm lg:text-base"
-        >Interview Preparations</span
-      >
-      <span class="text-xs md:text-sm lg:text-base">Walk in Interviews</span>
-    </div>
-  </div>
+  <ng-container *ngFor="let item of whatWeOffer">
+    <ng-container *ngTemplateOutlet='whatweofferTemplate; context: {offer: item}'></ng-container>
+  </ng-container>
 
   <div class="text-xl md:text-3xl font-bold text-center my-8 md:my-14 lg:my-20">
     Other Offering's
@@ -79,7 +13,7 @@
     <div
       *ngFor="let item of moreOffering"
       [id]="item?.id"
-      class="flex flex-col justify-center items-center border-2 more-offering-card rounded-md p-3 md:mb-8"
+      class="flex flex-col justify-center items-center border-2 more-offering-card rounded-md p-3 md:mb-8 scroll-animation"
     >
       <img
         src="assets/images/whatWeOffer/{{ item?.img }}.svg"
@@ -90,3 +24,50 @@
     </div>
   </div>
 </div>
+
+
+<ng-template let-offer="offer" #whatweofferTemplate>
+  <ng-container [ngSwitch]="offer.placement">
+    <div class="flex items-center flex-col md:flex-row {{offer.mainDivClass}}" *ngSwitchCase="'left'">
+      <div class="">
+        <img
+          src="assets/images/whatWeOffer/{{offer.image}}"
+          style="width: 40rem"
+        />
+      </div>
+      <div class="text-right text-slate-400">
+        <span class="text-green mb-2 font-medium">{{offer.title}}</span>
+        <div
+          class="bg-gray-cards text-white p-4 leading-7 rounded text-start mb-3 shadow-md"
+        >
+          {{offer.description}}
+        </div>
+        <span class="mr-4 text-xs md:text-sm lg:text-base" *ngFor="let tag of offer.tags">{{tag}}</span>
+        <!-- <span class="text-xs md:text-sm lg:text-base">Personal Tranings</span> -->
+      </div>
+    </div>
+    <div class="flex items-center flex-col-reverse md:flex-row my-16 {{offer.mainDivClass}}" *ngSwitchCase="'right'">
+      <div class="mt-2 md:mt-0 text-slate-400">
+        <span class="text-green mb-2 font-medium"
+          >{{offer.title}}</span
+        >
+        <div
+          class="bg-gray-cards text-white p-4 leading-7 rounded mb-3 shadow-md"
+        >
+          {{offer.description}}
+        </div>
+        <span class="mr-4 text-xs md:text-sm lg:text-base" *ngFor="let tag of offer.tags">{{tag}}</span
+        >
+        <!-- <span class="text-xs md:text-sm lg:text-base"
+          >One-to-One Counselling</span
+        > -->
+      </div>
+      <div class="">
+        <img
+          src="assets/images/whatWeOffer/{{offer.image}}"
+          style="width: 40rem"
+        />
+      </div>
+    </div>
+  </ng-container>
+</ng-template>
