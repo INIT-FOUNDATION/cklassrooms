@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../theme/theme.service';
-import { CookieService } from '../../services/cookies.service';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
@@ -11,14 +10,21 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  active_theme = 'light_theme';
+  active = false;
   constructor(
-    private themeService: ThemeService,
-    private cookieService: CookieService
+    public themeService: ThemeService
   ) {}
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollToPlugin);
+    
+    this.themeService.getActiveTheme.subscribe((res: string) => {
+      if (res === "light_theme") {
+        this.active = false;
+      } else {
+        this.active = true;
+      }
+    })
   }
 
   scrollToTarget(target: string) {
@@ -26,14 +32,11 @@ export class HeaderComponent implements OnInit {
   }
 
   switchTheme() {
-    if (this.active_theme == 'light_theme') {
-      this.themeService.setActiveThem('dark_theme');
-      this.active_theme = 'dark_theme';
+    if (this.themeService.active_theme == 'light_theme') {
+      this.themeService.active_theme = 'dark_theme';
     } else {
-      this.themeService.setActiveThem('light_theme');
-      this.active_theme = 'light_theme';
+      this.themeService.active_theme = 'light_theme';
     }
-    this.cookieService.deleteCookie('theme');
-    this.cookieService.setCookie('theme', this.active_theme);
+    this.themeService.setActiveThem(this.themeService.active_theme);
   }
 }
