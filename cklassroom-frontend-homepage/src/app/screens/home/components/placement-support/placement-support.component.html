@@ -1,0 +1,27 @@
+<div class="my-8 md:my-40">
+  <div class="md:text-xl text-center font-medium text-green mb-3">
+    Career Placement Support
+  </div>
+  <div class="text-sm md:text-base md:mx-10 lg:mx-40 text-center">
+    Benefit from our comprehensive Career Placement Support services, where we
+    leverage our extensive network, industry insights, and personalised guidance
+    to help you secure rewarding opportunities aligned with your skills,
+    aspirations, and ambitions. Your success is our priority.
+  </div>
+  <div
+    class="mt-5 lg:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+  >
+    <div
+      *ngFor="let item of careerPlacementSupport"
+      [id]="item?.id"
+      class="border-2 more-offering-card rounded-3xl p-5 flex flex-col items-center justify-center text-center"
+    >
+      <img
+        src="assets/images/whatWeOffer/{{ item?.img }}.svg"
+        class="w-20 h-20"
+      />
+      <div class="font-medium my-3 text-base text-green">{{ item?.label }}</div>
+      <span class="text-sm">{{ item?.description }}</span>
+    </div>
+  </div>
+</div>

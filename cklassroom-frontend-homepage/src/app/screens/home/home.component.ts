@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from 'src/app/modules/shared/theme/theme.service';
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,9 +13,14 @@ export class HomeComponent implements OnInit {
   learningPhaseImg = 'LearningPhasesLight';
 
   ngOnInit(): void {
+    gsap.registerPlugin(ScrollToPlugin);
     this.themeService.getActiveTheme.subscribe((res: string) => {
       this.learningPhaseImg =
         res === 'light_theme' ? 'LearningPhasesLight' : 'LearningPhasesDark';
     });
+  }
+
+  scrollToTarget(target: string) {
+    gsap.to(window, { duration: 0.8, scrollTo: { y: `#${target}` } });
   }
 }

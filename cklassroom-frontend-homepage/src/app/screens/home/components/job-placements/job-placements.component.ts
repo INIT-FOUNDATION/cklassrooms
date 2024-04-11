@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./job-placements.component.scss'],
 })
 export class JobPlacementsComponent implements OnInit {
-  moreOffering: any = [
+  jobPlacements: any = [
     {
       id: 1,
       img: 'expertTalk',

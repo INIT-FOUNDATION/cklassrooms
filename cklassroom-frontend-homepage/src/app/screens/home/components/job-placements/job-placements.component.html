@@ -1,12 +1,12 @@
-<div class="my-8 md:my-28">
-  <div class="text-base md:text-xl text-center font-medium">
+<div class="my-8 md:my-40" id="jobPlacement">
+  <div class="md:text-xl text-center font-medium text-green">
     On Job Placements
   </div>
 
-  <div class="font-medium text-lg md:text-4xl text-center my-1 md:my-3">
-    Placement Program for freshers.
+  <div class="text-xl md:text-4xl text-center my-3">
+    Placement Program for freshers
   </div>
-  <div class="text-xs md:text-base mx-10 lg:mx-40 xl:mx-80 text-center">
+  <div class="text-sm md:text-base md:mx-10 lg:mx-40 xl:mx-80 text-center">
     Mastering in-demand technologies directly from the
     <a
       href="https://www.cowin.gov.in/"
@@ -20,9 +20,9 @@
     class="mt-5 lg:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
   >
     <div
-      *ngFor="let item of moreOffering"
+      *ngFor="let item of jobPlacements"
       [id]="item?.id"
-      class="border-2 more-offering-card rounded-3xl p-5 md:mb-8"
+      class="border-2 more-offering-card rounded-3xl p-5"
     >
       <img
         src="assets/images/whatWeOffer/{{ item?.img }}.svg"
