@@ -1,9 +1,13 @@
 <div
-  class="text-center text-lg md:text-2xl font-semibold text-header"
-  mat-dialog-title
+  class="text-center text-lg md:text-2xl font-semibold text-header flex items-center justify-between pb-4"
 >
   Book your free assessment
+
+  <div class="cursor-pointer" (click)="closeModal()">
+    <i class="fa-solid fa-xmark" style="color: '#1b1f24'"></i>
+  </div>
 </div>
+
 <mat-dialog-content class="rounded-2xl">
   <ng-container
     *ngTemplateOutlet="screenTemplate; context: { activeScreen: activeScreen }"
@@ -31,7 +35,7 @@
     >
       <button
         mat-raised-button
-        class="btn-back text-green text-black rounded-lg px-3 mr-3 mb-3 md:mb-0 py-3 font-medium cursor-pointer"
+        class="btn-back text-green text-black rounded-lg px-5 mr-3 mb-3 md:mb-0 py-3 font-medium cursor-pointer"
         (click)="changeScreen('step1')"
         [disabled]="!step1Form.valid"
         type="button"

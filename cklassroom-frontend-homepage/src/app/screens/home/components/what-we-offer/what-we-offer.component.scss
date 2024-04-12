@@ -17,4 +17,5 @@
 .bg-gray-cards {
   background-color: $themeGray;
   color: $themeFontColor;
+  border: 1px solid var(--themeHoverBoxShadow);
 }
