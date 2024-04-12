@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ApplyDialogComponent } from '../apply-dialog/apply-dialog.component';
 
 @Component({
   selector: 'app-apply-button',
@@ -9,9 +11,14 @@ export class ApplyButtonComponent implements OnInit {
 
   @Input() additionalClasses: string = "";
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+
+  openDialog() {
+    this.dialog.open(ApplyDialogComponent)
   }
 
   openGoogleForm() {

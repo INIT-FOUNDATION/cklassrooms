@@ -13,7 +13,7 @@ export class JobPlacementsComponent implements OnInit {
       description:
         'Acquire mastery in full-stack and backend development within a simulated professional setting.',
       label:
-        'Engaging in 6+ professional projects alongside over 20 micro skilling exercises',
+        'Engaging in 10+ professional projects',
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ export class JobPlacementsComponent implements OnInit {
       description:
         'Receive mentorship from seasoned professionals in the tech industry, hailing from leading companies.',
       label:
-        'Experience over 80+ live, interactive guided sessions to enhance learning and engagement.',
+        'Experience live, interactive guided sessions to enhance learning and engagement.',
     },
     {
       id: 5,
@@ -45,14 +45,14 @@ export class JobPlacementsComponent implements OnInit {
       description:
         'Develop robust problem-solving abilities to excel in technical interviews.',
       label:
-        'Explore 200+ DSA problems and 20+ System Design challenges for skill enhancement.',
+        'Explore DSA problems and System Design challenges for skill enhancement.',
     },
     {
       id: 6,
       img: 'porfolioDesign',
       description:
         'Forge connections, network, and collaborate with alumni who have secured positions in leading tech firms.',
-      label: 'Join a vibrant community of over 5000 active learners.',
+      label: 'Join a vibrant community of active learners.',
     },
   ];
   constructor() {}

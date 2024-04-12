@@ -7,6 +7,16 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FooterComponent } from './components/footer/footer.component';
 import { ApplyButtonComponent } from './components/apply-button/apply-button.component';
+import { ApplyDialogComponent } from './components/apply-dialog/apply-dialog.component';
+
+
+
+/*------------------- MATERIAL COMPONENTS ------------------------*/
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+/*------------------- MATERIAL COMPONENTS ------------------------*/
 
 const MY_FORMATS = {
   parse: {
@@ -20,7 +30,7 @@ const MY_FORMATS = {
   },
 };
 
-const export_components = [HeaderComponent, FooterComponent, ApplyButtonComponent];
+const export_components = [HeaderComponent, FooterComponent, ApplyButtonComponent, ApplyDialogComponent];
 
 const export_material_modules = [
   CommonModule,
@@ -28,6 +38,10 @@ const export_material_modules = [
   RouterModule,
   ReactiveFormsModule,
   MatIconModule,
+  MatDialogModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule
 ];
 
 @NgModule({

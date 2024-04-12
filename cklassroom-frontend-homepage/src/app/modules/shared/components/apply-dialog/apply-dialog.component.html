@@ -1,0 +1,59 @@
+<h2 mat-dialog-title>Book your free assessment</h2>
+<mat-dialog-content>
+    <ng-container *ngTemplateOutlet="screenTemplate; context: { activeScreen: activeScreen }"></ng-container>
+          
+</mat-dialog-content>
+<mat-dialog-actions>
+    <ng-container *ngIf="activeScreen === 'step1'">
+        <button mat-raised-button color="primary" (click)="changeScreen('step2')" type="button">Next</button>
+    </ng-container>
+
+    <ng-container *ngIf="activeScreen === 'step2'">
+        <button mat-raised-button color="primary" (click)="changeScreen('step1')" type="button">Book your free assessment</button>
+    </ng-container>
+</mat-dialog-actions>
+
+
+
+<ng-template #screenTemplate>
+    <ng-container [ngSwitch]="activeScreen">
+        <form class="example-form" *ngSwitchCase="'step1'" [formGroup]="step1Form">
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" type="email" formControlName="email">
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Mobile Number</mat-label>
+                <input matInput placeholder="Mobile Number" type="tel" formControlName="mobile_number">
+                <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+        </form>
+
+        <form class="example-form" *ngSwitchCase="'step2'" [formGroup]="step2Form">
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Name" type="text" formControlName="name">
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Education Qualification (Eg. BTech)</mat-label>
+                <input matInput placeholder="Mobile Number" type="tel" formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Graduation Year</mat-label>
+                <input matInput placeholder="Mobile Number" type="tel" name="mobileNumber">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Are you working?</mat-label>
+                <mat-select>
+                    <mat-option value="yes">Yes</mat-option>
+                    <mat-option value="no">No</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </ng-container>
+</ng-template>
