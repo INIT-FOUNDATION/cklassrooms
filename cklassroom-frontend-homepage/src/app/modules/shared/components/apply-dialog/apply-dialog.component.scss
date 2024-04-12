@@ -30,3 +30,7 @@
 ::ng-deep .mat-form-field {
   font-family: inherit !important;
 }
+
+::ng-deep .cdk-overlay-dark-backdrop {
+  background: rgba(0, 0, 0, 0.4) !important;
+}

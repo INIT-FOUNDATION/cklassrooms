@@ -19,7 +19,7 @@
     <div class="flex justify-end w-full mb-3">
       <button
         mat-raised-button
-        class="btn-green text-black rounded-lg px-8 py-3 font-medium cursor-pointer"
+        class="btn-green text-white rounded-lg px-8 py-3 font-medium cursor-pointer"
         (click)="changeScreen('step2')"
         [disabled]="!step1Form.valid"
         type="button"
@@ -35,7 +35,7 @@
     >
       <button
         mat-raised-button
-        class="btn-back text-green text-black rounded-lg px-5 mr-3 mb-3 md:mb-0 py-3 font-medium cursor-pointer"
+        class="btn-back text-green rounded-lg px-5 mr-3 mb-3 md:mb-0 py-3 font-medium cursor-pointer"
         (click)="changeScreen('step1')"
         [disabled]="!step1Form.valid"
         type="button"
@@ -44,7 +44,7 @@
       </button>
       <button
         mat-raised-button
-        class="btn-green text-black rounded-lg px-3 lg:px-8 py-3 font-medium cursor-pointer"
+        class="btn-green text-white rounded-lg px-3 lg:px-8 py-3 font-medium cursor-pointer"
         (click)="changeScreen('step1')"
         [disabled]="!step2Form.valid"
         type="button"
