@@ -6,13 +6,15 @@ export const themes = {
     '--themeGray': '#ffffff',
     '--themeBoxShadow': '#eee',
     '--themeHoverBoxShadow': '#e3dddd',
+    '--themeDialogModal': '#112D4E',
   },
   dark_theme: {
     '--themePrimary': '#1b1f24',
-    '--themeSecondary': '#64ffda',
+    '--themeSecondary': '#16daaa',
     '--themeFontColor': '#ffffff',
     '--themeGray': '#3f3d56',
     '--themeBoxShadow': '#27272a',
     '--themeHoverBoxShadow': '#1b1f24',
+    '--themeDialogModal': '#112D4E',
   },
 };

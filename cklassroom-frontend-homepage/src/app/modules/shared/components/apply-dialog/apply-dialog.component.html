@@ -1,79 +1,151 @@
-<h2 mat-dialog-title>Book your free assessment</h2>
-<mat-dialog-content>
-    <ng-container *ngTemplateOutlet="screenTemplate; context: { activeScreen: activeScreen }"></ng-container>
-          
+<div
+  class="text-center text-lg md:text-2xl font-semibold text-header"
+  mat-dialog-title
+>
+  Book your free assessment
+</div>
+<mat-dialog-content class="rounded-2xl">
+  <ng-container
+    *ngTemplateOutlet="screenTemplate; context: { activeScreen: activeScreen }"
+  ></ng-container>
 </mat-dialog-content>
-<mat-dialog-actions>
-    <ng-container *ngIf="activeScreen === 'step1'">
-        <button mat-raised-button color="primary" (click)="changeScreen('step2')" [disabled]="!step1Form.valid" type="button">Next</button>
-    </ng-container>
 
-    <ng-container *ngIf="activeScreen === 'step2'">
-        <button mat-raised-button color="primary" (click)="changeScreen('step1')" [disabled]="!step2Form.valid" type="button">Book your free assessment</button>
-    </ng-container>
+<mat-dialog-actions>
+  <ng-container *ngIf="activeScreen === 'step1'">
+    <div class="flex justify-end w-full mb-3">
+      <button
+        mat-raised-button
+        class="btn-green text-black rounded-lg px-8 py-3 font-medium cursor-pointer"
+        (click)="changeScreen('step2')"
+        [disabled]="!step1Form.valid"
+        type="button"
+      >
+        Next
+      </button>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="activeScreen === 'step2'">
+    <div
+      class="flex flex-col md:flex-row justify-center md:justify-end w-full mb-3"
+    >
+      <button
+        mat-raised-button
+        class="btn-back text-green text-black rounded-lg px-3 mr-3 mb-3 md:mb-0 py-3 font-medium cursor-pointer"
+        (click)="changeScreen('step1')"
+        [disabled]="!step1Form.valid"
+        type="button"
+      >
+        Go Back
+      </button>
+      <button
+        mat-raised-button
+        class="btn-green text-black rounded-lg px-3 lg:px-8 py-3 font-medium cursor-pointer"
+        (click)="changeScreen('step1')"
+        [disabled]="!step2Form.valid"
+        type="button"
+      >
+        Book your free assessment
+      </button>
+    </div>
+  </ng-container>
 </mat-dialog-actions>
 
-
-
 <ng-template #screenTemplate>
-    <ng-container [ngSwitch]="activeScreen">
-        <form class="example-form" *ngSwitchCase="'step1'" [formGroup]="step1Form">
-            <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" type="email" formControlName="email">
-                <mat-icon matSuffix>email</mat-icon>
-            </mat-form-field>
-          
-            <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Mobile Number</mat-label>
-                <input matInput placeholder="Mobile Number" type="tel" formControlName="mobile_number">
-                <mat-icon matSuffix>phone</mat-icon>
-            </mat-form-field>
-        </form>
+  <ng-container [ngSwitch]="activeScreen">
+    <form class="example-form" *ngSwitchCase="'step1'" [formGroup]="step1Form">
+      <mat-form-field class="example-full-width w-full" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="Email"
+          type="email"
+          formControlName="email"
+        />
+        <mat-icon class="text-green" matSuffix>email</mat-icon>
+      </mat-form-field>
 
-        <form class="example-form" *ngSwitchCase="'step2'" [formGroup]="step2Form">
-            <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Name</mat-label>
-                <input matInput placeholder="Name" type="text" formControlName="name">
-            </mat-form-field>
-          
-            <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Education Qualification (Eg. BTech)</mat-label>
-                <input matInput placeholder="Education Qualification (Eg. BTech)" type="text" formControlName="education">
-            </mat-form-field>
+      <mat-form-field class="example-full-width w-full" appearance="outline">
+        <mat-label>Mobile Number</mat-label>
+        <input
+          maxlength="10"
+          matInput
+          placeholder="Mobile Number"
+          type="tel"
+          formControlName="mobile_number"
+        />
+        <mat-icon class="text-green" matSuffix>phone</mat-icon>
+      </mat-form-field>
+    </form>
 
-            <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Graduation Year</mat-label>
-                <input matInput placeholder="Graduation Year" type="number" name="graduation_year">
-            </mat-form-field>
+    <form class="example-form" *ngSwitchCase="'step2'" [formGroup]="step2Form">
+      <mat-form-field class="example-full-width w-full" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" type="text" formControlName="name" />
+      </mat-form-field>
 
-            <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Are you working?</mat-label>
-                <mat-select formControlName="working" (selectionChange)="onDropDownChange('working')">
-                    <mat-option value="yes">Yes</mat-option>
-                    <mat-option value="no">No</mat-option>
-                </mat-select>
-            </mat-form-field>
+      <mat-form-field class="example-full-width w-full" appearance="outline">
+        <mat-label>Education Qualification (Eg. BTech)</mat-label>
+        <input
+          matInput
+          placeholder="Education Qualification (Eg. BTech)"
+          type="text"
+          formControlName="education"
+        />
+      </mat-form-field>
 
-            <ng-container *ngIf="step2Form.get('working').value === 'yes'">
-                <mat-form-field class="example-full-width" appearance="outline">
-                    <mat-label>Job Domain</mat-label>
-                    <mat-select formControlName="job_domain">
-                        <mat-option value="tech">Tech</mat-option>
-                        <mat-option value="non-tech">Non-Tech</mat-option>
-                    </mat-select>
-                </mat-form-field>
+      <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Graduation Year</mat-label>
+          <input
+            matInput
+            placeholder="Graduation Year"
+            type="number"
+            name="graduation_year"
+          />
+        </mat-form-field>
 
-                <mat-form-field class="example-full-width" appearance="outline">
-                    <mat-label>Job Role</mat-label>
-                    <input matInput placeholder="Job Role" type="text" formControlName="job_role">
-                </mat-form-field>
+        <mat-form-field class="example-full-width w-full" appearance="outline">
+          <mat-label>Are you working?</mat-label>
+          <mat-select
+            formControlName="working"
+            (selectionChange)="onDropDownChange('working')"
+          >
+            <mat-option value="yes">Yes</mat-option>
+            <mat-option value="no">No</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
 
-                <mat-form-field class="example-full-width" appearance="outline">
-                    <mat-label>Company</mat-label>
-                    <input matInput placeholder="Company" type="text" formControlName="company">
-                </mat-form-field>
-            </ng-container>
-        </form>
-    </ng-container>
+      <ng-container *ngIf="step2Form.get('working').value === 'yes'">
+        <mat-form-field class="example-full-width w-full" appearance="outline">
+          <mat-label>Job Domain</mat-label>
+          <mat-select formControlName="job_domain">
+            <mat-option value="tech">Tech</mat-option>
+            <mat-option value="non-tech">Non-Tech</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width w-full" appearance="outline">
+          <mat-label>Job Role</mat-label>
+          <input
+            matInput
+            placeholder="Job Role"
+            type="text"
+            formControlName="job_role"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width w-full" appearance="outline">
+          <mat-label>Company</mat-label>
+          <input
+            matInput
+            placeholder="Company"
+            type="text"
+            formControlName="company"
+          />
+        </mat-form-field>
+      </ng-container>
+    </form>
+  </ng-container>
 </ng-template>

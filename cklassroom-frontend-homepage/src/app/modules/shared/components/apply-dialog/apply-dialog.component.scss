@@ -1,0 +1,32 @@
+@import "../../../../../theme/color";
+
+::ng-deep mat-dialog-container {
+  border-radius: 1rem !important;
+}
+
+::ng-deep
+  .mat-form-field-appearance-outline.mat-focused
+  .mat-form-field-outline-thick,
+::ng-deep
+  .mat-form-field-appearance-outline.mat-form-field-should-float
+  .mat-form-field-label,
+.text-header,
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: $themeDialogModal !important;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 0.7rem !important;
+}
+
+.btn-green {
+  background-color: $themeSecondary;
+}
+
+.btn-back {
+  border: 1px solid $themeSecondary;
+}
+
+::ng-deep .mat-form-field {
+  font-family: inherit !important;
+}
