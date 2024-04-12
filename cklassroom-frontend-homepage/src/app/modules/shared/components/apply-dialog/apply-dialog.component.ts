@@ -34,8 +34,33 @@ export class ApplyDialogComponent implements OnInit {
     });
   }
 
+  onDropDownChange(formControlName: string) {
+    const value =  this.step2Form.get(formControlName).value;
+    if (formControlName === 'working') {
+      if (value === "yes") {
+        this.step2Form.get("job_domain").setValidators([Validators.required]);
+        this.step2Form.get("job_role").setValidators([Validators.required]);
+        this.step2Form.get("company").setValidators([Validators.required]);
+      } else {
+        this.step2Form.get("job_domain").clearValidators();
+        this.step2Form.get("job_role").clearValidators();
+        this.step2Form.get("company").clearValidators();
+      }
+      this.step2Form.get("job_domain").updateValueAndValidity();
+      this.step2Form.get("job_role").updateValueAndValidity();
+      this.step2Form.get("company").updateValueAndValidity();
+    }
+  }
+
   changeScreen(name) {
-    this.activeScreen = name;
+    if (name === "step2") {
+      const step1FormValid = this.step1Form.valid;
+      if(step1FormValid) {
+        this.activeScreen = name;
+      }
+    } else {
+      this.activeScreen = name;
+    }
   }
 
 }

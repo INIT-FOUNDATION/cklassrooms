@@ -5,11 +5,11 @@
 </mat-dialog-content>
 <mat-dialog-actions>
     <ng-container *ngIf="activeScreen === 'step1'">
-        <button mat-raised-button color="primary" (click)="changeScreen('step2')" type="button">Next</button>
+        <button mat-raised-button color="primary" (click)="changeScreen('step2')" [disabled]="!step1Form.valid" type="button">Next</button>
     </ng-container>
 
     <ng-container *ngIf="activeScreen === 'step2'">
-        <button mat-raised-button color="primary" (click)="changeScreen('step1')" type="button">Book your free assessment</button>
+        <button mat-raised-button color="primary" (click)="changeScreen('step1')" [disabled]="!step2Form.valid" type="button">Book your free assessment</button>
     </ng-container>
 </mat-dialog-actions>
 
@@ -39,21 +39,41 @@
           
             <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Education Qualification (Eg. BTech)</mat-label>
-                <input matInput placeholder="Mobile Number" type="tel" formControlName="name">
+                <input matInput placeholder="Education Qualification (Eg. BTech)" type="text" formControlName="education">
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Graduation Year</mat-label>
-                <input matInput placeholder="Mobile Number" type="tel" name="mobileNumber">
+                <input matInput placeholder="Graduation Year" type="number" name="graduation_year">
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Are you working?</mat-label>
-                <mat-select>
+                <mat-select formControlName="working" (selectionChange)="onDropDownChange('working')">
                     <mat-option value="yes">Yes</mat-option>
                     <mat-option value="no">No</mat-option>
                 </mat-select>
             </mat-form-field>
+
+            <ng-container *ngIf="step2Form.get('working').value === 'yes'">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Job Domain</mat-label>
+                    <mat-select formControlName="job_domain">
+                        <mat-option value="tech">Tech</mat-option>
+                        <mat-option value="non-tech">Non-Tech</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Job Role</mat-label>
+                    <input matInput placeholder="Job Role" type="text" formControlName="job_role">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Company</mat-label>
+                    <input matInput placeholder="Company" type="text" formControlName="company">
+                </mat-form-field>
+            </ng-container>
         </form>
     </ng-container>
 </ng-template>
