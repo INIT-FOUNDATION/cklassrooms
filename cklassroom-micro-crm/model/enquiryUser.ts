@@ -48,7 +48,12 @@ class ValidateEnquiryUser {
       }),
       name: Joi.string().required(),
       education: Joi.string().required(),
-      graduation_year: Joi.string().required(),
+      graduation_year: Joi.number().integer().min(1900).max(2100).required().messages({
+          'number.base': 'Graduation Year must be a number',
+          'number.integer': 'Graduation Year must be an integer',
+          'number.min': 'Graduation Year must be greater than or equal to 1900',
+          'number.max': 'Graduation Year must be less than or equal to 2100'
+      }),
       working: Joi.string().required(),
       job_domain: Joi.string().when('working', {
         is: 'yes',

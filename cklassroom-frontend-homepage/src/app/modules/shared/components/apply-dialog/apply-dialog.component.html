@@ -37,7 +37,6 @@
         mat-raised-button
         class="btn-back text-green rounded-lg px-5 mr-3 mb-3 md:mb-0 py-3 font-medium cursor-pointer"
         (click)="changeScreen('step1')"
-        [disabled]="!step1Form.valid"
         type="button"
       >
         Go Back
@@ -65,6 +64,7 @@
           placeholder="Email"
           type="email"
           formControlName="email"
+          appInputChar="email"
         />
         <mat-icon class="text-green" matSuffix>email</mat-icon>
       </mat-form-field>
@@ -77,6 +77,11 @@
           placeholder="Mobile Number"
           type="tel"
           formControlName="mobile_number"
+          appIntegerInput
+          appMobileNumber="true"
+          [appMin]="6000000000"
+          [appMax]="9999999999"
+          [appRange]="[6000000000, 9999999999]"
         />
         <mat-icon class="text-green" matSuffix>phone</mat-icon>
       </mat-form-field>
@@ -85,7 +90,7 @@
     <form class="example-form" *ngSwitchCase="'step2'" [formGroup]="step2Form">
       <mat-form-field class="example-full-width w-full" appearance="outline">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Name" type="text" formControlName="name" />
+        <input matInput placeholder="Name" type="text" formControlName="name" appInputChar="username" appInputTrim/>
       </mat-form-field>
 
       <mat-form-field class="example-full-width w-full" appearance="outline">

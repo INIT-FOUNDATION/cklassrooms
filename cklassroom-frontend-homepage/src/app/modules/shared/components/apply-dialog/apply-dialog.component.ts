@@ -11,6 +11,7 @@ export class ApplyDialogComponent implements OnInit {
   activeScreen = 'step1';
   step1Form: FormGroup;
   step2Form: FormGroup;
+  form1Submitted = false;
   constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {
@@ -54,6 +55,7 @@ export class ApplyDialogComponent implements OnInit {
 
   changeScreen(name) {
     if (name === 'step2') {
+      this.form1Submitted = true;
       const step1FormValid = this.step1Form.valid;
       if (step1FormValid) {
         this.activeScreen = name;
