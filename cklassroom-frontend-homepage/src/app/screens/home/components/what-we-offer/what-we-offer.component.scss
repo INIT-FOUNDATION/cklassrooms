@@ -1,19 +1,5 @@
 @import "../../../../../theme/color";
 
-.header-text:after {
-  margin-left: 12rem;
-}
-
-.more-offering-card {
-  border-color: $themeBoxShadow;
-  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-}
-
-.more-offering-card:hover {
-  box-shadow: 0px 2px 2px 0px $themeSecondary;
-  transform: translateY(-0.8rem) !important;
-}
-
 .bg-gray-cards {
   background-color: $themeGray;
   color: $themeFontColor;
