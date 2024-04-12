@@ -3,4 +3,10 @@
 .hover-card {
   background-color: $themeGray;
   color: $themeFontColor;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.hover-card:hover {
+  box-shadow: 0px 2px 2px 0px $themeSecondary;
+  transform: translateY(-0.8rem) !important;
 }
