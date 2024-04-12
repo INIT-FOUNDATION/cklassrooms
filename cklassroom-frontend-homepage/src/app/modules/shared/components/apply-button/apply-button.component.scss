@@ -1,0 +1,12 @@
+@import "../../../../../theme/color";
+
+.border-green {
+    border: 1px solid $themeSecondary;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  .border-green:hover {
+    outline: none;
+    box-shadow: 3px 3px 0 0 $themeSecondary;
+    transform: translate(-4px, -4px);
+  }
