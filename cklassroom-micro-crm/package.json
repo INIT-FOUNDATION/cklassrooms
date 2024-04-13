@@ -30,6 +30,7 @@
     "moment": "^2.30.1",
     "multer": "^1.4.5-lts.1",
     "node-cron": "^3.0.3",
+    "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
     "uuid": "^9.0.1"
   },
@@ -50,7 +51,10 @@
       "INIT_COMMON_NOSQL_DATABASE": "cklassrooms",
       "INIT_COMMON_NOSQL_USER": "",
       "INIT_COMMON_NOSQL_PASSWORD": "",
-      "INIT_COMMON_LOG_LEVEL": "info"
+      "INIT_COMMON_LOG_LEVEL": "info",
+      "INIT_COMMON_NODEMAILER_USER": "narsimachilkuri@gmail.com",
+      "INIT_COMMON_NODEMAILER_PASSWORD": "fzba tbje djmj ijbt",
+      "CKLASSROOM_CRM_CC_EMAILS": "sud5868@gmail.com,narsimachilkuri237@gmail.com"
     }
   }
 }
