@@ -16,6 +16,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+/*------------------- MATERIAL COMPONENTS ------------------------*/
+
+/*------------------- DIRECTIVES ------------------------*/
 import { RangeDirective } from './directives/range.directive';
 import { RangeLengthDirective } from './directives/range-length.directive';
 import { MaxDirective } from './directives/max.directive';
@@ -26,7 +30,7 @@ import { MobileNumberDirective } from './directives/mobile-number.directive';
 import { DndDirective } from './directives/dnd.directive';
 import { OtpNumberDirective } from './directives/otp-number.directive';
 import { IntegerInputDirective } from './directives/input-integer.directive';
-/*------------------- MATERIAL COMPONENTS ------------------------*/
+/*------------------- DIRECTIVES ------------------------*/
 
 const MY_FORMATS = {
   parse: {
@@ -62,7 +66,8 @@ const export_material_modules = [
   MatDialogModule,
   MatFormFieldModule,
   MatInputModule,
-  MatSelectModule
+  MatSelectModule,
+  MatAutocompleteModule
 ];
 
 @NgModule({

@@ -44,7 +44,7 @@
       <button
         mat-raised-button
         class="btn-green text-white rounded-lg px-3 lg:px-8 py-3 font-medium cursor-pointer"
-        (click)="changeScreen('step1')"
+        (click)="submitBooking()"
         [disabled]="!step2Form.valid"
         type="button"
       >
@@ -67,6 +67,7 @@
           appInputChar="email"
         />
         <mat-icon class="text-green" matSuffix>email</mat-icon>
+        <mat-error *ngIf="step1Form.get('email').dirty && step1Form.get('email').invalid">Email is invalid</mat-error>
       </mat-form-field>
 
       <mat-form-field class="example-full-width w-full" appearance="outline">
@@ -76,7 +77,7 @@
           matInput
           placeholder="Mobile Number"
           type="tel"
-          formControlName="mobile_number"
+          formControlName="mobileNumber"
           appIntegerInput
           appMobileNumber="true"
           [appMin]="6000000000"
@@ -84,13 +85,15 @@
           [appRange]="[6000000000, 9999999999]"
         />
         <mat-icon class="text-green" matSuffix>phone</mat-icon>
+        <mat-error *ngIf="step1Form.get('mobileNumber').dirty && step1Form.get('mobileNumber').invalid">Mobile number is invalid</mat-error>
       </mat-form-field>
     </form>
 
     <form class="example-form" *ngSwitchCase="'step2'" [formGroup]="step2Form">
       <mat-form-field class="example-full-width w-full" appearance="outline">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Name" type="text" formControlName="name" appInputChar="username" appInputTrim/>
+        <input matInput placeholder="Name" type="text" formControlName="name" appInputChar="username" [appRangeLength]="[3,100]" appInputTrim/>
+        <mat-error *ngIf="step2Form.get('name').dirty && step2Form.get('name').invalid">Name is invalid</mat-error>
       </mat-form-field>
 
       <mat-form-field class="example-full-width w-full" appearance="outline">
@@ -100,18 +103,23 @@
           placeholder="Education Qualification (Eg. BTech)"
           type="text"
           formControlName="education"
+          [matAutocomplete]="autoEducationDegrees"
+          appInputChar="street"
+          [appRangeLength]="[3,100]" appInputTrim
         />
+        <mat-autocomplete #autoEducationDegrees="matAutocomplete">
+          <mat-option *ngFor="let option of (filteredEducationDegreeOptions | async)" [value]="option.name">{{option.name}}</mat-option>
+        </mat-autocomplete>
+        <mat-error *ngIf="step2Form.get('education').dirty && step2Form.get('education').invalid">Education Qualification is invalid</mat-error>
       </mat-form-field>
 
       <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
         <mat-form-field class="example-full-width" appearance="outline">
           <mat-label>Graduation Year</mat-label>
-          <input
-            matInput
-            placeholder="Graduation Year"
-            type="number"
-            name="graduation_year"
-          />
+          <mat-select formControlName="graduation_year">
+            <mat-option *ngFor="let year of graduation_year_list" [value]="year">{{year}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="step2Form.get('graduation_year').dirty && step2Form.get('graduation_year').invalid">Please select graduation year</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width w-full" appearance="outline">
@@ -123,6 +131,7 @@
             <mat-option value="yes">Yes</mat-option>
             <mat-option value="no">No</mat-option>
           </mat-select>
+          <mat-error *ngIf="step2Form.get('working').dirty && step2Form.get('working').invalid">Please select Are you working</mat-error>
         </mat-form-field>
       </div>
 
@@ -133,6 +142,7 @@
             <mat-option value="tech">Tech</mat-option>
             <mat-option value="non-tech">Non-Tech</mat-option>
           </mat-select>
+          <mat-error *ngIf="step2Form.get('job_domain').dirty && step2Form.get('job_domain').invalid">Please select Job Domain</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width w-full" appearance="outline">
@@ -142,7 +152,15 @@
             placeholder="Job Role"
             type="text"
             formControlName="job_role"
+            [matAutocomplete]="autoJobRoles"
+            appInputTrim
+            appInputChar="street"
+            [appRangeLength]="[3,100]"
           />
+          <mat-autocomplete #autoJobRoles="matAutocomplete">
+            <mat-option *ngFor="let option of (filteredJobRolesOptions | async)" [value]="option.title">{{option.title}}</mat-option>
+          </mat-autocomplete>
+          <mat-error *ngIf="step2Form.get('job_role').dirty && step2Form.get('job_role').invalid">Job role is invalid</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width w-full" appearance="outline">
@@ -152,7 +170,15 @@
             placeholder="Company"
             type="text"
             formControlName="company"
+            [matAutocomplete]="autoCompanies"
+            appInputChar="street"
+            appInputTrim
+            [appRangeLength]="[3,100]"
           />
+          <mat-autocomplete #autoCompanies="matAutocomplete">
+            <mat-option *ngFor="let option of (filteredCompaniesOptions | async);" [value]="option">{{option}}</mat-option>
+          </mat-autocomplete>
+          <mat-error *ngIf="step2Form.get('company').dirty && step2Form.get('company').invalid">Company name is invalid</mat-error>
         </mat-form-field>
       </ng-container>
     </form>

@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+// import * as jobRolesData from '../../../../../assets/json/job_roles.json';
+// import * as educationDegress from '../../../../../assets/json/education_degress.json';
+// import * as companiesData from '../../../../../assets/json/companies.json';
+import { Observable, forkJoin, map, startWith } from 'rxjs';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-apply-dialog',
@@ -12,16 +17,73 @@ export class ApplyDialogComponent implements OnInit {
   step1Form: FormGroup;
   step2Form: FormGroup;
   form1Submitted = false;
-  constructor(private dialog: MatDialog) {}
+  
+  filteredEducationDegreeOptions: Observable<any[]>;
+  educationDegrees: any[] = [];
+
+  filteredJobRolesOptions: Observable<any[]>;
+  jobRoles = [];
+
+  filteredCompaniesOptions: Observable<any[]>;
+  companies = [];
+  
+  startYear = 2002;
+  endYear = 2028;
+  graduation_year_list = Array.from({ length: this.endYear - this.startYear + 1 }, (_, index) => this.endYear - index);
+
+  constructor(private dialog: MatDialog,
+              private dataService: DataService) {}
 
   ngOnInit(): void {
     this.initForms();
+    this.loadAllStaticData();
+    this.filteredEducationDegreeOptions = this.step2Form.get("education").valueChanges.pipe(
+      startWith(''),
+      map(value => {
+        const name = typeof value === 'string' ? value : value?.name;
+        return name ? this._filter(name as string, this.educationDegrees, 'name') : this.educationDegrees.slice();
+      }),
+    );
+
+    this.filteredJobRolesOptions = this.step2Form.get("job_role").valueChanges.pipe(
+      startWith(''),
+      map(value => {
+        const name = typeof value === 'string' ? value : value?.name;
+        return name ? this._filter(name as string, this.jobRoles, 'title') : this.jobRoles.slice();
+      }),
+    );
+
+    this.filteredCompaniesOptions = this.step2Form.get("company").valueChanges.pipe(
+      startWith(''),
+      map(value => {
+        const name = typeof value === 'string' ? value : value?.name;
+        return name ? this._filter(name as string, this.companies, null) : this.companies.slice();
+      }),
+    );
+  }
+
+  loadAllStaticData() {
+    forkJoin({
+      educationDegrees: this.dataService.getEducationDegrees(),
+      jobRoles: this.dataService.getJobRoles(),
+      companies: this.dataService.getCompanies(),
+    }).subscribe((res: any) => {
+      this.educationDegrees = res.educationDegrees;
+      this.jobRoles = res.jobRoles;
+      this.companies = res.companies['Companies'];
+    })
+  }
+
+  private _filter(name: string, allValues: any[], filterOn: string): any[] {
+    const filterValue = name.toLowerCase();
+
+    return allValues.filter(option =>  filterOn ? option[filterOn].toLowerCase().includes(filterValue) : option.toLowerCase().includes(filterValue));
   }
 
   initForms() {
     this.step1Form = new FormGroup({
       email: new FormControl(null, [Validators.required]),
-      mobile_number: new FormControl(null, [Validators.required]),
+      mobileNumber: new FormControl(null, [Validators.required]),
     });
 
     this.step2Form = new FormGroup({
@@ -50,6 +112,23 @@ export class ApplyDialogComponent implements OnInit {
       this.step2Form.get('job_domain').updateValueAndValidity();
       this.step2Form.get('job_role').updateValueAndValidity();
       this.step2Form.get('company').updateValueAndValidity();
+    }
+  }
+
+  submitBooking() {
+    if (this.step2Form.valid) {
+      const form1Value = this.step1Form.getRawValue();
+      const form2Value = this.step2Form.getRawValue();
+
+      const payload = {
+        ...form1Value,
+        ...form2Value
+      }
+
+      this.dataService.enquiry(payload).subscribe(res=> {
+        console.log(res);
+        this.dialog.closeAll();
+      })
     }
   }
 

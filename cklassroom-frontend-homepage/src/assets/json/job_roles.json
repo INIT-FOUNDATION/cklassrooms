@@ -1,0 +1,87 @@
+[
+      {
+        "title": "Software Developer",
+        "description": "Designs, develops, and maintains software applications.",
+        "skills": ["Programming languages (e.g., Java, Python, JavaScript)", "Problem-solving", "Version control systems (e.g., Git)", "Agile methodologies"]
+      },
+      {
+        "title": "Data Scientist",
+        "description": "Analyzes and interprets complex data to inform business decisions.",
+        "skills": ["Statistical analysis", "Machine learning algorithms", "Data visualization tools (e.g., Tableau, Matplotlib)", "SQL and NoSQL databases"]
+      },
+      {
+        "title": "Network Engineer",
+        "description": "Designs, implements, and manages computer networks.",
+        "skills": ["Network protocols (e.g., TCP/IP)", "Routing and switching", "Network security", "Troubleshooting"]
+      },
+      {
+        "title": "Systems Administrator",
+        "description": "Installs, configures, and maintains an organization's IT infrastructure.",
+        "skills": ["Operating systems (e.g., Linux, Windows Server)", "Virtualization technologies", "Scripting (e.g., Bash, PowerShell)", "Backup and recovery processes"]
+      },
+      {
+        "title": "Cybersecurity Analyst",
+        "description": "Protects computer systems and networks from security breaches and cyber attacks.",
+        "skills": ["Security protocols and standards", "Vulnerability assessment", "Intrusion detection systems", "Incident response procedures"]
+      },
+      {
+        "title": "UX/UI Designer",
+        "description": "Creates user-centric designs for digital products and interfaces.",
+        "skills": ["User research", "Wireframing and prototyping tools (e.g., Sketch, Adobe XD)", "Usability testing", "Graphic design principles"]
+      },
+      {
+        "title": "DevOps Engineer",
+        "description": "Automates and streamlines the deployment and operation of software systems.",
+        "skills": ["Continuous integration/continuous deployment (CI/CD)", "Containerization (e.g., Docker, Kubernetes)", "Infrastructure as code (e.g., Terraform, Ansible)", "Monitoring and logging tools"]
+      },
+      {
+        "title": "Cloud Solutions Architect",
+        "description": "Designs and implements cloud-based solutions for organizations.",
+        "skills": ["Cloud platforms (e.g., AWS, Azure, Google Cloud)", "Architectural design patterns", "Security best practices", "Cost optimization strategies"]
+      },
+        {
+        "title": "Account Executive",
+        "description": "Manages client accounts, builds relationships, and sells products or services.",
+        "skills": ["Sales skills", "Customer relationship management", "Negotiation", "Communication"]
+        },
+        {
+        "title": "Financial Analyst",
+        "description": "Analyzes financial data to provide insights and recommendations for decision-making.",
+        "skills": ["Financial modeling", "Data analysis", "Financial reporting", "Critical thinking"]
+        },
+        {
+        "title": "Human Resources Coordinator",
+        "description": "Assists with HR functions such as recruiting, onboarding, and employee relations.",
+        "skills": ["Recruitment processes", "Employee relations", "Organizational skills", "Attention to detail"]
+        },
+        {
+        "title": "Marketing Coordinator",
+        "description": "Supports marketing campaigns, coordinates events, and manages marketing materials.",
+        "skills": ["Marketing strategy", "Event planning", "Content creation", "Analytical skills"]
+        },
+        {
+        "title": "Operations Associate",
+        "description": "Supports day-to-day operations, manages projects, and ensures efficiency.",
+        "skills": ["Project management", "Process improvement", "Analytical skills", "Attention to detail"]
+        },
+        {
+        "title": "Sales Associate",
+        "description": "Assists customers, processes sales transactions, and maintains store appearance.",
+        "skills": ["Customer service", "Sales techniques", "Product knowledge", "Communication"]
+        },
+        {
+        "title": "Administrative Assistant",
+        "description": "Provides administrative support, manages schedules, and coordinates meetings.",
+        "skills": ["Organization", "Time management", "Communication", "Attention to detail"]
+        },
+        {
+        "title": "Financial Advisor",
+        "description": "Provides financial guidance and advice to clients on investments, retirement planning, etc.",
+        "skills": ["Financial planning", "Investment knowledge", "Client relationship management", "Communication"]
+        },
+        {
+        "title": "Management Trainee",
+        "description": "Receives training and development to prepare for leadership roles within an organization.",
+        "skills": ["Leadership potential", "Adaptability", "Problem-solving", "Teamwork"]
+        }
+    ]

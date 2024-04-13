@@ -1,4 +1,5 @@
 import Joi from "joi";
+import moment from "moment";
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -11,8 +12,9 @@ class EnquiryUser {
   graduation_year: string;
   working: string;
   job_domain: string;
-  job_title: string;
+  job_role: string;
   company: string;
+  date_created: string;
   constructor (enquiryObj : {
     crmId: string;
     email: string;
@@ -22,8 +24,9 @@ class EnquiryUser {
     graduation_year: string;
     working: string;
     job_domain: string;
-    job_title: string;
+    job_role: string;
     company: string;
+    date_created: string;
   }){
     this.crmId = uuidv4();
     this.email = enquiryObj.email;
@@ -33,8 +36,9 @@ class EnquiryUser {
     this.graduation_year = enquiryObj.graduation_year;
     this.working = enquiryObj.working;
     this.job_domain = enquiryObj.job_domain;
-    this.job_title = enquiryObj.job_title;
+    this.job_role = enquiryObj.job_role;
     this.company = enquiryObj.company;
+    this.date_created = moment().toISOString()
   }
 }
 
@@ -60,7 +64,7 @@ class ValidateEnquiryUser {
         then: Joi.string().required(),
         otherwise: Joi.string().allow('', null)
       }),
-      job_title: Joi.string().when('working', {
+      job_role: Joi.string().when('working', {
         is: 'yes',
         then: Joi.string().required(),
         otherwise: Joi.string().allow('', null)
@@ -70,6 +74,7 @@ class ValidateEnquiryUser {
         then: Joi.string().required(),
         otherwise: Joi.string().allow('', null)
       }),
+      date_created: Joi.string().required()
     });
     return schema.validate(enquiryObj);
   }

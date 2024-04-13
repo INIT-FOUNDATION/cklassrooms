@@ -58,3 +58,7 @@ body {
 button:focus-visible {
   outline: none;
 }
+
+.ng-invalid.ng-touched.ng-dirty {
+  border-color: red !important;
+}
