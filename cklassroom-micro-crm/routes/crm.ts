@@ -39,7 +39,13 @@ crmRouter.post("/enquiry", async(req: Request, res: Response) => {
       return res.status(STATUS.BAD_REQUEST).send({errorCode: "ERROR0002", error: ERRORCODE.ERROR0002})
     }
 
-    const response = await enrollStudent(enquiryUserObj);
+
+    const requestedDeviceInfo = getDeviceInfoHeaders(req);
+    const savePayload = {
+      ...enquiryUserObj,
+      ...requestedDeviceInfo
+    }
+    const response = await enrollStudent(savePayload);
     res.status(STATUS.OK).send(response);
   } catch (error) {
     logger.error("CRM :: enquiry :: ", error);
@@ -47,4 +53,20 @@ crmRouter.post("/enquiry", async(req: Request, res: Response) => {
   }
 });
 
+
+const getDeviceInfoHeaders = (req: Request) => {
+  const headers = req.headers;
+  const userDeviceInfo = {
+    "uo-device-type": headers["uo-device-type"],
+    "uo-os": headers["uo-os"],
+    "uo-os-version": headers["uo-os-version"],
+    "uo-is-mobile": headers["uo-is-mobile"],
+    "uo-is-tablet": headers["uo-is-tablet"],
+    "uo-is-desktop": headers["uo-is-desktop"],
+    "uo-browser-version": headers["uo-browser-version"],
+    "uo-browser": headers["uo-browser"],
+    "uo-client-ip": req.ip || req.ips,
+  };
+  return userDeviceInfo;
+};
 
