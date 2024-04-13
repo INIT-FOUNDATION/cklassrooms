@@ -9,7 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ApplyButtonComponent } from './components/apply-button/apply-button.component';
 import { ApplyDialogComponent } from './components/apply-dialog/apply-dialog.component';
 
-
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { ToastrModule } from 'ngx-toastr';
 
 /*------------------- MATERIAL COMPONENTS ------------------------*/
 import {MatDialogModule} from '@angular/material/dialog';
@@ -30,6 +31,7 @@ import { MobileNumberDirective } from './directives/mobile-number.directive';
 import { DndDirective } from './directives/dnd.directive';
 import { OtpNumberDirective } from './directives/otp-number.directive';
 import { IntegerInputDirective } from './directives/input-integer.directive';
+import { LoaderComponent } from './components/loader/loader.component';
 /*------------------- DIRECTIVES ------------------------*/
 
 const MY_FORMATS = {
@@ -44,7 +46,7 @@ const MY_FORMATS = {
   },
 };
 
-const export_components = [HeaderComponent, FooterComponent, ApplyButtonComponent, ApplyDialogComponent];
+const export_components = [HeaderComponent, FooterComponent, ApplyButtonComponent, ApplyDialogComponent, LoaderComponent];
 const export_directives = [
   RangeDirective,
   RangeLengthDirective,
@@ -67,18 +69,20 @@ const export_material_modules = [
   MatFormFieldModule,
   MatInputModule,
   MatSelectModule,
-  MatAutocompleteModule
+  MatAutocompleteModule,
+  NgxSpinnerModule
 ];
 
 @NgModule({
   declarations: [...export_components, ...export_directives],
-  imports: [...export_material_modules],
+  imports: [...export_material_modules, ToastrModule.forRoot()],
   exports: [
     FormsModule,
     ReactiveFormsModule,
     ...export_components,
     ...export_material_modules,
-    ...export_directives
+    ...export_directives,
+    ToastrModule
   ],
   providers: [{ provide: MAT_DATE_FORMATS, useValue: MY_FORMATS }],
 })

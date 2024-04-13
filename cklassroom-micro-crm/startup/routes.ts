@@ -1,6 +1,6 @@
 import express, { Request, Response, Express, NextFunction } from 'express';
 import bodyParser from 'body-parser';
-import { STATUS} from 'cklasroom-micro-common';
+import { STATUS} from 'cklassroom-micro-common';
 
 import { crmRouter } from '../routes/crm';
 import * as CONSTANT from '../constants/CONST';

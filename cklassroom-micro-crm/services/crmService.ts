@@ -1,19 +1,34 @@
-import { mongoDB, logger, nodemailerUtils, ejsUtils } from "cklasroom-micro-common";
+import { mongoDB, mongoDBRead, logger, nodemailerUtils, ejsUtils } from "cklassroom-micro-common";
 import { EnquiryUser } from "../model/enquiryUser";
 import { MONGO_COLLECTIONS } from "../constants/MONGO_COLLECTIONS";
 
 
+
+const getEntrollStudentByEmail = async(email: string) => {
+  return new Promise(async(resolve, reject) => {
+    try {
+      const enrollStudent = await mongoDBRead.findOne(MONGO_COLLECTIONS.CRM_ENQUIRY_USERS, {email});
+      resolve(enrollStudent);
+    } catch (error) {
+      logger.error(error);
+      reject(error);
+    }
+  })
+}
+
 const enrollStudent = async (enquiryObj: EnquiryUser) => {
-  try {
-    logger.info(`crmService :: enrollStudent :: enquiryObj :: ${JSON.stringify(enquiryObj)}`);
-    const data = await mongoDB.insertOne(MONGO_COLLECTIONS.CRM_ENQUIRY_USERS, enquiryObj);
-    sendEnquiryNotification(enquiryObj);
-    logger.info(`crmService :: enrollStudent :: enquiryObj :: ${JSON.stringify(enquiryObj)} :: after saving :: ${JSON.stringify(data)}`);
-    return data;
-  } catch (error) {
-    logger.error(error);
-    throw error;
-  }
+  return new Promise(async(resolve, reject) => {
+    try {
+      logger.info(`crmService :: enrollStudent :: enquiryObj :: ${JSON.stringify(enquiryObj)}`);
+      const data = await mongoDB.insertOne(MONGO_COLLECTIONS.CRM_ENQUIRY_USERS, enquiryObj);
+      await sendEnquiryNotification(enquiryObj);
+      logger.info(`crmService :: enrollStudent :: enquiryObj :: ${JSON.stringify(enquiryObj)} :: after saving :: ${JSON.stringify(data)}`);
+      resolve(data);
+    } catch (error) {
+      logger.error(error);
+      reject(error);
+    }
+  })
 }
 
 const sendEnquiryNotification = async (enquiryObj: EnquiryUser) => {
@@ -36,5 +51,6 @@ const sendEnquiryNotification = async (enquiryObj: EnquiryUser) => {
 }
 
 export {
-  enrollStudent
+  enrollStudent,
+  getEntrollStudentByEmail
 };

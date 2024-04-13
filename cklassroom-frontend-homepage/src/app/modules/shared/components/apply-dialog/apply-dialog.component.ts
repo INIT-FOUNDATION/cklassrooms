@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 // import * as companiesData from '../../../../../assets/json/companies.json';
 import { Observable, forkJoin, map, startWith } from 'rxjs';
 import { DataService } from '../../services/data.service';
+import { UtilityService } from '../../services/utility.service';
 
 @Component({
   selector: 'app-apply-dialog',
@@ -32,7 +33,8 @@ export class ApplyDialogComponent implements OnInit {
   graduation_year_list = Array.from({ length: this.endYear - this.startYear + 1 }, (_, index) => this.endYear - index);
 
   constructor(private dialog: MatDialog,
-              private dataService: DataService) {}
+              private dataService: DataService,
+              private utilityService: UtilityService) {}
 
   ngOnInit(): void {
     this.initForms();
@@ -126,7 +128,7 @@ export class ApplyDialogComponent implements OnInit {
       }
 
       this.dataService.enquiry(payload).subscribe(res=> {
-        console.log(res);
+        this.utilityService.showSuccessMessage("Request submitted successfully");
         this.dialog.closeAll();
       })
     }

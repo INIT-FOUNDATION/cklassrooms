@@ -19,6 +19,7 @@ export class ApplyButtonComponent implements OnInit {
       width: 'clamp(20rem, 60vw, 35rem)',
     });
   }
+  
 
   openGoogleForm() {
     window.open(

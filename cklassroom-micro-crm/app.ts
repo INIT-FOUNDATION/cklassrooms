@@ -4,7 +4,7 @@ import fileUpload from "express-fileupload";
 import dotenv from "dotenv";
 import routes from "./startup/routes";
 import * as CONSTANT from './constants/CONST';
-import { logger } from "cklasroom-micro-common";
+import { logger } from "cklassroom-micro-common";
 
 
 dotenv.config();
