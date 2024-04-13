@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { STATUS, redis, logger } from "cklasroom-micro-common";
+import { STATUS, redis, logger } from "cklassroom-micro-common";
 import { CACHE_TTL } from "../constants/CONST";
 import { ERRORCODE } from "../constants/ERRORCODE";
 import { enrollStudent } from "../services/crmService";

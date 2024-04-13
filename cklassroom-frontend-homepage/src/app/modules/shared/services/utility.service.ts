@@ -1,9 +1,22 @@
 import { Injectable } from "@angular/core";
+import { ToastrService } from "ngx-toastr";
 
 @Injectable({providedIn:'root'})
 export class UtilityService {
 
-  constructor() {
+  constructor(private toasterService: ToastrService) {
+  }
+
+  showSuccessMessage(msg) {
+    this.toasterService.success(msg);
+  }
+
+  showErrorMessage(msg) {
+    this.toasterService.error(msg);
+  }
+
+  showInfoMessage(msg) {
+    this.toasterService.info(msg);
   }
 
   b64toBlob = (b64Data, contentType='', sliceSize=512) => {

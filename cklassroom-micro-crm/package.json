@@ -19,7 +19,7 @@
   "dependencies": {
     "@types/express-fileupload": "^1.4.4",
     "axios": "^1.6.7",
-    "cklasroom-micro-common": "git+https://letslinkai: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@github.com/TechknowkraftAI/init-micro-commons.git",
+    "cklassroom-micro-common": "git+https://letslinkai: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@github.com/TechknowkraftAI/init-micro-commons.git",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "dotenv": "^16.4.2",
@@ -52,9 +52,9 @@
       "INIT_COMMON_NOSQL_USER": "",
       "INIT_COMMON_NOSQL_PASSWORD": "",
       "INIT_COMMON_LOG_LEVEL": "info",
-      "INIT_COMMON_NODEMAILER_USER": "narsimachilkuri@gmail.com",
-      "INIT_COMMON_NODEMAILER_PASSWORD": "fzba tbje djmj ijbt",
-      "CKLASSROOM_CRM_CC_EMAILS": "sud5868@gmail.com,narsimachilkuri237@gmail.com"
+      "INIT_COMMON_NODEMAILER_USER": "cklassrooms@gmail.com",
+      "INIT_COMMON_NODEMAILER_PASSWORD": "hcvm eshg szom pcfq",
+      "CKLASSROOM_CRM_CC_EMAILS": "sud5868@gmail.com,rmchalukya@gmail.com"
     }
   }
 }

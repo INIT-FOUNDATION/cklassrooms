@@ -92,18 +92,20 @@
         <td>Working</td>
         <td><%= working %></td>
       </tr>
-      <tr>
-        <td>Job Domain</td>
-        <td><%= job_domain %></td>
-      </tr>
-      <tr>
-        <td>Job Title</td>
-        <td><%= job_title %></td>
-      </tr>
-      <tr>
-        <td>Company</td>
-        <td><%= company %></td>
-      </tr>
+      <% if (working === 'yes') { %>
+        <tr>
+          <td>Job Domain</td>
+          <td><%= job_domain %></td>
+        </tr>
+        <tr>
+          <td>Job Title</td>
+          <td><%= job_role %></td>
+        </tr>
+        <tr>
+          <td>Company</td>
+          <td><%= company %></td>
+        </tr>
+      <% } %>  
     </table>
   </div>
 
