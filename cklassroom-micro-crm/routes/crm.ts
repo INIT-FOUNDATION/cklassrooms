@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import { STATUS, redis, logger } from "cklassroom-micro-common";
 import { CACHE_TTL } from "../constants/CONST";
 import { ERRORCODE } from "../constants/ERRORCODE";
-import { enrollStudent } from "../services/crmService";
+import { enrollStudent, getEntrollStudentByEmail } from "../services/crmService";
 import moment from "moment";
 import { EnquiryUser, ValidateEnquiryUser } from '../model/enquiryUser';
 
@@ -31,6 +31,14 @@ crmRouter.post("/enquiry", async(req: Request, res: Response) => {
         return res.status(STATUS.BAD_REQUEST).send(error.details[0].message);
       else return res.status(STATUS.BAD_REQUEST).send(error.message);
     }
+
+
+    const existingEnrollStudent = await getEntrollStudentByEmail(enquiryUserObj.email);
+
+    if (existingEnrollStudent) {
+      return res.status(STATUS.BAD_REQUEST).send({errorCode: "ERROR0002", error: ERRORCODE.ERROR0002})
+    }
+
     const response = await enrollStudent(enquiryUserObj);
     res.status(STATUS.OK).send(response);
   } catch (error) {
