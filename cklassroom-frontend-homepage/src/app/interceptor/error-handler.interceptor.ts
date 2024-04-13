@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
 import { Router, NavigationExtras } from '@angular/router';
 import { ErrorCodes } from './error-codes.module';
 import { MatDialog } from '@angular/material/dialog';
+import { UtilityService } from '../modules/shared/services/utility.service';
 
 
 /**
@@ -19,7 +20,8 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
   constructor(
     private router: Router,
     private appPreferences: AppPreferencesService,
-    private dialog:  MatDialog
+    private dialog:  MatDialog,
+    private utilityService: UtilityService
     ) {
   }
 
@@ -82,27 +84,27 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
                     // this.authService.userId = userId;
                     this.router.navigate(['/login/updatepassword']);
                   } else if (errmsg.errorCode === 'USRAUT0005') {
-                    // this.toastr.error(errmsg.error, 'Error');
+                    this.utilityService.showErrorMessage(errmsg.error);
                     setTimeout(() => {
                       this.router.navigate(['/login/forget']);
                     }, 100);
                   } else if (errmsg.errorCode === 'USRAUT0006') {
                     const userId = errmsg.userId;
                     // this.authService.userId = userId;
-                    // this.toastr.error(errmsg.error, 'Error');
+                    this.utilityService.showErrorMessage(errmsg.error);
                     setTimeout(() => {
                       this.router.navigate(['/login/updatepassword']);
                     }, 100);
                   } else if (errmsg.errorCode === 'USRAUT0006' || errmsg.errorCode === 'USRAUT0007') {
                     const userId = errmsg.userId;
                     // this.authService.userId = userId;
-                    // this.toastr.error(errmsg.error, 'Error');
+                    this.utilityService.showErrorMessage(errmsg.error);
                     setTimeout(() => {
                       this.router.navigate(['/login/updatepassword']);
                     }, 100);
                   }
                 } else if (errmsg.errorCode == 'CONFIG0001') {
-                  // this.toastr.error(errmsg.error, 'Error');
+                  this.utilityService.showErrorMessage(errmsg.error);
 
                   // this.openPopupForConfig(errmsg.user_name)
                 } else {
@@ -110,16 +112,16 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
                     let errorCode: any = errmsg.errorCode;
                     const errorMessage: any = ErrorCodes[errorCode];
                     if (errorMessage) {
-                      // this.toastr.error(errorMessage, 'Error');
+                      this.utilityService.showErrorMessage(errorMessage);
                     } else {
-                      // this.toastr.error(errmsg.error, 'Error');
+                      this.utilityService.showErrorMessage(errmsg.error);
                     }
                   } else {
-                    // this.toastr.error(response.error, 'Error');
+                    this.utilityService.showErrorMessage(response.error);
                   }
                 }
               } else {
-                // this.toastr.error(response.error, 'Error');
+                this.utilityService.showErrorMessage(response.error);
               }
             } else if (response.error.errorCode) {
               if (response.error.errorCode === 'MEET000117') {
@@ -129,29 +131,29 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
                 };
                 this.router.navigate(['/waiting'], navigationExtras);
               }else if (response.error.errorCode === 'MEET000124') {
-                // this.toastr.error(response.error.error, 'Error');
+                this.utilityService.showErrorMessage(response.error.error);
               }else if (response.error.errorCode !== 'ADMROL0002') {
-                // this.toastr.error(`${response.error.error}`, 'Error');
+                this.utilityService.showErrorMessage(`${response.error.error}`);
               }
 
             } else {
               try{
-                // this.toastr.error(response.error.message, 'Error');
+                this.utilityService.showErrorMessage(response.error.message);
               } catch (e) {
                 console.error('Error!!! ', e);
               }
             }
           } else {
-            // this.toastr.error(response.error, 'Error');
+            this.utilityService.showErrorMessage(response.error);
           }
 
           break;
         case 0:
           if (window.navigator.onLine){
-            // this.toastr.error('Something went wrong. Please try again!', 'Error');
+            this.utilityService.showErrorMessage('Something went wrong. Please try again!');
             break;
           } else if (!window.navigator.onLine) {
-            // this.toastr.error('Something went wrong. Please try again!', 'Error');
+            this.utilityService.showErrorMessage('Something went wrong. Please try again!');
             break;
           }
           else {

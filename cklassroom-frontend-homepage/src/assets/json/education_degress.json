@@ -1,0 +1,110 @@
+[
+    {
+      "name": "Bachelor of Arts (BA)",
+      "level": "Undergraduate",
+      "field": "Arts/Humanities",
+      "duration": "3 years"
+    },
+    {
+      "name": "Bachelor of Science (BSc)",
+      "level": "Undergraduate",
+      "field": "Science",
+      "duration": "3 years"
+    },
+    {
+      "name": "Bachelor of Commerce (BCom)",
+      "level": "Undergraduate",
+      "field": "Commerce",
+      "duration": "3 years"
+    },
+    {
+      "name": "Bachelor of Engineering (BE)",
+      "level": "Undergraduate",
+      "field": "Engineering",
+      "duration": "4 years"
+    },
+    {
+      "name": "Bachelor of Technology (BTech)",
+      "level": "Undergraduate",
+      "field": "Technology/Engineering",
+      "duration": "4 years"
+    },
+    {
+      "name": "Bachelor of Business Administration (BBA)",
+      "level": "Undergraduate",
+      "field": "Business Administration/Management",
+      "duration": "3 years"
+    },
+    {
+      "name": "Bachelor of Computer Applications (BCA)",
+      "level": "Undergraduate",
+      "field": "Computer Applications",
+      "duration": "3 years"
+    },
+    {
+      "name": "Bachelor of Architecture (BArch)",
+      "level": "Undergraduate",
+      "field": "Architecture",
+      "duration": "5 years"
+    },
+    {
+      "name": "Bachelor of Pharmacy (BPharm)",
+      "level": "Undergraduate",
+      "field": "Pharmacy",
+      "duration": "4 years"
+    },
+    {
+      "name": "Bachelor of Dental Surgery (BDS)",
+      "level": "Undergraduate",
+      "field": "Dental Surgery",
+      "duration": "5 years"
+    },
+    {
+      "name": "Doctor of Medicine (MD)",
+      "level": "Postgraduate",
+      "field": "Medicine",
+      "duration": "3 years"
+    },
+    {
+      "name": "Master of Business Administration (MBA)",
+      "level": "Postgraduate",
+      "field": "Business Administration/Management",
+      "duration": "2 years"
+    },
+    {
+      "name": "Master of Science (MSc)",
+      "level": "Postgraduate",
+      "field": "Science",
+      "duration": "2 years"
+    },
+    {
+      "name": "Master of Technology (MTech)",
+      "level": "Postgraduate",
+      "field": "Technology/Engineering",
+      "duration": "2 years"
+    },
+    {
+      "name": "Master of Arts (MA)",
+      "level": "Postgraduate",
+      "field": "Arts/Humanities",
+      "duration": "2 years"
+    },
+    {
+      "name": "Master of Computer Applications (MCA)",
+      "level": "Postgraduate",
+      "field": "Computer Applications",
+      "duration": "3 years"
+    },
+    {
+      "name": "Master of Pharmacy (MPharm)",
+      "level": "Postgraduate",
+      "field": "Pharmacy",
+      "duration": "2 years"
+    },
+    {
+      "name": "Doctor of Philosophy (PhD)",
+      "level": "Doctoral",
+      "field": "Various",
+      "duration": "3-5 years"
+    }
+  ]

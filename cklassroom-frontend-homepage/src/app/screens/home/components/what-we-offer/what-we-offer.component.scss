@@ -1,18 +1,7 @@
 @import "../../../../../theme/color";
 
-.header-text:after {
-  margin-left: 12rem;
-}
-
-.more-offering-card {
-  border-color: $themeBoxShadow;
-}
-
-.more-offering-card:hover {
-  box-shadow: 0 8px 8px 0 $themeHoverBoxShadow;
-}
-
 .bg-gray-cards {
-  background-color: $themeGray;
+  background-color: $themeBoxShadow;
   color: $themeFontColor;
+  border: 1px solid var(--themeHoverBoxShadow);
 }

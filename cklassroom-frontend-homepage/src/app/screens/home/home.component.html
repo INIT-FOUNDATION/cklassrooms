@@ -4,7 +4,7 @@
   >
     <div class="mt-8 md:mt-0">
       <div
-        class="sm:text-3xl md:text-4xl font-bold animate__animated animate__fadeInUp"
+        class="text-xl xl:text-4xl font-bold animate__animated animate__fadeInUp"
         style="animation-duration: 0.8s"
       >
         <div class="mb-2">I'm Chalukya Mohanraj(CK),</div>
@@ -29,6 +29,23 @@
         CKlassrooms is a initiative led by Chalukya Mohanraj and his dedicated
         team, aimed at empowering new comers with cutting-edge knowledge to
         excel in their areas.
+
+        <div class="my-4">
+          <a href="https://github.com/rmchalukya" target="_blank">
+            <i
+              class="fa-brands fa-github text-2xl hover:scale-125 duration-200 me-5"
+            ></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/chalukya-mohanraj/"
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-linkedin text-2xl hover:scale-125 duration-200"
+            ></i>
+          </a>
+        </div>
+        <app-apply-button additionalClasses="px-5 py-3"></app-apply-button>
       </div>
     </div>
 
@@ -44,14 +61,57 @@
   </div>
 
   <app-testimonial></app-testimonial>
+
+  <app-job-placements></app-job-placements>
+
+  <div class="flex flex-col md:flex-row justify-center items-center">
+    <app-apply-button additionalClasses="py-5 w-80"></app-apply-button>
+  </div>
+
   <app-what-we-offer></app-what-we-offer>
-  <div class="">
+
+  <div class="flex flex-col md:flex-row justify-center items-center">
+    <button
+      type="button"
+      class="text-green border-green rounded-lg py-5 w-80 mb-3 md:mb-0 font-medium md:mr-4"
+      (click)="scrollToTarget('courses')"
+    >
+      Check the courses
+    </button>
+    <app-apply-button additionalClasses="py-5 w-80"></app-apply-button>
+  </div>
+
+  <app-placement-support></app-placement-support>
+
+  <div class="flex flex-col md:flex-row justify-center items-center">
+    <app-apply-button additionalClasses="py-5 w-80"></app-apply-button>
+  </div>
+
+  
+  <app-courses></app-courses>
+  
+  <div class="my-8 md:my-40">
     <img
       class="w-full h-full"
       src="assets/images/sixMonthsPhase/{{ learningPhaseImg }}.svg"
       alt=""
     />
   </div>
-  <app-courses></app-courses>
+
+  <div class="flex flex-col md:flex-row justify-center items-center">
+    <button
+      type="button"
+      class="text-green border-green rounded-lg py-5 w-80 mb-3 md:mb-0 font-medium md:mr-4"
+      (click)="scrollToTarget('jobPlacement')"
+    >
+      What we ensure?
+    </button>
+    <app-apply-button additionalClasses="py-5 w-80"></app-apply-button>
+  </div>
+
   <app-exprts-team></app-exprts-team>
+
+  <div class="flex flex-col md:flex-row justify-center items-center">
+    <app-apply-button additionalClasses="py-5 w-80"></app-apply-button>
+  </div>
 </div>

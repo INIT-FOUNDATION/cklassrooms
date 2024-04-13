@@ -1,0 +1,35 @@
+<div class="my-8 md:my-40" id="jobPlacement">
+  <div class="md:text-xl text-center font-medium text-green">
+    On Job Training/Placement Program
+  </div>
+
+  <div class="text-xl md:text-4xl text-center my-3 font-semibold">
+    For Freshers
+  </div>
+  <div class="text-sm md:text-base md:mx-10 lg:mx-40 xl:mx-60 text-center">
+    Mastering in-demand technologies directly from the
+    <a
+      href="https://www.cowin.gov.in/"
+      target="_blank"
+      class="text-green font-medium"
+      >CoWIN</a
+    >
+    core Technical Team, learn building world class large scale applications
+  </div>
+  <div
+    class="mt-5 lg:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+  >
+    <div
+      *ngFor="let item of jobPlacements"
+      [id]="item?.id"
+      class="hover-card rounded-3xl p-5"
+    >
+      <img
+        src="assets/images/whatWeOffer/{{ item?.img }}.svg"
+        class="w-20 h-20"
+      />
+      <div class="font-medium mt-3 text-base">{{ item?.label }}</div>
+      <span class="text-sm">{{ item?.description }}</span>
+    </div>
+  </div>
+</div>

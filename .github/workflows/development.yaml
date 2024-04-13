@@ -6,6 +6,9 @@ on:
       cklassroom-frontend-homepage:
         type: boolean
         required: false
+      cklassroom-micro-crm:
+        type: boolean
+        required: false
 
 jobs:
   build-and-push:

@@ -1,0 +1,186 @@
+<div
+  class="text-center text-lg md:text-2xl font-semibold text-header flex items-center justify-between pb-4"
+>
+  Book your free assessment
+
+  <div class="cursor-pointer" (click)="closeModal()">
+    <i class="fa-solid fa-xmark" style="color: '#1b1f24'"></i>
+  </div>
+</div>
+
+<mat-dialog-content class="rounded-2xl">
+  <ng-container
+    *ngTemplateOutlet="screenTemplate; context: { activeScreen: activeScreen }"
+  ></ng-container>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <ng-container *ngIf="activeScreen === 'step1'">
+    <div class="flex justify-end w-full mb-3">
+      <button
+        mat-raised-button
+        class="btn-green text-white rounded-lg px-8 py-3 font-medium cursor-pointer"
+        (click)="changeScreen('step2')"
+        [disabled]="!step1Form.valid"
+        type="button"
+      >
+        Next
+      </button>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="activeScreen === 'step2'">
+    <div
+      class="flex flex-col md:flex-row justify-center md:justify-end w-full mb-3"
+    >
+      <button
+        mat-raised-button
+        class="btn-back text-green rounded-lg px-5 mr-3 mb-3 md:mb-0 py-3 font-medium cursor-pointer"
+        (click)="changeScreen('step1')"
+        type="button"
+      >
+        Go Back
+      </button>
+      <button
+        mat-raised-button
+        class="btn-green text-white rounded-lg px-3 lg:px-8 py-3 font-medium cursor-pointer"
+        (click)="submitBooking()"
+        [disabled]="!step2Form.valid"
+        type="button"
+      >
+        Book your free assessment
+      </button>
+    </div>
+  </ng-container>
+</mat-dialog-actions>
+
+<ng-template #screenTemplate>
+  <ng-container [ngSwitch]="activeScreen">
+    <form class="example-form" *ngSwitchCase="'step1'" [formGroup]="step1Form">
+      <mat-form-field class="example-full-width w-full" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="Email"
+          type="email"
+          formControlName="email"
+          appInputChar="email"
+        />
+        <mat-icon class="text-green" matSuffix>email</mat-icon>
+        <mat-error *ngIf="step1Form.get('email').dirty && step1Form.get('email').invalid">Email is invalid</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width w-full" appearance="outline">
+        <mat-label>Mobile Number</mat-label>
+        <input
+          maxlength="10"
+          matInput
+          placeholder="Mobile Number"
+          type="tel"
+          formControlName="mobileNumber"
+          appIntegerInput
+          appMobileNumber="true"
+          [appMin]="6000000000"
+          [appMax]="9999999999"
+          [appRange]="[6000000000, 9999999999]"
+        />
+        <mat-icon class="text-green" matSuffix>phone</mat-icon>
+        <mat-error *ngIf="step1Form.get('mobileNumber').dirty && step1Form.get('mobileNumber').invalid">Mobile number is invalid</mat-error>
+      </mat-form-field>
+    </form>
+
+    <form class="example-form" *ngSwitchCase="'step2'" [formGroup]="step2Form">
+      <mat-form-field class="example-full-width w-full" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" type="text" formControlName="name" appInputChar="username" [appRangeLength]="[3,100]" appInputTrim/>
+        <mat-error *ngIf="step2Form.get('name').dirty && step2Form.get('name').invalid">Name is invalid</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width w-full" appearance="outline">
+        <mat-label>Education Qualification (Eg. BTech)</mat-label>
+        <input
+          matInput
+          placeholder="Education Qualification (Eg. BTech)"
+          type="text"
+          formControlName="education"
+          [matAutocomplete]="autoEducationDegrees"
+          appInputChar="street"
+          [appRangeLength]="[3,100]" appInputTrim
+        />
+        <mat-autocomplete #autoEducationDegrees="matAutocomplete">
+          <mat-option *ngFor="let option of (filteredEducationDegreeOptions | async)" [value]="option.name">{{option.name}}</mat-option>
+        </mat-autocomplete>
+        <mat-error *ngIf="step2Form.get('education').dirty && step2Form.get('education').invalid">Education Qualification is invalid</mat-error>
+      </mat-form-field>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Graduation Year</mat-label>
+          <mat-select formControlName="graduation_year">
+            <mat-option *ngFor="let year of graduation_year_list" [value]="year">{{year}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="step2Form.get('graduation_year').dirty && step2Form.get('graduation_year').invalid">Please select graduation year</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width w-full" appearance="outline">
+          <mat-label>Are you working?</mat-label>
+          <mat-select
+            formControlName="working"
+            (selectionChange)="onDropDownChange('working')"
+          >
+            <mat-option value="yes">Yes</mat-option>
+            <mat-option value="no">No</mat-option>
+          </mat-select>
+          <mat-error *ngIf="step2Form.get('working').dirty && step2Form.get('working').invalid">Please select Are you working</mat-error>
+        </mat-form-field>
+      </div>
+
+      <ng-container *ngIf="step2Form.get('working').value === 'yes'">
+        <mat-form-field class="example-full-width w-full" appearance="outline">
+          <mat-label>Job Domain</mat-label>
+          <mat-select formControlName="job_domain">
+            <mat-option value="tech">Tech</mat-option>
+            <mat-option value="non-tech">Non-Tech</mat-option>
+          </mat-select>
+          <mat-error *ngIf="step2Form.get('job_domain').dirty && step2Form.get('job_domain').invalid">Please select Job Domain</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width w-full" appearance="outline">
+          <mat-label>Job Role</mat-label>
+          <input
+            matInput
+            placeholder="Job Role"
+            type="text"
+            formControlName="job_role"
+            [matAutocomplete]="autoJobRoles"
+            appInputTrim
+            appInputChar="street"
+            [appRangeLength]="[3,100]"
+          />
+          <mat-autocomplete #autoJobRoles="matAutocomplete">
+            <mat-option *ngFor="let option of (filteredJobRolesOptions | async)" [value]="option.title">{{option.title}}</mat-option>
+          </mat-autocomplete>
+          <mat-error *ngIf="step2Form.get('job_role').dirty && step2Form.get('job_role').invalid">Job role is invalid</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width w-full" appearance="outline">
+          <mat-label>Company</mat-label>
+          <input
+            matInput
+            placeholder="Company"
+            type="text"
+            formControlName="company"
+            [matAutocomplete]="autoCompanies"
+            appInputChar="street"
+            appInputTrim
+            [appRangeLength]="[3,100]"
+          />
+          <mat-autocomplete #autoCompanies="matAutocomplete">
+            <mat-option *ngFor="let option of (filteredCompaniesOptions | async);" [value]="option">{{option}}</mat-option>
+          </mat-autocomplete>
+          <mat-error *ngIf="step2Form.get('company').dirty && step2Form.get('company').invalid">Company name is invalid</mat-error>
+        </mat-form-field>
+      </ng-container>
+    </form>
+  </ng-container>
+</ng-template>
