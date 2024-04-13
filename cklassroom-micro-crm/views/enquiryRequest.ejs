@@ -1,111 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Response to Your Inquiry</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 600px;
-      margin: 20px auto;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    p {
-      color: #555;
-      line-height: 1.6;
-    }
-    ul {
-      color: #555;
-      margin-left: 20px;
-    }
-    li {
-      margin-bottom: 5px;
-    }
-    .signature {
-      margin-top: 20px;
-      font-style: italic;
-    }
-    .enquiry-image {
-      text-align: center;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Response to Your Inquiry</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      p {
+        color: #555;
+        line-height: 1.6;
+      }
+      ul {
+        color: #555;
+        margin-left: 20px;
+      }
+      li {
+        margin-bottom: 5px;
+      }
+      .signature {
+        margin-top: 20px;
+        font-style: italic;
+      }
+      .enquiry-image {
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cklassrooms</h1>
+      <div class="enquiry-image">
+        <img
+          src="https://kineticsoftware.com/wp-content/uploads/2019/08/support-copy.png"
+          alt="Enquiry Image"
+          style="max-width: 100%"
+        />
+      </div>
+      <p>Dear Cklassrooms,</p>
 
-  <div class="container">
-    <h1>Cklassrooms</h1>
-    <div class="enquiry-image">
-      <img src="https://kineticsoftware.com/wp-content/uploads/2019/08/support-copy.png" alt="Enquiry Image" style="max-width: 100%;">
+      <p>Enquiry Received from <%= name %> with below details</p>
+
+      <table>
+        <tr>
+          <td>Email</td>
+          <td><%= email %></td>
+        </tr>
+        <tr>
+          <td>Mobile Number</td>
+          <td><%= mobileNumber %></td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td><%= name %></td>
+        </tr>
+        <tr>
+          <td>Education</td>
+          <td><%= education %></td>
+        </tr>
+        <tr>
+          <td>Graduation Year</td>
+          <td><%= graduation_year %></td>
+        </tr>
+        <tr>
+          <td>Working</td>
+          <td><%= working %></td>
+        </tr>
+        <tr>
+          <td>Job Domain</td>
+          <td><%= job_domain %></td>
+        </tr>
+        <tr>
+          <td>Job Title</td>
+          <td><%= job_role %></td>
+        </tr>
+        <tr>
+          <td>Company</td>
+          <td><%= company %></td>
+        </tr>
+      </table>
     </div>
-    <p>Dear Cklassrooms,</p>
-    
-    <p>Enquiry Received from <%= name %> with below details</p>
-
-    <table>
-      <tr>
-        <td>Email</td>
-        <td><%= email %></td>
-      </tr>
-      <tr>
-        <td>Mobile Number</td>
-        <td><%= mobileNumber %></td>
-      </tr>
-      <tr>
-        <td>Name</td>
-        <td><%= name %></td>
-      </tr>
-      <tr>
-        <td>Education</td>
-        <td><%= education %></td>
-      </tr>
-      <tr>
-        <td>Graduation Year</td>
-        <td><%= graduation_year %></td>
-      </tr>
-      <tr>
-        <td>Working</td>
-        <td><%= working %></td>
-      </tr>
-      <tr>
-        <td>Job Domain</td>
-        <td><%= job_domain %></td>
-      </tr>
-      <tr>
-        <td>Job Title</td>
-        <td><%= job_title %></td>
-      </tr>
-      <tr>
-        <td>Company</td>
-        <td><%= company %></td>
-      </tr>
-    </table>
-  </div>
-
-</body>
+  </body>
 </html>
