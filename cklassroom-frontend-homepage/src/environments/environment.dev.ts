@@ -1,5 +1,5 @@
-const BASE_URL = 'https://apidev.cklassrooms.com';
-const DIRECT_BASE_URL = 'https://apidev.cklassrooms.com';
+const BASE_URL = 'https://api.dev.cklassrooms.com';
+const DIRECT_BASE_URL = 'https://api.dev.cklassrooms.com';
 const API_CRM_PORT = ``;
 
 export const environment = {
