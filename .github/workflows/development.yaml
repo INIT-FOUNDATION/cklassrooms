@@ -63,7 +63,7 @@ jobs:
 
       - name: Build and Push Backend Services
         env:
-          COMMON_SERVICE_NAME: lss-micro-common
+          COMMON_SERVICE_NAME: cklassroom-micro-common
         run: |
           IFS=',' read -ra services <<< "${{ steps.micro-services.outputs.backend }}"
 

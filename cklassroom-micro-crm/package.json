@@ -19,7 +19,7 @@
   "dependencies": {
     "@types/express-fileupload": "^1.4.4",
     "axios": "^1.6.7",
-    "cklasroom-micro-common": "git+https://letslinkai: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@github.com/TechknowkraftAI/init-micro-commons.git#v1.0.7",
+    "cklassroom-micro-common": "git+https://letslinkai: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@github.com/TechknowkraftAI/init-micro-commons.git#v1.0.7",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "dotenv": "^16.4.2",
