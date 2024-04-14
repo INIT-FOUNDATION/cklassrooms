@@ -83,13 +83,6 @@ jobs:
               }
             ' package.json > package-temp.json && mv package-temp.json package.json
 
-            if grep -q "$COMMON_SERVICE_NAME" "package.json"; then
-              jq --arg common "$COMMON_SERVICE_NAME" '
-                .dependencies[$common] = "./\($common)"
-              ' package.json > package-temp.json && mv package-temp.json package.json
-              rm -rf $COMMON_SERVICE_NAME; cp -a ../$COMMON_SERVICE_NAME .
-            fi
-
             docker_registry_name=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
             short_sha=$(git rev-parse --short ${{ github.sha }})
             branch_name=$(echo "${{ github.ref }}" | sed 's|refs/heads/||' | sed 's|[/_]|-|g')
