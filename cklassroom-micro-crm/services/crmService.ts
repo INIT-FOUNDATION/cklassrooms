@@ -16,7 +16,7 @@ const getEntrollStudentByEmail = async(email: string) => {
   })
 }
 
-const enrollStudent = async (enquiryObj: EnquiryUser) => {
+const enrollStudent = async (enquiryObj: any) => {
   return new Promise(async(resolve, reject) => {
     try {
       logger.info(`crmService :: enrollStudent :: enquiryObj :: ${JSON.stringify(enquiryObj)}`);
