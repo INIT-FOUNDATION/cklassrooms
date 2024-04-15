@@ -1,101 +1,102 @@
 {
-    "meta": {
-      "name": "HTML, CSS, and JavaScript Roadmap",
-      "author": "Sudhirkumarrao Allada",
-      "version": "1.0"
-    },
-    "format": "node_tree",
-    "data": {
-      "id": "root",
-      "background-image":"assets/images/courses/htmlCssJs.svg","width":"100","height":"100",
-      "expanded": true,
-      "children": [
-        {
-          "id": "html",
-          "topic": "HTML",
-          "expanded": false,
-          "children": [
-            {
-              "id": "html1",
-              "topic": "Introduction to HTML"
-            },
-            {
-              "id": "html2",
-              "topic": "HTML Elements and Tags"
-            },
-            {
-              "id": "html3",
-              "topic": "Semantic HTML"
-            },
-            {
-              "id": "html4",
-              "topic": "HTML Forms"
-            }
-          ]
-        },
-        {
-          "id": "css",
-          "topic": "CSS",
-          "expanded": false,
-          "children": [
-            {
-              "id": "css1",
-              "topic": "Introduction to CSS"
-            },
-            {
-              "id": "css2",
-              "topic": "CSS Selectors and Properties"
-            },
-            {
-              "id": "css3",
-              "topic": "CSS Box Model"
-            },
-            {
-              "id": "css4",
-              "topic": "CSS Flexbox and Grid Layout"
-            },
-            {
-              "id": "css5",
-              "topic": "Responsive Web Design"
-            }
-          ]
-        },
-        {
-          "id": "js",
-          "topic": "JavaScript",
-          "expanded": false,
-          "children": [
-            {
-              "id": "js1",
-              "topic": "Introduction to JavaScript"
-            },
-            {
-              "id": "js2",
-              "topic": "Variables and Data Types"
-            },
-            {
-              "id": "js3",
-              "topic": "Functions and Scope"
-            },
-            {
-              "id": "js4",
-              "topic": "DOM Manipulation"
-            },
-            {
-              "id": "js5",
-              "topic": "Event Handling"
-            },
-            {
-              "id": "js6",
-              "topic": "AJAX and Fetch API"
-            },
-            {
-              "id": "js7",
-              "topic": "ES6+ Features"
-            }
-          ]
-        }
-      ]
-    }
+  "meta": {
+    "name": "HTML, CSS, and JavaScript Roadmap",
+    "author": "Sudhirkumarrao Allada",
+    "version": "1.0"
+  },
+  "format": "node_tree",
+  "data": {
+    "id": "root",
+    "background-image": "assets/images/courses/htmlCssJs.svg",
+    "width": "100",
+    "height": "100",
+    "expanded": true,
+    "children": [
+      {
+        "id": "html",
+        "topic": "HTML",
+        "expanded": false,
+        "children": [
+          {
+            "id": "html1",
+            "topic": "Introduction to HTML"
+          },
+          {
+            "id": "html2",
+            "topic": "HTML Elements and Tags"
+          },
+          {
+            "id": "html3",
+            "topic": "Semantic HTML"
+          },
+          {
+            "id": "html4",
+            "topic": "HTML Forms"
+          }
+        ]
+      },
+      {
+        "id": "css",
+        "topic": "CSS",
+        "expanded": false,
+        "children": [
+          {
+            "id": "css1",
+            "topic": "Introduction to CSS"
+          },
+          {
+            "id": "css2",
+            "topic": "CSS Selectors and Properties"
+          },
+          {
+            "id": "css3",
+            "topic": "CSS Box Model"
+          },
+          {
+            "id": "css4",
+            "topic": "CSS Flexbox and Grid Layout"
+          },
+          {
+            "id": "css5",
+            "topic": "Responsive Web Design"
+          }
+        ]
+      },
+      {
+        "id": "js",
+        "topic": "JavaScript",
+        "expanded": false,
+        "children": [
+          {
+            "id": "js1",
+            "topic": "Introduction to JavaScript"
+          },
+          {
+            "id": "js2",
+            "topic": "Variables and Data Types"
+          },
+          {
+            "id": "js3",
+            "topic": "Functions and Scope"
+          },
+          {
+            "id": "js4",
+            "topic": "DOM Manipulation"
+          },
+          {
+            "id": "js5",
+            "topic": "Event Handling"
+          },
+          {
+            "id": "js6",
+            "topic": "AJAX and Fetch API"
+          },
+          {
+            "id": "js7",
+            "topic": "ES6+ Features"
+          }
+        ]
+      }
+    ]
   }
-  
+}
