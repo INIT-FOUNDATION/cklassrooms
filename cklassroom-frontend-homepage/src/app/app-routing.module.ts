@@ -9,6 +9,12 @@ const routes: Routes = [
       import('./screens/home/home.module').then((m) => m.HomeModule),
     canActivate: [AuthGuard],
   },
+
+  {
+    path: 'course-details',
+    loadChildren: () => import('./screens/course-details/course-details.module').then((m) => m.CourseDetailsModule),
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

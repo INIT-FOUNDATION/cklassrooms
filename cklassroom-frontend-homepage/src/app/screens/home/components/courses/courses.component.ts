@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TweenMax } from 'gsap';
 
 @Component({
@@ -7,7 +8,8 @@ import { TweenMax } from 'gsap';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements AfterViewInit {
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef,
+              private router: Router) {}
 
   getCourseList: any = [
     {
@@ -182,5 +184,9 @@ export class CoursesComponent implements AfterViewInit {
       default:
         return '';
     }
+  }
+
+  openCourseDetailsPage(courseName) {
+    this.router.navigate([`/course-details/${courseName}`]);
   }
 }
