@@ -11,6 +11,7 @@ declare var jsMind: any;
 })
 export class CourseDetailsComponent implements OnInit, AfterViewInit {
   courseName = '';
+  mindMapJson: any = {}
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -26,8 +27,8 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
     }, 100);
   }
 
-  async ngAfterViewInit() {
-    const mindMapData = await this.dataService
+  async ngAfterViewInit() {debugger
+    this.mindMapJson = await this.dataService
       .loadMindMapData(this.courseName)
       .toPromise();
     const options = {
@@ -37,6 +38,13 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
       theme: 'greensea', // [required] theme
     };
     const jm = new jsMind(options);
-    jm.show(mindMapData);
+    jm.show(this.mindMapJson.mindMapData);
+  }
+
+  downloadPdf() {
+    const anchor = document.createElement('a');
+    anchor.href = this.mindMapJson.additionalData.pdfUrl;
+    anchor.download = this.mindMapJson.additionalData.pdfName; // Name of the downloaded file
+    anchor.click();
   }
 }

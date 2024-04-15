@@ -1,276 +1,282 @@
 {
-    "meta": {
-        "name": "Angular Roadmap",
-        "author": "Sudhirkumarrao Allada",
-        "version": "0.1"
+    "mindMapData": {
+        "meta": {
+            "name": "Angular Roadmap",
+            "author": "Sudhirkumarrao Allada",
+            "version": "0.1"
+        },
+        "format": "node_tree",
+        "data": {
+            "id": "root",
+            "background-image": "assets/images/courses/reactJs.svg",
+            "width": "100",
+            "height": "100",
+            "children": [
+                {
+                    "id": "gs",
+                    "topic": "Getting Started",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "gs1",
+                            "topic": "Introduction to React"
+                        },
+                        {
+                            "id": "gs2",
+                            "topic": "Setting Up a Development Environment"
+                        },
+                        {
+                            "id": "gs3",
+                            "topic": "JSX Syntax"
+                        },
+                        {
+                            "id": "gs4",
+                            "topic": "Components and Props"
+                        },
+                        {
+                            "id": "gs5",
+                            "topic": "State and Lifecycle"
+                        }
+                    ]
+                },
+                {
+                    "id": "cc",
+                    "topic": "Core Concepts",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "cc1",
+                            "topic": "Handling Events"
+                        },
+                        {
+                            "id": "cc2",
+                            "topic": "Conditional Rendering"
+                        },
+                        {
+                            "id": "cc3",
+                            "topic": "Lists and Keys"
+                        },
+                        {
+                            "id": "cc4",
+                            "topic": "Forms and Controlled Components"
+                        },
+                        {
+                            "id": "cc5",
+                            "topic": "Hooks (useState, useEffect, useContext, etc.)"
+                        },
+                        {
+                            "id": "cc6",
+                            "topic": "Context API and Provider Pattern"
+                        }
+                    ]
+                },
+                {
+                    "id": "at",
+                    "topic": "Advanced Topics",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "at1",
+                            "topic": "React Router"
+                        },
+                        {
+                            "id": "at2",
+                            "topic": "Higher-Order Components (HOCs)"
+                        },
+                        {
+                            "id": "at3",
+                            "topic": "Render Props"
+                        },
+                        {
+                            "id": "at4",
+                            "topic": "Error Boundaries"
+                        },
+                        {
+                            "id": "at5",
+                            "topic": "Portals"
+                        },
+                        {
+                            "id": "at6",
+                            "topic": "Fragments"
+                        },
+                        {
+                            "id": "at7",
+                            "topic": "Suspense and Lazy Loading"
+                        },
+                        {
+                            "id": "at8",
+                            "topic": "Refs and Forwarding Refs"
+                        }
+                    ]
+                },
+                {
+                    "id": "sm",
+                    "topic": "State Management",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "sm1",
+                            "topic": "React Context (for simple state)"
+                        },
+                        {
+                            "id": "sm2",
+                            "topic": "Redux (with Redux Toolkit)"
+                        },
+                        {
+                            "id": "sm3",
+                            "topic": "MobX"
+                        },
+                        {
+                            "id": "sm4",
+                            "topic": "Recoil"
+                        }
+                    ]
+                },
+                {
+                    "id": "styling",
+                    "topic": "Styling",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "styling1",
+                            "topic": "CSS Modules"
+                        },
+                        {
+                            "id": "styling2",
+                            "topic": "Styled Components"
+                        },
+                        {
+                            "id": "styling3",
+                            "topic": "Tailwind CSS with React"
+                        }
+                    ]
+                },
+                {
+                    "id": "sc",
+                    "topic": "Server Communication",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "sc1",
+                            "topic": "Fetch API"
+                        },
+                        {
+                            "id": "sc2",
+                            "topic": "Axios"
+                        },
+                        {
+                            "id": "sc3",
+                            "topic": "GraphQL with Apollo Client"
+                        }
+                    ]
+                },
+                {
+                    "id": "testing",
+                    "topic": "Testing",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "testing1",
+                            "topic": "Unit Testing with Jest"
+                        },
+                        {
+                            "id": "testing2",
+                            "topic": "Component Testing with React Testing Library"
+                        },
+                        {
+                            "id": "testing3",
+                            "topic": "End-to-End Testing with Cypress"
+                        },
+                        {
+                            "id": "testing4",
+                            "topic": "Testing Best Practices"
+                        }
+                    ]
+                },
+                {
+                    "id": "atech",
+                    "topic": "Advanced Techniques",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "atech1",
+                            "topic": "Server-Side Rendering (SSR) with Next.js"
+                        },
+                        {
+                            "id": "atech2",
+                            "topic": "Static Site Generation (SSG) with Next.js"
+                        },
+                        {
+                            "id": "atech3",
+                            "topic": "Progressive Web Apps (PWA) with Workbox"
+                        },
+                        {
+                            "id": "atech4",
+                            "topic": "Serverless Functions with Vercel or Netlify"
+                        }
+                    ]
+                },
+                {
+                    "id": "deployment",
+                    "topic": "Deployment",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "deployment1",
+                            "topic": "Deploying to Static Hosting (Netlify, Vercel, Surge)"
+                        },
+                        {
+                            "id": "deployment2",
+                            "topic": "Deploying to Cloud Platforms (AWS, Google Cloud, Azure)"
+                        },
+                        {
+                            "id": "deployment3",
+                            "topic": "Continuous Integration and Deployment (CI/CD) Pipelines"
+                        }
+                    ]
+                },
+                {
+                    "id": "bpp",
+                    "topic": "Best Practices & Patterns",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "bpp1",
+                            "topic": "Component Design Patterns"
+                        },
+                        {
+                            "id": "bpp2",
+                            "topic": "Code Organization and Structure"
+                        },
+                        {
+                            "id": "bpp3",
+                            "topic": "Performance Optimization"
+                        },
+                        {
+                            "id": "bpp4",
+                            "topic": "Accessibility (a11y) Best Practices"
+                        },
+                        {
+                            "id": "bpp5",
+                            "topic": "SEO Best Practices for Single Page Applications"
+                        }
+                    ]
+                }
+            ]
+        }
     },
-    "format": "node_tree",
-    "data": {
-        "id": "root",
-        "background-image": "assets/images/courses/reactJs.svg",
-        "width": "100",
-        "height": "100",
-        "children": [
-            {
-                "id": "gs",
-                "topic": "Getting Started",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "gs1",
-                        "topic": "Introduction to React"
-                    },
-                    {
-                        "id": "gs2",
-                        "topic": "Setting Up a Development Environment"
-                    },
-                    {
-                        "id": "gs3",
-                        "topic": "JSX Syntax"
-                    },
-                    {
-                        "id": "gs4",
-                        "topic": "Components and Props"
-                    },
-                    {
-                        "id": "gs5",
-                        "topic": "State and Lifecycle"
-                    }
-                ]
-            },
-            {
-                "id": "cc",
-                "topic": "Core Concepts",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "cc1",
-                        "topic": "Handling Events"
-                    },
-                    {
-                        "id": "cc2",
-                        "topic": "Conditional Rendering"
-                    },
-                    {
-                        "id": "cc3",
-                        "topic": "Lists and Keys"
-                    },
-                    {
-                        "id": "cc4",
-                        "topic": "Forms and Controlled Components"
-                    },
-                    {
-                        "id": "cc5",
-                        "topic": "Hooks (useState, useEffect, useContext, etc.)"
-                    },
-                    {
-                        "id": "cc6",
-                        "topic": "Context API and Provider Pattern"
-                    }
-                ]
-            },
-            {
-                "id": "at",
-                "topic": "Advanced Topics",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "at1",
-                        "topic": "React Router"
-                    },
-                    {
-                        "id": "at2",
-                        "topic": "Higher-Order Components (HOCs)"
-                    },
-                    {
-                        "id": "at3",
-                        "topic": "Render Props"
-                    },
-                    {
-                        "id": "at4",
-                        "topic": "Error Boundaries"
-                    },
-                    {
-                        "id": "at5",
-                        "topic": "Portals"
-                    },
-                    {
-                        "id": "at6",
-                        "topic": "Fragments"
-                    },
-                    {
-                        "id": "at7",
-                        "topic": "Suspense and Lazy Loading"
-                    },
-                    {
-                        "id": "at8",
-                        "topic": "Refs and Forwarding Refs"
-                    }
-                ]
-            },
-            {
-                "id": "sm",
-                "topic": "State Management",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "sm1",
-                        "topic": "React Context (for simple state)"
-                    },
-                    {
-                        "id": "sm2",
-                        "topic": "Redux (with Redux Toolkit)"
-                    },
-                    {
-                        "id": "sm3",
-                        "topic": "MobX"
-                    },
-                    {
-                        "id": "sm4",
-                        "topic": "Recoil"
-                    }
-                ]
-            },
-            {
-                "id": "styling",
-                "topic": "Styling",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "styling1",
-                        "topic": "CSS Modules"
-                    },
-                    {
-                        "id": "styling2",
-                        "topic": "Styled Components"
-                    },
-                    {
-                        "id": "styling3",
-                        "topic": "Tailwind CSS with React"
-                    }
-                ]
-            },
-            {
-                "id": "sc",
-                "topic": "Server Communication",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "sc1",
-                        "topic": "Fetch API"
-                    },
-                    {
-                        "id": "sc2",
-                        "topic": "Axios"
-                    },
-                    {
-                        "id": "sc3",
-                        "topic": "GraphQL with Apollo Client"
-                    }
-                ]
-            },
-            {
-                "id": "testing",
-                "topic": "Testing",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "testing1",
-                        "topic": "Unit Testing with Jest"
-                    },
-                    {
-                        "id": "testing2",
-                        "topic": "Component Testing with React Testing Library"
-                    },
-                    {
-                        "id": "testing3",
-                        "topic": "End-to-End Testing with Cypress"
-                    },
-                    {
-                        "id": "testing4",
-                        "topic": "Testing Best Practices"
-                    }
-                ]
-            },
-            {
-                "id": "atech",
-                "topic": "Advanced Techniques",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "atech1",
-                        "topic": "Server-Side Rendering (SSR) with Next.js"
-                    },
-                    {
-                        "id": "atech2",
-                        "topic": "Static Site Generation (SSG) with Next.js"
-                    },
-                    {
-                        "id": "atech3",
-                        "topic": "Progressive Web Apps (PWA) with Workbox"
-                    },
-                    {
-                        "id": "atech4",
-                        "topic": "Serverless Functions with Vercel or Netlify"
-                    }
-                ]
-            },
-            {
-                "id": "deployment",
-                "topic": "Deployment",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "deployment1",
-                        "topic": "Deploying to Static Hosting (Netlify, Vercel, Surge)"
-                    },
-                    {
-                        "id": "deployment2",
-                        "topic": "Deploying to Cloud Platforms (AWS, Google Cloud, Azure)"
-                    },
-                    {
-                        "id": "deployment3",
-                        "topic": "Continuous Integration and Deployment (CI/CD) Pipelines"
-                    }
-                ]
-            },
-            {
-                "id": "bpp",
-                "topic": "Best Practices & Patterns",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "bpp1",
-                        "topic": "Component Design Patterns"
-                    },
-                    {
-                        "id": "bpp2",
-                        "topic": "Code Organization and Structure"
-                    },
-                    {
-                        "id": "bpp3",
-                        "topic": "Performance Optimization"
-                    },
-                    {
-                        "id": "bpp4",
-                        "topic": "Accessibility (a11y) Best Practices"
-                    },
-                    {
-                        "id": "bpp5",
-                        "topic": "SEO Best Practices for Single Page Applications"
-                    }
-                ]
-            }
-        ]
+    "additionalData": {
+        "pdfUrl": "assets/course-mindmap-data/REACTJS ROADMAP.pdf",
+        "pdfName": "REACTJS ROADMAP.pdf"
     }
 }

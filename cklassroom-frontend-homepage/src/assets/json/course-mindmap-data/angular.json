@@ -1,168 +1,174 @@
 {
-    "meta": {
-        "name": "Angular Roadmap",
-        "author": "Sudhirkumarrao Allada",
-        "version": "0.1"
+    "mindMapData": {
+        "meta": {
+            "name": "Angular Roadmap",
+            "author": "Sudhirkumarrao Allada",
+            "version": "0.1"
+        },
+        "format": "node_tree",
+        "data": {
+            "id": "root",
+            "background-image": "assets/images/courses/angular.svg",
+            "width": "100",
+            "height": "100",
+            "children": [
+                {
+                    "id": "basic",
+                    "topic": "Basics",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "basic1",
+                            "topic": "TypeScript Fundamentals"
+                        },
+                        {
+                            "id": "basic2",
+                            "topic": "JavaScript ES6+ Features"
+                        },
+                        {
+                            "id": "basic3",
+                            "topic": "HTML & CSS Basics"
+                        }
+                    ]
+                },
+                {
+                    "id": "cc",
+                    "topic": "Core Concepts",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "cc1",
+                            "topic": "Angular Architecture"
+                        },
+                        {
+                            "id": "cc2",
+                            "topic": "Components & Directives"
+                        },
+                        {
+                            "id": "cc3",
+                            "topic": "Modules & Dependency Injection"
+                        },
+                        {
+                            "id": "cc4",
+                            "topic": "Templates & Data Binding"
+                        },
+                        {
+                            "id": "cc5",
+                            "topic": "Services & HTTP Client"
+                        },
+                        {
+                            "id": "cc6",
+                            "topic": "Routing & Navigation"
+                        }
+                    ]
+                },
+                {
+                    "id": "at",
+                    "topic": "Advanced Topics",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "at1",
+                            "topic": "Forms & Form Validation"
+                        },
+                        {
+                            "id": "at2",
+                            "topic": "RxJS & Observables"
+                        },
+                        {
+                            "id": "at3",
+                            "topic": "State Management (NgRx)"
+                        },
+                        {
+                            "id": "at4",
+                            "topic": "Angular Universal (Server-side Rendering)"
+                        },
+                        {
+                            "id": "at5",
+                            "topic": "Performance Optimization"
+                        },
+                        {
+                            "id": "at6",
+                            "topic": "Testing (Unit & E2E)"
+                        },
+                        {
+                            "id": "at7",
+                            "topic": "Security & Authentication"
+                        },
+                        {
+                            "id": "at8",
+                            "topic": "Internationalization (i18n)"
+                        },
+                        {
+                            "id": "at9",
+                            "topic": "Progressive Web Apps (PWA)"
+                        }
+                    ]
+                },
+                {
+                    "id": "tooling",
+                    "topic": "Tooling",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "tooling1",
+                            "topic": "Angular CLI"
+                        },
+                        {
+                            "id": "tooling2",
+                            "topic": "Angular Material"
+                        },
+                        {
+                            "id": "tooling3",
+                            "topic": "Angular DevTools"
+                        },
+                        {
+                            "id": "tooling4",
+                            "topic": "Third-party Libraries & Tools"
+                        }
+                    ]
+                },
+                {
+                    "id": "bpp",
+                    "topic": "Best Practices & Patterns",
+                    "direction": "right",
+                    "expanded": false,
+                    "children": [
+                        {
+                            "id": "bpp1",
+                            "topic": "Angular Style Guide"
+                        },
+                        {
+                            "id": "bpp2",
+                            "topic": "Component Communication Patterns"
+                        },
+                        {
+                            "id": "bpp3",
+                            "topic": "Code Organization & Structure"
+                        },
+                        {
+                            "id": "bpp4",
+                            "topic": "Error Handling & Logging"
+                        },
+                        {
+                            "id": "bpp5",
+                            "topic": "Optimizing for SEO"
+                        },
+                        {
+                            "id": "bpp6",
+                            "topic": "Continuous Integration & Deployment (CI/CD)"
+                        }
+                    ]
+                }
+            ]
+        }
     },
-    "format": "node_tree",
-    "data": {
-        "id": "root",
-        "background-image": "assets/images/courses/angular.svg",
-        "width": "100",
-        "height": "100",
-        "children": [
-            {
-                "id": "basic",
-                "topic": "Basics",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "basic1",
-                        "topic": "TypeScript Fundamentals"
-                    },
-                    {
-                        "id": "basic2",
-                        "topic": "JavaScript ES6+ Features"
-                    },
-                    {
-                        "id": "basic3",
-                        "topic": "HTML & CSS Basics"
-                    }
-                ]
-            },
-            {
-                "id": "cc",
-                "topic": "Core Concepts",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "cc1",
-                        "topic": "Angular Architecture"
-                    },
-                    {
-                        "id": "cc2",
-                        "topic": "Components & Directives"
-                    },
-                    {
-                        "id": "cc3",
-                        "topic": "Modules & Dependency Injection"
-                    },
-                    {
-                        "id": "cc4",
-                        "topic": "Templates & Data Binding"
-                    },
-                    {
-                        "id": "cc5",
-                        "topic": "Services & HTTP Client"
-                    },
-                    {
-                        "id": "cc6",
-                        "topic": "Routing & Navigation"
-                    }
-                ]
-            },
-            {
-                "id": "at",
-                "topic": "Advanced Topics",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "at1",
-                        "topic": "Forms & Form Validation"
-                    },
-                    {
-                        "id": "at2",
-                        "topic": "RxJS & Observables"
-                    },
-                    {
-                        "id": "at3",
-                        "topic": "State Management (NgRx)"
-                    },
-                    {
-                        "id": "at4",
-                        "topic": "Angular Universal (Server-side Rendering)"
-                    },
-                    {
-                        "id": "at5",
-                        "topic": "Performance Optimization"
-                    },
-                    {
-                        "id": "at6",
-                        "topic": "Testing (Unit & E2E)"
-                    },
-                    {
-                        "id": "at7",
-                        "topic": "Security & Authentication"
-                    },
-                    {
-                        "id": "at8",
-                        "topic": "Internationalization (i18n)"
-                    },
-                    {
-                        "id": "at9",
-                        "topic": "Progressive Web Apps (PWA)"
-                    }
-                ]
-            },
-            {
-                "id": "tooling",
-                "topic": "Tooling",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "tooling1",
-                        "topic": "Angular CLI"
-                    },
-                    {
-                        "id": "tooling2",
-                        "topic": "Angular Material"
-                    },
-                    {
-                        "id": "tooling3",
-                        "topic": "Angular DevTools"
-                    },
-                    {
-                        "id": "tooling4",
-                        "topic": "Third-party Libraries & Tools"
-                    }
-                ]
-            },
-            {
-                "id": "bpp",
-                "topic": "Best Practices & Patterns",
-                "direction": "right",
-                "expanded": false,
-                "children": [
-                    {
-                        "id": "bpp1",
-                        "topic": "Angular Style Guide"
-                    },
-                    {
-                        "id": "bpp2",
-                        "topic": "Component Communication Patterns"
-                    },
-                    {
-                        "id": "bpp3",
-                        "topic": "Code Organization & Structure"
-                    },
-                    {
-                        "id": "bpp4",
-                        "topic": "Error Handling & Logging"
-                    },
-                    {
-                        "id": "bpp5",
-                        "topic": "Optimizing for SEO"
-                    },
-                    {
-                        "id": "bpp6",
-                        "topic": "Continuous Integration & Deployment (CI/CD)"
-                    }
-                ]
-            }
-        ]
+    "additionalData": {
+        "pdfUrl": "assets/course-mindmap-data/ANGULAR ROADMAP.pdf",
+        "pdfName": "ANGULAR ROADMAP.pdf"
     }
 }
