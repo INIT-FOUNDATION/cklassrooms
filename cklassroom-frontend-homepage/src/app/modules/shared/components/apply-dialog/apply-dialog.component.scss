@@ -15,8 +15,12 @@
   color: $themeDialogModal !important;
 }
 
+::ng-deep .mat-error {
+  font-size: 0.9rem !important;
+}
+
 ::ng-deep .mat-form-field-wrapper {
-  padding-bottom: 0.7rem !important;
+  margin-bottom: 0.6rem !important;
 }
 
 .btn-green {

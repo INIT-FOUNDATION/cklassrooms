@@ -1,0 +1,20 @@
+@import "../../../../../theme/color";
+
+.mat-expansion-panel-header.mat-expanded:hover {
+  background-color: unset;
+}
+
+.mat-accordion .mat-expansion-panel:last-of-type {
+  background-color: $themeBoxShadow;
+}
+
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header,
+.mat-expansion-panel {
+  color: $themeFontColor;
+  font: inherit;
+}
+
+.mat-expansion-panel:not([class*="mat-elevation-z"]) {
+  box-shadow: none;
+}

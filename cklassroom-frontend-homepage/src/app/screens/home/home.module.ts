@@ -12,6 +12,7 @@ import { ExprtsTeamComponent } from './components/exprts-team/exprts-team.compon
 import { CoursesComponent } from './components/courses/courses.component';
 import { JobPlacementsComponent } from './components/job-placements/job-placements.component';
 import { PlacementSupportComponent } from './components/placement-support/placement-support.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PlacementSupportComponent } from './components/placement-support/placem
     ExprtsTeamComponent,
     CoursesComponent,
     JobPlacementsComponent,
-    PlacementSupportComponent
+    PlacementSupportComponent,
+    FaqComponent
   ],
   imports: [
     CommonModule,

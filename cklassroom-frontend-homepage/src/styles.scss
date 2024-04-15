@@ -3,8 +3,8 @@
 @import "tailwindcss/components";
 @import "../src/theme/color";
 @import "aos/dist/aos.css";
-@import '~ngx-toastr/toastr';
-@import './theme/loader';
+@import "~ngx-toastr/toastr";
+@import "./theme/loader";
 
 html,
 body {
@@ -63,4 +63,11 @@ button:focus-visible {
 
 .ng-invalid.ng-touched.ng-dirty {
   border-color: red !important;
+}
+
+.mat-expansion-panel-content {
+  color: $themeFontColor;
+  font: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
 }
