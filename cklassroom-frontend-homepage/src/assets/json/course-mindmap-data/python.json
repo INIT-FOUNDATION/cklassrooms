@@ -1,0 +1,52 @@
+{
+    "meta":{
+      "name":"Angular Roadmap",
+      "author":"Sudhirkumarrao Allada",
+      "version":"0.1"
+    },
+    "format":"node_tree",
+    "data":{"id":"root","background-image":"assets/images/courses/python.svg","width":"100","height":"100","children":[
+        {"id":"basic","topic":"Basics","direction":"right", "expanded": false,"children":[
+            {"id":"basic1","topic":"Installation and Setup"},
+            {"id":"basic2","topic":"Syntax and Basic Data Types"},
+            {"id":"basic3","topic":"Control Flow (if, else, elif, loops)"},
+            {"id":"basic4","topic":"Functions and Modules"}
+        ]},
+        {"id":"ic","topic":"Intermediate Concepts","direction":"right", "expanded": false,"children":[
+            {"id":"ic1","topic":"Object-Oriented Programming (Classes, Inheritance, Encapsulation, Polymorphism)"},
+            {"id":"ic2","topic":"File I/O (Reading and Writing Files)"},
+            {"id":"ic3","topic":"Exception Handling"},
+            {"id":"ic4","topic":"Regular Expressions"},
+            {"id":"ic5","topic":"Collections (Lists, Tuples, Sets, Dictionaries)"},
+            {"id":"ic6","topic":"Comprehensions and Generators"}
+        ]},
+        {"id":"at","topic":"Advanced Topics","direction":"right", "expanded": false,"children":[
+            {"id":"at1","topic":"Decorators and Context Managers"},
+            {"id":"at2","topic":"Iterators and Iterables"},
+            {"id":"at3","topic":"Concurrency and Parallelism (Threading, Multiprocessing)"},
+            {"id":"at4","topic":"Database Access (SQLAlchemy, SQLite, ORM)"},
+            {"id":"at5","topic":"Web Development (Flask, Django)"},
+            {"id":"at6","topic":"Data Science Libraries (NumPy, Pandas, Matplotlib)"},
+            {"id":"at7","topic":"Machine Learning (scikit-learn, TensorFlow, PyTorch)"}
+        ]},
+        {"id":"t&D","topic":"Testing and Debugging","direction":"right", "expanded": false,"children":[
+            {"id":"t&D1","topic":"Unit Testing (unittest, pytest)"},
+            {"id":"t&D2","topic":"Debugging Techniques"},
+            {"id":"t&D3","topic":"Code Profiling and Optimization"}
+        ]},
+        {"id":"bp","topic":"Best Practices","direction":"right", "expanded": false,"children":[
+          {"id":"bp1","topic":"PEP 8 Style Guide"},
+          {"id":"bp2","topic":"Code Organization and Structure"},
+          {"id":"bp3","topic":"Documentation (docstrings, Sphinx)"},
+          {"id":"bp4","topic":"Virtual Environments (venv, virtualenv)"},
+          {"id":"bp5","topic":"Package Management (pip, requirements.txt)"}
+        ]},
+        {"id":"bpy","topic":"Beyond Python","direction":"right", "expanded": false,"children":[
+            {"id":"bpy1","topic":"Integration with Other Languages (C/C++, Java)"},
+            {"id":"bpy2","topic":"Building CLI Applications (Click, argparse)"},
+            {"id":"bpy3","topic":"Web Scraping and Automation (Beautiful Soup, Selenium)"},
+            {"id":"bpy4","topic":"Game Development (Pygame)"},
+            {"id":"bpy5","topic":"DevOps and Deployment"}
+        ]}
+    ]}
+  }
