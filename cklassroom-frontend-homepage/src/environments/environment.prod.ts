@@ -5,4 +5,5 @@ const API_CRM_PORT = `:5001`;
 export const environment = {
   production: true,
   crm_prefix_url: `${BASE_URL}${API_CRM_PORT}/api/v1/cklassroom/crm`,
+  landing_page_prefix: 'https://cklassrooms.com/',
 };

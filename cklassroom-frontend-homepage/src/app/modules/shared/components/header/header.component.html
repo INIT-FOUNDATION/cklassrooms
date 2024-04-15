@@ -1,12 +1,16 @@
 <div class="flex justify-between">
   <div
-    class="text-xl animate__animated animate__fadeInDown"
+    class="text-xl animate__animated animate__fadeInDown cursor-pointer"
     style="animation-duration: 0.5s"
+    (click)="goBack()"
   >
     <span class="text-green font-bold">CK</span>
     <span>lassrooms</span>
   </div>
-  <div class="hidden md:flex items-center">
+  <div
+    class="hidden md:flex items-center"
+    *ngIf="utilityService.showFooter$ | async"
+  >
     <!-- <span
       class="animate__animated animate__fadeInDown cursor-pointer"
       style="animation-duration: 0.5s"

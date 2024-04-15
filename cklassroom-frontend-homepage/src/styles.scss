@@ -73,5 +73,17 @@ button:focus-visible {
 }
 
 .jsmind-inner {
-  position: absolute !important;
+  position: fixed !important;
+
+  // @media (max-width: 750px) {
+  //   left: -5rem;
+  // }
+}
+
+jmexpander {
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 15px;
+  border-radius: 16px;
 }

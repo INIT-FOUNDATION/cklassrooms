@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TweenMax } from 'gsap';
+import { UtilityService } from 'src/app/modules/shared/services/utility.service';
 
 @Component({
   selector: 'app-courses',
@@ -8,8 +9,11 @@ import { TweenMax } from 'gsap';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements AfterViewInit {
-  constructor(private elementRef: ElementRef,
-              private router: Router) {}
+  constructor(
+    private elementRef: ElementRef,
+    private router: Router,
+    private utilityService: UtilityService
+  ) {}
 
   getCourseList: any = [
     {
@@ -30,8 +34,8 @@ export class CoursesComponent implements AfterViewInit {
       img: 'angular',
       h1: 'Angular course empowers creation of feature-rich single-page applications, enhancing user experience and functionality.',
       h2: ' Angular enforces organization and scalability in development, improving code quality and maintenance.',
-      h3: 'With Angular, access powerful features like data binding and routing, streamlining development process and boosting productivity.',
-      h4: 'Learning Angular offers access to a vibrant community, ensuring ongoing learning and support for developers.',
+      h3: 'With Angular, access powerful features like data binding and routing, streamlining development process and etc.',
+      h4: 'Angular learning fosters vibrant community support for developers.',
       color: '#b52e31',
     },
     {
@@ -53,7 +57,7 @@ export class CoursesComponent implements AfterViewInit {
       h1: 'This course teaches the core of Node.js, empowering you to build scalable web applications efficiently.',
       h2: 'With Node.js, JavaScript spans both client and server, streamlining development and encouraging code reuse.',
       h3: 'Node.js excels in handling asynchronous tasks, ideal for crafting real-time applications like chats and gaming platforms.',
-      h4: 'Leveraging frameworks like Express.js, Node.js offers a rich ecosystem for swift API and server development, enhancing productivity.',
+      h4: 'Express.js and Node.js boost API development, enhancing productivity.',
       color: '#72ba54',
     },
     {
@@ -188,5 +192,6 @@ export class CoursesComponent implements AfterViewInit {
 
   openCourseDetailsPage(courseName) {
     this.router.navigate([`/course-details/${courseName}`]);
+    this.utilityService.showFooterSet = false;
   }
 }
