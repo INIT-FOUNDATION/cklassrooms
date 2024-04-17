@@ -11,7 +11,7 @@ declare var jsMind: any;
 })
 export class CourseDetailsComponent implements OnInit, AfterViewInit {
   courseName = '';
-  mindMapJson: any = {}
+  mindMapJson: any = {};
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -27,7 +27,7 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
     }, 100);
   }
 
-  async ngAfterViewInit() {debugger
+  async ngAfterViewInit() {
     this.mindMapJson = await this.dataService
       .loadMindMapData(this.courseName)
       .toPromise();
