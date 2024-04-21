@@ -11,14 +11,14 @@ export class HomeComponent implements OnInit {
   constructor(private themeService: ThemeService) {}
 
   // learningPhaseImg = 'LearningPhasesLight';
-  learningPhaseImg = 'section_light';
+  learningPhaseImg = 'Section_Light';
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollToPlugin);
     this.themeService.getActiveTheme.subscribe((res: string) => {
       this.learningPhaseImg =
         // res === 'light_theme' ? 'LearningPhasesLight' : 'LearningPhasesDark';
-        res === 'light_theme' ? 'section_light' : 'section_dark';
+        res === 'light_theme' ? 'Section_Light' : 'Section_Dark';
     });
   }
 
