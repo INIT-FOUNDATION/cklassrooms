@@ -41,7 +41,7 @@ const sendEnquiryNotification = async (enquiryObj: EnquiryUser) => {
     })
 
     await nodemailerUtils.sendEmail("CKLASSROOMS | Enquiry Request", enquiryRequestHtml, null, ccEmails, [])
-    await nodemailerUtils.sendEmail("CKLASSROOMS | Enquiry Response", enquiryResponseHtml, enquiryObj.email, ccEmails, [])
+    await nodemailerUtils.sendEmail("CKLASSROOMS | Enquiry Response", enquiryResponseHtml, enquiryObj.email, [], [])
 
     logger.info(`crmService :: sendEnquiryNotification :: Notifications Sent Successfully`);
   } catch (error) {
