@@ -1,6 +1,6 @@
-const BASE_URL = 'http://localhost';
-const DIRECT_BASE_URL = 'http://localhost';
-const API_CRM_PORT = `:5001`;
+const BASE_URL = 'https://api.cklassrooms.com';
+const DIRECT_BASE_URL = 'https://api.cklassrooms.com';
+const API_CRM_PORT = ``;
 
 export const environment = {
   production: true,
