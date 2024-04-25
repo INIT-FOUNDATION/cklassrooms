@@ -8,29 +8,31 @@ import { StarRatingModule } from 'angular-star-rating';
 import { FormsModule } from '@angular/forms';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { WhatWeOfferComponent } from './components/what-we-offer/what-we-offer.component';
-import { ExprtsTeamComponent } from './components/exprts-team/exprts-team.component';
+import { ExpertsTeamComponent } from './components/experts-team/experts-team.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { JobPlacementsComponent } from './components/job-placements/job-placements.component';
 import { PlacementSupportComponent } from './components/placement-support/placement-support.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { AchievementsComponent } from './components/achievements/achievements.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     TestimonialComponent,
     WhatWeOfferComponent,
-    ExprtsTeamComponent,
+    ExpertsTeamComponent,
     CoursesComponent,
     JobPlacementsComponent,
     PlacementSupportComponent,
-    FaqComponent
+    FaqComponent,
+    AchievementsComponent,
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SharedModule,
     FormsModule,
-    StarRatingModule.forRoot()
-  ]
+    StarRatingModule.forRoot(),
+  ],
 })
-export class HomeModule { }
+export class HomeModule {}

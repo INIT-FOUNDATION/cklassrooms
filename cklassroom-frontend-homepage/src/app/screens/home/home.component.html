@@ -1,4 +1,4 @@
-<div class="mt-3 md:mt-10 lg:mt-12 xl:mx-36">
+<div class="mt-24 xl:mx-36">
   <div
     class="flex flex-col-reverse md:grid md:grid-cols-2 md:place-items-center md:gap-x-11 text-base"
   >
@@ -7,8 +7,10 @@
         class="text-xl xl:text-4xl font-bold animate__animated animate__fadeInUp"
         style="animation-duration: 0.8s"
       >
-        <div class="mb-2">I'm Chalukya Mohanraj(CK),</div>
-        <span>Chief Architect</span>
+        <div class="mb-5 xl:mb-2 underline-label md:text-xl xl:text-3xl">
+          I'm Chalukya Mohanraj (CK)
+        </div>
+        <span class="text-base md:text-xl">Chief Architect</span>
       </div>
 
       <div
@@ -53,7 +55,9 @@
       class="flex justify-center animate__animated animate__backInRight"
       style="animation-duration: 1s"
     >
-      <div class="banner-image border-black dark:border-white overflow-hidden">
+      <div
+        class="banner-image border-black dark:border-white overflow-hidden lg:h-5/6 lg:w-5/6"
+      >
         <img
           src=" assets/images/home/chalukyaMohanrajProfile.png"
           class="px-10"
@@ -62,7 +66,7 @@
     </div>
   </div>
 
-  <app-testimonial></app-testimonial>
+  <app-achievements></app-achievements>
 
   <app-job-placements></app-job-placements>
 
@@ -75,7 +79,7 @@
   <div class="flex flex-col md:flex-row justify-center items-center">
     <button
       type="button"
-      class="text-green border-green rounded-lg py-5 w-80 mb-3 md:mb-0 font-medium md:mr-4"
+      class="text-green border-green rounded-lg py-5 w-80 mb-3 md:mb-0 font-bold md:mr-4"
       (click)="scrollToTarget('courses')"
     >
       Check the courses
@@ -102,7 +106,7 @@
   <div class="flex flex-col md:flex-row justify-center items-center">
     <button
       type="button"
-      class="text-green border-green rounded-lg py-5 w-80 mb-3 md:mb-0 font-medium md:mr-4"
+      class="text-green border-green rounded-lg py-5 w-80 mb-3 md:mb-0 font-bold md:mr-4"
       (click)="scrollToTarget('jobPlacement')"
     >
       What we ensure?
@@ -110,7 +114,7 @@
     <app-apply-button additionalClasses="py-5 w-80"></app-apply-button>
   </div>
 
-  <app-exprts-team></app-exprts-team>
+  <app-experts-team></app-experts-team>
 
   <div class="flex flex-col md:flex-row justify-center items-center">
     <app-apply-button additionalClasses="py-5 w-80"></app-apply-button>
@@ -121,4 +125,6 @@
   <div class="flex flex-col md:flex-row justify-center items-center">
     <app-apply-button additionalClasses="py-5 w-80"></app-apply-button>
   </div>
+
+  <app-testimonial></app-testimonial>
 </div>

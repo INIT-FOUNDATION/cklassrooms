@@ -1,9 +1,9 @@
-<div class="h-100 px-5 md:px-10 pt-4" appTheme>
+<div class="h-100" appTheme>
   <app-loader></app-loader>
-  <div class="">
-    <app-header></app-header>
+  <app-header></app-header>
+  <div class="px-5 md:px-10">
+    <router-outlet></router-outlet>
   </div>
-  <router-outlet></router-outlet>
   <!-- <app-scroll-top></app-scroll-top> -->
   <div *ngIf="utilityService.showFooter$ | async">
     <app-footer></app-footer>

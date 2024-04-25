@@ -9,15 +9,12 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 })
 export class HomeComponent implements OnInit {
   constructor(private themeService: ThemeService) {}
-
-  // learningPhaseImg = 'LearningPhasesLight';
   learningPhaseImg = 'sectionLight';
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollToPlugin);
     this.themeService.getActiveTheme.subscribe((res: string) => {
       this.learningPhaseImg =
-        // res === 'light_theme' ? 'LearningPhasesLight' : 'LearningPhasesDark';
         res === 'light_theme' ? 'sectionLight' : 'sectionDark';
     });
   }

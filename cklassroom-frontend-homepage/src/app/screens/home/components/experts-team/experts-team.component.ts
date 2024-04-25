@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-exprts-team',
-  templateUrl: './exprts-team.component.html',
-  styleUrls: ['./exprts-team.component.scss'],
+  selector: 'app-experts-team',
+  templateUrl: './experts-team.component.html',
+  styleUrls: ['./experts-team.component.scss'],
 })
-export class ExprtsTeamComponent implements OnInit {
+export class ExpertsTeamComponent implements OnInit {
   expertTeam: any = [
     {
       id: 1,

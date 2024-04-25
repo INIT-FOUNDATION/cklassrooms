@@ -34,3 +34,14 @@
   box-shadow: 3px 3px 0 0 $themeSecondary;
   transform: translate(-4px, -4px);
 }
+
+.underline-label::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 8px;
+  width: 80%;
+  height: 0.2rem;
+  border-radius: 1rem;
+  background-color: $themeSecondary;
+}

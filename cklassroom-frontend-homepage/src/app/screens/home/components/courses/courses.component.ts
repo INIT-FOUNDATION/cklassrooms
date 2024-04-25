@@ -73,7 +73,7 @@ export class CoursesComponent implements AfterViewInit {
     },
     {
       id: 6,
-      courseName: 'HTML/ CSS',
+      courseName: 'HTML, CSS & Javascript',
       desc: 'As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.',
       img: 'htmlCssJs',
       h1: 'Mastering HTML, CSS, and JavaScript is crucial for building websites from scratch.',

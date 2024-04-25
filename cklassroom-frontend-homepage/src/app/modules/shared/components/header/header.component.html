@@ -1,21 +1,18 @@
-<div class="flex justify-between">
+<div
+  class="flex justify-between fixed z-10 header-body pt-5 pb-3 px-5 md:px-10 w-screen"
+  [ngClass]="{ 'shadow-lg': verticalScrollValue }"
+>
   <div
     class="text-xl animate__animated animate__fadeInDown cursor-pointer"
     style="animation-duration: 0.5s"
     (click)="goBack()"
   >
-    <span class="text-green font-bold">CK</span>
-    <span>lassrooms</span>
+    <img src="assets/images/header/{{ headerLogo }}.svg" class="w-40" />
   </div>
   <div
     class="hidden md:flex items-center"
     *ngIf="utilityService.showFooter$ | async"
   >
-    <!-- <span
-      class="animate__animated animate__fadeInDown cursor-pointer"
-      style="animation-duration: 0.5s"
-      >Home</span
-    > -->
     <span
       class="mx-4 animate__animated animate__fadeInDown cursor-pointer"
       style="animation-duration: 0.65s"

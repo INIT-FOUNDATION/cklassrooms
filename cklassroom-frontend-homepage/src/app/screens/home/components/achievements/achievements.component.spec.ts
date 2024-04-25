@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExprtsTeamComponent } from './exprts-team.component';
+import { AchievementsComponent } from './achievements.component';
 
-describe('ExprtsTeamComponent', () => {
-  let component: ExprtsTeamComponent;
-  let fixture: ComponentFixture<ExprtsTeamComponent>;
+describe('AchievementsComponent', () => {
+  let component: AchievementsComponent;
+  let fixture: ComponentFixture<AchievementsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExprtsTeamComponent ]
+      declarations: [ AchievementsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExprtsTeamComponent);
+    fixture = TestBed.createComponent(AchievementsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

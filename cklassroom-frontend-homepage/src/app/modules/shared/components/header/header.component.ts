@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ThemeService } from '../../theme/theme.service';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
@@ -13,11 +13,13 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   active = false;
+  verticalScrollValue: boolean = false;
   constructor(
     public themeService: ThemeService,
     public utilityService: UtilityService,
     private router: Router
   ) {}
+  headerLogo = 'logoLight';
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollToPlugin);
@@ -28,6 +30,8 @@ export class HeaderComponent implements OnInit {
       } else {
         this.active = true;
       }
+
+      this.headerLogo = res === 'light_theme' ? 'logoLight' : 'logoDark';
     });
   }
 
@@ -46,5 +50,15 @@ export class HeaderComponent implements OnInit {
 
   goBack() {
     this.router.navigate(['']);
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event) {
+    if (window.scrollY > 0) {
+      this.verticalScrollValue = true;
+    } else {
+      this.verticalScrollValue = false;
+    }
+    console.log(this.verticalScrollValue);
   }
 }
