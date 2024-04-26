@@ -1,3 +1,5 @@
+@import ".../../../../../../../theme/color";
+
 .arrow-box::after {
   content: "";
   position: absolute;
@@ -12,4 +14,8 @@
 
 .custom-height {
   max-height: calc(100vh - 15rem);
+}
+
+.fa-brands:hover {
+  color: $themeSecondary;
 }

@@ -1,4 +1,49 @@
-<div class="text-md font-semibold mb-3 flex items-center justify-between">
+<div
+  class="flex flex-col md:flex-row text-center md:text-start items-center mb-3 relative"
+>
+  <img
+    src="/assets/images/testimonials/{{ data?.img }}.svg"
+    class="w-32 h-32 bg-gray-200 rounded-full p-2"
+  />
+  <div class="flex flex-col ps-5">
+    <span class="text-green font-semibold">{{ data.name }}</span>
+    <span class="text-sm">{{ data.position }}</span>
+    <div class="mt-1">
+      <a [href]="data?.github" target="_blank">
+        <i
+          class="fa-brands fa-github text-2xl hover:scale-125 duration-200 me-5"
+        ></i
+      ></a>
+      <a [href]="data?.linkedIn" target="_blank">
+        <i
+          class="fa-brands fa-linkedin text-2xl hover:scale-125 duration-200"
+        ></i>
+      </a>
+    </div>
+  </div>
+  <div class="cursor-pointer absolute top-0 right-0" (click)="closeModal()">
+    <i class="fa-solid fa-xmark text-2xl" style="color: '#1b1f24'"></i>
+  </div>
+</div>
+<div class="text-sm leading-6 overflow-y-auto custom-height font-medium">
+  <div class="">
+    {{ data?.desc1 }}
+  </div>
+  <div class="py-3">
+    {{ data?.desc2 }}
+  </div>
+  <div class="">
+    {{ data?.desc3 }}
+  </div>
+  <div class="py-3">
+    {{ data?.desc4 }}
+  </div>
+  <div class="">
+    {{ data?.desc5 }}
+  </div>
+</div>
+
+<!-- <div class="text-md font-semibold mb-3 flex items-center justify-between">
   Here's what {{ data?.name }} said about us
 
   <div class="cursor-pointer" (click)="closeModal()">
@@ -43,4 +88,4 @@
       {{ data?.desc5 }}
     </div>
   </div>
-</div>
+</div> -->

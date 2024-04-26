@@ -17,6 +17,8 @@ export class TestimonialComponent implements OnInit {
       position: 'Software Developer',
       img: 'defaultAvatar',
       companyName: 'Orrizonte',
+      linkedIn: 'https://www.linkedin.com/in/ashwini-jadhav-646a48175/',
+      github: 'https://github.com/ashwinijadhav24695',
       desc1:
         "Even though I graduated with a bachelor's degree in IT from Mumbai, securing a job after college proved challenging due to limited placement opportunities due to the college being a tier-three college. Despite my efforts to search independently, the outcomes were unsatisfactory as I lacked the skills that companies were seeking.",
       desc2:
@@ -30,6 +32,8 @@ export class TestimonialComponent implements OnInit {
       position: 'Software Developer',
       img: 'defaultAvatar',
       companyName: 'Orrizonte',
+      linkedIn: 'https://www.linkedin.com/in/saanghavi-sandhiri-22a88422a/',
+      github: 'https://github.com/saanghavi-orrizonte',
       desc1:
         'I graduated with a degree in hospitality studies but after working in the hotel industry, I realized my interests lay elsewhere. Following videos on how to create a basic website fascinated me, sparking my desire to learn more and pursue a career in the IT industry.',
       desc2:
@@ -43,6 +47,8 @@ export class TestimonialComponent implements OnInit {
       position: 'Software Engineer',
       img: 'defaultAvatar',
       companyName: 'Orrizonte',
+      linkedIn: 'https://www.linkedin.com/in/kirti-sharma-0189ab228/',
+      github: 'https://github.com/kirti-orrizonte',
       desc1:
         "I reside in Faridabad, and I graduated from college in 2023. Due to financial situation, I opted for a regular private college, with aspirations of becoming a software engineer. However, throughout my four years in college, there were no placement opportunities due to the institution's third-tier ranking. Despite my hard work, I couldn't secure any job placements, likely because I lacked the required skill set and knowledge.",
       desc2:
@@ -58,6 +64,8 @@ export class TestimonialComponent implements OnInit {
       position: 'Software Engineer',
       img: 'defaultAvatar',
       companyName: 'Orrizonte',
+      linkedIn: 'https://www.linkedin.com/in/harshita-garg-328aab221/',
+      github: 'https://github.com/harshita-orrizonte',
       desc1:
         'As a student from Faridabad, Haryana, my journey into the tech field was laden with challenges. Despite completing my BTech from an average college in the area, securing a job placement remained elusive despite relentless efforts. Enduring countless rejections and setbacks over a year was daunting.',
       desc2:
@@ -73,6 +81,8 @@ export class TestimonialComponent implements OnInit {
       position: 'Software Engineer',
       img: 'defaultAvatar',
       companyName: 'Orrizonte',
+      linkedIn: 'https://www.linkedin.com/in/pillirajesh/',
+      github: 'https://github.com/rajesh-orrizonte',
       desc1:
         'As a mechanical student I graduated with zero coding knowledge. But I wanted to start my career in IT. Soon, I got to know about CKlassrooms and joined it.',
       desc2:
@@ -86,6 +96,8 @@ export class TestimonialComponent implements OnInit {
       position: 'Software Engineer',
       img: 'defaultAvatar',
       companyName: 'Orrizonte',
+      linkedIn: 'https://www.linkedin.com/in/rupesh-vanneldas-1b0444197/',
+      github: 'https://github.com/rupesh-orrizonte',
       desc1:
         "I graduated from Mumbai with a bachelor's degree in IT; however, finding work after college proved difficult due to limited placement possibilities caused by the recession, as just a few organizations came to recruit freshers. Despite my efforts to search independently, the results were unsatisfying because I lacked the abilities that employers were looking for.",
       desc2:
@@ -103,7 +115,7 @@ export class TestimonialComponent implements OnInit {
 
   openDialog(data) {
     this.dialog.open(TestimonialDialogComponent, {
-      width: 'clamp(20rem, 60vw, 35rem)',
+      width: 'clamp(20rem, 80vw, 70rem)',
       data: data,
     });
   }
