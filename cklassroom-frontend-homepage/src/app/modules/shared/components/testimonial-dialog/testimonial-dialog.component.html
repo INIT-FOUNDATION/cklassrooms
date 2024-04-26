@@ -1,10 +1,14 @@
 <div
   class="flex flex-col md:flex-row text-center md:text-start items-center mb-3 relative"
 >
-  <img
-    src="/assets/images/testimonials/{{ data?.img }}.svg"
-    class="w-32 h-32 bg-gray-200 rounded-full p-2"
-  />
+  <div
+    class="bg-no-repeat bg-cover bottom-0 w-40 h-40 expert-img rounded-full overflow-hidden"
+    [ngStyle]="{
+      'background-image': data.img
+        ? 'url(assets/images/testimonials/' + data.img + '.png)'
+        : ''
+    }"
+  ></div>
   <div class="flex flex-col ps-5">
     <span class="text-green font-semibold">{{ data.name }}</span>
     <span class="text-sm">{{ data.position }}</span>

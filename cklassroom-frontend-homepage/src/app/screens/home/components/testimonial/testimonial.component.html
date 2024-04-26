@@ -44,10 +44,14 @@
         </button>
       </div>
       <div class="flex items-center">
-        <img
-          src="assets/images/testimonials/{{ item?.img }}.svg"
-          class="w-16 h-16 bg-white rounded-full p-2"
-        />
+        <div
+          class="bg-no-repeat bg-cover bottom-0 w-20 h-20 expert-img rounded-full overflow-hidden"
+          [ngStyle]="{
+            'background-image': item.img
+              ? 'url(assets/images/testimonials/' + item.img + '.png)'
+              : ''
+          }"
+        ></div>
         <div class="flex flex-col ps-2">
           <div class="font-semibold mb-1 text-sm text-green">
             {{ item?.name }}
