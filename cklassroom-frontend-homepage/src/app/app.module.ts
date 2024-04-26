@@ -11,13 +11,8 @@ import { SharedModule } from './modules/shared/shared.module';
 import { LoaderInterceptor } from './interceptor/loader.interceptor';
 import { ThemeModule } from './modules/shared/theme/theme.module';
 
-
-
 @NgModule({
-  declarations: [
-    AppComponent,
-      
-  ],  
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

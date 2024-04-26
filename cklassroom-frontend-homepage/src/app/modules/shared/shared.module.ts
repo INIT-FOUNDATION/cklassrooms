@@ -36,6 +36,7 @@ import { DndDirective } from './directives/dnd.directive';
 import { OtpNumberDirective } from './directives/otp-number.directive';
 import { IntegerInputDirective } from './directives/input-integer.directive';
 import { LoaderComponent } from './components/loader/loader.component';
+import { TestimonialDialogComponent } from './components/testimonial-dialog/testimonial-dialog.component';
 /*------------------- DIRECTIVES ------------------------*/
 
 const MY_FORMATS = {
@@ -85,7 +86,7 @@ const export_material_modules = [
 ];
 
 @NgModule({
-  declarations: [...export_components, ...export_directives],
+  declarations: [...export_components, ...export_directives, TestimonialDialogComponent],
   imports: [...export_material_modules, ToastrModule.forRoot()],
   exports: [
     FormsModule,

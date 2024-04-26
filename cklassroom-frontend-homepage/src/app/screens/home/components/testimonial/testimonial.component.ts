@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { TestimonialDialogComponent } from 'src/app/modules/shared/components/testimonial-dialog/testimonial-dialog.component';
 
 @Component({
   selector: 'app-testimonial',
@@ -6,7 +8,103 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testimonial.component.scss'],
 })
 export class TestimonialComponent implements OnInit {
-  constructor() {}
+  constructor(private dialog: MatDialog) {}
+
+  testimonialList: any = [
+    {
+      id: 1,
+      name: 'Ashwini Jadhav',
+      position: 'Software Developer',
+      img: 'defaultAvatar',
+      companyName: 'Orrizonte',
+      desc1:
+        "Even though I graduated with a bachelor's degree in IT from Mumbai, securing a job after college proved challenging due to limited placement opportunities due to the college being a tier-three college. Despite my efforts to search independently, the outcomes were unsatisfactory as I lacked the skills that companies were seeking.",
+      desc2:
+        'Determined to enhance my skills, I opted to enroll in a web development course. I learned about CKlassrooms by CK sir through a friend and visited their website. I was surprised to discover that the course was developed by the same team that built Cowin. Unlike other courses, Cklassrooms claimed to offer the students the chance to work on live projects which interested me in enrolling.',
+      desc3:
+        'Cklassrooms focused on both theoretical concepts and practical knowledge. We received assignments for hands-on practice and underwent exams to assess our understanding. After three months, I had the opportunity to participate in a live project, which proved to be a valuable learning experience for me. I am grateful to CK sir and his team for this opportunity. I now work as a Software Developer at Orrizonte Technologies.',
+    },
+    {
+      id: 2,
+      name: 'Saanghavi Sandhiri',
+      position: 'Software Developer',
+      img: 'defaultAvatar',
+      companyName: 'Orrizonte',
+      desc1:
+        'I graduated with a degree in hospitality studies but after working in the hotel industry, I realized my interests lay elsewhere. Following videos on how to create a basic website fascinated me, sparking my desire to learn more and pursue a career in the IT industry.',
+      desc2:
+        'Soon I began applying for internships. To my disappointment, my lack of a relevant degree and professional experience in the field resulted in rejections. To enhance my skills, I decided to enroll in a web development course which I thought would be something close to an IT degree and aid in securing a job. However, none of those courses impressed me. Most of them were pre-recorded videos lacking the guidance I needed. During my search for a comprehensive course, I discovered Cklassrooms. I found the course interesting and decided to enroll. ',
+      desc3:
+        'Cklassrooms were not only focused on theoretical concepts but also provided opportunities to work on live projects. Through this, I discovered my interest in front-end development. I learned to make websites and mobile applications. I am grateful to CK sir and his team for this great opportunity. Now I am working as a Software Developer at Orrizonte Technologies. This innovative approach has truly been a stepping stone in my career development.',
+    },
+    {
+      id: 3,
+      name: 'Kirti Sharma',
+      position: 'Software Engineer',
+      img: 'defaultAvatar',
+      companyName: 'Orrizonte',
+      desc1:
+        "I reside in Faridabad, and I graduated from college in 2023. Due to financial situation, I opted for a regular private college, with aspirations of becoming a software engineer. However, throughout my four years in college, there were no placement opportunities due to the institution's third-tier ranking. Despite my hard work, I couldn't secure any job placements, likely because I lacked the required skill set and knowledge.",
+      desc2:
+        "Eventually, I joined CKlassrooms, where CK Sir provided me with this opportunity, and I started learning .Joining CKlassrooms under CK Sir's mentorship, I embarked on a year of continuous learning.",
+      desc3:
+        "Supported by CK Sir and Cowin team members, I expanded my skill set in frontend development, thriving in CKlassrooms' growth environment.",
+      desc4:
+        'After completing my learning journey, I was fortunate to receive an opportunity to join the team at Orrizonte Technologies as a software developer. This role marks the culmination of my efforts and serves as a testament to the dedication and mentorship. I am grateful for the opportunity to work with Orrizonte and thankful for the support I have received.',
+    },
+    {
+      id: 4,
+      name: 'Harshita Garg',
+      position: 'Software Engineer',
+      img: 'defaultAvatar',
+      companyName: 'Orrizonte',
+      desc1:
+        'As a student from Faridabad, Haryana, my journey into the tech field was laden with challenges. Despite completing my BTech from an average college in the area, securing a job placement remained elusive despite relentless efforts. Enduring countless rejections and setbacks over a year was daunting.',
+      desc2:
+        "However, CKlassrooms by CK Sir became the game-changer. The institute's comprehensive and practical approach to learning under CK Sir's guidance transformed my coding and software development acumen. Suddenly, what seemed insurmountable became achievable.",
+      desc3:
+        "Gratefully, job offers from renowned tech MNCs started pouring in, all thanks to CKlassrooms' invaluable support. Today, I proudly serve as a Software Developer at Orrizonte Technologies, a dream realized through CKlassrooms' mentorship and resources.",
+      desc4:
+        'I owe my gratitude to CK Sir and the entire CKlassrooms team for their unwavering belief in me and their dedication to empowering students like myself. Their commitment to equipping us with the skills needed to thrive in the tech industry is commendable. I wholeheartedly endorse CKlassrooms to anyone embarking on a career in technology.',
+    },
+    {
+      id: 5,
+      name: 'Pilli Rajesh',
+      position: 'Software Engineer',
+      img: 'defaultAvatar',
+      companyName: 'Orrizonte',
+      desc1:
+        'As a mechanical student I graduated with zero coding knowledge. But I wanted to start my career in IT. Soon, I got to know about CKlassrooms and joined it.',
+      desc2:
+        'CKlassrooms trained me with all the required skills to get a software job.',
+      desc3:
+        'Now, I can boldly say that I know web technologies. Project-based learning made me get practical knowledge. Mock tests and coding practices improved my coding skills.',
+    },
+    {
+      id: 6,
+      name: 'Rupesh Vanneldas',
+      position: 'Software Engineer',
+      img: 'defaultAvatar',
+      companyName: 'Orrizonte',
+      desc1:
+        "I graduated from Mumbai with a bachelor's degree in IT; however, finding work after college proved difficult due to limited placement possibilities caused by the recession, as just a few organizations came to recruit freshers. Despite my efforts to search independently, the results were unsatisfying because I lacked the abilities that employers were looking for.",
+      desc2:
+        'Determined to improve my skills, I enrolled in a Web Development course. I discovered CKlassrooms by CK sir from an acquaintance and explored their website. I was startled to learn that the course was created by the same team who made CoWIN. Unlike other courses, Cklassrooms claimed to offer students the opportunity to work on live projects, which piqued my curiosity in joining.',
+      desc3:
+        'Cklassrooms emphasized both academic concepts and practical expertise. We were given homework for hands-on practice and took exams to assess our learning. After three months, I was able to engage in a live project, which proved to be an invaluable learning experience for me.',
+      desc4:
+        "With the help of CK Sir and CoWIN team members, I strengthened my skill set in frontend development and thrived in CKlassrooms' growing atmosphere. I'm grateful to CK Sir and his team for the opportunity.",
+      desc5:
+        'I currently work as a Software Developer at Orrizonte Technologies. This role represents the culmination of my work and demonstrates my dedication and mentorship. I am glad for the opportunity to work with Orrizonte and the support I have received.',
+    },
+  ];
 
   ngOnInit(): void {}
+
+  openDialog(data) {
+    this.dialog.open(TestimonialDialogComponent, {
+      width: 'clamp(20rem, 60vw, 35rem)',
+      data: data,
+    });
+  }
 }

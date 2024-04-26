@@ -1,0 +1,46 @@
+<div class="text-md font-semibold mb-3 flex items-center justify-between">
+  Here's what {{ data?.name }} said about us
+
+  <div class="cursor-pointer" (click)="closeModal()">
+    <i class="fa-solid fa-xmark text-2xl" style="color: '#1b1f24'"></i>
+  </div>
+</div>
+
+<div class="flex items-end">
+  <div class="arrow-box relative">
+    <div style="width: 4.3rem">
+      <img
+        src="../../../../../assets/images/testimonials/{{ data?.img }}.svg"
+        class="w-16 h-16 bg-gray-300 rounded-full p-2"
+      />
+    </div>
+  </div>
+  <div
+    class="bg-gray-300 rounded-xl px-5 py-3 text-sm leading-6 overflow-y-auto custom-height font-medium"
+  >
+    <div class="pb-3">
+      Greetings! I'm
+      <span class="font-semibold">{{ data.name }},</span>
+
+      <span class="text-sm">
+        a {{ data.position }} proudly contributing to the team at
+        {{ data?.companyName }}.</span
+      >
+    </div>
+    <div class="">
+      {{ data?.desc1 }}
+    </div>
+    <div class="py-3">
+      {{ data?.desc2 }}
+    </div>
+    <div class="">
+      {{ data?.desc3 }}
+    </div>
+    <div class="py-3">
+      {{ data?.desc4 }}
+    </div>
+    <div class="">
+      {{ data?.desc5 }}
+    </div>
+  </div>
+</div>

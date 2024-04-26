@@ -59,6 +59,5 @@ export class HeaderComponent implements OnInit {
     } else {
       this.verticalScrollValue = false;
     }
-    console.log(this.verticalScrollValue);
   }
 }
