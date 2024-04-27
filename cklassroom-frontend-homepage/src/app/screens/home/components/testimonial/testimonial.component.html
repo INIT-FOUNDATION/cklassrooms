@@ -25,7 +25,7 @@
     <div
       *ngFor="let item of testimonialList"
       [id]="item?.id"
-      class="hover-card rounded-3xl ps-5 py-5 pe-2 flex flex-col items-start h-96"
+      class="hover-card rounded-3xl ps-5 py-5 pe-2 flex flex-col items-start h-96 shadow-md"
       [ngClass]="{
         'xl:row-start-2 xl:row-span-2': item?.id === 1,
         'xl:row-end-3 xl:row-span-2 xl:mt-60': item?.id === 2

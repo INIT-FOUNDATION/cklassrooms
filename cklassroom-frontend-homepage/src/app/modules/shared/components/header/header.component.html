@@ -1,6 +1,9 @@
 <div
-  class="flex justify-between fixed z-10 header-body pt-5 pb-3 px-5 md:px-10 w-screen"
-  [ngClass]="{ 'shadow-lg': verticalScrollValue }"
+  class="flex justify-between z-50 header-body pt-5 pb-3 px-5 md:px-10 w-screen"
+  [ngClass]="{
+    'shadow-lg': verticalScrollValue,
+    fixed: utilityService.showFooter$ | async
+  }"
 >
   <div
     class="text-xl animate__animated animate__fadeInDown cursor-pointer"

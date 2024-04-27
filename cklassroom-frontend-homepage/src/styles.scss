@@ -12,6 +12,7 @@ body {
   background-color: $themePrimary;
   color: $themeFontColor;
   letter-spacing: 0.04rem;
+  scroll-behavior: smooth;
 }
 
 :root * {

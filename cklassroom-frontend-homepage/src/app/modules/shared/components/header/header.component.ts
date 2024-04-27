@@ -4,7 +4,8 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { UtilityService } from '../../services/utility.service';
 import { environment } from 'src/environments/environment';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -22,6 +23,14 @@ export class HeaderComponent implements OnInit {
   headerLogo = 'logoLight';
 
   ngOnInit(): void {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        if (event.url === '/') {
+          this.utilityService.showFooterSet = true;
+        }
+      });
+
     gsap.registerPlugin(ScrollToPlugin);
 
     this.themeService.getActiveTheme.subscribe((res: string) => {
@@ -50,6 +59,7 @@ export class HeaderComponent implements OnInit {
 
   goBack() {
     this.router.navigate(['']);
+    this.utilityService.showFooterSet = true;
   }
 
   @HostListener('window:scroll', ['$event'])
