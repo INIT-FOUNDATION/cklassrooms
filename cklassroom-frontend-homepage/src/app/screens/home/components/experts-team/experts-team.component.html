@@ -27,9 +27,9 @@
       <div
         class="absolute bg-no-repeat bg-cover bottom-0 w-52 h-80 expert-img"
         [ngStyle]="{
-          'background-image': item.img
-            ? 'url(assets/images/experts/' + item.img + '.png)'
-            : ''
+          'background-image': 'url(assets/images/experts/' + item.img + '.png)',
+          width: item?.width,
+          height: item?.height
         }"
       ></div>
       <div
