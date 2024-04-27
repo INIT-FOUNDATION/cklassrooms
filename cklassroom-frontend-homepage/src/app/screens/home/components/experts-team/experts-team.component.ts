@@ -46,7 +46,7 @@ export class ExpertsTeamComponent implements OnInit {
     {
       id: 4,
       name: 'Narsima Chilkuri',
-      position: 'Dev ops expert',
+      position: 'Devops expert',
       img: 'narsimaChilkuri',
       githubURL: 'https://github.com/narsima-orrizonte',
       linkedinURL: 'https://www.linkedin.com/in/narsima-chilkuri-63431a106/',
@@ -58,7 +58,7 @@ export class ExpertsTeamComponent implements OnInit {
     {
       id: 5,
       name: 'Sachin Mogaveera',
-      position: 'Technical Lead',
+      position: 'Frontend Architect',
       img: 'sachinkumarMogaveera',
       githubURL: 'https://github.com/skm-orrizonte',
       linkedinURL:

@@ -84,11 +84,11 @@ export class TestimonialComponent implements OnInit {
       linkedIn: 'https://www.linkedin.com/in/pillirajesh/',
       github: 'https://github.com/rajesh-orrizonte',
       desc1:
-        'As a mechanical student I graduated with zero coding knowledge. But I wanted to start my career in IT. Soon, I got to know about CKlassrooms and joined it.',
+        'I graduated with a bachelor\'s degree in Mechanical Engineering (ME) from Kolkata, transitioning from a non-IT background to becoming a proficient Full-stack developer seemed like an hopeless task.Transitioning from a mechanical engineering background to becoming a Full-stack developer has been a thrilling journey filled with challenges and opportunities for growth. However, my experience with the Full-stack development course at CKlassrooms has been nothing short of life-changing. Allow me to share my journey and the profound impact this course has had on my career trajectory.',
       desc2:
-        'CKlassrooms trained me with all the required skills to get a software job.',
+        'Before enrolling in the Full-stack Development course at CKlassrooms, my knowledge of coding was limited to basic HTML and CSS. The world of programming languages, server-side scripting, and database management felt like uncharted territory. Yet, from the onset, CKlassrooms comprehensive curriculum and supportive learning environment made this seemingly daunting journey accessible and rewarding. Moreover, CKlassrooms commitment to providing a supportive learning community fostered an environment of collaboration and growth. Through online forums, live coding sessions, and peer-to-peer feedback, I found myself surrounded by like-minded individuals who shared a passion for continuous learning and personal development. One of the distinguishing features of the course was its practical approach to learning. By working on real-world projects and collaborating with peers, I not only honed my technical skills but also developed the problem-solving mindset essential for success in the field of full-stack development.',
       desc3:
-        'Now, I can boldly say that I know web technologies. Project-based learning made me get practical knowledge. Mock tests and coding practices improved my coding skills.',
+        'Today, I am proud to say that I have successfully transitioned from a non-IT background to a proficient full-stack developer, thanks to the invaluable support and guidance of CKlassrooms.',
     },
     {
       id: 6,
