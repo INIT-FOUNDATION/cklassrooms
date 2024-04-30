@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import gsap from 'gsap';
-import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollTrigger from 'gsap/ScrollTrigger';
 @Component({
   selector: 'app-what-we-offer',
   templateUrl: './what-we-offer.component.html',
@@ -15,8 +15,8 @@ export class WhatWeOfferComponent implements OnInit, AfterViewInit {
       placement: 'left',
       description: `Tailored training, workshops, and practical experiences to equip
       individuals with technical, soft, and professional skills essential for
-      success in their carrier.`,
-      tags: ['Online Courses', 'Personal Tranings']
+      success in their career.`,
+      tags: ['Online Courses', 'Personal Tranings'],
     },
     {
       image: 'guidelineAndCounselling.svg',
@@ -26,7 +26,7 @@ export class WhatWeOfferComponent implements OnInit, AfterViewInit {
       description: `Personalised support in identifying strengths, interests, and career
       goals, alongside assistance in resume writing, interview preparation,
       and networking strategies for career success.`,
-      tags: ['Strength Enhancement', 'One-to-One Counselling']
+      tags: ['Strength Enhancement', 'One-to-One Counselling'],
     },
     {
       image: 'jobPlacement.svg',
@@ -36,9 +36,9 @@ export class WhatWeOfferComponent implements OnInit, AfterViewInit {
       description: `Facilitating connections with employers, identifying job openings, and
       providing support in application processes, interview preparation, and
       negotiation techniques for successful employment outcomes.`,
-      tags: ['Interview Preparations', 'Walk in Interviews']
-    }
-  ]
+      tags: ['Interview Preparations', 'Walk in Interviews'],
+    },
+  ];
 
   moreOffering: any = [
     {
@@ -91,7 +91,6 @@ export class WhatWeOfferComponent implements OnInit, AfterViewInit {
     gsap.registerPlugin(ScrollTrigger);
   }
 
-
   ngAfterViewInit(): void {
     gsap.utils.toArray('.scroll-animation').forEach((element: HTMLElement) => {
       gsap.from(element, {
@@ -105,10 +104,8 @@ export class WhatWeOfferComponent implements OnInit, AfterViewInit {
           once: true,
           toggleActions: 'play none none none', // play animation when in view, pause when out of view
           scrub: true, // smooth animation during scroll
-        }
+        },
       });
     });
   }
-
-
 }
