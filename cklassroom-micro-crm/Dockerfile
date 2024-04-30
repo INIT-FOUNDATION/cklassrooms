@@ -7,7 +7,7 @@ COPY package.json ./
 # Add this only if installing package from an internal git repository
 ENV GIT_SSL_NO_VERIFY=1
 
-RUN npm install --force
+RUN npm install
 
 COPY . .
 

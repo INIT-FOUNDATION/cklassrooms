@@ -1,13 +1,67 @@
-<div class="my-8 md:my-40" id="scrollToTestimonials">
-  <div class="grid grid-cols-1 grid-cols-1 md:grid-cols-3 gap-5 lg:gap-10">
+<div class="my-8 md:my-40">
+  <div class="md:text-xl text-center font-medium text-green mb-3">
+    Testimonials
+  </div>
+  <div class="text-xl md:text-4xl text-center my-3 font-semibold">
+    What people say about us
+  </div>
+  <div class="text-sm md:text-base md:mx-10 lg:mx-40 xl:mx-60 text-center">
+    Authentic, heartfelt praise capturing value and satisfaction, resonating
+    with genuine experience.
+  </div>
+  <div
+    class="mt-5 lg:mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-none xl:grid-rows-2 xl:grid-flow-col gap-4 relative"
+  >
+    <div class="absolute mt-10 hidden xl:block">
+      <div class="text-xl md:text-4xl my-3 font-semibold">
+        Here's the buzz about us:
+      </div>
+      <div class="text-sm md:text-base w-2/4">
+        "We're praised for our outstanding service and personalized solutions.
+        Our dedication, clear communication, and innovation earn trust and
+        deliver success."
+      </div>
+    </div>
     <div
-      class="flex items-center rounded-2xl px-5 py-8 hover-card cursor-pointer shadow-md hover:scale-110 duration-300"
-      *ngFor="let item of getTestimonials"
+      *ngFor="let item of testimonialList"
+      [id]="item?.id"
+      class="hover-card rounded-3xl ps-5 py-5 pe-2 flex flex-col items-start h-96 shadow-md"
+      [ngClass]="{
+        'xl:row-start-2 xl:row-span-2': item?.id === 1,
+        'xl:row-end-3 xl:row-span-2 xl:mt-60': item?.id === 2
+      }"
     >
-      <i class="fa-solid {{ item?.img }} text-green text-3xl mr-3"></i>
-      <div class="flex flex-col">
-        <span class="text-3xl font-bold">{{ item?.value }}</span>
-        <span class="text-sm">{{ item?.label }}</span>
+      <img
+        src="/assets/images/testimonials/invertedComma.svg"
+        class="w-5 mb-3"
+      />
+      <div class="text-sm leading-7 h-60 overflow-y-auto pe-3">
+        {{ item?.desc1 }}
+      </div>
+      <div class="flex justify-end w-full my-3 pe-3">
+        <button
+          type="button"
+          class="text-green border-green rounded-lg font-medium px-4 py-2 text-sm"
+          (click)="openDialog(item)"
+        >
+          Read more
+        </button>
+      </div>
+      <div class="flex items-center">
+        <div
+          class="bg-no-repeat bg-cover bottom-0 w-20 h-20 expert-img rounded-full overflow-hidden"
+          [ngStyle]="{
+            'background-image': item.img
+              ? 'url(assets/images/testimonials/' + item.img + '.png)'
+              : ''
+          }"
+        ></div>
+        <div class="flex flex-col ps-2">
+          <div class="font-semibold mb-1 text-sm text-green">
+            {{ item?.name }}
+          </div>
+          <span class="text-xs">{{ item?.position }}</span>
+        </div>
       </div>
     </div>
   </div>

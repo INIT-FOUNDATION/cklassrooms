@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ThemeService } from '../../theme/theme.service';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-
+import { UtilityService } from '../../services/utility.service';
+import { environment } from 'src/environments/environment';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -11,24 +14,38 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 })
 export class HeaderComponent implements OnInit {
   active = false;
+  verticalScrollValue: boolean = false;
   constructor(
-    public themeService: ThemeService
+    public themeService: ThemeService,
+    public utilityService: UtilityService,
+    private router: Router
   ) {}
+  headerLogo = 'logoLight';
 
   ngOnInit(): void {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        if (event.url === '/') {
+          this.utilityService.showFooterSet = true;
+        }
+      });
+
     gsap.registerPlugin(ScrollToPlugin);
-    
+
     this.themeService.getActiveTheme.subscribe((res: string) => {
-      if (res === "light_theme") {
+      if (res === 'light_theme') {
         this.active = false;
       } else {
         this.active = true;
       }
-    })
+
+      this.headerLogo = res === 'light_theme' ? 'logoLight' : 'logoDark';
+    });
   }
 
   scrollToTarget(target: string) {
-    gsap.to(window, { duration: 2, scrollTo: { y:  `#${target}` } });
+    gsap.to(window, { duration: 2, scrollTo: { y: `#${target}` } });
   }
 
   switchTheme() {
@@ -38,5 +55,19 @@ export class HeaderComponent implements OnInit {
       this.themeService.active_theme = 'light_theme';
     }
     this.themeService.setActiveThem(this.themeService.active_theme);
+  }
+
+  goBack() {
+    this.router.navigate(['']);
+    this.utilityService.showFooterSet = true;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event) {
+    if (window.scrollY > 0) {
+      this.verticalScrollValue = true;
+    } else {
+      this.verticalScrollValue = false;
+    }
   }
 }

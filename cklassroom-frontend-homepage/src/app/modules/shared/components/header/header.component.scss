@@ -1,3 +1,10 @@
+@import "../../../../../theme/color";
+
+.header-body {
+  background-color: $themePrimary;
+  top: -0.1rem;
+}
+
 .toggle-body {
   transition: 500ms;
   top: -1.1rem;

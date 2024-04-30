@@ -8,16 +8,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { FooterComponent } from './components/footer/footer.component';
 import { ApplyButtonComponent } from './components/apply-button/apply-button.component';
 import { ApplyDialogComponent } from './components/apply-dialog/apply-dialog.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
 
 /*------------------- MATERIAL COMPONENTS ------------------------*/
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 /*------------------- MATERIAL COMPONENTS ------------------------*/
 
 /*------------------- DIRECTIVES ------------------------*/
@@ -25,13 +26,17 @@ import { RangeDirective } from './directives/range.directive';
 import { RangeLengthDirective } from './directives/range-length.directive';
 import { MaxDirective } from './directives/max.directive';
 import { MinDirective } from './directives/min.directive';
-import { InpuTrimValidator, InputTrimDirective } from './directives/input-trim.directive';
+import {
+  InpuTrimValidator,
+  InputTrimDirective,
+} from './directives/input-trim.directive';
 import { InputCharDirective } from './directives/input-char.directive';
 import { MobileNumberDirective } from './directives/mobile-number.directive';
 import { DndDirective } from './directives/dnd.directive';
 import { OtpNumberDirective } from './directives/otp-number.directive';
 import { IntegerInputDirective } from './directives/input-integer.directive';
 import { LoaderComponent } from './components/loader/loader.component';
+import { TestimonialDialogComponent } from './components/testimonial-dialog/testimonial-dialog.component';
 /*------------------- DIRECTIVES ------------------------*/
 
 const MY_FORMATS = {
@@ -46,7 +51,13 @@ const MY_FORMATS = {
   },
 };
 
-const export_components = [HeaderComponent, FooterComponent, ApplyButtonComponent, ApplyDialogComponent, LoaderComponent];
+const export_components = [
+  HeaderComponent,
+  FooterComponent,
+  ApplyButtonComponent,
+  ApplyDialogComponent,
+  LoaderComponent,
+];
 const export_directives = [
   RangeDirective,
   RangeLengthDirective,
@@ -57,8 +68,8 @@ const export_directives = [
   MobileNumberDirective,
   DndDirective,
   OtpNumberDirective,
-  IntegerInputDirective
-]
+  IntegerInputDirective,
+];
 const export_material_modules = [
   CommonModule,
   FormsModule,
@@ -70,11 +81,12 @@ const export_material_modules = [
   MatInputModule,
   MatSelectModule,
   MatAutocompleteModule,
-  NgxSpinnerModule
+  NgxSpinnerModule,
+  MatExpansionModule,
 ];
 
 @NgModule({
-  declarations: [...export_components, ...export_directives],
+  declarations: [...export_components, ...export_directives, TestimonialDialogComponent],
   imports: [...export_material_modules, ToastrModule.forRoot()],
   exports: [
     FormsModule,
@@ -82,7 +94,7 @@ const export_material_modules = [
     ...export_components,
     ...export_material_modules,
     ...export_directives,
-    ToastrModule
+    ToastrModule,
   ],
   providers: [{ provide: MAT_DATE_FORMATS, useValue: MY_FORMATS }],
 })

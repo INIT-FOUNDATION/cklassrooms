@@ -1,0 +1,53 @@
+<div class="my-8 md:my-40">
+  <div class="md:text-xl text-center font-medium text-green mb-3">
+    Our Experts Team
+  </div>
+
+  <!-- <div class="text-xl md:text-4xl text-center my-3">
+    Placement Program for freshers
+  </div> -->
+  <div class="text-sm md:text-base md:mx-10 lg:mx-40 text-center">
+    Your imagination is the sole boundary to what you can achieve.
+  </div>
+  <div
+    id="experts"
+    class="mt-5 lg:mt-10 mb-10 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-5 lg:gap-10"
+  >
+    <div
+      class="px-4 rounded-full custom-height relative flex justify-center items-start text-sm overflow-hidden cursor-pointer"
+      [ngStyle]="{ 'background-color': item?.bgColor }"
+      *ngFor="let item of expertTeam"
+    >
+      <div
+        class="absolute pt-16 flex flex-col items-center text-center text-sky-950"
+      >
+        <span class="font-semibold mb-1">{{ item?.name }}</span>
+        <span>{{ item?.position }}</span>
+      </div>
+      <div
+        class="absolute bg-no-repeat bg-cover bottom-0 w-52 h-80 expert-img"
+        [ngStyle]="{
+          'background-image': 'url(assets/images/experts/' + item.img + '.png)',
+          width: item?.width,
+          height: item?.height
+        }"
+      ></div>
+      <div
+        class="overlay absolute w-full h-full items-end pb-5 justify-center hidden"
+      >
+        <a [href]="item?.githubURL" target="_blank">
+          <i
+            class="fa-brands fa-github text-4xl me-5"
+            [ngStyle]="{ color: item?.bgColor }"
+          ></i
+        ></a>
+        <a [href]="item?.linkedinURL" target="_blank">
+          <i
+            class="fa-brands fa-linkedin text-4xl"
+            [ngStyle]="{ color: item?.bgColor }"
+          ></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

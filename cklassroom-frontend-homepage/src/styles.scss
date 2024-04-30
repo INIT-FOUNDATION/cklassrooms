@@ -3,8 +3,8 @@
 @import "tailwindcss/components";
 @import "../src/theme/color";
 @import "aos/dist/aos.css";
-@import '~ngx-toastr/toastr';
-@import './theme/loader';
+@import "~ngx-toastr/toastr";
+@import "./theme/loader";
 
 html,
 body {
@@ -12,6 +12,7 @@ body {
   background-color: $themePrimary;
   color: $themeFontColor;
   letter-spacing: 0.04rem;
+  scroll-behavior: smooth;
 }
 
 :root * {
@@ -63,4 +64,27 @@ button:focus-visible {
 
 .ng-invalid.ng-touched.ng-dirty {
   border-color: red !important;
+}
+
+.mat-expansion-panel-content {
+  color: $themeFontColor;
+  font: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+}
+
+.jsmind-inner {
+  position: fixed !important;
+
+  // @media (max-width: 750px) {
+  //   left: -5rem;
+  // }
+}
+
+jmexpander {
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 15px;
+  border-radius: 16px;
 }

@@ -1,0 +1,199 @@
+{
+  "mindMapData": {
+    "meta": {
+      "name": "Node.js Roadmap",
+      "author": "Sudhirkumarrao Allada",
+      "version": "1.0"
+    },
+    "format": "node_tree",
+    "data": {
+      "id": "root",
+      "background-image": "assets/images/courses/nodeJs.svg",
+      "width": "100",
+      "height": "100",
+      "expanded": true,
+      "children": [
+        {
+          "id": "basic",
+          "topic": "Basics",
+          "expanded": false,
+          "children": [
+            {
+              "id": "basic1",
+              "topic": "Introduction to Node.js"
+            },
+            {
+              "id": "basic2",
+              "topic": "Node.js Installation and Setup"
+            },
+            {
+              "id": "basic3",
+              "topic": "Node.js Modules (CommonJS, ES Modules)"
+            },
+            {
+              "id": "basic4",
+              "topic": "Node Package Manager (npm)"
+            },
+            {
+              "id": "basic5",
+              "topic": "Understanding Asynchronous Programming"
+            }
+          ]
+        },
+        {
+          "id": "core",
+          "topic": "Core Concepts",
+          "expanded": false,
+          "children": [
+            {
+              "id": "core1",
+              "topic": "Event Loop and Non-Blocking I/O"
+            },
+            {
+              "id": "core2",
+              "topic": "File System Operations (fs module)"
+            },
+            {
+              "id": "core3",
+              "topic": "Streams and Buffers"
+            },
+            {
+              "id": "core4",
+              "topic": "HTTP and HTTPS Modules"
+            },
+            {
+              "id": "core5",
+              "topic": "Error Handling in Node.js"
+            }
+          ]
+        },
+        {
+          "id": "webdev",
+          "topic": "Web Development",
+          "expanded": false,
+          "children": [
+            {
+              "id": "webdev1",
+              "topic": "Creating Web Servers with Express.js"
+            },
+            {
+              "id": "webdev2",
+              "topic": "RESTful APIs with Express.js"
+            },
+            {
+              "id": "webdev3",
+              "topic": "Authentication and Authorization"
+            },
+            {
+              "id": "webdev4",
+              "topic": "Templating Engines (Pug, EJS)"
+            },
+            {
+              "id": "webdev5",
+              "topic": "Middleware and Routing"
+            }
+          ]
+        },
+        {
+          "id": "db",
+          "topic": "Database Integration",
+          "expanded": false,
+          "children": [
+            {
+              "id": "db1",
+              "topic": "Using MongoDB with Node.js (mongoose)"
+            },
+            {
+              "id": "db2",
+              "topic": "SQL Databases with Node.js (sequelize, knex)"
+            },
+            {
+              "id": "db3",
+              "topic": "Database Migrations"
+            }
+          ]
+        },
+        {
+          "id": "testing",
+          "topic": "Testing and Debugging",
+          "expanded": false,
+          "children": [
+            {
+              "id": "testing1",
+              "topic": "Unit Testing with Jest"
+            },
+            {
+              "id": "testing2",
+              "topic": "Integration Testing"
+            },
+            {
+              "id": "testing3",
+              "topic": "Debugging Techniques"
+            }
+          ]
+        },
+        {
+          "id": "security",
+          "topic": "Security",
+          "expanded": false,
+          "children": [
+            {
+              "id": "security1",
+              "topic": "Understanding Security Best Practices"
+            },
+            {
+              "id": "security2",
+              "topic": "Handling Authentication and Authorization"
+            },
+            {
+              "id": "security3",
+              "topic": "Preventing Common Security Vulnerabilities (OWASP Top 10)"
+            }
+          ]
+        },
+        {
+          "id": "deployment",
+          "topic": "Deployment",
+          "expanded": false,
+          "children": [
+            {
+              "id": "deployment1",
+              "topic": "Deploying Node.js Applications to Heroku"
+            },
+            {
+              "id": "deployment2",
+              "topic": "Containerization with Docker"
+            },
+            {
+              "id": "deployment3",
+              "topic": "Continuous Integration and Deployment (CI/CD)"
+            }
+          ]
+        },
+        {
+          "id": "extras",
+          "topic": "Extras",
+          "expanded": false,
+          "children": [
+            {
+              "id": "extras1",
+              "topic": "Building CLI Applications with Node.js"
+            },
+            {
+              "id": "extras2",
+              "topic": "File Uploads and Handling"
+            },
+            {
+              "id": "extras3",
+              "topic": "Real-Time Communication with WebSockets"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "additionalData": {
+    "pdfUrl": "assets/roadmaps/NODEJS ROADMAP.pdf",
+    "pdfName": "NODEJS ROADMAP.pdf"
+  }
+}

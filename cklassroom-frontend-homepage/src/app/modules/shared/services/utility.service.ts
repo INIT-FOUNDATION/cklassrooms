@@ -1,10 +1,19 @@
-import { Injectable } from "@angular/core";
-import { ToastrService } from "ngx-toastr";
+import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { BehaviorSubject, Observable } from 'rxjs';
 
-@Injectable({providedIn:'root'})
+@Injectable({ providedIn: 'root' })
 export class UtilityService {
+  private showFooter: BehaviorSubject<boolean>;
+  showFooter$: Observable<boolean>;
 
   constructor(private toasterService: ToastrService) {
+    this.showFooter = new BehaviorSubject(true);
+    this.showFooter$ = this.showFooter.asObservable();
+  }
+
+  set showFooterSet(flag) {
+    this.showFooter.next(flag);
   }
 
   showSuccessMessage(msg) {
@@ -19,7 +28,7 @@ export class UtilityService {
     this.toasterService.info(msg);
   }
 
-  b64toBlob = (b64Data, contentType='', sliceSize=512) => {
+  b64toBlob = (b64Data, contentType = '', sliceSize = 512) => {
     const byteCharacters = atob(b64Data);
     const byteArrays = [];
 
@@ -35,7 +44,7 @@ export class UtilityService {
       byteArrays.push(byteArray);
     }
 
-    const blob = new Blob(byteArrays, {type: contentType});
+    const blob = new Blob(byteArrays, { type: contentType });
     return blob;
-  }
+  };
 }

@@ -25,6 +25,11 @@ export class DataService {
     return this.http.get("/assets/json/companies.json");
   }
 
+
+  loadMindMapData(course: string) {
+    return this.http.get(`/assets/json/course-mindmap-data/${course}.json`);
+  }
+
   enquiry(payload) {
     return this.http.post(`${environment.crm_prefix_url}/enquiry`, payload);
   }

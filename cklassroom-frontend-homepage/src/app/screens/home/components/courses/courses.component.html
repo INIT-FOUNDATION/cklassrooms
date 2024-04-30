@@ -6,9 +6,11 @@
   <div class="text-xl md:text-4xl text-center my-3">
     Our Commitment to Your Development.
   </div>
-  <div class="mt-5 lg:mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+  <div
+    class="mt-5 lg:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+  >
     <div
-      class="courses-card relative overflow-hidden shadow-md rounded-xl"
+      class="courses-card relative overflow-hidden shadow-md rounded-xl min-h-80"
       *ngFor="let item of getCourseList"
     >
       <div class="flex items-center justify-center flex-col">
@@ -45,6 +47,16 @@
         <div class="flex items-start pt-3">
           <i class="fa-solid fa-circle pe-3 mt-1"></i>
           <div>{{ item?.h4 }}</div>
+        </div>
+        <div class="flex items-start justify-end pt-3">
+          <button
+            type="button"
+            class="btn bg-white px-5 py-3 rounded-lg font-medium"
+            [ngStyle]="{ color: item?.color }"
+            (click)="openCourseDetailsPage(item.img)"
+          >
+            Learn More
+          </button>
         </div>
       </div>
     </div>

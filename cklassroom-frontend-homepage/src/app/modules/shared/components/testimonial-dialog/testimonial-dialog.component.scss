@@ -1,0 +1,21 @@
+@import ".../../../../../../../theme/color";
+
+.arrow-box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2.5rem;
+  margin-top: -10px;
+  border-width: 1.2rem;
+  border-style: solid;
+  border-color: transparent transparent transparent #d1d5db;
+  transform: rotate(190deg);
+}
+
+.custom-height {
+  max-height: calc(100vh - 15rem);
+}
+
+.fa-brands:hover {
+  color: $themeSecondary;
+}
