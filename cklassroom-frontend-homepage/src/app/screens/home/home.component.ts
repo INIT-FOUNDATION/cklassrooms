@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   }
 
   scrollToTarget(target: string) {
-    this.$gaService.event('scroll', `Page scroll to ${target}`)
+    this.$gaService.event('scroll', 'Page scroll' , `Scrolled to ${target}`, (target as any))
     gsap.to(window, { duration: 0.8, scrollTo: { y: `#${target}` } });
   }
 
