@@ -6,6 +6,7 @@ import { UtilityService } from '../../services/utility.service';
 import { environment } from 'src/environments/environment';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +19,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     public themeService: ThemeService,
     public utilityService: UtilityService,
-    private router: Router
+    private router: Router,
+    private $gaService: GoogleAnalyticsService
   ) {}
   headerLogo = 'logoLight';
 
@@ -54,10 +56,13 @@ export class HeaderComponent implements OnInit {
     } else {
       this.themeService.active_theme = 'light_theme';
     }
+    const currentTheme: any = this.themeService.active_theme;
+    this.$gaService.event('click', 'Button', 'Theme Change', currentTheme);
     this.themeService.setActiveThem(this.themeService.active_theme);
   }
 
   goBack() {
+    this.$gaService.event('click', 'Logo Click', 'Back to homepage');
     this.router.navigate(['']);
     this.utilityService.showFooterSet = true;
   }

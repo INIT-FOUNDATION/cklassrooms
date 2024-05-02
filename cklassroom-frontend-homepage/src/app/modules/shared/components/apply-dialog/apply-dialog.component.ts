@@ -7,6 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Observable, forkJoin, map, startWith } from 'rxjs';
 import { DataService } from '../../services/data.service';
 import { UtilityService } from '../../services/utility.service';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 
 @Component({
   selector: 'app-apply-dialog',
@@ -34,7 +35,8 @@ export class ApplyDialogComponent implements OnInit {
 
   constructor(private dialog: MatDialog,
               private dataService: DataService,
-              private utilityService: UtilityService) {}
+              private utilityService: UtilityService,
+              private $gaService: GoogleAnalyticsService) {}
 
   ngOnInit(): void {
     this.initForms();
@@ -122,10 +124,12 @@ export class ApplyDialogComponent implements OnInit {
       const form1Value = this.step1Form.getRawValue();
       const form2Value = this.step2Form.getRawValue();
 
-      const payload = {
+      const payload: any = {
         ...form1Value,
         ...form2Value
       }
+
+      this.$gaService.event('submit', 'Form', 'Apply form step 2', (JSON.stringify(payload) as any));
 
       this.dataService.enquiry(payload).subscribe(res=> {
         this.utilityService.showSuccessMessage("Request submitted successfully");
@@ -138,6 +142,8 @@ export class ApplyDialogComponent implements OnInit {
     if (name === 'step2') {
       this.form1Submitted = true;
       const step1FormValid = this.step1Form.valid;
+      const data: any = this.step1Form.getRawValue()
+      this.$gaService.event('submit', 'Form', 'Apply form step 1', (JSON.stringify(data) as any));
       if (step1FormValid) {
         this.activeScreen = name;
       }

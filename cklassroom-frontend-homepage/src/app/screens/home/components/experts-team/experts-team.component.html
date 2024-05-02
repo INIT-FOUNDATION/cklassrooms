@@ -35,13 +35,13 @@
       <div
         class="overlay absolute w-full h-full items-end pb-5 justify-center hidden"
       >
-        <a [href]="item?.githubURL" target="_blank">
+        <a (click)="openUrl(item?.githubURL, 'Github')">
           <i
             class="fa-brands fa-github text-4xl me-5"
             [ngStyle]="{ color: item?.bgColor }"
           ></i
         ></a>
-        <a [href]="item?.linkedinURL" target="_blank">
+        <a (click)="openUrl(item?.linkedinURL, 'Linkedin')">
           <i
             class="fa-brands fa-linkedin text-4xl"
             [ngStyle]="{ color: item?.bgColor }"
