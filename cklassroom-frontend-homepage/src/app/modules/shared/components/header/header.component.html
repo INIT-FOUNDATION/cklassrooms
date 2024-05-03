@@ -17,19 +17,18 @@
     *ngIf="utilityService.showFooter$ | async"
   >
     <h1
-      class="mx-4 text-base animate__animated animate__fadeInDown cursor-pointer"
+      class="text-base mx-4 animate__animated animate__fadeInDown cursor-pointer"
       style="animation-duration: 0.65s"
       (click)="scrollToTarget('experts')"
     >
       Experts
     </h1>
-    <h1
+    <span
       class="text-base animate__animated animate__fadeInDown cursor-pointer"
       style="animation-duration: 0.8s"
       (click)="scrollToTarget('courses')"
-    >
-      Courses
-    </h1>
+      >Courses
+    </span>
     <div
       class="ms-4 toggle-switch-container border-2 border-zinc-400 px-10 rounded-3xl animate__animated animate__fadeInDown"
       style="animation-duration: 0.95s"
