@@ -28,6 +28,8 @@ export class ApplyDialogComponent implements OnInit {
 
   filteredCompaniesOptions: Observable<any[]>;
   companies = [];
+
+  publicIp = "";
   
   startYear = 2002;
   endYear = 2028;
@@ -71,10 +73,12 @@ export class ApplyDialogComponent implements OnInit {
       educationDegrees: this.dataService.getEducationDegrees(),
       jobRoles: this.dataService.getJobRoles(),
       companies: this.dataService.getCompanies(),
+      publicIp: this.dataService.getPublicIp()
     }).subscribe((res: any) => {
       this.educationDegrees = res.educationDegrees;
       this.jobRoles = res.jobRoles;
       this.companies = res.companies['Companies'];
+      this.publicIp = res.publicIp['ip'];
     })
   }
 
@@ -126,7 +130,8 @@ export class ApplyDialogComponent implements OnInit {
 
       const payload: any = {
         ...form1Value,
-        ...form2Value
+        ...form2Value,
+        client_ip: this.publicIp
       }
 
       this.$gaService.event('submit', 'Form', 'Apply form step 2', (JSON.stringify(payload) as any));

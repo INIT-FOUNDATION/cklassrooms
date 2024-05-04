@@ -27,10 +27,11 @@ export class TokenInterceptor implements HttpInterceptor {
           'uo-browser-version': deviceInfo.browser_version,
           'uo-browser': deviceInfo.browser
         };
-        
-        request = request.clone({
-            setHeaders: headers
-        });
+        if (!request.url.includes("api.ipify.org")) {
+            request = request.clone({
+                setHeaders: headers
+            });
+        }
         return next.handle(request);
     }
 }
