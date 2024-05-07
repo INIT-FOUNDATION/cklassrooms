@@ -5,12 +5,26 @@ import { ERRORCODE } from "../constants/ERRORCODE";
 import { enrollStudent, getEntrollStudentByEmail } from "../services/crmService";
 import moment from "moment";
 import { EnquiryUser, ValidateEnquiryUser } from '../model/enquiryUser';
+import axios from "axios";
 
 export const crmRouter = express.Router();
 
 crmRouter.get("/health", async (req: Request, res: Response) => {
   try {
     return res.status(STATUS.OK).send("CKlassroom CRM Service is Healthy");
+  } catch (error) {
+    logger.error("CRM :: healthCheck :: ", error);
+    return res
+      .status(STATUS.INTERNAL_SERVER_ERROR)
+      .send({ errorCode: error, error: error });
+  }
+});
+
+
+crmRouter.get("/getPublicIp", async(req: Request, res: Response) => {
+  try {
+    const response = await axios.get("https://api.ipify.org/?format=json")
+    return res.status(STATUS.OK).send(response.data);
   } catch (error) {
     logger.error("CRM :: healthCheck :: ", error);
     return res
@@ -65,7 +79,7 @@ const getDeviceInfoHeaders = (req: Request) => {
     "uo-is-desktop": headers["uo-is-desktop"],
     "uo-browser-version": headers["uo-browser-version"],
     "uo-browser": headers["uo-browser"],
-    "uo-client-ip": req.ip || req.ips,
+    "uo-client-ip": req.body.client_ip || req.ip || req.ips,
   };
   return userDeviceInfo;
 };

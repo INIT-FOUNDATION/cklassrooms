@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { TestimonialDialogComponent } from 'src/app/modules/shared/components/testimonial-dialog/testimonial-dialog.component';
 
 @Component({
@@ -8,7 +9,8 @@ import { TestimonialDialogComponent } from 'src/app/modules/shared/components/te
   styleUrls: ['./testimonial.component.scss'],
 })
 export class TestimonialComponent implements OnInit {
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog,
+    private $gaService: GoogleAnalyticsService) {}
 
   testimonialList: any = [
     {
@@ -114,6 +116,7 @@ export class TestimonialComponent implements OnInit {
   ngOnInit(): void {}
 
   openDialog(data) {
+    this.$gaService.event('click', 'Hyperlink', 'Open testimonials dialog', (JSON.stringify(data) as any))
     this.dialog.open(TestimonialDialogComponent, {
       width: 'clamp(20rem, 80vw, 70rem)',
       data: data,

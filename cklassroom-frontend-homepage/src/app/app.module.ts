@@ -10,6 +10,8 @@ import { ErrorHandlerInterceptor } from './interceptor/error-handler.interceptor
 import { SharedModule } from './modules/shared/shared.module';
 import { LoaderInterceptor } from './interceptor/loader.interceptor';
 import { ThemeModule } from './modules/shared/theme/theme.module';
+import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +22,7 @@ import { ThemeModule } from './modules/shared/theme/theme.module';
     HttpClientModule,
     SharedModule,
     ThemeModule,
+    NgxGoogleAnalyticsModule.forRoot(environment.ga)
   ],
   providers: [
     {

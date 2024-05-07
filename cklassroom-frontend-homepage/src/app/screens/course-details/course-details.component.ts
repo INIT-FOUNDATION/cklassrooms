@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { DataService } from 'src/app/modules/shared/services/data.service';
 import { UtilityService } from 'src/app/modules/shared/services/utility.service';
 declare var jsMind: any;
@@ -16,7 +17,8 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private dataService: DataService,
-    private utilityService: UtilityService
+    private utilityService: UtilityService,
+    private $gaService: GoogleAnalyticsService
   ) {
     this.courseName = activatedRoute.snapshot.params.courseName;
   }
@@ -42,6 +44,7 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
   }
 
   downloadPdf() {
+    this.$gaService.event('click', 'Button', 'Download PDF', this.mindMapJson.additionalData.pdfName)
     const anchor = document.createElement('a');
     anchor.href = this.mindMapJson.additionalData.pdfUrl;
     anchor.download = this.mindMapJson.additionalData.pdfName; // Name of the downloaded file

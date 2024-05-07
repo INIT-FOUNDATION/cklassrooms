@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 
 @Component({
   selector: 'app-experts-team',
@@ -52,7 +53,7 @@ export class ExpertsTeamComponent implements OnInit {
       linkedinURL: 'https://www.linkedin.com/in/narsima-chilkuri-63431a106/',
       bgColor: '#cbd5d4',
       width: '15rem',
-      height: '20rem',
+      height: '18rem',
     },
 
     {
@@ -69,7 +70,12 @@ export class ExpertsTeamComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private $gaService: GoogleAnalyticsService) {}
 
   ngOnInit(): void {}
+
+  openUrl(url: any, type: string) {
+    this.$gaService.event('click', 'Hyperlink', `${type} Url`, url);
+    window.open(url, '_blank');
+  }
 }

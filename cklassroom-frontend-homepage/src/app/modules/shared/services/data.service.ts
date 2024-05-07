@@ -30,6 +30,11 @@ export class DataService {
     return this.http.get(`/assets/json/course-mindmap-data/${course}.json`);
   }
 
+
+  getPublicIp() {
+    return this.http.get("https://api.ipify.org/?format=json");
+  }
+
   enquiry(payload) {
     return this.http.post(`${environment.crm_prefix_url}/enquiry`, payload);
   }
