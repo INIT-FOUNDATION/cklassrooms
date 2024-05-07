@@ -53,7 +53,7 @@ export class ExpertsTeamComponent implements OnInit {
       linkedinURL: 'https://www.linkedin.com/in/narsima-chilkuri-63431a106/',
       bgColor: '#cbd5d4',
       width: '15rem',
-      height: '20rem',
+      height: '18rem',
     },
 
     {
