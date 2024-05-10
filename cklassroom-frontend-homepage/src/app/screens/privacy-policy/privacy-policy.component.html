@@ -1,0 +1,31 @@
+<div class="my-28 md:my-40">
+  <h1 class="md:text-xl text-center font-medium text-green">
+    Privacy policy for CKlassrooms
+  </h1>
+
+  <div
+    class="text-sm md:text-base md:mx-10 lg:mx-40 xl:mx-60 text-center mt-3 mb-16"
+  >
+    At CKlassrooms, we are committed to protecting your privacy and ensuring the
+    security of your personal information. This Privacy Policy explains how we
+    collect, use, disclose, and protect the information we collect from you when
+    you use our education platform and services.
+  </div>
+
+  <div
+    class="md:mx-10 lg:mx-40 xl:mx-60 mt-5 lg:mt-10"
+    *ngFor="let item of privacyPolicy"
+  >
+    <div class="font-bold">
+      <span>{{ item?.id }}. </span> <span>{{ item?.label }}</span>
+    </div>
+    <div class="text-sm leading-7">{{ item?.desc }}</div>
+  </div>
+  <div
+    class="md:mx-10 lg:mx-40 xl:mx-60 mt-5 lg:mt-10 leading-7 text-sm font-medium"
+  >
+    By using CKlassrooms, you consent to the collection, use, and disclosure of
+    your information as described in this Privacy Policy. If you do not agree to
+    this Privacy Policy, please do not use CKlassrooms.
+  </div>
+</div>

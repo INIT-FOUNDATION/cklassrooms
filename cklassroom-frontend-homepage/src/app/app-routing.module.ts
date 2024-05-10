@@ -12,7 +12,28 @@ const routes: Routes = [
 
   {
     path: 'course-details',
-    loadChildren: () => import('./screens/course-details/course-details.module').then((m) => m.CourseDetailsModule),
+    loadChildren: () =>
+      import('./screens/course-details/course-details.module').then(
+        (m) => m.CourseDetailsModule
+      ),
+    canActivate: [AuthGuard],
+  },
+
+  {
+    path: 'terms-and-condition',
+    loadChildren: () =>
+      import('./screens/terms-and-conditions/terms-and-conditions.module').then(
+        (m) => m.TermsAndConditionsModule
+      ),
+    canActivate: [AuthGuard],
+  },
+
+  {
+    path: 'privacy-policy',
+    loadChildren: () =>
+      import('./screens/privacy-policy/privacy-policy.module').then(
+        (m) => m.PrivacyPolicyModule
+      ),
     canActivate: [AuthGuard],
   },
 ];
