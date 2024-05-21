@@ -22,7 +22,7 @@ import { environment } from 'src/environments/environment';
     HttpClientModule,
     SharedModule,
     ThemeModule,
-    NgxGoogleAnalyticsModule.forRoot(environment.ga)
+    NgxGoogleAnalyticsModule.forRoot(environment.ga),
   ],
   providers: [
     {

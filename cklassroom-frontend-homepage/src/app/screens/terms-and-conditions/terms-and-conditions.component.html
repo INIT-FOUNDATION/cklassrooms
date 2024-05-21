@@ -1,0 +1,32 @@
+<div class="my-28 md:my-40">
+  <h1 class="md:text-xl text-center font-medium text-green">
+    Terms and Conditions for CKlassrooms
+  </h1>
+
+  <div
+    class="text-sm md:text-base md:mx-10 lg:mx-40 xl:mx-60 text-center mt-3 mb-16"
+  >
+    Welcome to CKlassrooms! These Terms and Conditions ("Terms") govern your use
+    of CKlassrooms's education platform and services, including access to
+    various courses such as Angular, Node.js, React.js, Python, HTML, CSS,
+    JavaScript, and on-the-job training. By accessing or using CKlassrooms, you
+    agree to be bound by these Terms:
+  </div>
+
+  <div
+    class="md:mx-10 lg:mx-40 xl:mx-60 mt-5 lg:mt-10"
+    *ngFor="let item of termsAndConditions"
+  >
+    <div class="font-bold">
+      <span>{{ item?.id }}. </span> <span>{{ item?.label }}</span>
+    </div>
+    <div class="text-sm leading-7">{{ item?.desc }}</div>
+  </div>
+  <div
+    class="md:mx-10 lg:mx-40 xl:mx-60 mt-5 lg:mt-10 leading-7 text-sm font-medium"
+  >
+    By using CKlassrooms, you acknowledge that you have read, understood, and
+    agree to be bound by these Terms. If you do not agree to these Terms, please
+    do not use CKlassrooms.
+  </div>
+</div>

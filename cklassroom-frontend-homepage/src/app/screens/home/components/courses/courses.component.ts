@@ -40,7 +40,7 @@ export class CoursesComponent implements AfterViewInit {
     },
     {
       id: 3,
-      courseName: 'React Js',
+      courseName: 'ReactJS',
       desc: 'React is a popular JavaScript library for building user interfaces. It is also referred to as a front-end JavaScript library.',
       img: 'reactJs',
       h1: 'ReactJS course enables building interactive web interfaces for enhanced user experience.',
@@ -51,7 +51,7 @@ export class CoursesComponent implements AfterViewInit {
     },
     {
       id: 4,
-      courseName: 'Node Js',
+      courseName: 'NodeJS',
       desc: 'As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.',
       img: 'nodeJs',
       h1: 'This course teaches the core of Node.js, empowering you to build scalable web applications efficiently.',
@@ -81,6 +81,28 @@ export class CoursesComponent implements AfterViewInit {
       h3: 'Proficiency in these languages enables developers to create intuitive and attractive user interfaces.',
       h4: 'Learning HTML, CSS, and JavaScript sets the stage for ongoing adaptation to new web technologies.',
       color: '#f16529',
+    },
+    {
+      id: 7,
+      courseName: 'MEAN Stack',
+      desc: 'The MEAN stack is a modern web development framework comprising MongoDB, Express.js, AngularJS, and Node.js.',
+      img: 'meanStack',
+      h1: 'MEAN stack uses JavaScript from server to client, streamlining communication and reducing overhead.',
+      h2: "MEAN stack's Node.js and MongoDB's non-blocking architecture easily manage high user loads, perfect for scalability.",
+      h3: "MEAN stack's lightweight, modular nature enables rapid prototyping, turning ideas into functional prototypes swiftly.",
+      h4: 'MEAN stack benefits from open-source support, offering abundant resources for rapid development.',
+      color: '#9029f1',
+    },
+    {
+      id: 8,
+      courseName: 'MERN Stack',
+      desc: 'The MERN stack is a modern web development framework comprising MongoDB, Express.js, React and Node.js.',
+      img: 'mernStack',
+      h1: 'MERN stack comprises MongoDB, Express.js, React, and Node.js.',
+      h2: 'Utilizes JavaScript throughout, simplifying development and enhancing consistency.',
+      h3: 'Offers modular components for scalability and flexibility in building applications.',
+      h4: 'Benefits from a vast ecosystem and strong community support for rapid development and problem-solving.',
+      color: '#3f29f1',
     },
   ];
 
