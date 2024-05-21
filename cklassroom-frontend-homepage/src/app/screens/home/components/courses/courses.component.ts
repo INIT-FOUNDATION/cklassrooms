@@ -40,7 +40,7 @@ export class CoursesComponent implements AfterViewInit {
     },
     {
       id: 3,
-      courseName: 'React Js',
+      courseName: 'ReactJS',
       desc: 'React is a popular JavaScript library for building user interfaces. It is also referred to as a front-end JavaScript library.',
       img: 'reactJs',
       h1: 'ReactJS course enables building interactive web interfaces for enhanced user experience.',
@@ -51,7 +51,7 @@ export class CoursesComponent implements AfterViewInit {
     },
     {
       id: 4,
-      courseName: 'Node Js',
+      courseName: 'NodeJS',
       desc: 'As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.',
       img: 'nodeJs',
       h1: 'This course teaches the core of Node.js, empowering you to build scalable web applications efficiently.',
