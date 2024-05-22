@@ -1,0 +1,298 @@
+{
+  "mindMapData": {
+    "meta": {
+      "name": "Artificial Intelligence Roadmap",
+      "author": "Sudhirkumarrao Allada",
+      "version": "0.1"
+    },
+    "format": "node_tree",
+    "data": {
+      "id": "root",
+      "background-image": "assets/images/courses/artificialIntelligence.svg",
+      "width": "100",
+      "height": "100",
+      "children": [
+        {
+          "id": "iai",
+          "topic": "Introduction to AI",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "iai1",
+              "topic": "Introduction to AI"
+            },
+            {
+              "id": "iai2",
+              "topic": "Basics of Machine Learning"
+            },
+            {
+              "id": "iai3",
+              "topic": "Linear Algebra Fundamentals"
+            },
+            {
+              "id": "iai4",
+              "topic": "Probability and Statistics Basics"
+            },
+            {
+              "id": "iai5",
+              "topic": "Python for AI - Part 1"
+            },
+            {
+              "id": "iai6",
+              "topic": "Python for AI - Part 2"
+            },
+            {
+              "id": "iai7",
+              "topic": "Python for AI - Part 3"
+            }
+          ]
+        },
+        {
+          "id": "sl",
+          "topic": "Supervised Learning",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "sl1",
+              "topic": "Linear Regression"
+            },
+            {
+              "id": "sl2",
+              "topic": "Evaluation Metrics"
+            },
+            {
+              "id": "sl3",
+              "topic": "Logistic Regression"
+            },
+            {
+              "id": "sl4",
+              "topic": "Decision Trees"
+            },
+            {
+              "id": "sl5",
+              "topic": "Ensemble Methods"
+            },
+            {
+              "id": "sl6",
+              "topic": "Support Vector Machines (SVM)"
+            },
+            {
+              "id": "sl7",
+              "topic": "Naive Bayes Classifier"
+            }
+          ]
+        },
+        {
+          "id": "ul",
+          "topic": "Unsupervised Learning",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ul1",
+              "topic": "Clustering Techniques"
+            },
+            {
+              "id": "ul2",
+              "topic": "Hierarchical Clustering"
+            },
+            {
+              "id": "ul3",
+              "topic": "Dimensionality Reduction"
+            },
+            {
+              "id": "ul4",
+              "topic": "Anomaly Detection"
+            },
+            {
+              "id": "ul5",
+              "topic": "Association Rulesg"
+            },
+            {
+              "id": "ul6",
+              "topic": "Reinforcement Learning Basics"
+            },
+            {
+              "id": "ul7",
+              "topic": "Mid-Course Review"
+            }
+          ]
+        },
+        {
+          "id": "nndl",
+          "topic": "Neural Networks and Deep Learning",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "nndl1",
+              "topic": "Introduction to Neural Networks"
+            },
+            {
+              "id": "nndl2",
+              "topic": "Deep Learning Basics"
+            },
+            {
+              "id": "nndl3",
+              "topic": "Training Neural Networks"
+            },
+            {
+              "id": "nndl4",
+              "topic": "Convolutional Neural Networks (CNN)"
+            },
+            {
+              "id": "nndl5",
+              "topic": "Recurrent Neural Networks (RNN)"
+            },
+            {
+              "id": "nndl6",
+              "topic": "Long Short-Term Memory (LSTM)"
+            },
+            {
+              "id": "nndl7",
+              "topic": "Generative Adversarial Networks (GAN)"
+            }
+          ]
+        },
+        {
+          "id": "adlt",
+          "topic": "Advanced Deep Learning Techniques",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "adlt1",
+              "topic": "Transfer Learning"
+            },
+            {
+              "id": "adlt2",
+              "topic": "Hyperparameter Tuning"
+            },
+            {
+              "id": "adlt3",
+              "topic": "Natural Language Processing (NLP) - Part 1"
+            },
+            {
+              "id": "adlt4",
+              "topic": "Natural Language Processing (NLP) - Part 2"
+            },
+            {
+              "id": "adlt5",
+              "topic": "Natural Language Processing (NLP) - Part 3"
+            },
+            {
+              "id": "adlt6",
+              "topic": "Advanced CNN Architectures"
+            },
+            {
+              "id": "adlt7",
+              "topic": "Advanced RNN Architectures"
+            }
+          ]
+        },
+        {
+          "id": "sta",
+          "topic": "Special Topics and Applications",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "sta1",
+              "topic": "Time Series Analysis"
+            },
+            {
+              "id": "sta2",
+              "topic": "Recommender Systems"
+            },
+            {
+              "id": "sta3",
+              "topic": "Computer Vision"
+            },
+            {
+              "id": "sta4",
+              "topic": "Speech Recognition"
+            },
+            {
+              "id": "sta5",
+              "topic": "AI Ethics and Bias"
+            },
+            {
+              "id": "sta6",
+              "topic": "AI in Industry"
+            },
+            {
+              "id": "sta7",
+              "topic": "Advanced Reinforcement Learning"
+            }
+          ]
+        },
+        {
+          "id": "cpw1",
+          "topic": "Capstone Project Week 1",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "cpw11",
+              "topic": "Project Planning"
+            },
+            {
+              "id": "cpw12",
+              "topic": "Data Collection and Preprocessing"
+            },
+            {
+              "id": "cpw13",
+              "topic": "Model Selection"
+            },
+            {
+              "id": "cpw14",
+              "topic": "Model Training"
+            },
+            {
+              "id": "cpw15",
+              "topic": "Model Evaluation"
+            },
+            {
+              "id": "cpw16",
+              "topic": "Intermediate Milestone Review"
+            }
+          ]
+        },
+        {
+          "id": "cpw2",
+          "topic": "Capstone Project Week 2",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "cpw21",
+              "topic": "Advanced Model Tuning"
+            },
+            {
+              "id": "cpw22",
+              "topic": "Integrating Components"
+            },
+            {
+              "id": "cpw23",
+              "topic": "Final Model Evaluation"
+            },
+            {
+              "id": "cpw24",
+              "topic": "Final Touches"
+            },
+            {
+              "id": "cpw25",
+              "topic": "Final Review"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "additionalData": {
+    "pdfUrl": "assets/roadmaps/AI ROADMAP.pdf",
+    "pdfName": "AI ROADMAP.pdf"
+  }
+}

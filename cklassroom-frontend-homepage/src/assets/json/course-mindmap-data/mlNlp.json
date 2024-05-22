@@ -1,0 +1,218 @@
+{
+  "mindMapData": {
+    "meta": {
+      "name": "ML and NLP Roadmap",
+      "author": "Sudhirkumarrao Allada",
+      "version": "0.1"
+    },
+    "format": "node_tree",
+    "data": {
+      "id": "root",
+      "background-image": "assets/images/courses/mlNlp.svg",
+      "width": "100",
+      "height": "100",
+      "children": [
+        {
+          "id": "ipbc",
+          "topic": "Introduction to Python and Basic Concepts",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ipbc1",
+              "topic": "Introduction to Python"
+            },
+            {
+              "id": "ipbc2",
+              "topic": "Python for Data Analysis"
+            },
+            {
+              "id": "ipbc3",
+              "topic": "Data Visualization"
+            },
+            {
+              "id": "ipbc4",
+              "topic": "Revision and Mini Project"
+            }
+          ]
+        },
+        {
+          "id": "iml",
+          "topic": "Introduction to Machine Learning",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "iml1",
+              "topic": "Basic Statistics and Probability"
+            },
+            {
+              "id": "iml2",
+              "topic": "Introduction to Machine Learning"
+            },
+            {
+              "id": "iml3",
+              "topic": "Data Preprocessing"
+            },
+            {
+              "id": "iml4",
+              "topic": "Linear Regression"
+            }
+          ]
+        },
+        {
+          "id": "sla",
+          "topic": "Supervised Learning Algorithms",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "sla1",
+              "topic": "Logistic Regression"
+            },
+            {
+              "id": "sla2",
+              "topic": "Decision Trees and Random Forests"
+            },
+            {
+              "id": "sla3",
+              "topic": "Support Vector Machines (SVM)"
+            },
+            {
+              "id": "sla4",
+              "topic": "Evaluation Metrics"
+            }
+          ]
+        },
+        {
+          "id": "ula",
+          "topic": "Unsupervised Learning Algorithms",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ula1",
+              "topic": "Clustering Algorithms"
+            },
+            {
+              "id": "ula2",
+              "topic": "Dimensionality Reduction"
+            },
+            {
+              "id": "ula3",
+              "topic": "Association Rule Learning"
+            },
+            {
+              "id": "ula4",
+              "topic": "Anomaly Detection"
+            }
+          ]
+        },
+        {
+          "id": "inlp",
+          "topic": "Introduction to NLP",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "inlp1",
+              "topic": "Basics of NLP"
+            },
+            {
+              "id": "inlp2",
+              "topic": "Text Representation"
+            },
+            {
+              "id": "inlp3",
+              "topic": "Text Classification"
+            },
+            {
+              "id": "inlp4",
+              "topic": "Named Entity Recognition (NER)"
+            }
+          ]
+        },
+        {
+          "id": "anlpa",
+          "topic": "Advanced NLP Concepts",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "anlpa1",
+              "topic": "Advanced Text Representations"
+            },
+            {
+              "id": "anlpa2",
+              "topic": "Sequence-to-Sequence Models"
+            },
+            {
+              "id": "anlpa3",
+              "topic": "Machine Translation"
+            },
+            {
+              "id": "anlpa4",
+              "topic": "Text Summarization"
+            }
+          ]
+        },
+        {
+          "id": "dlnlp",
+          "topic": "Deep Learning for NLP",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "dlnlp1",
+              "topic": "Introduction to Deep Learning"
+            },
+            {
+              "id": "dlnlp2",
+              "topic": "Deep Learning Frameworks"
+            },
+            {
+              "id": "dlnlp3",
+              "topic": "CNNs for NLP"
+            },
+            {
+              "id": "dlnlp4",
+              "topic": "Attention Mechanisms"
+            }
+          ]
+        },
+        {
+          "id": "atfp",
+          "topic": "Advanced Topics and Final Project",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "atfp1",
+              "topic": "Transformers in Detail"
+            },
+            {
+              "id": "atfp2",
+              "topic": "Fine-tuning Pre-trained Models"
+            },
+            {
+              "id": "atfp3",
+              "topic": "Advanced Applications"
+            },
+            {
+              "id": "atfp4",
+              "topic": "Model Deployment"
+            },
+            {
+              "id": "atfp5",
+              "topic": "Final Project"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "additionalData": {
+    "pdfUrl": "assets/roadmaps/ML & NLP ROADMAP.pdf",
+    "pdfName": "ML & NLP ROADMAP.pdf"
+  }
+}

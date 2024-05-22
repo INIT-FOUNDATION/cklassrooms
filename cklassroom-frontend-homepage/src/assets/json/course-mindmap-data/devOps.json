@@ -1,0 +1,122 @@
+{
+  "mindMapData": {
+    "meta": {
+      "name": "Artificial Intelligence Roadmap",
+      "author": "Sudhirkumarrao Allada",
+      "version": "0.1"
+    },
+    "format": "node_tree",
+    "data": {
+      "id": "root",
+      "background-image": "assets/images/courses/devOps.svg",
+      "width": "100",
+      "height": "100",
+      "children": [
+        {
+          "id": "idof",
+          "topic": "Introduction to DevOps Fundamentals",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "idof1",
+              "topic": "Understanding DevOps Principles"
+            },
+            {
+              "id": "idof2",
+              "topic": "Version Control Systems (VCS)"
+            },
+            {
+              "id": "idof3",
+              "topic": "Continuous Integration (CI)"
+            },
+            {
+              "id": "idof4",
+              "topic": "Continuous Delivery (CD)"
+            },
+            {
+              "id": "idof5",
+              "topic": "Infrastructure as Code (IaC)"
+            }
+          ]
+        },
+        {
+          "id": "co",
+          "topic": "Containerization and Orchestration",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "co1",
+              "topic": "Introduction to Docker"
+            },
+            {
+              "id": "co2",
+              "topic": "Container Orchestration with Kubernetes"
+            },
+            {
+              "id": "co3",
+              "topic": "Monitoring and Logging"
+            },
+            {
+              "id": "co4",
+              "topic": "Security in DevOps"
+            }
+          ]
+        },
+        {
+          "id": "adp",
+          "topic": "Advanced DevOps Practices",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "adp1",
+              "topic": "Microservices Architecture "
+            },
+            {
+              "id": "adp2",
+              "topic": "Cloud-Native DevOps"
+            },
+            {
+              "id": "adp3",
+              "topic": "DevOps Culture and Collaboration"
+            },
+            {
+              "id": "adp4",
+              "topic": "Advanced CI/CD Techniques"
+            }
+          ]
+        },
+        {
+          "id": "fpst",
+          "topic": "Final Projects and Specialized Topics",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "fpst1",
+              "topic": "DevOps Tools and Ecosystem"
+            },
+            {
+              "id": "fpst2",
+              "topic": "DevOps in Practice"
+            },
+            {
+              "id": "fpst3",
+              "topic": "DevOps for Specific Environments"
+            },
+            {
+              "id": "fpst4",
+              "topic": "Capstone Project and Review"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "additionalData": {
+    "pdfUrl": "assets/roadmaps/DEVOPS ROADMAP.pdf",
+    "pdfName": "DEVOPS ROADMAP.pdf"
+  }
+}

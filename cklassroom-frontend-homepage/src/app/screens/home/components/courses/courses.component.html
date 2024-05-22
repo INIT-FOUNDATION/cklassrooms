@@ -7,7 +7,7 @@
     Our Commitment to Your Development.
   </div>
   <div
-    class="mt-5 lg:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+    class="mt-5 lg:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
   >
     <div
       class="courses-card relative overflow-hidden shadow-md rounded-xl min-h-80"
@@ -15,9 +15,21 @@
     >
       <div class="flex items-center justify-center flex-col">
         <img
-          class="w-60 h-40 pt-3"
+          *ngIf="item?.id !== 9 && item?.id !== 10"
+          class="w-60 pt-3"
+          style="height: 25vh"
           src="assets/images/courses/{{ item?.img }}.svg"
         />
+        <div
+          *ngIf="item?.id == 9 || item?.id == 10"
+          class="bg-no-repeat bg-cover w-full flex items-center justify-center"
+          style="height: 25vh"
+          [ngStyle]="{
+            'background-image': item.img
+              ? 'url(assets/images/courses/' + item.img + '.svg)'
+              : ''
+          }"
+        ></div>
         <div
           class="py-2 my-2 self-start font-semibold w-full px-5 text-white text-center text-md"
           [ngStyle]="{ background: item?.color }"
@@ -48,7 +60,9 @@
           <i class="fa-solid fa-circle pe-3 mt-1"></i>
           <div>{{ item?.h4 }}</div>
         </div>
-        <div class="flex items-start justify-end pt-3">
+        <div
+          class="flex items-start justify-end pt-3 absolute bottom-4 right-4"
+        >
           <button
             type="button"
             class="btn bg-white px-5 py-3 rounded-lg font-medium"
