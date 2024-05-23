@@ -1,174 +1,174 @@
 {
-    "mindMapData": {
-        "meta": {
-            "name": "MERN Stack Roadmap",
-            "author": "Sudhirkumarrao Allada",
-            "version": "0.1"
-        },
-        "format": "node_tree",
-        "data": {
-            "id": "root",
-            "background-image": "assets/images/courses/mernStack.svg",
-            "width": "100",
-            "height": "100",
-            "children": [
-                {
-                    "id": "is",
-                    "topic": "Introduction to Web Development and JavaScript Basics",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "is1",
-                            "topic": "Understanding Web Development"
-                        },
-                        {
-                            "id": "is2",
-                            "topic": "HTML & CSS Basics"
-                        },
-                        {
-                            "id": "is3",
-                            "topic": "JavaScript Fundamentals"
-                        }
-                    ]
-                },
-                {
-                    "id": "js",
-                    "topic": "JavaScript Deep Dive and Version Control",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "js1",
-                            "topic": "Advanced JavaScript Concepts"
-                        },
-                        {
-                            "id": "js2",
-                            "topic": "Asynchronous JavaScript"
-                        },
-                        {
-                            "id": "js3",
-                            "topic": "Version Control with Git"
-                        }
-                    ]
-                },
-                {
-                    "id": "eb",
-                    "topic": "Express.js Basics",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "eb1",
-                            "topic": "Introduction to Express.js"
-                        },
-                        {
-                            "id": "eb2",
-                            "topic": "Advanced Express.js"
-                        },
-                        {
-                            "id": "eb3",
-                            "topic": "RESTful API Development"
-                        }
-                    ]
-                },
-                {
-                    "id": "wwd",
-                    "topic": "Working with Databases (MongoDB)",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "wwd1",
-                            "topic": "MongoDB Basics"
-                        },
-                        {
-                            "id": "wwd2",
-                            "topic": "Integrating MongoDB with Node.js"
-                        },
-                        {
-                            "id": "wwd3",
-                            "topic": "Authentication and Authorization"
-                        }
-                    ]
-                },
-                {
-                    "id": "ir",
-                    "topic": "Introduction to React",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "ir1",
-                            "topic": "React Basics"
-                        },
-                        {
-                            "id": "ir2",
-                            "topic": "State and Props"
-                        },
-                        {
-                            "id": "ir3",
-                            "topic": "React Router"
-                        },
-                        {
-                            "id": "ir4",
-                            "topic": "Advanced React Concepts"
-                        }
-                    ]
-                },
-                {
-                    "id": "ifb",
-                    "topic": "Integrating Frontend and Backend",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "ifb1",
-                            "topic": "Connecting React to Express"
-                        },
-                        {
-                            "id": "ifb2",
-                            "topic": "Advanced State Management"
-                        },
-                        {
-                            "id": "ifb3",
-                            "topic": "Form Handling and Validation"
-                        },
-                        {
-                            "id": "ifb4",
-                            "topic": "File Uploads"
-                        }
-                    ]
-                },
-                {
-                    "id": "dat",
-                    "topic": "Deployment and Advanced Topics",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "dat1",
-                            "topic": "Deployment"
-                        },
-                        {
-                            "id": "dat2",
-                            "topic": "Testing"
-                        },
-                        {
-                            "id": "dat3",
-                            "topic": "Advanced Topics"
-                        },
-                        {
-                            "id": "dat4",
-                            "topic": "Project Day"
-                        }
-                    ]
-                }
-            ]
-        }
+  "mindMapData": {
+    "meta": {
+      "name": "MERN Stack Roadmap",
+      "author": "Sudhirkumarrao Allada",
+      "version": "0.1"
     },
-    "additionalData": {
-        "pdfUrl": "assets/roadmaps/MERN STACK ROADMAP.pdf",
-        "pdfName": "MERN STACK ROADMAP.pdf"
+    "format": "node_tree",
+    "data": {
+      "id": "root",
+      "background-image": "assets/images/courses/mernStack.svg",
+      "width": "180",
+      "height": "100",
+      "children": [
+        {
+          "id": "is",
+          "topic": "Introduction to Web Development and JavaScript Basics",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "is1",
+              "topic": "Understanding Web Development"
+            },
+            {
+              "id": "is2",
+              "topic": "HTML & CSS Basics"
+            },
+            {
+              "id": "is3",
+              "topic": "JavaScript Fundamentals"
+            }
+          ]
+        },
+        {
+          "id": "js",
+          "topic": "JavaScript Deep Dive and Version Control",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "js1",
+              "topic": "Advanced JavaScript Concepts"
+            },
+            {
+              "id": "js2",
+              "topic": "Asynchronous JavaScript"
+            },
+            {
+              "id": "js3",
+              "topic": "Version Control with Git"
+            }
+          ]
+        },
+        {
+          "id": "eb",
+          "topic": "Express.js Basics",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "eb1",
+              "topic": "Introduction to Express.js"
+            },
+            {
+              "id": "eb2",
+              "topic": "Advanced Express.js"
+            },
+            {
+              "id": "eb3",
+              "topic": "RESTful API Development"
+            }
+          ]
+        },
+        {
+          "id": "wwd",
+          "topic": "Working with Databases (MongoDB)",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "wwd1",
+              "topic": "MongoDB Basics"
+            },
+            {
+              "id": "wwd2",
+              "topic": "Integrating MongoDB with Node.js"
+            },
+            {
+              "id": "wwd3",
+              "topic": "Authentication and Authorization"
+            }
+          ]
+        },
+        {
+          "id": "ir",
+          "topic": "Introduction to React",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ir1",
+              "topic": "React Basics"
+            },
+            {
+              "id": "ir2",
+              "topic": "State and Props"
+            },
+            {
+              "id": "ir3",
+              "topic": "React Router"
+            },
+            {
+              "id": "ir4",
+              "topic": "Advanced React Concepts"
+            }
+          ]
+        },
+        {
+          "id": "ifb",
+          "topic": "Integrating Frontend and Backend",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ifb1",
+              "topic": "Connecting React to Express"
+            },
+            {
+              "id": "ifb2",
+              "topic": "Advanced State Management"
+            },
+            {
+              "id": "ifb3",
+              "topic": "Form Handling and Validation"
+            },
+            {
+              "id": "ifb4",
+              "topic": "File Uploads"
+            }
+          ]
+        },
+        {
+          "id": "dat",
+          "topic": "Deployment and Advanced Topics",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "dat1",
+              "topic": "Deployment"
+            },
+            {
+              "id": "dat2",
+              "topic": "Testing"
+            },
+            {
+              "id": "dat3",
+              "topic": "Advanced Topics"
+            },
+            {
+              "id": "dat4",
+              "topic": "Project Day"
+            }
+          ]
+        }
+      ]
     }
+  },
+  "additionalData": {
+    "pdfUrl": "assets/roadmaps/MERN STACK ROADMAP.pdf",
+    "pdfName": "MERN STACK ROADMAP.pdf"
+  }
 }

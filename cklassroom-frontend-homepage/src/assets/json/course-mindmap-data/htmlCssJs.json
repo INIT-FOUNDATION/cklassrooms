@@ -9,7 +9,7 @@
     "data": {
       "id": "root",
       "background-image": "assets/images/courses/htmlCssJs.svg",
-      "width": "100",
+      "width": "250",
       "height": "100",
       "expanded": true,
       "children": [

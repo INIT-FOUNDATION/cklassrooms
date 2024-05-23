@@ -9,7 +9,7 @@
     "data": {
       "id": "root",
       "background-image": "assets/images/courses/devOps.svg",
-      "width": "100",
+      "width": "180",
       "height": "100",
       "children": [
         {
