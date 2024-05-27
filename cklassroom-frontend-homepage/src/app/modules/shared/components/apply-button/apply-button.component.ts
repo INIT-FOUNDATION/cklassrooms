@@ -11,8 +11,10 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
 export class ApplyButtonComponent implements OnInit {
   @Input() additionalClasses: string = '';
 
-  constructor(private dialog: MatDialog,
-              private $gaService: GoogleAnalyticsService ) {}
+  constructor(
+    private dialog: MatDialog,
+    private $gaService: GoogleAnalyticsService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -22,7 +24,6 @@ export class ApplyButtonComponent implements OnInit {
       width: 'clamp(20rem, 60vw, 35rem)',
     });
   }
-  
 
   openGoogleForm() {
     window.open(

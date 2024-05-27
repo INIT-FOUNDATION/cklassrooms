@@ -7,6 +7,8 @@ import { environment } from 'src/environments/environment';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { MatDialog } from '@angular/material/dialog';
+import { ApplyDialogComponent } from '../apply-dialog/apply-dialog.component';
 
 @Component({
   selector: 'app-header',
@@ -20,7 +22,8 @@ export class HeaderComponent implements OnInit {
     public themeService: ThemeService,
     public utilityService: UtilityService,
     private router: Router,
-    private $gaService: GoogleAnalyticsService
+    private $gaService: GoogleAnalyticsService,
+    private dialog: MatDialog
   ) {}
   headerLogo = 'logoLight';
 
@@ -74,5 +77,12 @@ export class HeaderComponent implements OnInit {
     } else {
       this.verticalScrollValue = false;
     }
+  }
+
+  openDialog() {
+    this.$gaService.event('click', 'Button', 'Open Apply dialog box', 1);
+    this.dialog.open(ApplyDialogComponent, {
+      width: 'clamp(20rem, 60vw, 35rem)',
+    });
   }
 }

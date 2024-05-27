@@ -56,3 +56,11 @@
 #themeCheckbox:checked + .toggle-body .toggle-image-light {
   width: 0rem;
 }
+
+.header-label:hover {
+  color: $themeSecondary;
+}
+
+.bg-green {
+  background-color: $themeSecondary;
+}
