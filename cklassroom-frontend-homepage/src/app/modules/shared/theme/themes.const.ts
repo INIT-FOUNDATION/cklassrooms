@@ -7,6 +7,7 @@ export const themes = {
     '--themeBoxShadow': '#e8e8e8',
     '--themeHoverBoxShadow': '#e3dddd',
     '--themeDialogModal': '#112D4E',
+    '--themeButtonColor': '#5278FF',
   },
   dark_theme: {
     '--themePrimary': '#1b1f24',
@@ -16,5 +17,6 @@ export const themes = {
     '--themeBoxShadow': '#73798129',
     '--themeHoverBoxShadow': '#1b1f24',
     '--themeDialogModal': '#112D4E',
+    '--themeButtonColor': '#849fff',
   },
 };
