@@ -1,17 +1,18 @@
 @import "../../../theme/color";
 
-::ng-deep .mat-tab-label-content {
-    color: white !important;
+::ng-deep .mat-tab-label {
+    // color: $themeSecondary !important;
+    color: white;
 }
 
 .bg-gray-cards {
-  background-color: $themeBoxShadow;
-  border: 1px solid var(--themeHoverBoxShadow);
+    background-color: $themeBoxShadow;
+    border: 1px solid var(--themeHoverBoxShadow);
 }
 
 .courses-card {
     border: 1px solid $themeBoxShadow;
-  }
+}
 
 .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
     background: transparent;

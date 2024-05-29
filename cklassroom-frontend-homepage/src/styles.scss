@@ -43,6 +43,11 @@ body {
   color: $themeSecondary;
 }
 
+.card-bg {
+  background-color: $themeBoxShadow;
+  color: $themeFontColor;
+}
+
 .hover-card {
   background-color: $themeBoxShadow;
   color: $themeFontColor;
@@ -98,5 +103,12 @@ jmnodes.theme-greensea jmnode {
   background-size: cover !important;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
