@@ -23,9 +23,9 @@
         <mat-tab label="Pre-requisite">
           <p class="mt-4 mb-4">This course is for beginners. No prior experience is required.</p>
           <ul class="list-disc">
-            <li class=""><a href="#">Basics of Python or another programmimg language.</a></li>
+            <li class=""><a href="#">Basics of Python or another programming language.</a></li>
             <li class=""><a href="#">Familiarity with the command line.</a></li>
-            <li class=""><a href="#">A code editor(VS code, Sublime Text, etc.) inatalled on your computer.</a></li>
+            <li class=""><a href="#">A code editor (VS code, Sublime Text, etc.) installed on your computer.</a></li>
           </ul>
         </mat-tab>
         <mat-tab label="Why Python">
@@ -38,31 +38,138 @@
     </div>
   </div>
 
- 
-  <div class="lg:w-1/3 p-6 bg-gray-50">
-    <h3 class="text-xl font-semibold mb-4 text-black">Courses Overview</h3>
-    <div class="mb-4">
-      <mat-accordion>
-        <mat-expansion-panel (opened)="panelOpenState = true"
-        (closed)="panelOpenState = false">
+  <div class="lg:w-1/3 p-6">
+    <div class="p-6 courses-card rounded-xl md:flex md:flex-col md:space-y-6">
+      <h3 class="text-xl font-semibold mb-4 text-white">Courses Overview</h3>
+      <div class="mb-4 max-h-80 overflow-y-auto">
+  
+        <mat-accordion >
+          <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="text-white"> Basics </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="text-green">
+              <li class="p-2">TypeScript Fundamentals</li>
+              <li class="p-2">JavaScript ES6+ Features</li>
+              <li class="p-2">HTML & CSS Basics</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>
+        <mat-accordion>
+          <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="text-white"> Core Concepts </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="text-green">
+              <li class="p-2">Angular Architecture</li>
+              <li class="p-2">Components & Directives</li>
+              <li class="p-2">Modules & Dependency Injection</li>
+              <li class="p-2">Templates & Data Binding</li>
+              <li class="p-2">Services & HTTP Client</li>
+              <li class="p-2">Routing & Navigation</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>
+        <mat-accordion>
+          <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="text-white"> Advanced Topics </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="text-green">
+              <li class="p-2">Forms & Form Validation</li>
+              <li class="p-2">RxJS & Observables</li>
+              <li class="p-2">State Management (NgRx)</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>
+        <mat-accordion>
+          <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="text-white">Tooling </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="text-green">
+              <li class="p-2">Angular CLI</li>
+              <li class="p-2">Angular Material</li>
+              <li class="p-2">Angular DevTools</li>
+              <li class="p-2">Third-party Libraries & Tools</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>
+        <!-- <mat-accordion>
+          <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="text-white">Tooling </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul>
+              <li>Angular CLI</li>
+              <li>Angular Material</li>
+              <li>Angular DevTools</li>
+              <li>Third-party Libraries & Tools</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>
+        <mat-accordion>
+          <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="text-white">Tooling </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul>
+              <li>Angular CLI</li>
+              <li>Angular Material</li>
+              <li>Angular DevTools</li>
+              <li>Third-party Libraries & Tools</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion>
+        <mat-accordion>
+          <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="text-white">Tooling </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul>
+              <li>Angular CLI</li>
+              <li>Angular Material</li>
+              <li>Angular DevTools</li>
+              <li>Third-party Libraries & Tools</li>
+            </ul>
+          </mat-expansion-panel>
+        </mat-accordion> -->
+      </div>
+    </div>
+  
+    <div class="p-6 courses-card rounded-xl md:flex md:flex-col md:space-y-6">
+      <h2 class="text-xl font-semibold mb-4 text-white">FAQs</h2>
+      <mat-accordion >
+        <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
           <mat-expansion-panel-header>
-            <mat-panel-title>
-              Click me to open
-            </mat-panel-title>
-            <mat-panel-description>
-             {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description>
+            <mat-panel-title class="text-white"> What is the refund policy? </mat-panel-title>
           </mat-expansion-panel-header>
-          <p class="text-black">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos alias porro ratione obcaecati, numquam nam!</p>
+          <p class="pt-4 text-green">If you subscribed, you get a 7-day free trial during which you can cancel at no penalty. After that, we don’t give refunds, but you can cancel your subscription at any time.</p>
         </mat-expansion-panel>
       </mat-accordion>
-    </div>
+      <mat-accordion >
+        <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="text-white"> What is the refund policy? </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="pt-4 text-green">If you subscribed, you get a 7-day free trial during which you can cancel at no penalty. After that, we don’t give refunds, but you can cancel your subscription at any time.</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-accordion >
+        <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="text-white"> What is the refund policy? </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="pt-4 text-green">If you subscribed, you get a 7-day free trial during which you can cancel at no penalty. After that, we don’t give refunds, but you can cancel your subscription at any time.</p>
+        </mat-expansion-panel>
+      </mat-accordion>
 
-    <div class="bg-white p-4 rounded-lg shadow-md">
-      <div class="flex items-center mb-2">
-        <h3 class="text-black font-bold">FAQs</h3>
-      </div>
-  
     </div>
   </div>
+
 </div>
+
+
+
+
+

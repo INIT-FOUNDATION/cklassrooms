@@ -1,3 +1,14 @@
+@import "../../../theme/color";
+
 ::ng-deep .mat-tab-label-content {
     color: white !important;
 }
+
+.bg-gray-cards {
+  background-color: $themeBoxShadow;
+  border: 1px solid var(--themeHoverBoxShadow);
+}
+
+.courses-card {
+    border: 1px solid $themeBoxShadow;
+  }
