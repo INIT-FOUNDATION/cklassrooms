@@ -11,6 +11,7 @@ declare var jsMind: any;
   styleUrls: ['./course-details.component.scss'],
 })
 export class CourseDetailsComponent implements OnInit, AfterViewInit {
+  panelOpenState = false;
   courseName = '';
   mindMapJson: any = {};
   constructor(

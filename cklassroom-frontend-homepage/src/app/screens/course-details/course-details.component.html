@@ -7,4 +7,62 @@
     <h1>Download PDF</h1>
   </button>
 </div>
-<div id="jsmind_container"></div>
+<!-- <div id="jsmind_container"></div> -->
+
+
+<div class="flex flex-col lg:flex-row">
+  
+  <div class="lg:w-2/3 p-6">
+    <h2 class="text-2xl font-semibold mb-4">Learn Python</h2>
+    <p class="text-white-600 mb-4">Python is an efficient high-level data structures and a simple but effective approach to object-oriented programming.</p>
+    <div class="relative">
+      <img src="assets/images/courses/python-course-image.jpg" alt="Course Thumbnail" class="w-full rounded-lg mb-4 h-80">
+    </div>
+    <div>
+      <mat-tab-group class="mb-4 text-white">
+        <mat-tab label="Pre-requisite">
+          <p class="mt-4 mb-4">This course is for beginners. No prior experience is required.</p>
+          <ul class="list-disc">
+            <li class=""><a href="#">Basics of Python or another programmimg language.</a></li>
+            <li class=""><a href="#">Familiarity with the command line.</a></li>
+            <li class=""><a href="#">A code editor(VS code, Sublime Text, etc.) inatalled on your computer.</a></li>
+          </ul>
+        </mat-tab>
+        <mat-tab label="Why Python">
+          <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat error esse qui autem consectetur sint!</p>
+        </mat-tab>
+        <mat-tab label="Why Python from CKlassrooms">
+          <p class="mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde dolorem, doloribus incidunt odio illo recusandae.</p>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+
+ 
+  <div class="lg:w-1/3 p-6 bg-gray-50">
+    <h3 class="text-xl font-semibold mb-4 text-black">Courses Overview</h3>
+    <div class="mb-4">
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Click me to open
+            </mat-panel-title>
+            <mat-panel-description>
+             {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p class="text-black">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos alias porro ratione obcaecati, numquam nam!</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+    <div class="bg-white p-4 rounded-lg shadow-md">
+      <div class="flex items-center mb-2">
+        <h3 class="text-black font-bold">FAQs</h3>
+      </div>
+  
+    </div>
+  </div>
+</div>
