@@ -1,8 +1,11 @@
 @import "../../../theme/color";
 
-::ng-deep .mat-tab-label {
-    // color: $themeSecondary !important;
-    color: white;
+.top-18 {
+    top: 4.5rem;
+}
+
+::ng-deep .mat-tab-label-content {
+    color: white !important;
 }
 
 .bg-gray-cards {
@@ -14,6 +17,6 @@
     border: 1px solid $themeBoxShadow;
 }
 
-.mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"]) .mat-expansion-panel-header:hover {
     background: transparent;
 }

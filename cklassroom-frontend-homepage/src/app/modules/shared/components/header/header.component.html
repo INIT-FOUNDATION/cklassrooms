@@ -1,8 +1,7 @@
 <div
-  class="z-50 header-body pb-3 w-full"
+  class="z-50 header-body pb-3 w-screen fixed"
   [ngClass]="{
-    'shadow-lg': verticalScrollValue,
-    fixed: utilityService.showFooter$ | async
+    'shadow-lg': verticalScrollValue
   }"
 >
   <div class="flex justify-between items-center bg-green">
