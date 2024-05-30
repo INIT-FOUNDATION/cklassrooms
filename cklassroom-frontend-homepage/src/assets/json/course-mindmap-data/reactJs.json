@@ -8,7 +8,8 @@
         "format": "node_tree",
         "data": {
             "id": "root",
-            "background-image": "assets/images/courses/reactJs.svg",
+            "description": "React is a popular JavaScript library for building user interfaces. It is also referred to as a front-end JavaScript library.",
+            "background-image": "assets/images/courses/reactJs-course-image.jpg",
             "width": "100",
             "height": "100",
             "children": [

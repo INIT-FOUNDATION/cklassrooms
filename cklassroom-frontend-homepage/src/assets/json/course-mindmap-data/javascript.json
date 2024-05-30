@@ -8,7 +8,8 @@
     "format": "node_tree",
     "data": {
       "id": "root",
-      "background-image": "assets/images/courses/javascript.svg",
+      "description": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages.",
+      "background-image": "assets/images/courses/JavaScript-course-image.jpg",
       "width": "100",
       "height": "100",
       "expanded": true,

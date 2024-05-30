@@ -8,7 +8,8 @@
         "format": "node_tree",
         "data": {
             "id": "root",
-            "background-image": "assets/images/courses/angular.svg",
+            "description": "Angular is an application-design framework and development platform for creating efficient and sophisticated single-page apps.",
+            "background-image": "assets/images/courses/angular-course-image.jpg",
             "width": "100",
             "height": "100",
             "children": [

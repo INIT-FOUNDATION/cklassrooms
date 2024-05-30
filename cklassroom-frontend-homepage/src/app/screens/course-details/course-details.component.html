@@ -1,11 +1,11 @@
 <div class="relative z-50">
-  <!-- <button
+  <button
     type="button"
     class="hover-card px-5 py-3 rounded-xl text-sm font-medium absolute right-0"
     (click)="downloadPdf()"
   >
     <h1>Download PDF</h1>
-  </button> -->
+  </button>
 </div>
 <!-- <div id="jsmind_container"></div> -->
 
@@ -13,15 +13,14 @@
   <div class="lg:w-2/3 p-3 md:p-6" >
     <h2 class="text-2xl font-semibold mb-4">{{mindMapJson?.mindMapData?.meta?.name}}</h2>
     <p class="text-white-600 mb-4 text-green">
-      Python is an efficient high-level data structures and a simple but
-      effective approach to object-oriented programming.
+      {{mindMapJson?.mindMapData?.data?.description}}
     </p>
     <div class="relative">
       <img
-        src="assets/images/courses/python-course-image.jpg"
-        alt="Course Thumbnail"
-        class="w-full rounded-lg mb-4 h-80"
-      />
+    [src]="mindMapJson?.mindMapData?.data?.['background-image']"
+    alt="Course Thumbnail"
+    class="w-full rounded-lg mb-4 h-96"
+  />
     </div>
     <div>
       <mat-tab-group class="mb-4">

@@ -8,7 +8,8 @@
     "format": "node_tree",
     "data": {
       "id": "root",
-      "background-image": "assets/images/courses/artificialIntelligence.svg",
+      "description": "Artificial Intelligence (AI) o1ers numerous advantages across various domains, enhancing e1iciency, productivity, and innovation.",
+      "background-image": "assets/images/courses/artificialIntelligence-course-image.jpg",
       "width": "150",
       "height": "100",
       "children": [

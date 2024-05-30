@@ -8,7 +8,8 @@
     "format": "node_tree",
     "data": {
       "id": "root",
-      "background-image": "assets/images/courses/nodeJs.svg",
+      "description": "As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.",
+      "background-image": "assets/images/courses/nodeJs-course-image.jpg",
       "width": "100",
       "height": "100",
       "expanded": true,
