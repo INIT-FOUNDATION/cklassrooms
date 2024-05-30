@@ -164,6 +164,20 @@
                         }
                     ]
                 }
+            ],
+            "faqs":[
+                {
+                    "question": "What is Angular?",
+                    "answer": "Angular, maintained by Google, is a TypeScript-based framework for building dynamic SPAs. It includes features like two-way data binding, dependency injection, and modular development."
+                },
+                {
+                    "question": "What are some career opportunities in Angular development after completing this course?",
+                    "answer": "Career opportunities in Angular development include roles such as front-end developer, Angular developer, web application developer, UI/UX developer, and full-stack developer."
+                },
+                {
+                    "question": "What are the prerequisites for enrolling in this Angular course?",
+                    "answer": "While no specific prerequisites are required, a basic understanding of HTML, CSS, and JavaScript would be beneficial. Familiarity with TypeScript is also recommended, as Angular is built with TypeScript."
+                }
             ]
         }
     },

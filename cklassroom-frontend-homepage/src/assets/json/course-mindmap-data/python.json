@@ -180,6 +180,20 @@
                         }
                     ]
                 }
+            ],
+            "faqs":[
+                {
+                    "question": "What is Python?",
+                    "answer": "Python is a high-level programming language known for its simplicity and readability. It is widely used in various domains such as web development, data science, artificial intelligence, and more."
+                },
+                {
+                    "question": "Who is this Python course for?",
+                    "answer": "This Python course is suitable for beginners who have little to no programming experience."
+                },
+                {
+                    "question": "What are the prerequisites for this Python course?",
+                    "answer": "There are no specific prerequisites for this Python course. However, having a basic understanding of programming concepts and familiarity with any programming language would be helpful."
+                }
             ]
         }
     },

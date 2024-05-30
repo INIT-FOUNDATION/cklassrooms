@@ -189,7 +189,21 @@
             }
           ]
         }
-      ]
+      ],
+      "faqs":[
+        {
+            "question": "What is Node.js?",
+            "answer": "Node.js is an open-source, server-side runtime environment built on Chrome's V8 JavaScript engine. It allows you to run JavaScript code on the server."
+        },
+        {
+            "question": "Who is this Node.js course for?",
+            "answer": "This Node.js course is designed for both beginners and experienced developers who want to learn how to build server-side applications using Node.js."
+        },
+        {
+            "question": "What are the prerequisites for learning Node.js?",
+            "answer": "Basic knowledge of JavaScript is essential for learning Node.js. Familiarity with concepts such as functions, arrays, objects, and control flow statements will be beneficial."
+        }
+    ]
     }
   },
   "additionalData": {

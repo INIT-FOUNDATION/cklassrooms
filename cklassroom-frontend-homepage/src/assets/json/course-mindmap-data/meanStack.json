@@ -192,7 +192,21 @@
             }
           ]
         }
-      ]
+      ],
+      "faqs":[
+        {
+            "question": "What is the MEAN Stack?",
+            "answer": "The MEAN Stack is a collection of JavaScript-based technologies used for building full-stack web applications. It consists of MongoDB (a NoSQL database), Express.js (a web application framework), Angular (a front-end JavaScript framework), and Node.js (a back-end JavaScript runtime environment)."
+        },
+        {
+            "question": "Who is this MEAN Stack course designed for?",
+            "answer": "This MEAN Stack course is suitable for aspiring web developers, software engineers, and individuals interested in mastering the art of full-stack web development using the MEAN Stack."
+        },
+        {
+            "question": "Can the skills acquired in the course be applied to real-world projects?",
+            "answer": "Absolutely! You'll learn industry-standard practices and techniques essential for building scalable, modern web applications."
+        }
+    ]
     }
   },
   "additionalData": {

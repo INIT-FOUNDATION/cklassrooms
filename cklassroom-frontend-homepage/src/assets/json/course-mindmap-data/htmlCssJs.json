@@ -98,7 +98,21 @@
             }
           ]
         }
-      ]
+      ],
+      "faqs":[
+        {
+            "question": "Who is this course designed for?",
+            "answer": "This course is designed for individuals interested in learning the fundamentals of web development. Whether you're a complete beginner or have some experience with coding, this course is suitable for anyone looking to build websites from scratch."
+        },
+        {
+            "question": "Do I need any prior programming experience to take this course?",
+            "answer": "No prior programming experience is required to enroll in this course. However, familiarity with basic computer operations and navigating the internet will be beneficial for understanding the concepts covered."
+        },
+        {
+            "question": "Is course access available after it ends?",
+            "answer": " Yes, you'll maintain access to the course content indefinitely, even after the course concludes."
+        }
+    ]
     }
   },
   "additionalData": {

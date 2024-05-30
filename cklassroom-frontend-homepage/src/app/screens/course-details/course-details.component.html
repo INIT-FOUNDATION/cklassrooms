@@ -60,97 +60,42 @@
 
   <div class="lg:w-1/3 p-3 md:p-6">
 
-    <div class="card-bg p-3 md:p-6 courses-card rounded-xl md:flex md:flex-col md:space-y-6 mb-4 max-h-80 overflow-y-auto">
+    <div class="card-bg p-3 md:p-6 courses-card rounded-xl md:flex md:flex-col md:space-y-6 mb-4">
       
       <h2 class="text-xl font-semibold text-white">Courses Overview</h2>
+      <div class="max-h-80 overflow-y-auto">
       <mat-accordion>
-        <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
-          <mat-expansion-panel-header>
-            <mat-panel-title class="text-white">
-              Basics
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <ul class="text-green">
-            <li class="p-2">TypeScript Fundamentals</li>
-            <li class="p-2">JavaScript ES6+ Features</li>
-            <li class="p-2">HTML & CSS Basics</li>
-          </ul>
-        </mat-expansion-panel>
+        <div *ngFor="let course of mindMapJson?.mindMapData?.data?.children">
+          <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="text-white">
+                {{ course.topic }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul class="text-green">
+              <li *ngFor="let courseSub of course.children" class="p-2">{{ courseSub.topic }}</li>
+            </ul>
+          </mat-expansion-panel>
+        </div>
       </mat-accordion>
-      <mat-accordion>
-        <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
-          <mat-expansion-panel-header>
-            <mat-panel-title class="text-white">
-              Advanced Topics
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <ul class="text-green">
-            <li class="p-2">Forms & Form Validation</li>
-            <li class="p-2">RxJS & Observables</li>
-            <li class="p-2">State Management (NgRx)</li>
-          </ul>
-        </mat-expansion-panel>
-      </mat-accordion>
-      <mat-accordion>
-        <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
-          <mat-expansion-panel-header>
-            <mat-panel-title class="text-white">
-              Tooling
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <ul class="text-green">
-            <li class="p-2">Angular CLI</li>
-            <li class="p-2">Angular Material</li>
-            <li class="p-2">Angular DevTools</li>
-            <li class="p-2">Third-party Libraries & Tools</li>
-          </ul>
-        </mat-expansion-panel>
-      </mat-accordion>
+      </div>
     </div>
 
     <div class="card-bg p-3 md:p-6 courses-card rounded-xl md:flex md:flex-col md:space-y-6">
       <h2 class="text-xl font-semibold text-white">FAQs</h2>
       <mat-accordion>
-        <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
-          <mat-expansion-panel-header>
-            <mat-panel-title class="text-white">
-              What is the refund policy?
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p class="pt-4 text-green">
-            If you subscribed, you get a 7-day free trial during which you can
-            cancel at no penalty. After that, we don’t give refunds, but you can
-            cancel your subscription at any time.
-          </p>
-        </mat-expansion-panel>
-      </mat-accordion>
-      <mat-accordion>
-        <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
-          <mat-expansion-panel-header>
-            <mat-panel-title class="text-white">
-              What is the refund policy?
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p class="pt-4 text-green">
-            If you subscribed, you get a 7-day free trial during which you can
-            cancel at no penalty. After that, we don’t give refunds, but you can
-            cancel your subscription at any time.
-          </p>
-        </mat-expansion-panel>
-      </mat-accordion>
-      <mat-accordion>
-        <mat-expansion-panel class="bg-gray-cards rounded-xl text-white">
-          <mat-expansion-panel-header>
-            <mat-panel-title class="text-white">
-              What is the refund policy?
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p class="pt-4 text-green">
-            If you subscribed, you get a 7-day free trial during which you can
-            cancel at no penalty. After that, we don’t give refunds, but you can
-            cancel your subscription at any time.
-          </p>
-        </mat-expansion-panel>
+        <div *ngFor="let faq of mindMapJson?.mindMapData?.data?.faqs">
+          <mat-expansion-panel class="bg-gray-cards rounded-xl text-white  p-3">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="text-white">
+                {{ faq.question }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="pt-4 text-green">
+              {{ faq.answer }}
+            </p>
+          </mat-expansion-panel>
+        </div>
       </mat-accordion>
     </div>
   </div>

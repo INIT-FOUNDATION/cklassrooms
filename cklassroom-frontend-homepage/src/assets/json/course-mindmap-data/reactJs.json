@@ -272,6 +272,20 @@
                         }
                     ]
                 }
+            ],
+            "faqs":[
+                {
+                    "question": "What is React.js?",
+                    "answer": "React.js is a JavaScript library for building user interfaces, particularly single-page applications where you need a fast, interactive, and dynamic user experience. "
+                },
+                {
+                    "question": "Who should take this React.js course?",
+                    "answer": "This course is designed for web developers, software engineers, and anyone interested in building dynamic web applications. Basic knowledge of HTML, CSS, and JavaScript is recommended."
+                },
+                {
+                    "question": "What are the prerequisites for learning React.js?",
+                    "answer": "Basic understanding of HTML, CSS, and JavaScript is essential. Familiarity with ES6+ JavaScript features and basic web development concepts will be beneficial."
+                }
             ]
         }
     },
