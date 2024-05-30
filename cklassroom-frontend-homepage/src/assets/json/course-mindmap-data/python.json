@@ -1,7 +1,7 @@
 {
     "mindMapData": {
         "meta": {
-            "name": "Angular Roadmap",
+            "name": "Learn Python",
             "author": "Sudhirkumarrao Allada",
             "version": "0.1"
         },
@@ -181,7 +181,7 @@
                     ]
                 }
             ],
-            "faqs":[
+            "faqs": [
                 {
                     "question": "What is Python?",
                     "answer": "Python is a high-level programming language known for its simplicity and readability. It is widely used in various domains such as web development, data science, artificial intelligence, and more."

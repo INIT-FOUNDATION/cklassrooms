@@ -1,7 +1,7 @@
 {
   "mindMapData": {
     "meta": {
-      "name": "Artificial Intelligence Roadmap",
+      "name": "Learn Artificial Intelligence",
       "author": "Sudhirkumarrao Allada",
       "version": "0.1"
     },
@@ -289,20 +289,20 @@
           ]
         }
       ],
-      "faqs":[
+      "faqs": [
         {
-            "question": "What are the prerequisites for enrolling in this AI course?",
-            "answer": "While no specific prerequisites are required, familiarity with programming languages like Python and basic understanding of mathematics and statistics would be beneficial."
+          "question": "What are the prerequisites for enrolling in this AI course?",
+          "answer": "While no specific prerequisites are required, familiarity with programming languages like Python and basic understanding of mathematics and statistics would be beneficial."
         },
         {
-            "question": "What are some career opportunities in AI after completing this course?",
-            "answer": "Career opportunities in AI include roles such as data scientist, machine learning engineer, AI researcher, AI consultant, robotics engineer, and AI ethics specialist, among others."
+          "question": "What are some career opportunities in AI after completing this course?",
+          "answer": "Career opportunities in AI include roles such as data scientist, machine learning engineer, AI researcher, AI consultant, robotics engineer, and AI ethics specialist, among others."
         },
         {
-            "question": "Will there be any certification upon completion of the course?",
-            "answer": "Yes, a certification of completion may be awarded to participants who successfully meet the course requirements and assessments."
+          "question": "Will there be any certification upon completion of the course?",
+          "answer": "Yes, a certification of completion may be awarded to participants who successfully meet the course requirements and assessments."
         }
-    ]
+      ]
     }
   },
   "additionalData": {

@@ -1,7 +1,7 @@
 {
   "mindMapData": {
     "meta": {
-      "name": "Artificial Intelligence Roadmap",
+      "name": "Learn DevOps",
       "author": "Sudhirkumarrao Allada",
       "version": "0.1"
     },
@@ -113,20 +113,20 @@
           ]
         }
       ],
-      "faqs":[
+      "faqs": [
         {
-            "question": "What is DevOps and why is it important?",
-            "answer": "DevOps is a culture, philosophy, and set of practices that aims to improve collaboration between software development (Dev) and IT operations (Ops) teams, leading to faster and more reliable software delivery."
+          "question": "What is DevOps and why is it important?",
+          "answer": "DevOps is a culture, philosophy, and set of practices that aims to improve collaboration between software development (Dev) and IT operations (Ops) teams, leading to faster and more reliable software delivery."
         },
         {
-            "question": "Will there be any assessments or certifications upon completion of the course?",
-            "answer": "Yes, there may be assessments throughout the course to reinforce learning. Additionally, a certification of completion may be awarded to participants who successfully meet the course requirements."
+          "question": "Will there be any assessments or certifications upon completion of the course?",
+          "answer": "Yes, there may be assessments throughout the course to reinforce learning. Additionally, a certification of completion may be awarded to participants who successfully meet the course requirements."
         },
         {
-            "question": "How can I get support or clarification on course content during the learning process?",
-            "answer": "Support will be available through online forums, and possibly live Q&A sessions with instructors or teaching assistants."
+          "question": "How can I get support or clarification on course content during the learning process?",
+          "answer": "Support will be available through online forums, and possibly live Q&A sessions with instructors or teaching assistants."
         }
-    ]
+      ]
     }
   },
   "additionalData": {

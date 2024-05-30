@@ -1,7 +1,7 @@
 {
   "mindMapData": {
     "meta": {
-      "name": "ML and NLP Roadmap",
+      "name": "Learn ML and NLP",
       "author": "Sudhirkumarrao Allada",
       "version": "0.1"
     },
@@ -209,20 +209,20 @@
           ]
         }
       ],
-      "faqs":[
+      "faqs": [
         {
-            "question": "What is Machine Learning (ML) and Natural Language Processing (NLP)?",
-            "answer": "Machine Learning is a subset of artificial intelligence (AI) that focuses on the development of algorithms and statistical models that enable computers to perform tasks without explicit programming."
+          "question": "What is Machine Learning (ML) and Natural Language Processing (NLP)?",
+          "answer": "Machine Learning is a subset of artificial intelligence (AI) that focuses on the development of algorithms and statistical models that enable computers to perform tasks without explicit programming."
         },
         {
-            "question": "Who is this ML & NLP course for?",
-            "answer": "This ML & NLP course is designed for aspiring data scientists, AI engineers, software developers, and anyone interested in leveraging machine learning and NLP techniques to solve real-world problems."
+          "question": "Who is this ML & NLP course for?",
+          "answer": "This ML & NLP course is designed for aspiring data scientists, AI engineers, software developers, and anyone interested in leveraging machine learning and NLP techniques to solve real-world problems."
         },
         {
-            "question": "What are the prerequisites for learning ML & NLP?",
-            "answer": "To get the most out of this ML & NLP course, it's beneficial to have a basic understanding of programming (preferably Python), linear algebra, calculus, and probability theory."
+          "question": "What are the prerequisites for learning ML & NLP?",
+          "answer": "To get the most out of this ML & NLP course, it's beneficial to have a basic understanding of programming (preferably Python), linear algebra, calculus, and probability theory."
         }
-    ]
+      ]
     }
   },
   "additionalData": {

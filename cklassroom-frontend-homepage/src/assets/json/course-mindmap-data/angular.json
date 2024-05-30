@@ -1,7 +1,7 @@
 {
     "mindMapData": {
         "meta": {
-            "name": "Angular Roadmap",
+            "name": "Learn Angular",
             "author": "Sudhirkumarrao Allada",
             "version": "0.1"
         },
@@ -165,7 +165,7 @@
                     ]
                 }
             ],
-            "faqs":[
+            "faqs": [
                 {
                     "question": "What is Angular?",
                     "answer": "Angular, maintained by Google, is a TypeScript-based framework for building dynamic SPAs. It includes features like two-way data binding, dependency injection, and modular development."

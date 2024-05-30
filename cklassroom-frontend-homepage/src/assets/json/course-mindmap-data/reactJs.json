@@ -1,7 +1,7 @@
 {
     "mindMapData": {
         "meta": {
-            "name": "Angular Roadmap",
+            "name": "Learn ReactJs",
             "author": "Sudhirkumarrao Allada",
             "version": "0.1"
         },
@@ -273,7 +273,7 @@
                     ]
                 }
             ],
-            "faqs":[
+            "faqs": [
                 {
                     "question": "What is React.js?",
                     "answer": "React.js is a JavaScript library for building user interfaces, particularly single-page applications where you need a fast, interactive, and dynamic user experience. "
