@@ -190,39 +190,39 @@
             }
           ]
         }
-      ],
-      "faqs": [
-        {
-          "question": "What is Node.js?",
-          "answer": "Node.js is an open-source, server-side runtime environment built on Chrome's V8 JavaScript engine. It allows you to run JavaScript code on the server."
-        },
-        {
-          "question": "Who is this Node.js course for?",
-          "answer": "This Node.js course is designed for both beginners and experienced developers who want to learn how to build server-side applications using Node.js."
-        },
-        {
-          "question": "How will learning Node.js benefit my career?",
-          "answer": "Mastering Node.js opens up opportunities for backend development roles, full-stack development positions, and careers in JavaScript-based server-side programming."
-        }
-      ],
-      "tabs":[
-        {
-         "title":"Why NodeJS",
-         "content":"Node.js is efficient in building scalable, high-performance applications using JavaScript on both the client and server sides, streamlining development processes and enabling seamless real-time interactions."
-        },
-        {
-         "title":"Why NodeJS from CKlassrooms",
-         "content":"Learn Node.js by industry experts, offering comprehensive coverage of Node.js concepts, practical projects, and hands-on experience, enhancing your skills in a structured and flexible learning environment."
-        },
-        {
-          "title":"Pre-requisite",
-          "content":"Familiarity with JavaScript and server-side concepts is essential for understanding Node.js applications."
-        }
-    ]
+      ]
     }
   },
   "additionalData": {
     "pdfUrl": "assets/roadmaps/NODEJS ROADMAP.pdf",
-    "pdfName": "NODEJS ROADMAP.pdf"
+    "pdfName": "NODEJS ROADMAP.pdf",
+    "faqs": [
+      {
+        "question": "What is Node.js?",
+        "answer": "Node.js is an open-source, server-side runtime environment built on Chrome's V8 JavaScript engine. It allows you to run JavaScript code on the server."
+      },
+      {
+        "question": "Who is this Node.js course for?",
+        "answer": "This Node.js course is designed for both beginners and experienced developers who want to learn how to build server-side applications using Node.js."
+      },
+      {
+        "question": "How will learning Node.js benefit my career?",
+        "answer": "Mastering Node.js opens up opportunities for backend development roles, full-stack development positions, and careers in JavaScript-based server-side programming."
+      }
+    ],
+    "tabs":[
+      {
+       "title":"Why NodeJS",
+       "content":"Node.js is efficient in building scalable, high-performance applications using JavaScript on both the client and server sides, streamlining development processes and enabling seamless real-time interactions."
+      },
+      {
+       "title":"Why NodeJS from CKlassrooms",
+       "content":"Learn Node.js by industry experts, offering comprehensive coverage of Node.js concepts, practical projects, and hands-on experience, enhancing your skills in a structured and flexible learning environment."
+      },
+      {
+        "title":"Pre-requisite",
+        "content":"Familiarity with JavaScript and server-side concepts is essential for understanding Node.js applications."
+      }
+    ]
   }
 }

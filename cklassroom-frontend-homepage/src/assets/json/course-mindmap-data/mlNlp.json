@@ -209,39 +209,39 @@
             }
           ]
         }
-      ],
-      "faqs": [
-        {
-          "question": "What is Machine Learning (ML) and Natural Language Processing (NLP)?",
-          "answer": "Machine Learning is a subset of artificial intelligence (AI) that focuses on the development of algorithms and statistical models that enable computers to perform tasks without explicit programming."
-        },
-        {
-          "question": "Who is this ML & NLP course for?",
-          "answer": "This ML & NLP course is designed for aspiring data scientists, AI engineers, software developers, and anyone interested in leveraging machine learning and NLP techniques to solve real-world problems."
-        },
-        {
-          "question": "Is there any certification offered upon completion of the course?",
-          "answer": "Yes, upon successful completion, you will receive a certification recognizing your proficiency in ML and NLP."
-        }
-      ],      
-      "tabs":[
-        {
-         "title":"Why ML & NPL",
-         "content":"Learning ML and NLP enables you to harness data patterns for predictions and understand and process human language, offering diverse career prospects and technological advancements."
-        },
-        {
-         "title":"Why NodeJS from CKlassrooms",
-         "content":"Learning ML and NLP from CKlassrooms provides structured courses, expert instructors, hands-on projects, and a supportive team, fostering practical skills and career advancement in these cutting-edge fields."
-        },
-        {
-          "title":"Pre-requisite",
-          "content":"A basic understanding of Python and data science concepts is necessary to grasp machine learning and natural language processing techniques effectively."
-        }
-    ]
+      ]
     }
   },
   "additionalData": {
     "pdfUrl": "assets/roadmaps/ML & NLP ROADMAP.pdf",
-    "pdfName": "ML & NLP ROADMAP.pdf"
+    "pdfName": "ML & NLP ROADMAP.pdf",
+    "faqs": [
+      {
+        "question": "What is Machine Learning (ML) and Natural Language Processing (NLP)?",
+        "answer": "Machine Learning is a subset of artificial intelligence (AI) that focuses on the development of algorithms and statistical models that enable computers to perform tasks without explicit programming."
+      },
+      {
+        "question": "Who is this ML & NLP course for?",
+        "answer": "This ML & NLP course is designed for aspiring data scientists, AI engineers, software developers, and anyone interested in leveraging machine learning and NLP techniques to solve real-world problems."
+      },
+      {
+        "question": "Is there any certification offered upon completion of the course?",
+        "answer": "Yes, upon successful completion, you will receive a certification recognizing your proficiency in ML and NLP."
+      }
+    ],      
+    "tabs":[
+      {
+       "title":"Why ML & NPL",
+       "content":"Learning ML and NLP enables you to harness data patterns for predictions and understand and process human language, offering diverse career prospects and technological advancements."
+      },
+      {
+       "title":"Why NodeJS from CKlassrooms",
+       "content":"Learning ML and NLP from CKlassrooms provides structured courses, expert instructors, hands-on projects, and a supportive team, fostering practical skills and career advancement in these cutting-edge fields."
+      },
+      {
+        "title":"Pre-requisite",
+        "content":"A basic understanding of Python and data science concepts is necessary to grasp machine learning and natural language processing techniques effectively."
+      }
+    ]
   }
 }

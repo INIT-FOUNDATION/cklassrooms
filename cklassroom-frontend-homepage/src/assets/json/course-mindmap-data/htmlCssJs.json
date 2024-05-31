@@ -99,39 +99,39 @@
             }
           ]
         }
-      ],
-      "faqs": [
-        {
-          "question": "Who is this course designed for?",
-          "answer": "This course is designed for individuals interested in learning the fundamentals of web development. Whether you're a complete beginner or have some experience with coding, this course is suitable for anyone looking to build websites from scratch."
-        },
-        {
-          "question": "What are the career opportunities with proficiency in HTML, CSS, and JS?",
-          "answer": "Proficiency in HTML, CSS, and JavaScript opens up a wide range of career opportunities in web development, including front-end development, full-stack development, UI/UX design, and freelance web development."
-        },
-        {
-          "question": "Is course access available after it ends?",
-          "answer": " Yes, you'll maintain access to the course content indefinitely, even after the course concludes."
-        }
-      ],
-      "tabs":[
-        {
-         "title":"Why HTML, CSS & Javascript",
-         "content":"Learning HTML, CSS, and JavaScript is essential for web development, offering versatile skills, career opportunities, creative expression, and a foundation for continuous learning."
-        },
-        {
-         "title":"Why HTML, CSS & Javascript from CKlassrooms",
-         "content":"Learning HTML, CSS, and JavaScript from CKlassrooms offers structured courses, expert instruction, practical projects, and a supportive team, enabling efficient skill development and career advancement in web development."
-        },
-        {
-          "title":"Pre-requisite",
-          "content":"An interest in web development and basic computer skills are sufficient to start learning HTML, CSS, and JavaScript."
-        }
-    ]
+      ]
     }
   },
   "additionalData": {
     "pdfUrl": "assets/roadmaps/HTML,CSS&JS ROADMAP.pdf",
-    "pdfName": "HTML,CSS&JS ROADMAP.pdf"
+    "pdfName": "HTML,CSS&JS ROADMAP.pdf",
+    "faqs": [
+      {
+        "question": "Who is this course designed for?",
+        "answer": "This course is designed for individuals interested in learning the fundamentals of web development. Whether you're a complete beginner or have some experience with coding, this course is suitable for anyone looking to build websites from scratch."
+      },
+      {
+        "question": "What are the career opportunities with proficiency in HTML, CSS, and JS?",
+        "answer": "Proficiency in HTML, CSS, and JavaScript opens up a wide range of career opportunities in web development, including front-end development, full-stack development, UI/UX design, and freelance web development."
+      },
+      {
+        "question": "Is course access available after it ends?",
+        "answer": " Yes, you'll maintain access to the course content indefinitely, even after the course concludes."
+      }
+    ],
+    "tabs":[
+      {
+       "title":"Why HTML, CSS & Javascript",
+       "content":"Learning HTML, CSS, and JavaScript is essential for web development, offering versatile skills, career opportunities, creative expression, and a foundation for continuous learning."
+      },
+      {
+       "title":"Why HTML, CSS & Javascript from CKlassrooms",
+       "content":"Learning HTML, CSS, and JavaScript from CKlassrooms offers structured courses, expert instruction, practical projects, and a supportive team, enabling efficient skill development and career advancement in web development."
+      },
+      {
+        "title":"Pre-requisite",
+        "content":"An interest in web development and basic computer skills are sufficient to start learning HTML, CSS, and JavaScript."
+      }
+    ]
   }
 }

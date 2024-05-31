@@ -289,39 +289,39 @@
             }
           ]
         }
-      ],
-      "faqs": [
-        {
-          "question": "What are the prerequisites for enrolling in this AI course?",
-          "answer": "While no specific prerequisites are required, familiarity with programming languages like Python and basic understanding of mathematics and statistics would be beneficial."
-        },
-        {
-          "question": "What are some career opportunities in AI after completing this course?",
-          "answer": "Career opportunities in AI include roles such as data scientist, machine learning engineer, AI researcher, AI consultant, robotics engineer, and AI ethics specialist, among others."
-        },
-        {
-          "question": "Will there be any certification upon completion of the course?",
-          "answer": "Yes, a certification of completion may be awarded to participants who successfully meet the course requirements and assessments."
-        }
-      ],
-      "tabs":[
-        {
-         "title":"Why Artificial Intelligence",
-         "content":"Learning Artificial Intelligence opens up opportunities to develop innovative solutions, automate tasks, and make data-driven decisions, contributing to advancements in various fields such as healthcare, finance, and technology."
-        },
-        {
-         "title":"Why Artificial Intelligence from CKlassrooms",
-         "content":"Learn Artificial Intelligence from industry experts, providing comprehensive knowledge and practical skills to excel in DevOps practices and technologies."
-        },
-        {
-          "title":"Pre-requisite",
-          "content":"Understanding mathematics like calculus, linear algebra, and probability is key, along with proficiency in Python and familiarity with machine learning concepts."
-        }
-    ]
+      ]
     }
   },
   "additionalData": {
     "pdfUrl": "assets/roadmaps/AI ROADMAP.pdf",
-    "pdfName": "AI ROADMAP.pdf"
+    "pdfName": "AI ROADMAP.pdf",
+    "faqs": [
+      {
+        "question": "What are the prerequisites for enrolling in this AI course?",
+        "answer": "While no specific prerequisites are required, familiarity with programming languages like Python and basic understanding of mathematics and statistics would be beneficial."
+      },
+      {
+        "question": "What are some career opportunities in AI after completing this course?",
+        "answer": "Career opportunities in AI include roles such as data scientist, machine learning engineer, AI researcher, AI consultant, robotics engineer, and AI ethics specialist, among others."
+      },
+      {
+        "question": "Will there be any certification upon completion of the course?",
+        "answer": "Yes, a certification of completion may be awarded to participants who successfully meet the course requirements and assessments."
+      }
+    ],
+    "tabs":[
+      {
+       "title":"Why Artificial Intelligence",
+       "content":"Learning Artificial Intelligence opens up opportunities to develop innovative solutions, automate tasks, and make data-driven decisions, contributing to advancements in various fields such as healthcare, finance, and technology."
+      },
+      {
+       "title":"Why Artificial Intelligence from CKlassrooms",
+       "content":"Learn Artificial Intelligence from industry experts, providing comprehensive knowledge and practical skills to excel in DevOps practices and technologies."
+      },
+      {
+        "title":"Pre-requisite",
+        "content":"Understanding mathematics like calculus, linear algebra, and probability is key, along with proficiency in Python and familiarity with machine learning concepts."
+      }
+    ]
   }
 }

@@ -40,8 +40,8 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
       editable: false, // [required] whether allow edit or not
       theme: 'greensea', // [required] theme
     };
-    const jm = new jsMind(options);
-    jm.show(this.mindMapJson.mindMapData);
+    // const jm = new jsMind(options);
+    // jm.show(this.mindMapJson.mindMapData);
   }
 
   downloadPdf() {

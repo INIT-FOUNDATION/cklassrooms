@@ -181,39 +181,39 @@
                         }
                     ]
                 }
-            ],
-            "faqs": [
-                {
-                    "question": "What is Python?",
-                    "answer": "Python is a high-level programming language known for its simplicity and readability. It is widely used in various domains such as web development, data science, artificial intelligence, and more."
-                },
-                {
-                    "question": "Who is this Python course for?",
-                    "answer": "This Python course is suitable for beginners who have little to no programming experience."
-                },
-                {
-                    "question": "How is Python different from other programming languages?",
-                    "answer": "Python emphasizes simplicity and readability, making it easier to learn and understand compared to some other programming languages. It also has a vast ecosystem of libraries and frameworks."
-                }
-            ],
-            "tabs":[
-                {
-                 "title":"Why Python",
-                 "content":"Python is beneficial as it is widely used in different fields like web development, data science, and automation, and it opens up many job opportunities."
-                },
-                {
-                 "title":"Why Python from CKlassrooms",
-                 "content":"Learning Python from CKlassrooms offers a structured curriculum, practical exercises, and experienced instructors. Additionally, CKlassrooms provides a supportive team, making it an effective platform to master Python."
-                },
-                {
-                 "title":"Pre-requisite",
-                 "content":"Basic understanding of programming concepts is recommended, but no prior experience is required."
-                }
             ]
         }
     },
     "additionalData": {
         "pdfUrl": "assets/roadmaps/PYTHON ROADMAP.pdf",
-        "pdfName": "PYTHON ROADMAP.pdf"
+        "pdfName": "PYTHON ROADMAP.pdf",
+        "faqs": [
+            {
+                "question": "What is Python?",
+                "answer": "Python is a high-level programming language known for its simplicity and readability. It is widely used in various domains such as web development, data science, artificial intelligence, and more."
+            },
+            {
+                "question": "Who is this Python course for?",
+                "answer": "This Python course is suitable for beginners who have little to no programming experience."
+            },
+            {
+                "question": "How is Python different from other programming languages?",
+                "answer": "Python emphasizes simplicity and readability, making it easier to learn and understand compared to some other programming languages. It also has a vast ecosystem of libraries and frameworks."
+            }
+        ],
+        "tabs":[
+            {
+             "title":"Why Python",
+             "content":"Python is beneficial as it is widely used in different fields like web development, data science, and automation, and it opens up many job opportunities."
+            },
+            {
+             "title":"Why Python from CKlassrooms",
+             "content":"Learning Python from CKlassrooms offers a structured curriculum, practical exercises, and experienced instructors. Additionally, CKlassrooms provides a supportive team, making it an effective platform to master Python."
+            },
+            {
+             "title":"Pre-requisite",
+             "content":"Basic understanding of programming concepts is recommended, but no prior experience is required."
+            }
+        ]
     }
 }

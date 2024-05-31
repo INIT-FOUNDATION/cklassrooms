@@ -165,39 +165,39 @@
                         }
                     ]
                 }
-            ],
-            "faqs": [
-                {
-                    "question": "What is Angular?",
-                    "answer": "Angular, maintained by Google, is a TypeScript-based framework for building dynamic SPAs. It includes features like two-way data binding, dependency injection, and modular development."
-                },
-                {
-                    "question": "What are the career opportunities after completing this course?",
-                    "answer": "Career opportunities in Angular development include roles such as front-end developer, Angular developer, web application developer, UI/UX developer, and full-stack developer."
-                },
-                {
-                    "question": "Will I receive a certificate upon completion?",
-                    "answer": "Yes, upon completion of the course and fulfilling any requirements, you'll receive a certificate of completion, which can be a valuable addition to your resume."
-                }
-            ],
-            "tabs":[
-                {
-                 "title":"Why Angular",
-                 "content":"Learning Angular equips you with the skills to build robust, scalable web applications with a structured framework supported by Google, enhancing your development efficiency and enabling you to create dynamic, interactive user experiences."
-                },
-                {
-                 "title":"Why Angular from CKlassrooms",
-                 "content":"Learning Angular from CKlassrooms provides structured courses taught by industry experts, offering a wide range of topics, and hands-on projects allowing you to master Angular."
-                },
-                {
-                    "title":"Pre-requisite",
-                    "content": "Basic understanding of HTML, CSS, and JavaScript is essential. Familiarity with TypeScript and basic web development concepts will be beneficial."
-                }
             ]
         }
     },
     "additionalData": {
         "pdfUrl": "assets/roadmaps/ANGULAR ROADMAP.pdf",
-        "pdfName": "ANGULAR ROADMAP.pdf"
+        "pdfName": "ANGULAR ROADMAP.pdf",
+        "faqs": [
+            {
+                "question": "What is Angular?",
+                "answer": "Angular, maintained by Google, is a TypeScript-based framework for building dynamic SPAs. It includes features like two-way data binding, dependency injection, and modular development."
+            },
+            {
+                "question": "What are the career opportunities after completing this course?",
+                "answer": "Career opportunities in Angular development include roles such as front-end developer, Angular developer, web application developer, UI/UX developer, and full-stack developer."
+            },
+            {
+                "question": "Will I receive a certificate upon completion?",
+                "answer": "Yes, upon completion of the course and fulfilling any requirements, you'll receive a certificate of completion, which can be a valuable addition to your resume."
+            }
+        ],
+        "tabs":[
+            {
+             "title":"Why Angular",
+             "content":"Learning Angular equips you with the skills to build robust, scalable web applications with a structured framework supported by Google, enhancing your development efficiency and enabling you to create dynamic, interactive user experiences."
+            },
+            {
+             "title":"Why Angular from CKlassrooms",
+             "content":"Learning Angular from CKlassrooms provides structured courses taught by industry experts, offering a wide range of topics, and hands-on projects allowing you to master Angular."
+            },
+            {
+                "title":"Pre-requisite",
+                "content": "Basic understanding of HTML, CSS, and JavaScript is essential. Familiarity with TypeScript and basic web development concepts will be beneficial."
+            }
+        ]
     }
 }

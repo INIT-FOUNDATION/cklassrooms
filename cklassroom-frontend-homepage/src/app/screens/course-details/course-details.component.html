@@ -24,7 +24,7 @@
     </div>
     <div>
       <mat-tab-group class="mb-4">
-        <mat-tab *ngFor="let tab of mindMapJson?.mindMapData?.data?.tabs" [label]="tab?.title">
+        <mat-tab *ngFor="let tab of mindMapJson?.additionalData?.tabs" [label]="tab?.title">
           <div *ngIf="tab?.content">
             <p class="my-4">{{ tab?.content }}</p>
           </div>
@@ -59,7 +59,7 @@
     <div class="card-bg p-3 md:p-6 courses-card rounded-xl md:flex md:flex-col md:space-y-6">
       <h2 class="text-xl font-semibold text-white">FAQs</h2>
       <mat-accordion>
-        <div *ngFor="let faq of mindMapJson?.mindMapData?.data?.faqs">
+        <div *ngFor="let faq of mindMapJson?.additionalData?.faqs">
           <mat-expansion-panel class="bg-gray-cards rounded-xl text-white  p-4">
             <mat-expansion-panel-header>
               <mat-panel-title class="text-white">
