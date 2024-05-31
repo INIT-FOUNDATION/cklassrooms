@@ -1,7 +1,7 @@
 @import "../../../theme/color";
 
 ::ng-deep .mat-tab-label {
-    color: $themeFontColor!important;
+    color: $themeFontColor !important;
 }
 
 .bg-gray-cards {
@@ -16,10 +16,10 @@
     background: transparent;
 }
 
-.font-color{
+.font-color {
     color: $themeFontColor;
 }
 
-.courses-card {
-    border: 1px solid $themeBoxShadow;
-  }
+::ng-deep .mat-expansion-indicator::after {
+    border-color: $themeFontColor;
+}
