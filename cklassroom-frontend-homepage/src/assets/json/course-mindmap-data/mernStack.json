@@ -8,7 +8,8 @@
     "format": "node_tree",
     "data": {
       "id": "root",
-      "background-image": "assets/images/courses/mernStack.svg",
+      "description": "The MERN stack is a modern web development framework comprising MongoDB, Express.js, React and Node.js.",
+      "background-image": "assets/images/courses/mernStack-course-image.png",
       "width": "180",
       "height": "100",
       "children": [

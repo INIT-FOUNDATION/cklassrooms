@@ -8,7 +8,8 @@
     "format": "node_tree",
     "data": {
       "id": "root",
-      "background-image": "assets/images/courses/meanStack.svg",
+      "description": "The MEAN stack is a modern web development framework comprising MongoDB, Express.js, AngularJS, and Node.js.",
+      "background-image": "assets/images/courses/meanStack-course-image.jpg",
       "width": "180",
       "height": "100",
       "children": [
