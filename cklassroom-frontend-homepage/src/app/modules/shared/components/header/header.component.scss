@@ -64,3 +64,17 @@
 .bg-green {
   background-color: $themeSecondary;
 }
+
+.download-icon{
+  display: none;
+}
+
+@media screen and (max-width:425px) {
+  .download-btn{
+    display:none;
+  }
+
+  .download-icon{
+    display: flex
+  }
+}
