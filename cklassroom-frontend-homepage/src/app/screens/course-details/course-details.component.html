@@ -26,7 +26,7 @@
       <mat-tab-group class="mb-4">
         <mat-tab *ngFor="let tab of mindMapJson?.additionalData?.tabs" [label]="tab?.title">
           <div *ngIf="tab?.content">
-            <p class="my-4">{{ tab?.content }}</p>
+            <p class="my-4 text-white leading-7">{{ tab?.content }}</p>
           </div>
         </mat-tab>
       </mat-tab-group>

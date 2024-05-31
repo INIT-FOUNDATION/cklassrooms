@@ -312,16 +312,16 @@
     "tabs":[
       {
        "title":"Why Artificial Intelligence",
-       "content":"Learning Artificial Intelligence opens up opportunities to develop innovative solutions, automate tasks, and make data-driven decisions, contributing to advancements in various fields such as healthcare, finance, and technology."
+       "content":"Learning artificial intelligence (AI) is highly beneficial due to its high demand across various industries, leading to lucrative career opportunities. AI is at the forefront of technological innovation, allowing you to tackle complex problems and work on impactful projects. Its applications span diverse fields such as finance, healthcare, and robotics, offering multiple career paths. Acquiring AI skills ensures you stay relevant in the evolving job market and empowers you to contribute to advancements that improve quality of life and address global challenges."
       },
       {
        "title":"Why Artificial Intelligence from CKlassrooms",
-       "content":"Learn Artificial Intelligence from industry experts, providing comprehensive knowledge and practical skills to excel in DevOps practices and technologies."
+       "content":"Our courses are taught by industry-leading experts, ensuring you receive top-notch instruction and up-to-date knowledge. With a structured curriculum covering foundational concepts to advanced techniques, you'll gain a comprehensive understanding of AI. Through hands-on projects and practical exercises, you'll develop real-world skills and enhance your problem-solving abilities."
       },
       {
         "title":"Pre-requisite",
         "content":"Understanding mathematics like calculus, linear algebra, and probability is key, along with proficiency in Python and familiarity with machine learning concepts."
       }
-    ]
+  ]
   }
 }

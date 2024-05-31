@@ -213,11 +213,11 @@
     "tabs":[
       {
        "title":"Why NodeJS",
-       "content":"Node.js is efficient in building scalable, high-performance applications using JavaScript on both the client and server sides, streamlining development processes and enabling seamless real-time interactions."
+       "content":"Learning Node.js is crucial for modern web development because it allows developers to use JavaScript not only on the client side but also on the server side. This means you can build entire applications using just one programming language, making development more efficient. Node.js is particularly well-suited for handling multiple requests simultaneously, making it perfect for building real-time applications like chat applications or streaming services. Additionally, Node.js has a vast library of tools and frameworks that simplify development tasks, saving time and effort. Mastering Node.js opens up a wide range of opportunities in web development, including building web servers, APIs, and microservices, making it an essential skill for developers in today's tech industry."
       },
       {
        "title":"Why NodeJS from CKlassrooms",
-       "content":"Learn Node.js by industry experts, offering comprehensive coverage of Node.js concepts, practical projects, and hands-on experience, enhancing your skills in a structured and flexible learning environment."
+       "content":"Learning Node.js from CKlassroom offers a structured and comprehensive approach tailored to aspiring developers. Our expert instructors provide thorough coverage of Node.js fundamentals and advanced concepts, ensuring a solid understanding of the technology. With hands-on projects, personalized mentorship, and a supportive learning environment, CKlassroom empowers learners to build practical skills and confidence in Node.js development. Whether you're new to programming or an experienced developer looking to expand your skill set, CKlassroom offers courses designed to help you succeed in mastering Node.js and advancing your career in web development."
       },
       {
         "title":"Pre-requisite",

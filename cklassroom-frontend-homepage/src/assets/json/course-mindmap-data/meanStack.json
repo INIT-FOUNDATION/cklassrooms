@@ -216,11 +216,11 @@
     "tabs":[
       {
        "title":"Why MEAN Stack",
-       "content":"Learning the MEAN stack means mastering MongoDB, Express.js, Angular, and Node.js, enabling you to develop scalable, real-time web applications entirely in JavaScript, with a single language across the stack and a vibrant community supporting your efforts."
+       "content":"Learning the MEAN stack—MongoDB, Express.js, Angular, and Node.js—offers a robust and efficient toolkit for developing modern web applications. MongoDB provides a flexible NoSQL database solution, Express.js simplifies server-side development, Angular enables the creation of dynamic frontend interfaces, and Node.js facilitates scalable backend solutions. By mastering the MEAN stack, developers can create full-stack applications efficiently using a unified JavaScript ecosystem. This proficiency is highly sought-after in the industry, offering diverse career opportunities in web development."
       },
       {
        "title":"Why MEAN Stack from CKlassrooms",
-       "content":"Learning the MEAN stack from CKlassrooms offers structured courses, hands-on projects, and expert instructors, providing comprehensive guidance and resources to master MongoDB, Express.js, Angular, and Node.js effectively."
+       "content":"Learning the MEAN stack from CKlassroom offers a comprehensive and hands-on learning experience tailored for aspiring full-stack developers. Our expert instructors guide you through MongoDB, Express.js, Angular, and Node.js, ensuring you gain proficiency in each component of the stack. With practical projects, personalized mentorship, and a supportive learning community, CKlassroom empowers you to build real-world skills and confidence in MEAN stack development. Join CKlassroom to unlock your potential, master the MEAN stack, and pave the way for a successful career in full-stack web development."
       },
       {
         "title":"Pre-requisite",

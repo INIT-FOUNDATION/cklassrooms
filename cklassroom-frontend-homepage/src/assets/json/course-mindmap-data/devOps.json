@@ -136,16 +136,18 @@
     "tabs":[
       {
        "title":"Why Devops",
-       "content":"DevOps is crucial for streamlining software development and operations, enhancing collaboration, accelerating delivery, and staying competitive in the market."
+       "content":"Learning DevOps is essential for modern software development, emphasizing efficiency, collaboration, and automation. It enables faster delivery through continuous integration and delivery pipelines, fostering a culture of collaboration and shared responsibility. With abundant career opportunities, mastering DevOps equips you with the skills needed for success in today's dynamic development landscape."
       },
       {
        "title":"Why Devops from CKlassrooms",
-       "content":"Learn DevOps from industry experts, providing comprehensive knowledge and practical skills to excel in DevOps practices and technologies."
+       "content":"Learning DevOps from CKlassrooms offers an unparalleled opportunity to master essential skills in a dynamic and growing field. Our courses, led by industry experts, provide comprehensive coverage of DevOps principles, tools, and practices. Through hands-on projects and real-world scenarios, you'll gain practical experience and confidence in implementing DevOps solutions."
       },
       {
         "title":"Pre-requisite",
         "content":"Familiarity with software development and IT operations principles is crucial for understanding the DevOps lifecycle and practices."
       }
-    ]
+  ]
+
+
   }
 }

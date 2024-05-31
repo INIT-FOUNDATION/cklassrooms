@@ -188,11 +188,11 @@
         "tabs":[
             {
              "title":"Why Angular",
-             "content":"Learning Angular equips you with the skills to build robust, scalable web applications with a structured framework supported by Google, enhancing your development efficiency and enabling you to create dynamic, interactive user experiences."
+             "content":"Learning Angular is beneficial because it's a widely used, robust framework supported by Google, ideal for building dynamic and single-page applications. It enhances productivity through built-in features like data binding and dependency injection. With a large community and extensive resources, Angular ensures you have the support needed for development. Additionally, its versatility allows for cross-platform development, making it a valuable skill in the job market."
             },
             {
              "title":"Why Angular from CKlassrooms",
-             "content":"Learning Angular from CKlassrooms provides structured courses taught by industry experts, offering a wide range of topics, and hands-on projects allowing you to master Angular."
+             "content":"Our structured courses are taught by industry experts, ensuring you gain up-to-date, high-quality knowledge. We cover a comprehensive range of topics, from foundational concepts to advanced techniques, providing a deep understanding of Angular. With hands-on projects integrated into the curriculum, you'll apply your skills in real-world scenarios, mastering Angular effectively. This practical experience sets you apart in the job market, making you a highly attractive candidate for employers. Join CKlassrooms and take your Angular skills to the next level!"
             },
             {
                 "title":"Pre-requisite",

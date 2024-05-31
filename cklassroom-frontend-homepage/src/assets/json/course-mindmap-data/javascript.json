@@ -164,11 +164,11 @@
     "tabs":[
       {
        "title":"Why Javascript",
-       "content":"Learning the MEAN stack means mastering MongoDB, Express.js, Angular, and Node.js, enabling you to develop scalable, real-time web applications entirely in JavaScript, with a single language across the stack and a vibrant community supporting your efforts."
+       "content":"Learning JavaScript is pivotal for anyone aspiring to become a well-rounded web developer. JavaScript is the backbone of interactive web development, enabling dynamic and responsive user experiences. With its versatility, JavaScript is used both on the client and server sides, making it a crucial skill for full-stack development. Mastering JavaScript opens up a world of possibilities in web development, allowing you to create engaging applications and websites."
       },
       {
        "title":"Why Javascript from CKlassrooms",
-       "content":"Learning JavaScript from CKlassrooms offers structured courses with comprehensive content, hands-on projects, and experienced instructors, providing an effective platform to master the language. "
+       "content":"Learning JavaScript from CKlassroom offers an enriching educational experience tailored to aspiring web developers. Our courses are meticulously designed and taught by industry professionals, ensuring a comprehensive understanding of JavaScript's core concepts and advanced techniques. With hands-on projects and personalized guidance, CKlassroom empowers learners to build practical skills and confidence in JavaScript development. Join CKlassroom to embark on a rewarding journey towards mastering JavaScript and unlocking your full potential as a proficient web developer."
       },
       {
         "title":"Pre-requisite",

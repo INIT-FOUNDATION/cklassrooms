@@ -122,16 +122,16 @@
     "tabs":[
       {
        "title":"Why HTML, CSS & Javascript",
-       "content":"Learning HTML, CSS, and JavaScript is essential for web development, offering versatile skills, career opportunities, creative expression, and a foundation for continuous learning."
+       "content":"Learning HTML, CSS, and JavaScript is essential for anyone aspiring to become a proficient web developer. HTML provides the structure, CSS adds style and design, while JavaScript adds interactivity and functionality to websites. These core languages form the foundation of web development, enabling you to create visually appealing, responsive, and interactive web pages. With HTML, CSS, and JavaScript skills, you'll have the foundation needed to pursue a career in web development and build engaging online experiences for users."
       },
       {
        "title":"Why HTML, CSS & Javascript from CKlassrooms",
-       "content":"Learning HTML, CSS, and JavaScript from CKlassrooms offers structured courses, expert instruction, practical projects, and a supportive team, enabling efficient skill development and career advancement in web development."
+       "content":"Our expert-led courses provide comprehensive coverage of these essential languages, ensuring you gain a solid understanding of building dynamic and responsive websites. With hands-on projects and personalized guidance, CKlassroom equips you with practical skills and knowledge to excel in the field. Join CKlassroom to kickstart your journey as a proficient web developer and unlock exciting opportunities in the ever-evolving world of web development."
       },
       {
         "title":"Pre-requisite",
         "content":"An interest in web development and basic computer skills are sufficient to start learning HTML, CSS, and JavaScript."
       }
-    ]
+  ]
   }
 }
