@@ -119,6 +119,7 @@
   "additionalData": {
     "pdfUrl": "assets/roadmaps/DEVOPS ROADMAP.pdf",
     "pdfName": "DEVOPS ROADMAP.pdf",
+    "description":"DevOps is a software development approach that combines development (Dev) and operations (Ops) teams, emphasizing collaboration, automation, and continuous integration and delivery (CI/CD) practices.",
     "faqs": [
       {
         "question": "What is DevOps and why is it important?",

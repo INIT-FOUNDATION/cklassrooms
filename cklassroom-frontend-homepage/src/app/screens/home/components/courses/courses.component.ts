@@ -106,7 +106,7 @@ export class CoursesComponent implements AfterViewInit {
     },
     {
       id: 9,
-      courseName: 'ML & NPL',
+      courseName: 'ML & NLP',
       desc: 'ML and NLP offer automation, smarter decisions, personalized experiences, and language breakthroughs, driving innovation across industries.',
       img: 'mlNlp',
       h1: 'The demand for ML and NLP professionals is rapidly growing across various industries such as technology, healthcare, finance, and e-commerce',

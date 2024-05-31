@@ -171,6 +171,7 @@
     "additionalData": {
         "pdfUrl": "assets/roadmaps/ANGULAR ROADMAP.pdf",
         "pdfName": "ANGULAR ROADMAP.pdf",
+        "description":"Angular is a popular open-source framework maintained by Google for building dynamic web applications.",
         "faqs": [
             {
                 "question": "What is Angular?",

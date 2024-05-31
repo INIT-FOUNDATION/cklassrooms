@@ -105,6 +105,7 @@
   "additionalData": {
     "pdfUrl": "assets/roadmaps/HTML,CSS&JS ROADMAP.pdf",
     "pdfName": "HTML,CSS&JS ROADMAP.pdf",
+    "description":"HTML, CSS, and JavaScript form the foundational technologies of web development. HTML provides the structure and content of web pages, CSS styles the appearance and layout, while JavaScript adds interactivity and dynamic behavior, collectively enabling the creation of modern, interactive, and visually appealing websites and web applications.",
     "faqs": [
       {
         "question": "Who is this course designed for?",

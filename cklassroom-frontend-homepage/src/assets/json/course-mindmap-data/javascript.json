@@ -147,6 +147,7 @@
   "additionalData": {
     "pdfUrl": "assets/roadmaps/JAVASCRIPT ROADMAP.pdf",
     "pdfName": "JAVASCRIPT ROADMAP.pdf",
+    "description":"JavaScript is a versatile programming language used to create dynamic and interactive web content. It enables developers to add functionality, handle user interactions, and manipulate webpage elements, making it essential for modern web development.",
     "faqs": [
       {
         "question": "What is JavaScript?",

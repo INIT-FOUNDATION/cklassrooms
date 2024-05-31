@@ -199,6 +199,7 @@
   "additionalData": {
     "pdfUrl": "assets/roadmaps/MEAN STACK ROADMAP.pdf",
     "pdfName": "MEAN STACK ROADMAP.pdf",
+    "description":"The MEAN Stack combines MongoDB, Express.js, Angular, and Node.js for full-stack JavaScript development, enabling efficient creation of dynamic web applications.",
     "faqs": [
       {
         "question": "What is the MEAN Stack?",

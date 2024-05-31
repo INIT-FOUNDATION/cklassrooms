@@ -187,6 +187,7 @@
     "additionalData": {
         "pdfUrl": "assets/roadmaps/PYTHON ROADMAP.pdf",
         "pdfName": "PYTHON ROADMAP.pdf",
+        "description":"Python is a versatile and beginner-friendly programming language known for its simplicity and readability. It is widely used for web development, data analysis, artificial intelligence, automation, and more, making it one of the most popular and powerful programming languages today.",
         "faqs": [
             {
                 "question": "What is Python?",

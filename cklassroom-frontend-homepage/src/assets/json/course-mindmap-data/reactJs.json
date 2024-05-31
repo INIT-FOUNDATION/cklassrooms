@@ -279,6 +279,7 @@
     "additionalData": {
         "pdfUrl": "assets/roadmaps/REACTJS ROADMAP.pdf",
         "pdfName": "REACTJS ROADMAP.pdf",
+        "description":"React.js is a JavaScript library for building user interfaces, developed by Facebook. It allows developers to create reusable UI components that efficiently update and render in response to changes in data, enabling the creation of interactive and dynamic web applications with a component-based architecture.",
         "faqs": [
             {
                 "question": "What is React.js?",

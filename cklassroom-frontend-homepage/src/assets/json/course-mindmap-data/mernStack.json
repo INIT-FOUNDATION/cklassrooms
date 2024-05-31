@@ -171,6 +171,7 @@
   "additionalData": {
     "pdfUrl": "assets/roadmaps/MERN STACK ROADMAP.pdf",
     "pdfName": "MERN STACK ROADMAP.pdf",
+    "description":"The MERN Stack consists of MongoDB, Express.js, React, and Node.js, offering a comprehensive JavaScript-based solution for building full-stack web applications.",
     "faqs": [
       {
         "question": "What is the MERN Stack?",

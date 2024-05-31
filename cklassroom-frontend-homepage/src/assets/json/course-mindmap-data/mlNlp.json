@@ -215,6 +215,7 @@
   "additionalData": {
     "pdfUrl": "assets/roadmaps/ML & NLP ROADMAP.pdf",
     "pdfName": "ML & NLP ROADMAP.pdf",
+    "description":"Machine Learning (ML) involves the development of algorithms and statistical models that enable computers to learn from and make predictions or decisions based on data, without being explicitly programmed. Natural Language Processing (NLP) is a subset of ML that focuses on enabling computers to understand, interpret, and generate human language data, allowing for tasks such as language translation, sentiment analysis, and chatbot interactions.",
     "faqs": [
       {
         "question": "What is Machine Learning (ML) and Natural Language Processing (NLP)?",
@@ -231,11 +232,11 @@
     ],      
     "tabs":[
       {
-       "title":"Why ML & NPL",
+       "title":"Why ML & NLP",
        "content":"Learning Machine Learning (ML) and Natural Language Processing (NLP) opens up a world of opportunities in today's data-driven and AI-powered landscape. ML enables computers to learn from data and make predictions or decisions without being explicitly programmed, while NLP focuses on enabling computers to understand, interpret, and generate human language. Together, they are transforming industries by automating tasks, extracting insights from large datasets, and enhancing user experiences. Proficiency in ML and NLP equips individuals with sought-after skills for roles in data science, AI engineering, research, and more, making it a valuable investment in one's career."
       },
       {
-       "title":"Why ML & NPL from CKlassrooms",
+       "title":"Why ML & NLP from CKlassrooms",
        "content":"Learning ML and NLP with CKlassroom ensures hands-on approach to mastering these advanced technologies. Our experts  deliver comprehensive instruction on ML algorithms, NLP methodologies, and their practical implementations. Through immersive projects, personalized guidance, and a supportive community, CKlassroom empowers learners to cultivate practical expertise and confidence in ML and NLP. Whether you're starting from scratch or seeking to enhance your skills, CKlassroom provides tailored courses to help you realize your potential and thrive in the dynamic domains of ML and NLP."
       },
       {

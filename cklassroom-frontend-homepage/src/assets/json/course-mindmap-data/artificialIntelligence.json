@@ -295,10 +295,11 @@
   "additionalData": {
     "pdfUrl": "assets/roadmaps/AI ROADMAP.pdf",
     "pdfName": "AI ROADMAP.pdf",
+    "description":"AI, or Artificial Intelligence, refers to the development of computer systems capable of performing tasks that typically require human intelligence.",
     "faqs": [
       {
-        "question": "What are the prerequisites for enrolling in this AI course?",
-        "answer": "While no specific prerequisites are required, familiarity with programming languages like Python and basic understanding of mathematics and statistics would be beneficial."
+        "question": "Who is this AI course for?",
+        "answer": "This AI course is designed for aspiring data scientists, AI engineers, software developers, and anyone interested in leveraging AI techniques to solve real-world problems."
       },
       {
         "question": "What are some career opportunities in AI after completing this course?",

@@ -196,6 +196,7 @@
   "additionalData": {
     "pdfUrl": "assets/roadmaps/NODEJS ROADMAP.pdf",
     "pdfName": "NODEJS ROADMAP.pdf",
+    "description":"Node.js is a runtime environment that allows developers to run JavaScript code outside of a web browser. It uses an event-driven, non-blocking I/O model, making it lightweight and efficient for building scalable network applications.",
     "faqs": [
       {
         "question": "What is Node.js?",
