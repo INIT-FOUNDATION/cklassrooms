@@ -1,13 +1,11 @@
 @import "../../../theme/color";
 
 ::ng-deep .mat-tab-label {
-    // color: $themeSecondary !important;
-    color: white;
+    color: $themeFontColor!important;
 }
 
 .bg-gray-cards {
     background-color: $themeBoxShadow;
-    // border: 1px solid var(--themeHoverBoxShadow);
 }
 
 .courses-card {
@@ -17,3 +15,11 @@
 .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
     background: transparent;
 }
+
+.font-color{
+    color: $themeFontColor;
+}
+
+.courses-card {
+    border: 1px solid $themeBoxShadow;
+  }
