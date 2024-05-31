@@ -219,10 +219,24 @@
           "answer": "This ML & NLP course is designed for aspiring data scientists, AI engineers, software developers, and anyone interested in leveraging machine learning and NLP techniques to solve real-world problems."
         },
         {
-          "question": "What are the prerequisites for learning ML & NLP?",
-          "answer": "To get the most out of this ML & NLP course, it's beneficial to have a basic understanding of programming (preferably Python), linear algebra, calculus, and probability theory."
+          "question": "Is there any certification offered upon completion of the course?",
+          "answer": "Yes, upon successful completion, you will receive a certification recognizing your proficiency in ML and NLP."
         }
-      ]
+      ],      
+      "tabs":[
+        {
+         "title":"Why ML & NPL",
+         "content":"Learning ML and NLP enables you to harness data patterns for predictions and understand and process human language, offering diverse career prospects and technological advancements."
+        },
+        {
+         "title":"Why NodeJS from CKlassrooms",
+         "content":"Learning ML and NLP from CKlassrooms provides structured courses, expert instructors, hands-on projects, and a supportive team, fostering practical skills and career advancement in these cutting-edge fields."
+        },
+        {
+          "title":"Pre-requisite",
+          "content":"A basic understanding of Python and data science concepts is necessary to grasp machine learning and natural language processing techniques effectively."
+        }
+    ]
     }
   },
   "additionalData": {

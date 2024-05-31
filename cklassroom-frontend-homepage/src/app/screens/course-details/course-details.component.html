@@ -1,11 +1,11 @@
 <div class="relative z-50">
-  <!-- <button
+  <button
     type="button"
     class="hover-card px-5 py-3 rounded-xl text-sm font-medium absolute right-0"
     (click)="downloadPdf()"
   >
     <h1>Download PDF</h1>
-  </button> -->
+  </button>
 </div>
 <!-- <div id="jsmind_container"></div> -->
 
@@ -25,34 +25,10 @@
     </div>
     <div>
       <mat-tab-group class="mb-4">
-        <mat-tab label="Pre-requisite">
-          <p class="mt-4 mb-4">
-            This course is for beginners. No prior experience is required.
-          </p>
-          <ul class="list-disc pl-5">
-            <li class="">
-              <a href="#">Basics of Python or another programming language.</a>
-            </li>
-            <li class=""><a href="#">Familiarity with the command line.</a></li>
-            <li class="">
-              <a href="#"
-                >A code editor (VS code, Sublime Text, etc.) installed on your
-                computer.</a
-              >
-            </li>
-          </ul>
-        </mat-tab>
-        <mat-tab label="Why Python">
-          <p class="mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
-            error esse qui autem consectetur sint!
-          </p>
-        </mat-tab>
-        <mat-tab label="Why Python from CKlassrooms">
-          <p class="mt-4">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
-            dolorem, doloribus incidunt odio illo recusandae.
-          </p>
+        <mat-tab *ngFor="let tab of mindMapJson?.mindMapData?.data?.tabs" [label]="tab?.title">
+          <div *ngIf="tab?.content">
+            <p class="my-4">{{ tab?.content }}</p>
+          </div>
         </mat-tab>
       </mat-tab-group>
     </div>
@@ -85,7 +61,7 @@
       <h2 class="text-xl font-semibold text-white">FAQs</h2>
       <mat-accordion>
         <div *ngFor="let faq of mindMapJson?.mindMapData?.data?.faqs">
-          <mat-expansion-panel class="bg-gray-cards rounded-xl text-white  p-3">
+          <mat-expansion-panel class="bg-gray-cards rounded-xl text-white  p-4">
             <mat-expansion-panel-header>
               <mat-panel-title class="text-white">
                 {{ faq.question }}

@@ -119,14 +119,28 @@
           "answer": "DevOps is a culture, philosophy, and set of practices that aims to improve collaboration between software development (Dev) and IT operations (Ops) teams, leading to faster and more reliable software delivery."
         },
         {
-          "question": "Will there be any assessments or certifications upon completion of the course?",
-          "answer": "Yes, there may be assessments throughout the course to reinforce learning. Additionally, a certification of completion may be awarded to participants who successfully meet the course requirements."
+          "question": "Will there be any certifications upon completion of the course?",
+          "answer": "Yes, a certification of completion will be awarded to participants who successfully meet the course requirements."
         },
         {
-          "question": "How can I get support or clarification on course content during the learning process?",
+          "question": "How can I get support on course content during the learning process?",
           "answer": "Support will be available through online forums, and possibly live Q&A sessions with instructors or teaching assistants."
         }
-      ]
+      ],
+      "tabs":[
+        {
+         "title":"Why Devops",
+         "content":"DevOps is crucial for streamlining software development and operations, enhancing collaboration, accelerating delivery, and staying competitive in the market."
+        },
+        {
+         "title":"Why Devops from CKlassrooms",
+         "content":"Learn DevOps from industry experts, providing comprehensive knowledge and practical skills to excel in DevOps practices and technologies."
+        },
+        {
+          "title":"Pre-requisite",
+          "content":"Familiarity with software development and IT operations principles is crucial for understanding the DevOps lifecycle and practices."
+        }
+    ]
     }
   },
   "additionalData": {

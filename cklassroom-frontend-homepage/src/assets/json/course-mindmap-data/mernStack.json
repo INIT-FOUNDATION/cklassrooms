@@ -175,10 +175,24 @@
           "answer": "This MERN Stack course is ideal for web developers, software engineers, and anyone interested in learning how to build full-stack web applications using the MERN Stack. Basic knowledge of HTML, CSS, and JavaScript is recommended but not required."
         },
         {
-          "question": "What are the prerequisites for learning the MERN Stack?",
-          "answer": "The prerequisites for learning the MERN Stack include a basic understanding of HTML, CSS, and JavaScript. Familiarity with ES6+ JavaScript features and concepts like asynchronous programming will be beneficial but not mandatory."
+          "question": "Will I receive a certificate upon completing the course?",
+          "answer": "Yes, upon successful completion, you will receive a certification recognizing your proficiency in MERN Stack."
         }
-      ]
+      ],
+      "tabs":[
+        {
+         "title":"Why MERN Stack",
+         "content":"learning the MERN stack (MongoDB, Express.js, React.js, Node.js) enables you to build full-stack web applications efficiently, leveraging modern technologies for both front-end and back-end development."
+        },
+        {
+         "title":"Why MERN Stack from CKlassrooms",
+         "content":"Learning the MERN stack from CKlassrooms provides structured courses, practical projects, and experienced instructors, offering a comprehensive learning experience"
+        },
+        {
+          "title":"Pre-requisite",
+          "content":"Knowledge of HTML, CSS, JavaScript, and MongoDB basics is required to build full-stack web applications using the MERN stack."
+        }
+    ]
     }
   },
   "additionalData": {

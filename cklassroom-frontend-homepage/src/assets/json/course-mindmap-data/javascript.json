@@ -151,10 +151,24 @@
           "answer": "This JavaScript course is designed for individuals with varying levels of programming experience. Whether you're a beginner looking to dive into the world of web development or an experienced developer seeking to enhance your JavaScript skills, this course is suitable for you."
         },
         {
-          "question": "Do I need any prior programming experience to take this JavaScript course?",
-          "answer": "No prior programming experience is required to enroll in this JavaScript course. However, familiarity with basic HTML and CSS concepts will be beneficial for understanding how JavaScript interacts with web pages."
+          "question": "Do I need any special software to take this course?",
+          "answer": "You'll need a code editor like Visual Studio Code or Sublime Text, as well as a web browser for testing your JavaScript code."
         }
-      ]
+      ],
+      "tabs":[
+        {
+         "title":"Why Javascript",
+         "content":"Learning the MEAN stack means mastering MongoDB, Express.js, Angular, and Node.js, enabling you to develop scalable, real-time web applications entirely in JavaScript, with a single language across the stack and a vibrant community supporting your efforts."
+        },
+        {
+         "title":"Why Javascript from CKlassrooms",
+         "content":"Learning JavaScript from CKlassrooms offers structured courses with comprehensive content, hands-on projects, and experienced instructors, providing an effective platform to master the language. "
+        },
+        {
+          "title":"Pre-requisite",
+          "content":"Basic understanding of programming concepts and web development fundamentals is necessary to learn JavaScript effectively."
+        }
+    ]
     }
   },
   "additionalData": {
