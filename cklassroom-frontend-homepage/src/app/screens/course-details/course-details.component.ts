@@ -122,6 +122,8 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
         }
       });
     }
+
+    window.scrollTo({top: 0})
   }
 
   getCourses() {
@@ -186,8 +188,6 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
 
   openCourseDetailsPage(courseName) {
     this.router.navigate([`/course-details/${courseName}`]);
-    this.utilityService.showFooterSet = false;
-
     setTimeout(() => {
       window.location.reload();
     }, 100);
