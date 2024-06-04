@@ -34,7 +34,6 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.getCourses()
-    this.getCarouselData();
     setTimeout(() => {
       this.utilityService.showFooterSet = false;
     }, 100);
@@ -44,6 +43,8 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
     this.mindMapJson = await this.dataService
       .loadMindMapData(this.courseName)
       .toPromise();
+
+      this.getCarouselData();
 
     const boxes =
       this.elementRef.nativeElement.querySelectorAll('.courses-card-body');
@@ -125,6 +126,7 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
 
   getCourses() {
     this.getCourseList = this.dataService.getCourseDetails();
+    this.filteredCourses = this.getCourseList.filter((course) => course.courseName.toLowerCase() !== this.courseName.toLowerCase());
   }
 
   closestEdge(x: number, y: number, width: number, height: number): string {
@@ -155,16 +157,11 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
   }
 
   getCarouselData() {
-    this.filteredCourses = this.getCourseList.filter(
-      (course) =>
-        course.courseName.toLowerCase() !== this.courseName.toLowerCase()
-    );
-
     var swiper = new Swiper('.mySwiper', {
       slidesPerView: 1,
       spaceBetween: 10,
       freeMode: true,
-      centeredSlides: true,
+      centeredSlides: false,
       autoplay: {
         delay: 4000,
         disableOnInteraction: false,
