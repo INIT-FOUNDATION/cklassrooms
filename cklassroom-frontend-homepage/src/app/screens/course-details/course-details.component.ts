@@ -33,7 +33,7 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    this.getCourses()
+    this.getCourses();
     setTimeout(() => {
       this.utilityService.showFooterSet = false;
     }, 100);
@@ -44,7 +44,7 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
       .loadMindMapData(this.courseName)
       .toPromise();
 
-      this.getCarouselData();
+    this.getCarouselData();
 
     const boxes =
       this.elementRef.nativeElement.querySelectorAll('.courses-card-body');
@@ -123,12 +123,15 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
       });
     }
 
-    window.scrollTo({top: 0})
+    window.scrollTo({ top: 0 });
   }
 
   getCourses() {
     this.getCourseList = this.dataService.getCourseDetails();
-    this.filteredCourses = this.getCourseList.filter((course) => course.courseName.toLowerCase() !== this.courseName.toLowerCase());
+    this.filteredCourses = this.getCourseList.filter(
+      (course) =>
+        course.courseName.toLowerCase() !== this.courseName.toLowerCase()
+    );
   }
 
   closestEdge(x: number, y: number, width: number, height: number): string {
@@ -164,6 +167,7 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
       spaceBetween: 10,
       freeMode: true,
       centeredSlides: false,
+      loop: true,
       autoplay: {
         delay: 4000,
         disableOnInteraction: false,
