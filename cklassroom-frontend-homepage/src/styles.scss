@@ -78,7 +78,10 @@ button:focus-visible {
   letter-spacing: 0.05rem;
 }
 
-.mat-option-text {
+.mat-option-text,
+.mat-tab-label,
+.mat-tab-body-content,
+.mat-expansion-panel-header-title {
   font-family: "Montserrat" !important;
 }
 
@@ -101,14 +104,4 @@ jmexpander {
 jmnodes.theme-greensea jmnode {
   background-repeat: no-repeat;
   background-size: cover !important;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

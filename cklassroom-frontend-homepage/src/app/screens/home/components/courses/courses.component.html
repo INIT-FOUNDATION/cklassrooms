@@ -65,6 +65,13 @@
         >
           <button
             type="button"
+            class="btn text-white border border-white px-5 py-3 me-5 rounded-lg font-medium"
+            [ngStyle]="{ background: item?.color }"
+          >
+            Buy Course
+          </button>
+          <button
+            type="button"
             class="btn bg-white px-5 py-3 rounded-lg font-medium"
             [ngStyle]="{ color: item?.color }"
             (click)="openCourseDetailsPage(item.img)"

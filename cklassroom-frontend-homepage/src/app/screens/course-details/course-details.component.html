@@ -1,21 +1,26 @@
 <div class="flex flex-col lg:flex-row pt-28">
-  <div class="lg:w-2/3 p-3 md:p-6" >
-    <h2 class="text-2xl font-semibold mb-4">{{mindMapJson?.mindMapData?.meta?.name}}</h2>
-    <p class="text-white-600 mb-4 text-green">
-      {{mindMapJson?.additionalData?.description}}
+  <div class="lg:w-2/3 p-3 md:p-6">
+    <h2 class="text-2xl font-semibold mb-4">
+      {{ mindMapJson?.mindMapData?.meta?.name }}
+    </h2>
+    <p class="text-white-600 mb-4 text-green leading-7">
+      {{ mindMapJson?.additionalData?.description }}
     </p>
     <div class="relative">
       <img
-    [src]="mindMapJson?.mindMapData?.data?.['background-image']"
-    alt="Course Thumbnail"
-    class="w-full rounded-lg mb-4 h-96"
-  />
+        [src]="mindMapJson?.mindMapData?.data?.['background-image']"
+        alt="Course Thumbnail"
+        class="w-full rounded-lg mb-4 h-96"
+      />
     </div>
     <div>
       <mat-tab-group class="mb-4">
-        <mat-tab *ngFor="let tab of mindMapJson?.additionalData?.tabs" [label]="tab?.title" >
+        <mat-tab
+          *ngFor="let tab of mindMapJson?.additionalData?.tabs"
+          [label]="tab?.title"
+        >
           <div *ngIf="tab?.content">
-            <p class="my-4 leading-7">{{ tab?.content }}</p>
+            <p class="my-4 leading-7 text-sm">{{ tab?.content }}</p>
           </div>
         </mat-tab>
       </mat-tab-group>
@@ -23,33 +28,44 @@
   </div>
 
   <div class="lg:w-1/3 p-3 md:p-6">
-
-    <div class="courses-card shadow-md p-4 rounded-xl md:flex md:flex-col md:space-y-6 mb-4">
-      
+    <div
+      class="courses-card shadow-md p-4 rounded-xl md:flex md:flex-col md:space-y-6 mb-4"
+    >
       <h2 class="text-xl font-semibold">Courses Overview</h2>
-      <div class="max-h-80 overflow-y-auto">
-      <mat-accordion>
-        <div *ngFor="let course of mindMapJson?.mindMapData?.data?.children" class="mb-2">
-          <mat-expansion-panel class="bg-gray-cards rounded-xl px-0 p-2">
-            <mat-expansion-panel-header>
-              <mat-panel-title class="font-color">
-                {{ course.topic }}
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <ul class="text-green">
-              <li *ngFor="let courseSub of course.children" class="p-2">{{ courseSub.topic }}</li>
-            </ul>
-          </mat-expansion-panel>
-        </div>
-      </mat-accordion>
+      <div class="max-h-80 !mt-2 overflow-y-auto">
+        <mat-accordion>
+          <div
+            *ngFor="let course of mindMapJson?.mindMapData?.data?.children"
+            class="mb-2"
+          >
+            <mat-expansion-panel
+              class="bg-gray-cards !shadow-none rounded-xl py-1"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title class="font-color">
+                  {{ course.topic }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ul class="text-green">
+                <li *ngFor="let courseSub of course.children" class="p-2">
+                  {{ courseSub.topic }}
+                </li>
+              </ul>
+            </mat-expansion-panel>
+          </div>
+        </mat-accordion>
       </div>
     </div>
 
-    <div class="courses-card shadow-md p-4 rounded-xl md:flex md:flex-col md:space-y-6">
+    <div
+      class="courses-card shadow-md p-4 rounded-xl md:flex md:flex-col md:space-y-6"
+    >
       <h2 class="text-xl font-semibold">FAQs</h2>
-      <mat-accordion>
+      <mat-accordion class="!mt-2">
         <div *ngFor="let faq of mindMapJson?.additionalData?.faqs" class="mb-2">
-          <mat-expansion-panel class="bg-gray-cards rounded-xl px-0 p-4">
+          <mat-expansion-panel
+            class="bg-gray-cards !shadow-none rounded-xl py-1"
+          >
             <mat-expansion-panel-header>
               <mat-panel-title class="font-color">
                 {{ faq.question }}
@@ -61,6 +77,85 @@
           </mat-expansion-panel>
         </div>
       </mat-accordion>
+    </div>
+  </div>
+</div>
+
+<div class="swiper mt-10">
+  <span>Recommended courses</span>
+  <div class="swiper mySwiper mt-3">
+    <div class="swiper-wrapper swiper-height">
+      <div
+        class="swiper-slide courses-card-body overflow-hidden rounded-xl min-h-80"
+        *ngFor="let item of filteredCourses"
+      >
+        <div class="flex items-center flex-col">
+          <img
+            *ngIf="item?.id !== 9 && item?.id !== 10"
+            class="pt-3 h-60"
+            style="width: 10rem"
+            src="assets/images/courses/{{ item?.img }}.svg"
+          />
+          <div
+            *ngIf="item?.id == 9 || item?.id == 10"
+            class="bg-no-repeat bg-cover w-full flex items-center justify-center h-60"
+            [ngStyle]="{
+              'background-image': item.img
+                ? 'url(assets/images/courses/' + item.img + '.svg)'
+                : ''
+            }"
+          ></div>
+          <div
+            class="py-2 my-2 self-start font-semibold w-full px-5 text-white text-center text-md"
+            [ngStyle]="{ background: item?.color }"
+          >
+            {{ item?.courseName }}
+          </div>
+          <div class="pb-2 font-medium text-sm leading-6 px-5">
+            {{ item?.desc }}
+          </div>
+        </div>
+        <div
+          class="overlay absolute w-full h-full top-0 right-full z-10 p-5 flex flex-col text-white text-xs"
+          [ngStyle]="{ background: item?.color }"
+        >
+          <div class="flex items-start">
+            <i class="fa-solid fa-circle pe-3 mt-1"></i>
+            <div>{{ item?.h1 }}</div>
+          </div>
+          <div class="flex items-start py-3">
+            <i class="fa-solid fa-circle pe-3 mt-1"></i>
+            <div>{{ item?.h2 }}</div>
+          </div>
+          <div class="flex items-start">
+            <i class="fa-solid fa-circle pe-3 mt-1"></i>
+            <div>{{ item?.h3 }}</div>
+          </div>
+          <div class="flex items-start pt-3">
+            <i class="fa-solid fa-circle pe-3 mt-1"></i>
+            <div>{{ item?.h4 }}</div>
+          </div>
+          <div
+            class="flex items-start justify-end pt-3 absolute bottom-4 right-4"
+          >
+            <button
+              type="button"
+              class="btn text-white border border-white px-5 py-3 me-5 rounded-lg font-medium"
+              [ngStyle]="{ background: item?.color }"
+            >
+              Buy Course
+            </button>
+            <button
+              type="button"
+              class="btn bg-white px-5 py-3 rounded-lg font-medium"
+              [ngStyle]="{ color: item?.color }"
+              (click)="openCourseDetailsPage(item.img)"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
