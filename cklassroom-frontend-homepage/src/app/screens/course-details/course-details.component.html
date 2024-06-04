@@ -14,7 +14,7 @@
       />
     </div>
     <div>
-      <mat-tab-group class="mb-4">
+      <mat-tab-group>
         <mat-tab
           *ngFor="let tab of mindMapJson?.additionalData?.tabs"
           [label]="tab?.title"
@@ -81,7 +81,7 @@
   </div>
 </div>
 
-<div class="swiper mt-10">
+<div class="swiper mt-8 px-3 md:px-6">
   <span>Recommended courses</span>
   <div class="swiper mySwiper mt-3">
     <div class="swiper-wrapper swiper-height">
