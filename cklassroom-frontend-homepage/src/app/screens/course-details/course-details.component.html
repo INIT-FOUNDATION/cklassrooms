@@ -6,15 +6,16 @@
     <p class="text-white-600 mb-4 text-green leading-7">
       {{ mindMapJson?.additionalData?.description }}
     </p>
-    <div class="relative">
-      <img
-        [src]="mindMapJson?.mindMapData?.data?.['background-image']"
-        alt="Course Thumbnail"
-        class="w-full rounded-lg mb-4 h-96"
-      />
-    </div>
+    <div
+      class="bg-no-repeat bg-contain w-full h-96"
+      [ngStyle]="{
+        'background-image': mindMapJson?.mindMapData?.data
+          ? 'url(' + mindMapJson.mindMapData.data['background-image'] + ')'
+          : ''
+      }"
+    ></div>
     <div>
-      <mat-tab-group class="mb-4">
+      <mat-tab-group class="mt-4">
         <mat-tab
           *ngFor="let tab of mindMapJson?.additionalData?.tabs"
           [label]="tab?.title"
@@ -81,7 +82,7 @@
   </div>
 </div>
 
-<div class="swiper mt-10">
+<div class="swiper mt-10 px-3 md:px-6">
   <span>Recommended courses</span>
   <div class="swiper mySwiper mt-3">
     <div class="swiper-wrapper swiper-height">
