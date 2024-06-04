@@ -16,9 +16,7 @@ declare var Swiper;
   templateUrl: './course-details.component.html',
   styleUrls: ['./course-details.component.scss'],
 })
-export class CourseDetailsComponent
-  implements OnInit, AfterViewInit, OnChanges
-{
+export class CourseDetailsComponent implements OnInit, AfterViewInit {
   panelOpenState = false;
   courseName = '';
   mindMapJson: any = {};
@@ -165,12 +163,7 @@ export class CourseDetailsComponent
     }, 100);
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
-  }
-
   async ngAfterViewInit() {
-    console.log(this.courseName);
     this.mindMapJson = await this.dataService
       .loadMindMapData(this.courseName)
       .toPromise();
@@ -311,5 +304,9 @@ export class CourseDetailsComponent
   openCourseDetailsPage(courseName) {
     this.router.navigate([`/course-details/${courseName}`]);
     this.utilityService.showFooterSet = false;
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 100);
   }
 }
