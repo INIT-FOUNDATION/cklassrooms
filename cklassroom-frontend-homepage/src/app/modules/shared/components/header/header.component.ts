@@ -10,6 +10,7 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { MatDialog } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../apply-dialog/apply-dialog.component';
 import { DataService } from '../../services/data.service';
+import { CoursesNavBarOverlayComponent } from '../courses-nav-bar-overlay/courses-nav-bar-overlay.component';
 
 @Component({
   selector: 'app-header',
@@ -98,6 +99,13 @@ export class HeaderComponent implements OnInit {
     this.$gaService.event('click', 'Button', 'Open Apply dialog box', 1);
     this.dialog.open(ApplyDialogComponent, {
       width: 'clamp(20rem, 60vw, 35rem)',
+    });
+  }
+
+  openCoursesDialog() {
+    this.$gaService.event('click', 'Button', 'Open Apply dialog box', 1);
+    this.dialog.open(CoursesNavBarOverlayComponent, {
+      // width: 'clamp(20rem, 67vw, 64rem)',
     });
   }
 
