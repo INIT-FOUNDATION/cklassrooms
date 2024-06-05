@@ -66,7 +66,7 @@ export class PayAfterPlacementComponent implements OnInit {
 
   ngOnInit(): void {
     this.themeService.getActiveTheme.subscribe((res: string) => {
-      this.learningPhaseImg = res === 'light_theme' ? 'sectionLight' : 'sectionDark';
+      this.learningPhaseImg = res === 'light_theme' ? 'placement-roadmap-light' : 'placement-roadmap-dark';
     });
   }
 

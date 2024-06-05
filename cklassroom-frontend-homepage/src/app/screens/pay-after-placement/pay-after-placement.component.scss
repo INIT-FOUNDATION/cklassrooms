@@ -1,3 +1,4 @@
+@import "../../../theme/color";
 .bg-grey{
     background-color: #f6f8fe;
 }
@@ -5,3 +6,10 @@
 .features-text{
     color:#374151;
 }
+
+.bg-gray-cards {
+    background-color: $themeBoxShadow;
+    color: $themeFontColor;
+    border: 1px solid var(--themeHoverBoxShadow);
+  }
+  

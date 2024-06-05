@@ -6,6 +6,12 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [    function({ addUtilities }) {
+    addUtilities({
+      '.underline-offset-4': {
+        'text-underline-offset': '4px',
+      },
+    }, ['responsive', 'hover'])
+  }],
 }
 
