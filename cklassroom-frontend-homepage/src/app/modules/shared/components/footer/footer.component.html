@@ -15,7 +15,7 @@
           <div class="text-sm pb-2.5">{{item.key}} Courses - 
           
             <ng-container *ngFor="let course of item.value">
-              <a class="font-medium underline underline-offset-4" (click)="openCourseDetailsPage(course.img)">{{course.courseName}}</a> |
+              <a class="font-medium underline underline-offset-4 cursor-pointer" (click)="openCourseDetailsPage(course.img)">{{course.courseName}}</a> |
             </ng-container>
           </div>
         </ng-container>
