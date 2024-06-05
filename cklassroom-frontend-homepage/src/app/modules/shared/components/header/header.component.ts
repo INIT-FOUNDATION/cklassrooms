@@ -107,6 +107,7 @@ export class HeaderComponent implements OnInit {
     this.$gaService.event('click', 'Button', 'Open Apply dialog box', 1);
     this.dialog.open(CoursesNavBarOverlayComponent, {
       // width: 'clamp(20rem, 67vw, 64rem)',
+      height: '29rem',
     });
   }
 
