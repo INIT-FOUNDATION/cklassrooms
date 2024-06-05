@@ -1,14 +1,15 @@
 {
     "mindMapData": {
         "meta": {
-            "name": "Angular Roadmap",
+            "name": "Learn Angular",
             "author": "Sudhirkumarrao Allada",
             "version": "0.1"
         },
         "format": "node_tree",
         "data": {
             "id": "root",
-            "background-image": "assets/images/courses/angular.svg",
+            "description": "Angular is an application-design framework and development platform for creating efficient and sophisticated single-page apps.",
+            "background-image": "assets/images/courses/angular-course-image.jpg",
             "width": "100",
             "height": "100",
             "children": [
@@ -169,6 +170,35 @@
     },
     "additionalData": {
         "pdfUrl": "assets/roadmaps/ANGULAR ROADMAP.pdf",
-        "pdfName": "ANGULAR ROADMAP.pdf"
+        "pdfName": "ANGULAR ROADMAP.pdf",
+        "description":"Angular is a popular open-source framework maintained by Google for building dynamic web applications.",
+        "faqs": [
+            {
+                "question": "What is Angular?",
+                "answer": "Angular, maintained by Google, is a TypeScript-based framework for building dynamic SPAs. It includes features like two-way data binding, dependency injection, and modular development."
+            },
+            {
+                "question": "What are the career opportunities after completing this course?",
+                "answer": "Career opportunities in Angular development include roles such as front-end developer, Angular developer, web application developer, UI/UX developer, and full-stack developer."
+            },
+            {
+                "question": "Will I receive a certificate upon completion?",
+                "answer": "Yes, upon completion of the course and fulfilling any requirements, you'll receive a certificate of completion, which can be a valuable addition to your resume."
+            }
+        ],
+        "tabs":[
+            {
+             "title":"Why Angular",
+             "content":"Learning Angular is beneficial because it's a widely used, robust framework supported by Google, ideal for building dynamic and single-page applications. It enhances productivity through built-in features like data binding and dependency injection. With a large community and extensive resources, Angular ensures you have the support needed for development. Additionally, its versatility allows for cross-platform development, making it a valuable skill in the job market."
+            },
+            {
+             "title":"Why Angular from CKlassrooms",
+             "content":"Our structured courses are taught by industry experts, ensuring you gain up-to-date, high-quality knowledge. We cover a comprehensive range of topics, from foundational concepts to advanced techniques, providing a deep understanding of Angular. With hands-on projects integrated into the curriculum, you'll apply your skills in real-world scenarios, mastering Angular effectively. This practical experience sets you apart in the job market, making you a highly attractive candidate for employers. Join CKlassrooms and take your Angular skills to the next level!"
+            },
+            {
+                "title":"Pre-requisite",
+                "content": "Basic understanding of HTML, CSS, and JavaScript is essential. Familiarity with TypeScript and basic web development concepts will be beneficial."
+            }
+        ]
     }
 }

@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TweenMax } from 'gsap';
+import { DataService } from 'src/app/modules/shared/services/data.service';
 import { UtilityService } from 'src/app/modules/shared/services/utility.service';
 
 @Component({
@@ -8,103 +9,19 @@ import { UtilityService } from 'src/app/modules/shared/services/utility.service'
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss'],
 })
-export class CoursesComponent implements AfterViewInit {
+export class CoursesComponent implements OnInit, AfterViewInit {
   constructor(
     private elementRef: ElementRef,
     private router: Router,
-    private utilityService: UtilityService
+    private utilityService: UtilityService,
+    private dataService: DataService
   ) {}
 
-  getCourseList: any = [
-    {
-      id: 1,
-      courseName: 'Python',
-      desc: 'Python is an efficient high-level data structures and a simple but effective approach to object-oriented programming.',
-      img: 'python',
-      h1: 'Python course provides skills applicable across various domains like web development, data science, and automation.',
-      h2: "Python's readability and simplicity make it accessible for beginners and efficient for experienced developers.",
-      h3: 'Python offers a rich library of tools and frameworks for rapid development and diverse project solutions.',
-      h4: 'Its widespread use ensures ample career opportunities and advancements across industries.',
-      color: '#2775b5',
-    },
-    {
-      id: 2,
-      courseName: 'Angular',
-      desc: 'Angular is an application-design framework and development platform for creating efficient and sophisticated single-page apps.',
-      img: 'angular',
-      h1: 'Angular course empowers creation of feature-rich single-page applications, enhancing user experience and functionality.',
-      h2: ' Angular enforces organization and scalability in development, improving code quality and maintenance.',
-      h3: 'With Angular, access powerful features like data binding and routing, streamlining development process and etc.',
-      h4: 'Angular learning fosters vibrant community support for developers.',
-      color: '#b52e31',
-    },
-    {
-      id: 3,
-      courseName: 'ReactJS',
-      desc: 'React is a popular JavaScript library for building user interfaces. It is also referred to as a front-end JavaScript library.',
-      img: 'reactJs',
-      h1: 'ReactJS course enables building interactive web interfaces for enhanced user experience.',
-      h2: "React's component-based approach fosters code reusability and scalability, optimizing development workflow.",
-      h3: "React's virtual DOM ensures fast rendering updates, enhancing performance and user interaction.",
-      h4: 'Learning React provides access to a vast developer community, offering resources and support for continual learning.',
-      color: '#53c1de',
-    },
-    {
-      id: 4,
-      courseName: 'NodeJS',
-      desc: 'As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.',
-      img: 'nodeJs',
-      h1: 'This course teaches the core of Node.js, empowering you to build scalable web applications efficiently.',
-      h2: 'With Node.js, JavaScript spans both client and server, streamlining development and encouraging code reuse.',
-      h3: 'Node.js excels in handling asynchronous tasks, ideal for crafting real-time applications like chats and gaming platforms.',
-      h4: 'Express.js and Node.js boost API development, enhancing productivity.',
-      color: '#72ba54',
-    },
-    {
-      id: 5,
-      courseName: 'Javascript',
-      desc: 'JavaScript is a scripting or programming language that allows you to implement complex features on web pages.',
-      img: 'javascript',
-      h1: 'JavaScript is essential for creating dynamic and interactive web pages.',
-      h2: "It's widely used across front-end, back-end, and full-stack development, making it indispensable in modern web development.",
-      h3: 'JavaScript enables features like form validation and real-time updates, improving user engagement.',
-      h4: 'Proficiency in JavaScript opens doors to learning advanced frameworks like React and Angular, crucial for building scalable web applications.',
-      color: '#d5bf14',
-    },
-    {
-      id: 6,
-      courseName: 'HTML, CSS & Javascript',
-      desc: 'As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.',
-      img: 'htmlCssJs',
-      h1: 'Mastering HTML, CSS, and JavaScript is crucial for building websites from scratch.',
-      h2: 'These skills are in high demand across industries, offering numerous career opportunities.',
-      h3: 'Proficiency in these languages enables developers to create intuitive and attractive user interfaces.',
-      h4: 'Learning HTML, CSS, and JavaScript sets the stage for ongoing adaptation to new web technologies.',
-      color: '#f16529',
-    },
-    {
-      id: 7,
-      courseName: 'MEAN Stack',
-      desc: 'The MEAN stack is a modern web development framework comprising MongoDB, Express.js, AngularJS, and Node.js.',
-      img: 'meanStack',
-      h1: 'MEAN stack uses JavaScript from server to client, streamlining communication and reducing overhead.',
-      h2: "MEAN stack's Node.js and MongoDB's non-blocking architecture easily manage high user loads, perfect for scalability.",
-      h3: "MEAN stack's lightweight, modular nature enables rapid prototyping, turning ideas into functional prototypes swiftly.",
-      h4: 'MEAN stack benefits from open-source support, offering abundant resources for rapid development.',
-      color: '#9029f1',
-    },
-    {
-      id: 8,
-      courseName: 'MERN Stack',
-      desc: 'The MERN stack is a modern web development framework comprising MongoDB, Express.js, React and Node.js.',
-      img: 'mernStack',
-      h1: 'MERN stack comprises MongoDB, Express.js, React, and Node.js.',
-      h2: 'Utilizes JavaScript throughout, simplifying development and enhancing consistency.',
-      h3: 'Offers modular components for scalability and flexibility in building applications.',
-      h4: 'Benefits from a vast ecosystem and strong community support for rapid development and problem-solving.',
-      color: '#3f29f1',
-    },
-  ];
+  getCourseList: any = [];
+
+  ngOnInit(): void {
+    this.getCourses()
+  }
 
   ngAfterViewInit(): void {
     const boxes =
@@ -183,6 +100,10 @@ export class CoursesComponent implements AfterViewInit {
         }
       });
     }
+  }
+
+  getCourses() {
+    this.getCourseList = this.dataService.getCourseDetails();
   }
 
   closestEdge(x: number, y: number, width: number, height: number): string {

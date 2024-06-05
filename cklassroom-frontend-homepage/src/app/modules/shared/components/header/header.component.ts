@@ -7,6 +7,9 @@ import { environment } from 'src/environments/environment';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { MatDialog } from '@angular/material/dialog';
+import { ApplyDialogComponent } from '../apply-dialog/apply-dialog.component';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-header',
@@ -20,17 +23,26 @@ export class HeaderComponent implements OnInit {
     public themeService: ThemeService,
     public utilityService: UtilityService,
     private router: Router,
-    private $gaService: GoogleAnalyticsService
+    private $gaService: GoogleAnalyticsService,
+    private dialog: MatDialog,
+    private dataService: DataService
   ) {}
   headerLogo = 'logoLight';
+  courseName = '';
+  mindMapJson: any = {};
 
   ngOnInit(): void {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe((event: NavigationEnd) => {
+      .subscribe(async(event: NavigationEnd) => {
         if (event.url === '/') {
           this.utilityService.showFooterSet = true;
         }
+
+        const currentUrl = window.location.href;
+        const parts = currentUrl.split('/');
+        this.courseName = parts[parts.length - 1];
+        await this.fetchMindMapData();
       });
 
     gsap.registerPlugin(ScrollToPlugin);
@@ -44,6 +56,12 @@ export class HeaderComponent implements OnInit {
 
       this.headerLogo = res === 'light_theme' ? 'logoLight' : 'logoDark';
     });
+  }
+
+  async fetchMindMapData() {
+    this.mindMapJson = await this.dataService
+      .loadMindMapData(this.courseName)
+      .toPromise();
   }
 
   scrollToTarget(target: string) {
@@ -75,4 +93,23 @@ export class HeaderComponent implements OnInit {
       this.verticalScrollValue = false;
     }
   }
+
+  openDialog() {
+    this.$gaService.event('click', 'Button', 'Open Apply dialog box', 1);
+    this.dialog.open(ApplyDialogComponent, {
+      width: 'clamp(20rem, 60vw, 35rem)',
+    });
+  }
+
+  courseDetailsPage(): boolean {
+    return this.router.url.includes('/course-details');
+  }
+
+  downloadPdf() {
+    this.$gaService.event('click', 'Button', 'Download PDF', this.mindMapJson.additionalData.pdfName)
+    const anchor = document.createElement('a');
+    anchor.href = this.mindMapJson.additionalData.pdfUrl;
+    anchor.download = this.mindMapJson.additionalData.pdfName;
+  }
+
 }

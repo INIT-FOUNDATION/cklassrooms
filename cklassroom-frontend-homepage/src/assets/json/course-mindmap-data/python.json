@@ -1,14 +1,15 @@
 {
     "mindMapData": {
         "meta": {
-            "name": "Angular Roadmap",
+            "name": "Learn Python",
             "author": "Sudhirkumarrao Allada",
             "version": "0.1"
         },
         "format": "node_tree",
         "data": {
             "id": "root",
-            "background-image": "assets/images/courses/python.svg",
+            "description": "Python is an efficient high-level data structures and a simple but effective approach to object-oriented programming.",
+            "background-image": "assets/images/courses/python-course-image1.jpg",
             "width": "100",
             "height": "100",
             "children": [
@@ -185,6 +186,35 @@
     },
     "additionalData": {
         "pdfUrl": "assets/roadmaps/PYTHON ROADMAP.pdf",
-        "pdfName": "PYTHON ROADMAP.pdf"
+        "pdfName": "PYTHON ROADMAP.pdf",
+        "description":"Python is a versatile and beginner-friendly programming language known for its simplicity and readability. It is widely used for web development, data analysis, artificial intelligence, automation, and more, making it one of the most popular and powerful programming languages today.",
+        "faqs": [
+            {
+                "question": "What is Python?",
+                "answer": "Python is a high-level programming language known for its simplicity and readability. It is widely used in various domains such as web development, data science, artificial intelligence, and more."
+            },
+            {
+                "question": "Who is this Python course for?",
+                "answer": "This Python course is suitable for beginners who have little to no programming experience."
+            },
+            {
+                "question": "How is Python different from other programming languages?",
+                "answer": "Python emphasizes simplicity and readability, making it easier to learn and understand compared to some other programming languages. It also has a vast ecosystem of libraries and frameworks."
+            }
+        ],
+        "tabs":[
+            {
+             "title":"Why Python",
+             "content":"Learning Python is advantageous for its simplicity, versatility, and widespread use across various domains like web development, data science, machine learning, artificial intelligence, and automation. Its readable syntax, extensive library support, and robust community make it easy to learn and highly adaptable for solving diverse problems efficiently. With abundant job opportunities and the potential for continuous growth, mastering Python is not only valuable but also essential for staying competitive in today's tech-driven world."
+            },
+            {
+             "title":"Why Python from CKlassrooms",
+             "content":"Learning Python from CKlassroom offers a structured and comprehensive approach tailored to learners of all levels. Our expert instructors provide thorough coverage of Python fundamentals and advanced concepts, ensuring a solid understanding of the language. With hands-on projects, personalized mentorship, and a supportive learning environment, CKlassroom empowers learners to build practical skills and confidence in Python programming. Whether you're a beginner or an experienced developer, CKlassroom offers courses designed to help you succeed in mastering Python and advancing your career in various domains, such as web development, data science, machine learning, and more."
+            },
+            {
+             "title":"Pre-requisite",
+             "content":"Basic understanding of programming concepts is recommended, but no prior experience is required."
+            }
+        ]
     }
 }

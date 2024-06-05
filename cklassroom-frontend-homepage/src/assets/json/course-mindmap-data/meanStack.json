@@ -1,202 +1,232 @@
 {
-    "mindMapData": {
-        "meta": {
-            "name": "MEAN Stack Roadmap",
-            "author": "Sudhirkumarrao Allada",
-            "version": "0.1"
-        },
-        "format": "node_tree",
-        "data": {
-            "id": "root",
-            "background-image": "assets/images/courses/meanStack.svg",
-            "width": "100",
-            "height": "100",
-            "children": [
-                {
-                    "id": "is",
-                    "topic": "Introduction and Setup",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "is1",
-                            "topic": "Overview and Setup"
-                        },
-                        {
-                            "id": "is2",
-                            "topic": "Basic JavaScript and Node.js"
-                        },
-                        {
-                            "id": "is3",
-                            "topic": "Project Initialization"
-                        }
-                    ]
-                },
-                {
-                    "id": "mb",
-                    "topic": "MongoDB Basics",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "mb1",
-                            "topic": "Introduction to MongoDB"
-                        },
-                        {
-                            "id": "mb2",
-                            "topic": "Working with MongoDB"
-                        },
-                        {
-                            "id": "mb3",
-                            "topic": "Integrating MongoDB with Node.js"
-                        }
-                    ]
-                },
-                {
-                    "id": "eb",
-                    "topic": "Express.js Basics",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "eb1",
-                            "topic": "Introduction to Express.js"
-                        },
-                        {
-                            "id": "eb2",
-                            "topic": "Advanced Express.js"
-                        },
-                        {
-                            "id": "eb3",
-                            "topic": "RESTful API Development"
-                        }
-                    ]
-                },
-                {
-                    "id": "ab",
-                    "topic": "Angular Basics",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "ab1",
-                            "topic": "Introduction to Angular"
-                        },
-                        {
-                            "id": "ab2",
-                            "topic": "Angular Components and Data Binding"
-                        },
-                        {
-                            "id": "ab3",
-                            "topic": "Angular Services and Dependency Injection"
-                        }
-                    ]
-                },
-                {
-                    "id": "arf",
-                    "topic": "Angular Routing and Forms",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "arf1",
-                            "topic": "Angular Routing"
-                        },
-                        {
-                            "id": "arf2",
-                            "topic": "Angular Forms"
-                        },
-                        {
-                            "id": "arf3",
-                            "topic": "Integrating Angular with Express"
-                        }
-                    ]
-                },
-                {
-                    "id": "ama",
-                    "topic": "Advanced MongoDB and Authentication",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "ama1",
-                            "topic": "Advanced MongoDB"
-                        },
-                        {
-                            "id": "ama2",
-                            "topic": "Authentication Basics"
-                        },
-                        {
-                            "id": "ama3",
-                            "topic": "Secure API Development"
-                        }
-                    ]
-                },
-                {
-                    "id": "aa",
-                    "topic": "Advanced Angular",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "aa1",
-                            "topic": "Advanced Angular Concepts"
-                        },
-                        {
-                            "id": "aa2",
-                            "topic": "State Management"
-                        },
-                        {
-                            "id": "aa3",
-                            "topic": "Testing Angular Applications"
-                        }
-                    ]
-                },
-                {
-                    "id": "fsd",
-                    "topic": "Full-Stack Development",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "fsd1",
-                            "topic": "Building a Full-Stack Application"
-                        },
-                        {
-                            "id": "fsd2",
-                            "topic": "Advanced Topics"
-                        },
-                        {
-                            "id": "fsd3",
-                            "topic": "Performance and Optimization"
-                        }
-                    ]
-                },
-                {
-                    "id": "deployment",
-                    "topic": "Deployment and Final Project",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "deployment1",
-                            "topic": "Deployment"
-                        },
-                        {
-                            "id": "deployment2",
-                            "topic": "Final Project Review and Q&A"
-                        },
-                        {
-                            "id": "deployment3",
-                            "topic": "Additional Topics (Optional)"
-                        }
-                    ]
-                }
-            ]
-        }
+  "mindMapData": {
+    "meta": {
+      "name": "Learn MEAN Stack",
+      "author": "Sudhirkumarrao Allada",
+      "version": "0.1"
     },
-    "additionalData": {
-        "pdfUrl": "assets/roadmaps/MEAN STACK ROADMAP.pdf",
-        "pdfName": "MEAN STACK ROADMAP.pdf"
+    "format": "node_tree",
+    "data": {
+      "id": "root",
+      "description": "The MEAN stack is a modern web development framework comprising MongoDB, Express.js, AngularJS, and Node.js.",
+      "background-image": "assets/images/courses/meanStack-course-image.jpg",
+      "width": "180",
+      "height": "100",
+      "children": [
+        {
+          "id": "is",
+          "topic": "Introduction and Setup",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "is1",
+              "topic": "Overview and Setup"
+            },
+            {
+              "id": "is2",
+              "topic": "Basic JavaScript and Node.js"
+            },
+            {
+              "id": "is3",
+              "topic": "Project Initialization"
+            }
+          ]
+        },
+        {
+          "id": "mb",
+          "topic": "MongoDB Basics",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "mb1",
+              "topic": "Introduction to MongoDB"
+            },
+            {
+              "id": "mb2",
+              "topic": "Working with MongoDB"
+            },
+            {
+              "id": "mb3",
+              "topic": "Integrating MongoDB with Node.js"
+            }
+          ]
+        },
+        {
+          "id": "eb",
+          "topic": "Express.js Basics",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "eb1",
+              "topic": "Introduction to Express.js"
+            },
+            {
+              "id": "eb2",
+              "topic": "Advanced Express.js"
+            },
+            {
+              "id": "eb3",
+              "topic": "RESTful API Development"
+            }
+          ]
+        },
+        {
+          "id": "ab",
+          "topic": "Angular Basics",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ab1",
+              "topic": "Introduction to Angular"
+            },
+            {
+              "id": "ab2",
+              "topic": "Angular Components and Data Binding"
+            },
+            {
+              "id": "ab3",
+              "topic": "Angular Services and Dependency Injection"
+            }
+          ]
+        },
+        {
+          "id": "arf",
+          "topic": "Angular Routing and Forms",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "arf1",
+              "topic": "Angular Routing"
+            },
+            {
+              "id": "arf2",
+              "topic": "Angular Forms"
+            },
+            {
+              "id": "arf3",
+              "topic": "Integrating Angular with Express"
+            }
+          ]
+        },
+        {
+          "id": "ama",
+          "topic": "Advanced MongoDB and Authentication",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ama1",
+              "topic": "Advanced MongoDB"
+            },
+            {
+              "id": "ama2",
+              "topic": "Authentication Basics"
+            },
+            {
+              "id": "ama3",
+              "topic": "Secure API Development"
+            }
+          ]
+        },
+        {
+          "id": "aa",
+          "topic": "Advanced Angular",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "aa1",
+              "topic": "Advanced Angular Concepts"
+            },
+            {
+              "id": "aa2",
+              "topic": "State Management"
+            },
+            {
+              "id": "aa3",
+              "topic": "Testing Angular Applications"
+            }
+          ]
+        },
+        {
+          "id": "fsd",
+          "topic": "Full-Stack Development",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "fsd1",
+              "topic": "Building a Full-Stack Application"
+            },
+            {
+              "id": "fsd2",
+              "topic": "Advanced Topics"
+            },
+            {
+              "id": "fsd3",
+              "topic": "Performance and Optimization"
+            }
+          ]
+        },
+        {
+          "id": "deployment",
+          "topic": "Deployment and Final Project",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "deployment1",
+              "topic": "Deployment"
+            },
+            {
+              "id": "deployment2",
+              "topic": "Final Project Review and Q&A"
+            },
+            {
+              "id": "deployment3",
+              "topic": "Additional Topics (Optional)"
+            }
+          ]
+        }
+      ]
     }
+  },
+  "additionalData": {
+    "pdfUrl": "assets/roadmaps/MEAN STACK ROADMAP.pdf",
+    "pdfName": "MEAN STACK ROADMAP.pdf",
+    "description":"The MEAN Stack combines MongoDB, Express.js, Angular, and Node.js for full-stack JavaScript development, enabling efficient creation of dynamic web applications.",
+    "faqs": [
+      {
+        "question": "What is the MEAN Stack?",
+        "answer": "The MEAN Stack is a collection of JavaScript-based technologies used for building full-stack web applications. It consists of MongoDB (a NoSQL database), Express.js (a web application framework), Angular (a front-end JavaScript framework), and Node.js (a back-end JavaScript runtime environment)."
+      },
+      {
+        "question": "Who is this MEAN Stack course designed for?",
+        "answer": "This MEAN Stack course is suitable for aspiring web developers, software engineers, and individuals interested in mastering the art of full-stack web development using the MEAN Stack."
+      },
+      {
+        "question": "Can the skills acquired in the course be applied to real-world projects?",
+        "answer": "Absolutely! You'll learn industry-standard practices and techniques essential for building scalable, modern web applications."
+      }
+    ],
+    "tabs":[
+      {
+       "title":"Why MEAN Stack",
+       "content":"Learning the MEAN stack—MongoDB, Express.js, Angular, and Node.js—offers a robust and efficient toolkit for developing modern web applications. MongoDB provides a flexible NoSQL database solution, Express.js simplifies server-side development, Angular enables the creation of dynamic frontend interfaces, and Node.js facilitates scalable backend solutions. By mastering the MEAN stack, developers can create full-stack applications efficiently using a unified JavaScript ecosystem. This proficiency is highly sought-after in the industry, offering diverse career opportunities in web development."
+      },
+      {
+       "title":"Why MEAN Stack from CKlassrooms",
+       "content":"Learning the MEAN stack from CKlassroom offers a comprehensive and hands-on learning experience tailored for aspiring full-stack developers. Our expert instructors guide you through MongoDB, Express.js, Angular, and Node.js, ensuring you gain proficiency in each component of the stack. With practical projects, personalized mentorship, and a supportive learning community, CKlassroom empowers you to build real-world skills and confidence in MEAN stack development. Join CKlassroom to unlock your potential, master the MEAN stack, and pave the way for a successful career in full-stack web development."
+      },
+      {
+        "title":"Pre-requisite",
+        "content":"Understanding MongoDB, Express.js, Angular, and Node.js is essential for mastering full-stack web development with the MEAN stack."
+      }
+    ]
+  }
 }

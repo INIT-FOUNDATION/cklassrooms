@@ -1,14 +1,15 @@
 {
     "mindMapData": {
         "meta": {
-            "name": "Angular Roadmap",
+            "name": "Learn ReactJs",
             "author": "Sudhirkumarrao Allada",
             "version": "0.1"
         },
         "format": "node_tree",
         "data": {
             "id": "root",
-            "background-image": "assets/images/courses/reactJs.svg",
+            "description": "React is a popular JavaScript library for building user interfaces. It is also referred to as a front-end JavaScript library.",
+            "background-image": "assets/images/courses/reactJs-course-image.jpg",
             "width": "100",
             "height": "100",
             "children": [
@@ -277,6 +278,35 @@
     },
     "additionalData": {
         "pdfUrl": "assets/roadmaps/REACTJS ROADMAP.pdf",
-        "pdfName": "REACTJS ROADMAP.pdf"
+        "pdfName": "REACTJS ROADMAP.pdf",
+        "description":"React.js is a JavaScript library for building user interfaces, developed by Facebook. It allows developers to create reusable UI components that efficiently update and render in response to changes in data, enabling the creation of interactive and dynamic web applications with a component-based architecture.",
+        "faqs": [
+            {
+                "question": "What is React.js?",
+                "answer": "React.js is a JavaScript library for building user interfaces, particularly single-page applications where you need a fast, interactive, and dynamic user experience. "
+            },
+            {
+                "question": "Who should take this React.js course?",
+                "answer": "This course is designed for web developers, software engineers, and anyone interested in building dynamic web applications. Basic knowledge of HTML, CSS, and JavaScript is recommended."
+            },
+            {
+                "question": "Does the course offer support for troubleshooting and problem-solving?",
+                "answer": "Absolutely! You'll have access to instructor-led Q&A sessions, a dedicated discussion forum, and assistance from teaching assistants to help you overcome any challenges you encounter during the course."
+            }
+        ],
+        "tabs":[
+            {
+             "title":"Why ReactJs",
+             "content":"ReactJs offers efficiency, flexibility, and high performance in building user interfaces. With its reusable components and strong community support, React.js streamlines development processes and enhances code maintainability. Its capability to create single-page applications and mobile apps using React Native ensures a seamless cross-platform development experience. Mastering React.js opens up abundant career opportunities and empowers developers to create cutting-edge web applications."
+            },
+            {
+             "title":"Why ReactJs from CKlassrooms",
+             "content":"React.js with CKlassroom provides a structured and comprehensive learning experience suited for all skill levels. Our expert instructors deliver thorough instruction on React.js fundamentals and advanced topics, ensuring a strong grasp of the library. Through hands-on projects, individualized guidance, and a supportive community, CKlassroom enables learners to develop practical skills and confidence in React.js development. Whether you're a novice or an experienced developer, CKlassroom offers courses tailored to help you excel in mastering React.js and progress in your web development career."
+            },
+            {
+             "title":"Pre-requisite",
+             "content":"To learn React.js, you need a basic understanding of HTML, CSS, and JavaScript, along with familiarity with ES6+ features and setting up a development environment."
+            }
+        ]
     }
 }

@@ -1,0 +1,31 @@
+@import "../../../theme/color";
+
+::ng-deep .mat-tab-label {
+  color: $themeFontColor !important;
+}
+
+.bg-gray-cards {
+  background-color: $themeBoxShadow;
+}
+
+.courses-card,
+.courses-card-body {
+  border: 1px solid $themeBoxShadow;
+}
+
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"])
+  .mat-expansion-panel-header:hover {
+  background: transparent;
+}
+
+.font-color {
+  color: $themeFontColor;
+}
+
+::ng-deep .mat-expansion-indicator::after {
+  border-color: $themeFontColor;
+}
+
+.swiper-height{
+  height: 25rem;
+}

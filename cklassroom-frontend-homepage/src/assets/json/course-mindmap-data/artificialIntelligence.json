@@ -1,0 +1,328 @@
+{
+  "mindMapData": {
+    "meta": {
+      "name": "Learn Artificial Intelligence",
+      "author": "Sudhirkumarrao Allada",
+      "version": "0.1"
+    },
+    "format": "node_tree",
+    "data": {
+      "id": "root",
+      "description": "Artificial Intelligence (AI) o1ers numerous advantages across various domains, enhancing e1iciency, productivity, and innovation.",
+      "background-image": "assets/images/courses/artificialIntelligence-course-image.jpg",
+      "width": "150",
+      "height": "100",
+      "children": [
+        {
+          "id": "iai",
+          "topic": "Introduction to AI",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "iai1",
+              "topic": "Introduction to AI"
+            },
+            {
+              "id": "iai2",
+              "topic": "Basics of Machine Learning"
+            },
+            {
+              "id": "iai3",
+              "topic": "Linear Algebra Fundamentals"
+            },
+            {
+              "id": "iai4",
+              "topic": "Probability and Statistics Basics"
+            },
+            {
+              "id": "iai5",
+              "topic": "Python for AI - Part 1"
+            },
+            {
+              "id": "iai6",
+              "topic": "Python for AI - Part 2"
+            },
+            {
+              "id": "iai7",
+              "topic": "Python for AI - Part 3"
+            }
+          ]
+        },
+        {
+          "id": "sl",
+          "topic": "Supervised Learning",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "sl1",
+              "topic": "Linear Regression"
+            },
+            {
+              "id": "sl2",
+              "topic": "Evaluation Metrics"
+            },
+            {
+              "id": "sl3",
+              "topic": "Logistic Regression"
+            },
+            {
+              "id": "sl4",
+              "topic": "Decision Trees"
+            },
+            {
+              "id": "sl5",
+              "topic": "Ensemble Methods"
+            },
+            {
+              "id": "sl6",
+              "topic": "Support Vector Machines (SVM)"
+            },
+            {
+              "id": "sl7",
+              "topic": "Naive Bayes Classifier"
+            }
+          ]
+        },
+        {
+          "id": "ul",
+          "topic": "Unsupervised Learning",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ul1",
+              "topic": "Clustering Techniques"
+            },
+            {
+              "id": "ul2",
+              "topic": "Hierarchical Clustering"
+            },
+            {
+              "id": "ul3",
+              "topic": "Dimensionality Reduction"
+            },
+            {
+              "id": "ul4",
+              "topic": "Anomaly Detection"
+            },
+            {
+              "id": "ul5",
+              "topic": "Association Rulesg"
+            },
+            {
+              "id": "ul6",
+              "topic": "Reinforcement Learning Basics"
+            },
+            {
+              "id": "ul7",
+              "topic": "Mid-Course Review"
+            }
+          ]
+        },
+        {
+          "id": "nndl",
+          "topic": "Neural Networks and Deep Learning",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "nndl1",
+              "topic": "Introduction to Neural Networks"
+            },
+            {
+              "id": "nndl2",
+              "topic": "Deep Learning Basics"
+            },
+            {
+              "id": "nndl3",
+              "topic": "Training Neural Networks"
+            },
+            {
+              "id": "nndl4",
+              "topic": "Convolutional Neural Networks (CNN)"
+            },
+            {
+              "id": "nndl5",
+              "topic": "Recurrent Neural Networks (RNN)"
+            },
+            {
+              "id": "nndl6",
+              "topic": "Long Short-Term Memory (LSTM)"
+            },
+            {
+              "id": "nndl7",
+              "topic": "Generative Adversarial Networks (GAN)"
+            }
+          ]
+        },
+        {
+          "id": "adlt",
+          "topic": "Advanced Deep Learning Techniques",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "adlt1",
+              "topic": "Transfer Learning"
+            },
+            {
+              "id": "adlt2",
+              "topic": "Hyperparameter Tuning"
+            },
+            {
+              "id": "adlt3",
+              "topic": "Natural Language Processing (NLP) - Part 1"
+            },
+            {
+              "id": "adlt4",
+              "topic": "Natural Language Processing (NLP) - Part 2"
+            },
+            {
+              "id": "adlt5",
+              "topic": "Natural Language Processing (NLP) - Part 3"
+            },
+            {
+              "id": "adlt6",
+              "topic": "Advanced CNN Architectures"
+            },
+            {
+              "id": "adlt7",
+              "topic": "Advanced RNN Architectures"
+            }
+          ]
+        },
+        {
+          "id": "sta",
+          "topic": "Special Topics and Applications",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "sta1",
+              "topic": "Time Series Analysis"
+            },
+            {
+              "id": "sta2",
+              "topic": "Recommender Systems"
+            },
+            {
+              "id": "sta3",
+              "topic": "Computer Vision"
+            },
+            {
+              "id": "sta4",
+              "topic": "Speech Recognition"
+            },
+            {
+              "id": "sta5",
+              "topic": "AI Ethics and Bias"
+            },
+            {
+              "id": "sta6",
+              "topic": "AI in Industry"
+            },
+            {
+              "id": "sta7",
+              "topic": "Advanced Reinforcement Learning"
+            }
+          ]
+        },
+        {
+          "id": "cpw1",
+          "topic": "Capstone Project Week 1",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "cpw11",
+              "topic": "Project Planning"
+            },
+            {
+              "id": "cpw12",
+              "topic": "Data Collection and Preprocessing"
+            },
+            {
+              "id": "cpw13",
+              "topic": "Model Selection"
+            },
+            {
+              "id": "cpw14",
+              "topic": "Model Training"
+            },
+            {
+              "id": "cpw15",
+              "topic": "Model Evaluation"
+            },
+            {
+              "id": "cpw16",
+              "topic": "Intermediate Milestone Review"
+            }
+          ]
+        },
+        {
+          "id": "cpw2",
+          "topic": "Capstone Project Week 2",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "cpw21",
+              "topic": "Advanced Model Tuning"
+            },
+            {
+              "id": "cpw22",
+              "topic": "Integrating Components"
+            },
+            {
+              "id": "cpw23",
+              "topic": "Final Model Evaluation"
+            },
+            {
+              "id": "cpw24",
+              "topic": "Final Touches"
+            },
+            {
+              "id": "cpw25",
+              "topic": "Final Review"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "additionalData": {
+    "pdfUrl": "assets/roadmaps/AI ROADMAP.pdf",
+    "pdfName": "AI ROADMAP.pdf",
+    "description":"AI, or Artificial Intelligence, refers to the development of computer systems capable of performing tasks that typically require human intelligence.",
+    "faqs": [
+      {
+        "question": "Who is this AI course for?",
+        "answer": "This AI course is designed for aspiring data scientists, AI engineers, software developers, and anyone interested in leveraging AI techniques to solve real-world problems."
+      },
+      {
+        "question": "What are some career opportunities in AI after completing this course?",
+        "answer": "Career opportunities in AI include roles such as data scientist, machine learning engineer, AI researcher, AI consultant, robotics engineer, and AI ethics specialist, among others."
+      },
+      {
+        "question": "Will there be any certification upon completion of the course?",
+        "answer": "Yes, a certification of completion may be awarded to participants who successfully meet the course requirements and assessments."
+      }
+    ],
+    "tabs":[
+      {
+       "title":"Why Artificial Intelligence",
+       "content":"Learning artificial intelligence (AI) is highly beneficial due to its high demand across various industries, leading to lucrative career opportunities. AI is at the forefront of technological innovation, allowing you to tackle complex problems and work on impactful projects. Its applications span diverse fields such as finance, healthcare, and robotics, offering multiple career paths. Acquiring AI skills ensures you stay relevant in the evolving job market and empowers you to contribute to advancements that improve quality of life and address global challenges."
+      },
+      {
+       "title":"Why Artificial Intelligence from CKlassrooms",
+       "content":"Our courses are taught by industry-leading experts, ensuring you receive top-notch instruction and up-to-date knowledge. With a structured curriculum covering foundational concepts to advanced techniques, you'll gain a comprehensive understanding of AI. Through hands-on projects and practical exercises, you'll develop real-world skills and enhance your problem-solving abilities."
+      },
+      {
+        "title":"Pre-requisite",
+        "content":"Understanding mathematics like calculus, linear algebra, and probability is key, along with proficiency in Python and familiarity with machine learning concepts."
+      }
+  ]
+  }
+}

@@ -43,6 +43,11 @@ body {
   color: $themeSecondary;
 }
 
+.card-bg {
+  background-color: $themeBoxShadow;
+  color: $themeFontColor;
+}
+
 .hover-card {
   background-color: $themeBoxShadow;
   color: $themeFontColor;
@@ -73,6 +78,13 @@ button:focus-visible {
   letter-spacing: 0.05rem;
 }
 
+.mat-option-text,
+.mat-tab-label,
+.mat-tab-body-content,
+.mat-expansion-panel-header-title {
+  font-family: "Montserrat" !important;
+}
+
 .jsmind-inner {
   position: fixed !important;
 
@@ -91,4 +103,5 @@ jmexpander {
 
 jmnodes.theme-greensea jmnode {
   background-repeat: no-repeat;
+  background-size: cover !important;
 }

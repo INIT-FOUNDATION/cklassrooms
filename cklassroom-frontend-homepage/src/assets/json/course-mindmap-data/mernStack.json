@@ -1,174 +1,204 @@
 {
-    "mindMapData": {
-        "meta": {
-            "name": "MERN Stack Roadmap",
-            "author": "Sudhirkumarrao Allada",
-            "version": "0.1"
-        },
-        "format": "node_tree",
-        "data": {
-            "id": "root",
-            "background-image": "assets/images/courses/mernStack.svg",
-            "width": "100",
-            "height": "100",
-            "children": [
-                {
-                    "id": "is",
-                    "topic": "Introduction to Web Development and JavaScript Basics",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "is1",
-                            "topic": "Understanding Web Development"
-                        },
-                        {
-                            "id": "is2",
-                            "topic": "HTML & CSS Basics"
-                        },
-                        {
-                            "id": "is3",
-                            "topic": "JavaScript Fundamentals"
-                        }
-                    ]
-                },
-                {
-                    "id": "js",
-                    "topic": "JavaScript Deep Dive and Version Control",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "js1",
-                            "topic": "Advanced JavaScript Concepts"
-                        },
-                        {
-                            "id": "js2",
-                            "topic": "Asynchronous JavaScript"
-                        },
-                        {
-                            "id": "js3",
-                            "topic": "Version Control with Git"
-                        }
-                    ]
-                },
-                {
-                    "id": "eb",
-                    "topic": "Express.js Basics",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "eb1",
-                            "topic": "Introduction to Express.js"
-                        },
-                        {
-                            "id": "eb2",
-                            "topic": "Advanced Express.js"
-                        },
-                        {
-                            "id": "eb3",
-                            "topic": "RESTful API Development"
-                        }
-                    ]
-                },
-                {
-                    "id": "wwd",
-                    "topic": "Working with Databases (MongoDB)",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "wwd1",
-                            "topic": "MongoDB Basics"
-                        },
-                        {
-                            "id": "wwd2",
-                            "topic": "Integrating MongoDB with Node.js"
-                        },
-                        {
-                            "id": "wwd3",
-                            "topic": "Authentication and Authorization"
-                        }
-                    ]
-                },
-                {
-                    "id": "ir",
-                    "topic": "Introduction to React",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "ir1",
-                            "topic": "React Basics"
-                        },
-                        {
-                            "id": "ir2",
-                            "topic": "State and Props"
-                        },
-                        {
-                            "id": "ir3",
-                            "topic": "React Router"
-                        },
-                        {
-                            "id": "ir4",
-                            "topic": "Advanced React Concepts"
-                        }
-                    ]
-                },
-                {
-                    "id": "ifb",
-                    "topic": "Integrating Frontend and Backend",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "ifb1",
-                            "topic": "Connecting React to Express"
-                        },
-                        {
-                            "id": "ifb2",
-                            "topic": "Advanced State Management"
-                        },
-                        {
-                            "id": "ifb3",
-                            "topic": "Form Handling and Validation"
-                        },
-                        {
-                            "id": "ifb4",
-                            "topic": "File Uploads"
-                        }
-                    ]
-                },
-                {
-                    "id": "dat",
-                    "topic": "Deployment and Advanced Topics",
-                    "direction": "right",
-                    "expanded": false,
-                    "children": [
-                        {
-                            "id": "dat1",
-                            "topic": "Deployment"
-                        },
-                        {
-                            "id": "dat2",
-                            "topic": "Testing"
-                        },
-                        {
-                            "id": "dat3",
-                            "topic": "Advanced Topics"
-                        },
-                        {
-                            "id": "dat4",
-                            "topic": "Project Day"
-                        }
-                    ]
-                }
-            ]
-        }
+  "mindMapData": {
+    "meta": {
+      "name": "Learn MERN Stack",
+      "author": "Sudhirkumarrao Allada",
+      "version": "0.1"
     },
-    "additionalData": {
-        "pdfUrl": "assets/roadmaps/MERN STACK ROADMAP.pdf",
-        "pdfName": "MERN STACK ROADMAP.pdf"
+    "format": "node_tree",
+    "data": {
+      "id": "root",
+      "description": "The MERN stack is a modern web development framework comprising MongoDB, Express.js, React and Node.js.",
+      "background-image": "assets/images/courses/mernStack-course-image.png",
+      "width": "180",
+      "height": "100",
+      "children": [
+        {
+          "id": "is",
+          "topic": "Introduction to Web Development and JavaScript Basics",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "is1",
+              "topic": "Understanding Web Development"
+            },
+            {
+              "id": "is2",
+              "topic": "HTML & CSS Basics"
+            },
+            {
+              "id": "is3",
+              "topic": "JavaScript Fundamentals"
+            }
+          ]
+        },
+        {
+          "id": "js",
+          "topic": "JavaScript Deep Dive and Version Control",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "js1",
+              "topic": "Advanced JavaScript Concepts"
+            },
+            {
+              "id": "js2",
+              "topic": "Asynchronous JavaScript"
+            },
+            {
+              "id": "js3",
+              "topic": "Version Control with Git"
+            }
+          ]
+        },
+        {
+          "id": "eb",
+          "topic": "Express.js Basics",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "eb1",
+              "topic": "Introduction to Express.js"
+            },
+            {
+              "id": "eb2",
+              "topic": "Advanced Express.js"
+            },
+            {
+              "id": "eb3",
+              "topic": "RESTful API Development"
+            }
+          ]
+        },
+        {
+          "id": "wwd",
+          "topic": "Working with Databases (MongoDB)",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "wwd1",
+              "topic": "MongoDB Basics"
+            },
+            {
+              "id": "wwd2",
+              "topic": "Integrating MongoDB with Node.js"
+            },
+            {
+              "id": "wwd3",
+              "topic": "Authentication and Authorization"
+            }
+          ]
+        },
+        {
+          "id": "ir",
+          "topic": "Introduction to React",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ir1",
+              "topic": "React Basics"
+            },
+            {
+              "id": "ir2",
+              "topic": "State and Props"
+            },
+            {
+              "id": "ir3",
+              "topic": "React Router"
+            },
+            {
+              "id": "ir4",
+              "topic": "Advanced React Concepts"
+            }
+          ]
+        },
+        {
+          "id": "ifb",
+          "topic": "Integrating Frontend and Backend",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ifb1",
+              "topic": "Connecting React to Express"
+            },
+            {
+              "id": "ifb2",
+              "topic": "Advanced State Management"
+            },
+            {
+              "id": "ifb3",
+              "topic": "Form Handling and Validation"
+            },
+            {
+              "id": "ifb4",
+              "topic": "File Uploads"
+            }
+          ]
+        },
+        {
+          "id": "dat",
+          "topic": "Deployment and Advanced Topics",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "dat1",
+              "topic": "Deployment"
+            },
+            {
+              "id": "dat2",
+              "topic": "Testing"
+            },
+            {
+              "id": "dat3",
+              "topic": "Advanced Topics"
+            },
+            {
+              "id": "dat4",
+              "topic": "Project Day"
+            }
+          ]
+        }
+      ]
     }
+  },
+  "additionalData": {
+    "pdfUrl": "assets/roadmaps/MERN STACK ROADMAP.pdf",
+    "pdfName": "MERN STACK ROADMAP.pdf",
+    "description":"The MERN Stack consists of MongoDB, Express.js, React, and Node.js, offering a comprehensive JavaScript-based solution for building full-stack web applications.",
+    "faqs": [
+      {
+        "question": "What is the MERN Stack?",
+        "answer": "The MERN Stack is a collection of JavaScript-based technologies used for building modern web applications. It consists of MongoDB (a NoSQL database), Express.js (a web application framework), React.js (a front-end JavaScript library), and Node.js (a back-end JavaScript runtime environment)."
+      },
+      {
+        "question": "Who is this MERN Stack course for?",
+        "answer": "This MERN Stack course is ideal for web developers, software engineers, and anyone interested in learning how to build full-stack web applications using the MERN Stack. Basic knowledge of HTML, CSS, and JavaScript is recommended but not required."
+      },
+      {
+        "question": "Will I receive a certificate upon completing the course?",
+        "answer": "Yes, upon successful completion, you will receive a certification recognizing your proficiency in MERN Stack."
+      }
+    ],
+    "tabs":[
+      {
+       "title":"Why MERN Stack",
+       "content":"Learning the MERN stack—MongoDB, Express.js, React, and Node.js—equips developers with a powerful toolkit for building modern web applications. With MongoDB for flexible data storage, Express.js for server-side development, React for dynamic user interfaces, and Node.js for scalable backend solutions, mastering the MERN stack enables efficient full-stack development using JavaScript throughout. This proficiency is highly sought-after in the industry, offering diverse career opportunities in web development. "
+      },
+      {
+       "title":"Why MERN Stack from CKlassrooms",
+       "content":"Learning the MERN stack from CKlassroom offers an immersive and comprehensive educational experience tailored for aspiring full-stack developers. Our expert-led courses cover MongoDB, Express.js, React, and Node.js in depth, ensuring you gain proficiency in each component of the stack. With hands-on projects, personalized mentorship, and a supportive learning community, CKlassroom empowers you to build practical skills and confidence in MERN stack development. Join CKlassroom to unlock your potential, master the MERN stack, and advance your career in full-stack web development."
+      },
+      {
+        "title":"Pre-requisite",
+        "content":"Knowledge of HTML, CSS, JavaScript, and MongoDB basics is required to build full-stack web applications using the MERN stack."
+      }
+    ]
+  }
 }

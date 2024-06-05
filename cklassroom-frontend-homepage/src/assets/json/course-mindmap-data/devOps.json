@@ -1,0 +1,154 @@
+{
+  "mindMapData": {
+    "meta": {
+      "name": "Learn DevOps",
+      "author": "Sudhirkumarrao Allada",
+      "version": "0.1"
+    },
+    "format": "node_tree",
+    "data": {
+      "id": "root",
+      "description": "DevOps blends development and operations for faster delivery and superior software quality.",
+      "background-image": "assets/images/courses/devOps-course-image.png",
+      "width": "180",
+      "height": "100",
+      "children": [
+        {
+          "id": "idof",
+          "topic": "Introduction to DevOps Fundamentals",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "idof1",
+              "topic": "Understanding DevOps Principles"
+            },
+            {
+              "id": "idof2",
+              "topic": "Version Control Systems (VCS)"
+            },
+            {
+              "id": "idof3",
+              "topic": "Continuous Integration (CI)"
+            },
+            {
+              "id": "idof4",
+              "topic": "Continuous Delivery (CD)"
+            },
+            {
+              "id": "idof5",
+              "topic": "Infrastructure as Code (IaC)"
+            }
+          ]
+        },
+        {
+          "id": "co",
+          "topic": "Containerization and Orchestration",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "co1",
+              "topic": "Introduction to Docker"
+            },
+            {
+              "id": "co2",
+              "topic": "Container Orchestration with Kubernetes"
+            },
+            {
+              "id": "co3",
+              "topic": "Monitoring and Logging"
+            },
+            {
+              "id": "co4",
+              "topic": "Security in DevOps"
+            }
+          ]
+        },
+        {
+          "id": "adp",
+          "topic": "Advanced DevOps Practices",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "adp1",
+              "topic": "Microservices Architecture "
+            },
+            {
+              "id": "adp2",
+              "topic": "Cloud-Native DevOps"
+            },
+            {
+              "id": "adp3",
+              "topic": "DevOps Culture and Collaboration"
+            },
+            {
+              "id": "adp4",
+              "topic": "Advanced CI/CD Techniques"
+            }
+          ]
+        },
+        {
+          "id": "fpst",
+          "topic": "Final Projects and Specialized Topics",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "fpst1",
+              "topic": "DevOps Tools and Ecosystem"
+            },
+            {
+              "id": "fpst2",
+              "topic": "DevOps in Practice"
+            },
+            {
+              "id": "fpst3",
+              "topic": "DevOps for Specific Environments"
+            },
+            {
+              "id": "fpst4",
+              "topic": "Capstone Project and Review"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "additionalData": {
+    "pdfUrl": "assets/roadmaps/DEVOPS ROADMAP.pdf",
+    "pdfName": "DEVOPS ROADMAP.pdf",
+    "description":"DevOps is a software development approach that combines development (Dev) and operations (Ops) teams, emphasizing collaboration, automation, and continuous integration and delivery (CI/CD) practices.",
+    "faqs": [
+      {
+        "question": "What is DevOps and why is it important?",
+        "answer": "DevOps is a culture, philosophy, and set of practices that aims to improve collaboration between software development (Dev) and IT operations (Ops) teams, leading to faster and more reliable software delivery."
+      },
+      {
+        "question": "Will there be any certifications upon completion of the course?",
+        "answer": "Yes, a certification of completion will be awarded to participants who successfully meet the course requirements."
+      },
+      {
+        "question": "How can I get support on course content during the learning process?",
+        "answer": "Support will be available through online forums, and possibly live Q&A sessions with instructors or teaching assistants."
+      }
+    ],
+    "tabs":[
+      {
+       "title":"Why Devops",
+       "content":"Learning DevOps is essential for modern software development, emphasizing efficiency, collaboration, and automation. It enables faster delivery through continuous integration and delivery pipelines, fostering a culture of collaboration and shared responsibility. With abundant career opportunities, mastering DevOps equips you with the skills needed for success in today's dynamic development landscape."
+      },
+      {
+       "title":"Why Devops from CKlassrooms",
+       "content":"Learning DevOps from CKlassrooms offers an unparalleled opportunity to master essential skills in a dynamic and growing field. Our courses, led by industry experts, provide comprehensive coverage of DevOps principles, tools, and practices. Through hands-on projects and real-world scenarios, you'll gain practical experience and confidence in implementing DevOps solutions."
+      },
+      {
+        "title":"Pre-requisite",
+        "content":"Familiarity with software development and IT operations principles is crucial for understanding the DevOps lifecycle and practices."
+      }
+  ]
+
+
+  }
+}

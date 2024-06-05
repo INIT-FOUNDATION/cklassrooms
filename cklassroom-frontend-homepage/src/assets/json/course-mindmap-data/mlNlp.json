@@ -1,0 +1,248 @@
+{
+  "mindMapData": {
+    "meta": {
+      "name": "Learn ML and NLP",
+      "author": "Sudhirkumarrao Allada",
+      "version": "0.1"
+    },
+    "format": "node_tree",
+    "data": {
+      "id": "root",
+      "description": "ML and NLP offer automation, smarter decisions, personalized experiences, and language breakthroughs, driving innovation across industries.",
+      "background-image": "assets/images/courses/mlandNlp-course-image.jpg",
+      "width": "150",
+      "height": "100",
+      "children": [
+        {
+          "id": "ipbc",
+          "topic": "Introduction to Python and Basic Concepts",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ipbc1",
+              "topic": "Introduction to Python"
+            },
+            {
+              "id": "ipbc2",
+              "topic": "Python for Data Analysis"
+            },
+            {
+              "id": "ipbc3",
+              "topic": "Data Visualization"
+            },
+            {
+              "id": "ipbc4",
+              "topic": "Revision and Mini Project"
+            }
+          ]
+        },
+        {
+          "id": "iml",
+          "topic": "Introduction to Machine Learning",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "iml1",
+              "topic": "Basic Statistics and Probability"
+            },
+            {
+              "id": "iml2",
+              "topic": "Introduction to Machine Learning"
+            },
+            {
+              "id": "iml3",
+              "topic": "Data Preprocessing"
+            },
+            {
+              "id": "iml4",
+              "topic": "Linear Regression"
+            }
+          ]
+        },
+        {
+          "id": "sla",
+          "topic": "Supervised Learning Algorithms",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "sla1",
+              "topic": "Logistic Regression"
+            },
+            {
+              "id": "sla2",
+              "topic": "Decision Trees and Random Forests"
+            },
+            {
+              "id": "sla3",
+              "topic": "Support Vector Machines (SVM)"
+            },
+            {
+              "id": "sla4",
+              "topic": "Evaluation Metrics"
+            }
+          ]
+        },
+        {
+          "id": "ula",
+          "topic": "Unsupervised Learning Algorithms",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "ula1",
+              "topic": "Clustering Algorithms"
+            },
+            {
+              "id": "ula2",
+              "topic": "Dimensionality Reduction"
+            },
+            {
+              "id": "ula3",
+              "topic": "Association Rule Learning"
+            },
+            {
+              "id": "ula4",
+              "topic": "Anomaly Detection"
+            }
+          ]
+        },
+        {
+          "id": "inlp",
+          "topic": "Introduction to NLP",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "inlp1",
+              "topic": "Basics of NLP"
+            },
+            {
+              "id": "inlp2",
+              "topic": "Text Representation"
+            },
+            {
+              "id": "inlp3",
+              "topic": "Text Classification"
+            },
+            {
+              "id": "inlp4",
+              "topic": "Named Entity Recognition (NER)"
+            }
+          ]
+        },
+        {
+          "id": "anlpa",
+          "topic": "Advanced NLP Concepts",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "anlpa1",
+              "topic": "Advanced Text Representations"
+            },
+            {
+              "id": "anlpa2",
+              "topic": "Sequence-to-Sequence Models"
+            },
+            {
+              "id": "anlpa3",
+              "topic": "Machine Translation"
+            },
+            {
+              "id": "anlpa4",
+              "topic": "Text Summarization"
+            }
+          ]
+        },
+        {
+          "id": "dlnlp",
+          "topic": "Deep Learning for NLP",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "dlnlp1",
+              "topic": "Introduction to Deep Learning"
+            },
+            {
+              "id": "dlnlp2",
+              "topic": "Deep Learning Frameworks"
+            },
+            {
+              "id": "dlnlp3",
+              "topic": "CNNs for NLP"
+            },
+            {
+              "id": "dlnlp4",
+              "topic": "Attention Mechanisms"
+            }
+          ]
+        },
+        {
+          "id": "atfp",
+          "topic": "Advanced Topics and Final Project",
+          "direction": "right",
+          "expanded": false,
+          "children": [
+            {
+              "id": "atfp1",
+              "topic": "Transformers in Detail"
+            },
+            {
+              "id": "atfp2",
+              "topic": "Fine-tuning Pre-trained Models"
+            },
+            {
+              "id": "atfp3",
+              "topic": "Advanced Applications"
+            },
+            {
+              "id": "atfp4",
+              "topic": "Model Deployment"
+            },
+            {
+              "id": "atfp5",
+              "topic": "Final Project"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "additionalData": {
+    "pdfUrl": "assets/roadmaps/ML & NLP ROADMAP.pdf",
+    "pdfName": "ML & NLP ROADMAP.pdf",
+    "description":"Machine Learning (ML) involves the development of algorithms and statistical models that enable computers to learn from and make predictions or decisions based on data, without being explicitly programmed. Natural Language Processing (NLP) is a subset of ML that focuses on enabling computers to understand, interpret, and generate human language data, allowing for tasks such as language translation, sentiment analysis, and chatbot interactions.",
+    "faqs": [
+      {
+        "question": "What is Machine Learning (ML) and Natural Language Processing (NLP)?",
+        "answer": "Machine Learning is a subset of artificial intelligence (AI) that focuses on the development of algorithms and statistical models that enable computers to perform tasks without explicit programming."
+      },
+      {
+        "question": "Who is this ML & NLP course for?",
+        "answer": "This ML & NLP course is designed for aspiring data scientists, AI engineers, software developers, and anyone interested in leveraging machine learning and NLP techniques to solve real-world problems."
+      },
+      {
+        "question": "Is there any certification offered upon completion of the course?",
+        "answer": "Yes, upon successful completion, you will receive a certification recognizing your proficiency in ML and NLP."
+      }
+    ],      
+    "tabs":[
+      {
+       "title":"Why ML & NLP",
+       "content":"Learning Machine Learning (ML) and Natural Language Processing (NLP) opens up a world of opportunities in today's data-driven and AI-powered landscape. ML enables computers to learn from data and make predictions or decisions without being explicitly programmed, while NLP focuses on enabling computers to understand, interpret, and generate human language. Together, they are transforming industries by automating tasks, extracting insights from large datasets, and enhancing user experiences. Proficiency in ML and NLP equips individuals with sought-after skills for roles in data science, AI engineering, research, and more, making it a valuable investment in one's career."
+      },
+      {
+       "title":"Why ML & NLP from CKlassrooms",
+       "content":"Learning ML and NLP with CKlassroom ensures hands-on approach to mastering these advanced technologies. Our experts  deliver comprehensive instruction on ML algorithms, NLP methodologies, and their practical implementations. Through immersive projects, personalized guidance, and a supportive community, CKlassroom empowers learners to cultivate practical expertise and confidence in ML and NLP. Whether you're starting from scratch or seeking to enhance your skills, CKlassroom provides tailored courses to help you realize your potential and thrive in the dynamic domains of ML and NLP."
+      },
+      {
+        "title":"Pre-requisite",
+        "content":"A basic understanding of Python and data science concepts is necessary to grasp machine learning and natural language processing techniques effectively."
+      }
+    ]
+  }
+}

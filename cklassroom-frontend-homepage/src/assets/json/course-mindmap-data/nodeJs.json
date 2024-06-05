@@ -1,14 +1,15 @@
 {
   "mindMapData": {
     "meta": {
-      "name": "Node.js Roadmap",
+      "name": "Learn Node.js",
       "author": "Sudhirkumarrao Allada",
       "version": "1.0"
     },
     "format": "node_tree",
     "data": {
       "id": "root",
-      "background-image": "assets/images/courses/nodeJs.svg",
+      "description": "As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.",
+      "background-image": "assets/images/courses/nodeJs-course-image.jpg",
       "width": "100",
       "height": "100",
       "expanded": true,
@@ -194,6 +195,35 @@
   },
   "additionalData": {
     "pdfUrl": "assets/roadmaps/NODEJS ROADMAP.pdf",
-    "pdfName": "NODEJS ROADMAP.pdf"
+    "pdfName": "NODEJS ROADMAP.pdf",
+    "description":"Node.js is a runtime environment that allows developers to run JavaScript code outside of a web browser. It uses an event-driven, non-blocking I/O model, making it lightweight and efficient for building scalable network applications.",
+    "faqs": [
+      {
+        "question": "What is Node.js?",
+        "answer": "Node.js is an open-source, server-side runtime environment built on Chrome's V8 JavaScript engine. It allows you to run JavaScript code on the server."
+      },
+      {
+        "question": "Who is this Node.js course for?",
+        "answer": "This Node.js course is designed for both beginners and experienced developers who want to learn how to build server-side applications using Node.js."
+      },
+      {
+        "question": "How will learning Node.js benefit my career?",
+        "answer": "Mastering Node.js opens up opportunities for backend development roles, full-stack development positions, and careers in JavaScript-based server-side programming."
+      }
+    ],
+    "tabs":[
+      {
+       "title":"Why NodeJS",
+       "content":"Learning Node.js is crucial for modern web development because it allows developers to use JavaScript not only on the client side but also on the server side. This means you can build entire applications using just one programming language, making development more efficient. Node.js is particularly well-suited for handling multiple requests simultaneously, making it perfect for building real-time applications like chat applications or streaming services. Additionally, Node.js has a vast library of tools and frameworks that simplify development tasks, saving time and effort. Mastering Node.js opens up a wide range of opportunities in web development, including building web servers, APIs, and microservices, making it an essential skill for developers in today's tech industry."
+      },
+      {
+       "title":"Why NodeJS from CKlassrooms",
+       "content":"Learning Node.js from CKlassroom offers a structured and comprehensive approach tailored to aspiring developers. Our expert instructors provide thorough coverage of Node.js fundamentals and advanced concepts, ensuring a solid understanding of the technology. With hands-on projects, personalized mentorship, and a supportive learning environment, CKlassroom empowers learners to build practical skills and confidence in Node.js development. Whether you're new to programming or an experienced developer looking to expand your skill set, CKlassroom offers courses designed to help you succeed in mastering Node.js and advancing your career in web development."
+      },
+      {
+        "title":"Pre-requisite",
+        "content":"Familiarity with JavaScript and server-side concepts is essential for understanding Node.js applications."
+      }
+    ]
   }
 }

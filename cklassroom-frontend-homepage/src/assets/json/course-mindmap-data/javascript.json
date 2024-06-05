@@ -1,14 +1,15 @@
 {
   "mindMapData": {
     "meta": {
-      "name": "JavaScript Roadmap",
+      "name": "Learn JavaScript",
       "author": "Sudhirkumarrao Allada",
       "version": "1.0"
     },
     "format": "node_tree",
     "data": {
       "id": "root",
-      "background-image": "assets/images/courses/javascript.svg",
+      "description": "JavaScript is a scripting or programming language that allows you to implement complex features on web pages.",
+      "background-image": "assets/images/courses/JavaScript-course-image.jpg",
       "width": "100",
       "height": "100",
       "expanded": true,
@@ -145,6 +146,35 @@
   },
   "additionalData": {
     "pdfUrl": "assets/roadmaps/JAVASCRIPT ROADMAP.pdf",
-    "pdfName": "JAVASCRIPT ROADMAP.pdf"
+    "pdfName": "JAVASCRIPT ROADMAP.pdf",
+    "description":"JavaScript is a versatile programming language used to create dynamic and interactive web content. It enables developers to add functionality, handle user interactions, and manipulate webpage elements, making it essential for modern web development.",
+    "faqs": [
+      {
+        "question": "What is JavaScript?",
+        "answer": "JavaScript is a versatile programming language primarily used for adding interactivity and dynamic behavior to web pages."
+      },
+      {
+        "question": "Who is this JavaScript course designed for?",
+        "answer": "This JavaScript course is designed for individuals with varying levels of programming experience. Whether you're a beginner looking to dive into the world of web development or an experienced developer seeking to enhance your JavaScript skills, this course is suitable for you."
+      },
+      {
+        "question": "Do I need any special software to take this course?",
+        "answer": "You'll need a code editor like Visual Studio Code or Sublime Text, as well as a web browser for testing your JavaScript code."
+      }
+    ],
+    "tabs":[
+      {
+       "title":"Why Javascript",
+       "content":"Learning JavaScript is pivotal for anyone aspiring to become a well-rounded web developer. JavaScript is the backbone of interactive web development, enabling dynamic and responsive user experiences. With its versatility, JavaScript is used both on the client and server sides, making it a crucial skill for full-stack development. Mastering JavaScript opens up a world of possibilities in web development, allowing you to create engaging applications and websites."
+      },
+      {
+       "title":"Why Javascript from CKlassrooms",
+       "content":"Learning JavaScript from CKlassroom offers an enriching educational experience tailored to aspiring web developers. Our courses are meticulously designed and taught by industry professionals, ensuring a comprehensive understanding of JavaScript's core concepts and advanced techniques. With hands-on projects and personalized guidance, CKlassroom empowers learners to build practical skills and confidence in JavaScript development. Join CKlassroom to embark on a rewarding journey towards mastering JavaScript and unlocking your full potential as a proficient web developer."
+      },
+      {
+        "title":"Pre-requisite",
+        "content":"Basic understanding of programming concepts and web development fundamentals is necessary to learn JavaScript effectively."
+      }
+    ]
   }
 }
