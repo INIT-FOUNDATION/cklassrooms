@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { UtilityService } from '../../services/utility.service';
 import { environment } from 'src/environments/environment';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { MatDialog } from '@angular/material/dialog';
@@ -20,6 +20,7 @@ import { CoursesNavBarOverlayComponent } from '../courses-nav-bar-overlay/course
 export class HeaderComponent implements OnInit {
   active = false;
   verticalScrollValue: boolean = false;
+  showExpert = true;
   constructor(
     public themeService: ThemeService,
     public utilityService: UtilityService,
@@ -33,6 +34,13 @@ export class HeaderComponent implements OnInit {
   mindMapJson: any = {};
 
   ngOnInit(): void {
+    this.router.events.subscribe(ev => {
+      if (ev instanceof NavigationStart) {
+        console.log('Navigation started:', ev.url);
+        this.showExpert = (ev.url === "/")
+      }
+    });
+    console.log(this.router.url);
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(async(event: NavigationEnd) => {
@@ -43,7 +51,7 @@ export class HeaderComponent implements OnInit {
         const currentUrl = window.location.href;
         const parts = currentUrl.split('/');
         this.courseName = parts[parts.length - 1];
-        await this.fetchMindMapData();
+        // await this.fetchMindMapData();
       });
 
     gsap.registerPlugin(ScrollToPlugin);
