@@ -66,6 +66,7 @@ export class HeaderComponent implements OnInit {
   }
 
   scrollToTarget(target: string) {
+    console.log(target)
     gsap.to(window, { duration: 2, scrollTo: { y: `#${target}` } });
   }
 
