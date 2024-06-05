@@ -121,4 +121,7 @@ export class HeaderComponent implements OnInit {
     anchor.download = this.mindMapJson.additionalData.pdfName;
   }
 
+  openPayAfterPlacementPage() {
+    this.router.navigate([`/pay-after-placement`]);
+  }
 }
