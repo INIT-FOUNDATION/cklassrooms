@@ -51,7 +51,7 @@ export class HeaderComponent implements OnInit {
         const currentUrl = window.location.href;
         const parts = currentUrl.split('/');
         this.courseName = parts[parts.length - 1];
-        // await this.fetchMindMapData();
+        await this.fetchMindMapData();
       });
 
     gsap.registerPlugin(ScrollToPlugin);
@@ -71,6 +71,7 @@ export class HeaderComponent implements OnInit {
     this.mindMapJson = await this.dataService
       .loadMindMapData(this.courseName)
       .toPromise();
+      console.log(this.courseName)
   }
 
   scrollToTarget(target: string) {
@@ -128,6 +129,7 @@ export class HeaderComponent implements OnInit {
     const anchor = document.createElement('a');
     anchor.href = this.mindMapJson.additionalData.pdfUrl;
     anchor.download = this.mindMapJson.additionalData.pdfName;
+    anchor.click();
   }
 
   openPayAfterPlacementPage() {
