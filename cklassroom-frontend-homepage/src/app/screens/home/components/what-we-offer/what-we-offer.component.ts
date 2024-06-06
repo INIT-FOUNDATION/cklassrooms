@@ -92,20 +92,20 @@ export class WhatWeOfferComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    gsap.utils.toArray('.scroll-animation').forEach((element: HTMLElement) => {
-      gsap.from(element, {
-        opacity: 0,
-        y: 100,
-        duration: 3,
-        scrollTrigger: {
-          trigger: element,
-          start: 'top 80%', // trigger animation when top of element hits 80% of viewport
-          end: 'bottom 80%', // end animation when bottom of element hits 80% of viewport
-          once: true,
-          toggleActions: 'play none none none', // play animation when in view, pause when out of view
-          scrub: true, // smooth animation during scroll
-        },
-      });
-    });
+    // gsap.utils.toArray('.scroll-animation').forEach((element: HTMLElement) => {
+    //   gsap.from(element, {
+    //     opacity: 0,
+    //     y: 100,
+    //     duration: 3,
+    //     scrollTrigger: {
+    //       trigger: element,
+    //       start: 'top 80%', // trigger animation when top of element hits 80% of viewport
+    //       end: 'bottom 80%', // end animation when bottom of element hits 80% of viewport
+    //       once: true,
+    //       toggleActions: 'play none none none', // play animation when in view, pause when out of view
+    //       scrub: true, // smooth animation during scroll
+    //     },
+    //   });
+    // });
   }
 }

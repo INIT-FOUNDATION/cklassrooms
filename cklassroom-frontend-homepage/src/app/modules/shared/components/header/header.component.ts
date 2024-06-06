@@ -40,23 +40,22 @@ export class HeaderComponent implements OnInit {
   mindMapJson: any = {};
 
   ngOnInit(): void {
-    this.router.events.subscribe((ev) => {
+    this.router.events.subscribe(async(ev) => {
       if (ev instanceof NavigationStart) {
         this.showExpert = ev.url === '/';
-      }
-    });
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(async (event: NavigationEnd) => {
-        if (event.url === '/') {
+      } else if (ev instanceof NavigationEnd) {
+        if (ev.url === '/') {
           this.utilityService.showFooterSet = true;
         }
 
         const currentUrl = window.location.href;
-        const parts = currentUrl.split('/');
-        this.courseName = parts[parts.length - 1];
-        await this.fetchMindMapData();
-      });
+        if (currentUrl.indexOf("course-details") != -1) {
+          const parts = currentUrl.split('/');
+          this.courseName = parts[parts.length - 1];
+          await this.fetchMindMapData();
+        }
+      }
+    });
 
     gsap.registerPlugin(ScrollToPlugin);
 
