@@ -20,6 +20,15 @@ const routes: Routes = [
   },
 
   {
+    path: 'pay-after-placement',
+    loadChildren: () =>
+      import('./screens/pay-after-placement/pay-after-placement.module').then(
+        (m) => m.PayAfterPlacementModule
+      ),
+    canActivate: [AuthGuard],
+  },
+
+  {
     path: 'terms-and-condition',
     loadChildren: () =>
       import('./screens/terms-and-conditions/terms-and-conditions.module').then(

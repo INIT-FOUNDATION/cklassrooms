@@ -4,12 +4,13 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { UtilityService } from '../../services/utility.service';
 import { environment } from 'src/environments/environment';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { MatDialog } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../apply-dialog/apply-dialog.component';
 import { DataService } from '../../services/data.service';
+import { CoursesNavBarOverlayComponent } from '../courses-nav-bar-overlay/courses-nav-bar-overlay.component';
 
 @Component({
   selector: 'app-header',
@@ -19,6 +20,7 @@ import { DataService } from '../../services/data.service';
 export class HeaderComponent implements OnInit {
   active = false;
   verticalScrollValue: boolean = false;
+  showExpert = true;
   constructor(
     public themeService: ThemeService,
     public utilityService: UtilityService,
@@ -32,6 +34,13 @@ export class HeaderComponent implements OnInit {
   mindMapJson: any = {};
 
   ngOnInit(): void {
+    this.router.events.subscribe(ev => {
+      if (ev instanceof NavigationStart) {
+        console.log('Navigation started:', ev.url);
+        this.showExpert = (ev.url === "/")
+      }
+    });
+    console.log(this.router.url);
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(async(event: NavigationEnd) => {
@@ -42,7 +51,7 @@ export class HeaderComponent implements OnInit {
         const currentUrl = window.location.href;
         const parts = currentUrl.split('/');
         this.courseName = parts[parts.length - 1];
-        await this.fetchMindMapData();
+        // await this.fetchMindMapData();
       });
 
     gsap.registerPlugin(ScrollToPlugin);
@@ -65,6 +74,7 @@ export class HeaderComponent implements OnInit {
   }
 
   scrollToTarget(target: string) {
+    console.log(target)
     gsap.to(window, { duration: 2, scrollTo: { y: `#${target}` } });
   }
 
@@ -101,6 +111,14 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  openCoursesDialog() {
+    this.$gaService.event('click', 'Button', 'Open Apply dialog box', 1);
+    this.dialog.open(CoursesNavBarOverlayComponent, {
+      // width: 'clamp(20rem, 67vw, 64rem)',
+      height: '29rem',
+    });
+  }
+
   courseDetailsPage(): boolean {
     return this.router.url.includes('/course-details');
   }
@@ -112,4 +130,7 @@ export class HeaderComponent implements OnInit {
     anchor.download = this.mindMapJson.additionalData.pdfName;
   }
 
+  openPayAfterPlacementPage() {
+    this.router.navigate([`/pay-after-placement`]);
+  }
 }
