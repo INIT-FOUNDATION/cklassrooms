@@ -15,9 +15,11 @@ export class FooterComponent implements OnInit {
   courses: any = [];
   categories: any = [];
   categoryWiseCourses: any = {};
-  constructor(public themeService: ThemeService,
-              private router: Router,
-              private dataService: DataService) {}
+  constructor(
+    public themeService: ThemeService,
+    private router: Router,
+    private dataService: DataService
+  ) {}
 
   ngOnInit(): void {
     this.themeService.getActiveTheme.subscribe((res: string) => {
@@ -26,9 +28,8 @@ export class FooterComponent implements OnInit {
 
     this.courses = this.dataService.getCourseDetails();
     this.categories = this.dataService.getCourseCategoryDetails();
-    this.categories.forEach(element => {
-      let corse = this.courses.filter(el => el.category === element);
-      console.log(corse);
+    this.categories.forEach((element) => {
+      let corse = this.courses.filter((el) => el.category === element);
       this.categoryWiseCourses[element] = corse;
     });
   }

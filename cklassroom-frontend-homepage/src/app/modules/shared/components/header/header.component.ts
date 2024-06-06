@@ -4,7 +4,13 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { UtilityService } from '../../services/utility.service';
 import { environment } from 'src/environments/environment';
-import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
+import {
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router,
+} from '@angular/router';
 import { filter } from 'rxjs';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { MatDialog } from '@angular/material/dialog';
@@ -34,16 +40,14 @@ export class HeaderComponent implements OnInit {
   mindMapJson: any = {};
 
   ngOnInit(): void {
-    this.router.events.subscribe(ev => {
+    this.router.events.subscribe((ev) => {
       if (ev instanceof NavigationStart) {
-        console.log('Navigation started:', ev.url);
-        this.showExpert = (ev.url === "/")
+        this.showExpert = ev.url === '/';
       }
     });
-    console.log(this.router.url);
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(async(event: NavigationEnd) => {
+      .subscribe(async (event: NavigationEnd) => {
         if (event.url === '/') {
           this.utilityService.showFooterSet = true;
         }
@@ -51,7 +55,7 @@ export class HeaderComponent implements OnInit {
         const currentUrl = window.location.href;
         const parts = currentUrl.split('/');
         this.courseName = parts[parts.length - 1];
-        // await this.fetchMindMapData();
+        await this.fetchMindMapData();
       });
 
     gsap.registerPlugin(ScrollToPlugin);
@@ -74,7 +78,6 @@ export class HeaderComponent implements OnInit {
   }
 
   scrollToTarget(target: string) {
-    console.log(target)
     gsap.to(window, { duration: 2, scrollTo: { y: `#${target}` } });
   }
 
@@ -124,10 +127,16 @@ export class HeaderComponent implements OnInit {
   }
 
   downloadPdf() {
-    this.$gaService.event('click', 'Button', 'Download PDF', this.mindMapJson.additionalData.pdfName)
+    this.$gaService.event(
+      'click',
+      'Button',
+      'Download PDF',
+      this.mindMapJson.additionalData.pdfName
+    );
     const anchor = document.createElement('a');
     anchor.href = this.mindMapJson.additionalData.pdfUrl;
     anchor.download = this.mindMapJson.additionalData.pdfName;
+    anchor.click();
   }
 
   openPayAfterPlacementPage() {
