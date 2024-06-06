@@ -59,7 +59,7 @@
 
   <div class="md:hidden flex items-center">
     <button (click)="toggleMenu()" class="focus:outline-none">
-      <i class="fas fa-bars text-white text-2xl"></i>
+      <i [ngClass]="{ 'text-black': isLightTheme, 'text-white': !isLightTheme }" class="fas fa-bars text-white text-2xl"></i>
     </button>
   </div>
 
@@ -133,10 +133,10 @@
 </div>
 
   <div *ngIf="isMenuOpen" class="md:hidden flex flex-col items-start bg-green px-5 pt-3">
-    <span class="text-base cursor-pointer header-label hover:text-yellow-300" (click)="openPayAfterPlacementPage()">
+    <span class="text-base cursor-pointer header-label hover:text-yellow-300" (click)="openPayAfterPlacementPageAndCloseMenu()">
       Pay After Placement
     </span>
-    <span class="text-base mt-2 cursor-pointer header-label hover:text-yellow-300" (click)="openCoursesDialog()">
+    <span class="text-base mt-2 cursor-pointer header-label hover:text-yellow-300" (click)="openCoursesDialogAndCloseMenu()">
       Courses
     </span>
   </div>

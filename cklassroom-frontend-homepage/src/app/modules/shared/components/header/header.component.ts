@@ -25,6 +25,7 @@ import { CoursesNavBarOverlayComponent } from '../courses-nav-bar-overlay/course
 })
 export class HeaderComponent implements OnInit {
   isMenuOpen = false;
+  isLightTheme = true;
   active = false;
   verticalScrollValue: boolean = false;
   showExpert = true;
@@ -90,6 +91,7 @@ export class HeaderComponent implements OnInit {
     const currentTheme: any = this.themeService.active_theme;
     this.$gaService.event('click', 'Button', 'Theme Change', currentTheme);
     this.themeService.setActiveThem(this.themeService.active_theme);
+    this.isLightTheme = !this.isLightTheme;
   }
 
   goBack() {
@@ -145,5 +147,15 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  openPayAfterPlacementPageAndCloseMenu() {
+    this.openPayAfterPlacementPage();
+    this.isMenuOpen = false;
+  }
+
+  openCoursesDialogAndCloseMenu() {
+    this.openCoursesDialog();
+    this.isMenuOpen = false;
   }
 }
