@@ -57,19 +57,25 @@
     </button>
   </div>
 
-    <div
+  <div class="md:hidden flex items-center">
+    <button (click)="toggleMenu()" class="focus:outline-none">
+      <i class="fas fa-bars text-white text-2xl"></i>
+    </button>
+  </div>
+
+    <!-- <div
       class="hidden md:flex items-center"
       *ngIf="utilityService.showFooter$ | async"
     >
 
-      <!-- <span
+      <span
         class="text-base mx-4 animate__animated animate__fadeInDown cursor-pointer header-label hover:"
         style="animation-duration: 0.65s"
         (click)="scrollToTarget('experts')"
         *ngIf="showExpert"
       >
         Experts
-      </span> -->
+      </span>
 
       <span
         class="text-base animate__animated animate__fadeInDown cursor-pointer header-label hover:"
@@ -106,5 +112,33 @@
         </label>
       </div>
     </div>
+  </div> -->
+  
+  <div class="hidden md:flex items-center" *ngIf="utilityService.showFooter$ | async">
+    <span class="text-base animate__animated animate__fadeInDown cursor-pointer header-label hover:" style="animation-duration: 0.65s" (click)="openPayAfterPlacementPage()">
+      Pay After Placement
+    </span>
+    <span class="text-base mx-4 animate__animated animate__fadeInDown cursor-pointer header-label hover:" style="animation-duration: 0.8s" (click)="openCoursesDialog()">
+      Courses
+    </span>
+    <div class="toggle-switch-container border-2 border-zinc-400 px-10 rounded-3xl animate__animated animate__fadeInDown" style="animation-duration: 0.95s">
+      <input (change)="switchTheme()" [(ngModel)]="active" type="checkbox" id="themeCheckbox" class="opacity-0 absolute" />
+      <label for="themeCheckbox" class="toggle-body relative cursor-pointer rounded-3xl shadow">
+        <span class="toggle-button absolute rounded-2xl"></span>
+        <span class="absolute toggle-image-light"></span>
+        <span class="absolute toggle-image-dark"></span>
+      </label>
+    </div>
   </div>
+</div>
+
+  <div *ngIf="isMenuOpen" class="md:hidden flex flex-col items-start bg-green px-5 pt-3">
+    <span class="text-base cursor-pointer header-label hover:text-yellow-300" (click)="openPayAfterPlacementPage()">
+      Pay After Placement
+    </span>
+    <span class="text-base mt-2 cursor-pointer header-label hover:text-yellow-300" (click)="openCoursesDialog()">
+      Courses
+    </span>
+  </div>
+  
 </div>

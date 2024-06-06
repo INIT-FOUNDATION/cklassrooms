@@ -24,6 +24,7 @@ import { CoursesNavBarOverlayComponent } from '../courses-nav-bar-overlay/course
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  isMenuOpen = false;
   active = false;
   verticalScrollValue: boolean = false;
   showExpert = true;
@@ -140,5 +141,9 @@ export class HeaderComponent implements OnInit {
 
   openPayAfterPlacementPage() {
     this.router.navigate([`/pay-after-placement`]);
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
