@@ -14,18 +14,47 @@
       />
     </div>
     <div>
-      <mat-tab-group>
-        <mat-tab
-          *ngFor="let tab of mindMapJson?.additionalData?.tabs"
-          [label]="tab?.title"
-        >
-          <div *ngIf="tab?.content">
-            <p class="my-4 leading-7 text-sm">{{ tab?.content }}</p>
+   
+      <div class="hidden lg:block">
+        <mat-tab-group>
+          <mat-tab
+            *ngFor="let tab of mindMapJson?.additionalData?.tabs"
+            [label]="tab?.title"
+          >
+            <div *ngIf="tab?.content">
+              <p class="my-4 leading-7 text-sm">{{ tab?.content }}</p>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+      
+      <div class="block lg:hidden">
+        <mat-accordion>
+          <div
+            *ngFor="let tab of mindMapJson?.additionalData?.tabs; let i = index"
+            class="mb-2"
+          >
+            <mat-expansion-panel
+              class="bg-gray-cards !shadow-none rounded-xl py-1"
+              [expanded]="i === 0"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title class="font-color accordion-header">
+                  {{ tab?.title }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <ul class="text-green">
+                <li *ngIf="tab?.content" class="p-2">
+                  {{ tab?.content }}
+                </li>
+              </ul>
+            </mat-expansion-panel>
           </div>
-        </mat-tab>
-      </mat-tab-group>
+        </mat-accordion>
+      </div>
     </div>
   </div>
+  
 
   <div class="lg:w-1/3 p-3 md:p-6">
     <div
