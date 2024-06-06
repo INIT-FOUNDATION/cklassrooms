@@ -70,6 +70,8 @@ export class HeaderComponent implements OnInit {
 
       this.headerLogo = res === 'light_theme' ? 'logoLight' : 'logoDark';
     });
+
+    this.isLightTheme = this.detectCurrentTheme();
   }
 
   async fetchMindMapData() {
@@ -157,5 +159,9 @@ export class HeaderComponent implements OnInit {
   openCoursesDialogAndCloseMenu() {
     this.openCoursesDialog();
     this.isMenuOpen = false;
+  }
+
+  detectCurrentTheme(): boolean {
+    return document.body.classList.contains('light-theme');
   }
 }
