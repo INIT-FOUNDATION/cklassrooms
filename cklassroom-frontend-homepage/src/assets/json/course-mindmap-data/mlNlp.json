@@ -218,7 +218,7 @@
     "description":"Machine Learning (ML) involves the development of algorithms and statistical models that enable computers to learn from and make predictions or decisions based on data, without being explicitly programmed. Natural Language Processing (NLP) is a subset of ML that focuses on enabling computers to understand, interpret, and generate human language data, allowing for tasks such as language translation, sentiment analysis, and chatbot interactions.",
     "faqs": [
       {
-        "question": "What is Machine Learning (ML) and Natural Language Processing (NLP)?",
+        "question": "What is ML and NLP?",
         "answer": "Machine Learning is a subset of artificial intelligence (AI) that focuses on the development of algorithms and statistical models that enable computers to perform tasks without explicit programming."
       },
       {
@@ -226,7 +226,7 @@
         "answer": "This ML & NLP course is designed for aspiring data scientists, AI engineers, software developers, and anyone interested in leveraging machine learning and NLP techniques to solve real-world problems."
       },
       {
-        "question": "Is there any certification offered upon completion of the course?",
+        "question": "Will I receive a certificate upon completion?",
         "answer": "Yes, upon successful completion, you will receive a certification recognizing your proficiency in ML and NLP."
       }
     ],      
