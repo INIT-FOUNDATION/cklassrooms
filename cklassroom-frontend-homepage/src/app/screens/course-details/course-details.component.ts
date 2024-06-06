@@ -168,6 +168,10 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
       freeMode: true,
       centeredSlides: false,
       loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
       autoplay: {
         delay: 4000,
         disableOnInteraction: false,
@@ -180,7 +184,7 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
         },
         1024: {
           slidesPerView: 3,
-          spaceBetween: 50,
+          spaceBetween: 30,
         },
         1800: {
           slidesPerView: 4,

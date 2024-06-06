@@ -86,19 +86,18 @@
   <div class="swiper mySwiper mt-3">
     <div class="swiper-wrapper swiper-height">
       <div
-        class="swiper-slide relative courses-card-body overflow-hidden rounded-xl min-h-80"
+        class="swiper-slide relative courses-card-body overflow-hidden h-96 rounded-xl"
         *ngFor="let item of filteredCourses"
       >
         <div class="flex items-center flex-col">
           <img
             *ngIf="item?.id !== 9 && item?.id !== 10"
-            class="pt-3 h-60"
-            style="width: 10rem"
+            class="pt-3 h-56"
             src="assets/images/courses/{{ item?.img }}.svg"
           />
           <div
             *ngIf="item?.id == 9 || item?.id == 10"
-            class="bg-no-repeat bg-cover w-full flex items-center justify-center h-60"
+            class="bg-no-repeat bg-cover w-full flex items-center justify-center h-56"
             [ngStyle]="{
               'background-image': item.img
                 ? 'url(assets/images/courses/' + item.img + '.svg)'
@@ -106,7 +105,7 @@
             }"
           ></div>
           <div
-            class="py-2 my-2 self-start font-semibold w-full px-5 text-white text-center text-md"
+            class="py-2 self-start font-semibold w-full px-5 text-white text-center text-md"
             [ngStyle]="{ background: item?.color }"
           >
             {{ item?.courseName }}
@@ -151,4 +150,5 @@
       </div>
     </div>
   </div>
+  <div class="swiper-pagination mt-8"></div>
 </div>
