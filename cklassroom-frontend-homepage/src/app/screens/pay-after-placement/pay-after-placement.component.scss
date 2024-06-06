@@ -1,15 +1,24 @@
 @import "../../../theme/color";
-.bg-grey{
+
+.bg-grey {
     background-color: #f6f8fe;
 }
 
-.features-text{
-    color:#374151;
+.features-text {
+    color: #374151;
 }
 
 .bg-gray-cards {
     background-color: $themeBoxShadow;
     color: $themeFontColor;
     border: 1px solid var(--themeHoverBoxShadow);
-  }
-  
+}
+
+.explore-card {
+    border-radius: 1rem;
+}
+
+.btn-border-radius {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}

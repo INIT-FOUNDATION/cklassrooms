@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from 'src/app/modules/shared/services/data.service';
 import { ThemeService } from 'src/app/modules/shared/theme/theme.service';
 
 @Component({
@@ -7,6 +9,7 @@ import { ThemeService } from 'src/app/modules/shared/theme/theme.service';
   styleUrls: ['./pay-after-placement.component.scss']
 })
 export class PayAfterPlacementComponent implements OnInit {
+  getCourseList: any = [];
 
   keyFeatures: any[] = [
     {
@@ -59,7 +62,8 @@ export class PayAfterPlacementComponent implements OnInit {
     },
   ];
 
-  constructor( private themeService: ThemeService) {
+  constructor( private themeService: ThemeService,
+    private router: Router) {
    
    }
   learningPhaseImg = 'sectionLight';
@@ -70,4 +74,7 @@ export class PayAfterPlacementComponent implements OnInit {
     });
   }
 
+  navigateToCourseDetails(courseName): void {
+    this.router.navigate([`/course-details/${courseName}`]);
+  }
 }
