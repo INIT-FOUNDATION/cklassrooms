@@ -75,6 +75,7 @@ export class HeaderComponent implements OnInit {
     this.mindMapJson = await this.dataService
       .loadMindMapData(this.courseName)
       .toPromise();
+      console.log(this.courseName)
   }
 
   scrollToTarget(target: string) {
