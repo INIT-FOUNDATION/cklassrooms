@@ -25,7 +25,6 @@ import { CoursesNavBarOverlayComponent } from '../courses-nav-bar-overlay/course
 })
 export class HeaderComponent implements OnInit {
   isMenuOpen = false;
-  isLightTheme = true;
   active = false;
   verticalScrollValue: boolean = false;
   showExpert = true;
@@ -70,8 +69,6 @@ export class HeaderComponent implements OnInit {
 
       this.headerLogo = res === 'light_theme' ? 'logoLight' : 'logoDark';
     });
-
-    this.isLightTheme = this.detectCurrentTheme();
   }
 
   async fetchMindMapData() {
@@ -93,7 +90,6 @@ export class HeaderComponent implements OnInit {
     const currentTheme: any = this.themeService.active_theme;
     this.$gaService.event('click', 'Button', 'Theme Change', currentTheme);
     this.themeService.setActiveThem(this.themeService.active_theme);
-    this.isLightTheme = !this.isLightTheme;
   }
 
   goBack() {
@@ -152,16 +148,13 @@ export class HeaderComponent implements OnInit {
   }
 
   openPayAfterPlacementPageAndCloseMenu() {
-    this.openPayAfterPlacementPage();
     this.isMenuOpen = false;
+    this.router.navigate(['/pay-after-placement']);
   }
 
   openCoursesDialogAndCloseMenu() {
-    this.openCoursesDialog();
     this.isMenuOpen = false;
+    this.openCoursesDialog();
   }
 
-  detectCurrentTheme(): boolean {
-    return document.body.classList.contains('light-theme');
-  }
 }

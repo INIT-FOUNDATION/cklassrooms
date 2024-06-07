@@ -57,11 +57,9 @@
     </button>
   </div>
 
-  <div class="md:hidden flex items-center">
-    <button (click)="toggleMenu()" class="focus:outline-none">
-      <i [ngClass]="{ 'text-black': isLightTheme, 'text-white': !isLightTheme }" class="fas fa-bars text-white text-2xl"></i>
-    </button>
-  </div>
+  <button class="md:hidden p-2" (click)="toggleMenu()">
+    <i [ngClass]="{'fa-bars': !isMenuOpen, 'fa-times': isMenuOpen, 'text-black': !active, 'text-white': active}" class="fas text-2xl"></i>
+  </button>
 
   <div class="hidden md:flex items-center" *ngIf="utilityService.showFooter$ | async">
     <span class="text-base animate__animated animate__fadeInDown cursor-pointer header-label hover:" style="animation-duration: 0.65s" (click)="openPayAfterPlacementPage()">
@@ -81,13 +79,9 @@
   </div>
 </div>
 
-  <div *ngIf="isMenuOpen" class="md:hidden flex flex-col items-start bg-green px-5 pt-3">
-    <span class="text-base cursor-pointer header-label hover:text-yellow-300" (click)="openPayAfterPlacementPageAndCloseMenu()">
-      Pay After Placement
-    </span>
-    <span class="text-base mt-2 cursor-pointer header-label hover:text-yellow-300" (click)="openCoursesDialogAndCloseMenu()">
-      Courses
-    </span>
-  </div>
+<div *ngIf="isMenuOpen" class="md:hidden flex flex-col items-start bg-green px-5 pt-3">
+  <span class="text-base cursor-pointer header-label hover:text-yellow-300" (click)="openPayAfterPlacementPageAndCloseMenu()">Pay After Placement</span>
+  <span class="text-base mt-2 cursor-pointer header-label hover:text-yellow-300" (click)="openCoursesDialogAndCloseMenu()">Courses</span>
+</div>
   
 </div>
