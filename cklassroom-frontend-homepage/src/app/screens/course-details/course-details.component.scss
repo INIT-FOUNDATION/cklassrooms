@@ -5,23 +5,8 @@
 }
 
 ::ng-deep .mat-expansion-panel-header {
-  min-height: 60px;
-  padding: 5px 15px!important;
-
-  @media screen and (min-width: 1024px) and (max-width: 1097px) {
-    min-height: 70px;
-  }
-}
-
-.accordion-header{
-  font-size: 15px;
-  @media screen and (min-width: 1024px) and (max-width: 1097px) {
-    font-size: 13px;
-  }
-
-  @media screen and (max-width: 375px) {
-    font-size: 13px;
-  }
+  height: auto;
+  padding: 0.3rem 0.9rem !important;
 }
 
 .bg-gray-cards {
@@ -38,14 +23,25 @@
   background: transparent;
 }
 
-.font-color {
-  color: $themeFontColor;
-}
+// .font-color {
+//   color: #8a8686;
+// }
 
 ::ng-deep .mat-expansion-indicator::after {
   border-color: $themeFontColor;
 }
 
-.swiper-height{
+.swiper-height {
   height: 26rem;
+}
+
+.mat-expansion-panel-header-title {
+  font-size: 0.9rem !important;
+}
+
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header,
+.mat-expansion-panel {
+  color: $themeFontColor;
+  font: inherit;
 }
