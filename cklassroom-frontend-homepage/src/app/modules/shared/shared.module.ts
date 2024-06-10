@@ -19,6 +19,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatTabsModule } from '@angular/material/tabs';
 /*------------------- MATERIAL COMPONENTS ------------------------*/
 
 /*------------------- DIRECTIVES ------------------------*/
@@ -37,6 +38,7 @@ import { OtpNumberDirective } from './directives/otp-number.directive';
 import { IntegerInputDirective } from './directives/input-integer.directive';
 import { LoaderComponent } from './components/loader/loader.component';
 import { TestimonialDialogComponent } from './components/testimonial-dialog/testimonial-dialog.component';
+import { CoursesNavBarOverlayComponent } from './components/courses-nav-bar-overlay/courses-nav-bar-overlay.component';
 /*------------------- DIRECTIVES ------------------------*/
 
 const MY_FORMATS = {
@@ -83,10 +85,11 @@ const export_material_modules = [
   MatAutocompleteModule,
   NgxSpinnerModule,
   MatExpansionModule,
+  MatTabsModule,
 ];
 
 @NgModule({
-  declarations: [...export_components, ...export_directives, TestimonialDialogComponent],
+  declarations: [...export_components, ...export_directives, TestimonialDialogComponent, CoursesNavBarOverlayComponent],
   imports: [...export_material_modules, ToastrModule.forRoot()],
   exports: [
     FormsModule,

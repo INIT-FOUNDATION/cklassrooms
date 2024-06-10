@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import { ThemeService } from './modules/shared/theme/theme.service';
 import { CookieService } from './modules/shared/services/cookies.service';
 import { UtilityService } from './modules/shared/services/utility.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   constructor(
     private themeService: ThemeService,
     private cookieService: CookieService,
-    public utilityService: UtilityService
+    public utilityService: UtilityService,
+    private router: Router
   ) {
     const theme = cookieService.getCookie('theme');
     const darkModeMediaQuery = window.matchMedia(
@@ -39,6 +41,16 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     AOS.init();
+
+    this.router.events.subscribe((event) => {
+      if (!(event instanceof NavigationEnd)) {
+        return;
+      }
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    })    
   }
 
   ngAfterViewInit(): void {}

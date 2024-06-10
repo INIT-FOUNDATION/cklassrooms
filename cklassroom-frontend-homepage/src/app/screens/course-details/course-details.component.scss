@@ -4,6 +4,26 @@
   color: $themeFontColor !important;
 }
 
+::ng-deep .mat-expansion-panel-header {
+  min-height: 60px;
+  padding: 5px 15px!important;
+
+  @media screen and (min-width: 1024px) and (max-width: 1097px) {
+    min-height: 70px;
+  }
+}
+
+.accordion-header{
+  font-size: 15px;
+  @media screen and (min-width: 1024px) and (max-width: 1097px) {
+    font-size: 13px;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 13px;
+  }
+}
+
 .bg-gray-cards {
   background-color: $themeBoxShadow;
 }
@@ -27,5 +47,5 @@
 }
 
 .swiper-height{
-  height: 25rem;
+  height: 26rem;
 }

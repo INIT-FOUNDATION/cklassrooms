@@ -4,12 +4,19 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { UtilityService } from '../../services/utility.service';
 import { environment } from 'src/environments/environment';
-import { NavigationEnd, Router } from '@angular/router';
+import {
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router,
+} from '@angular/router';
 import { filter } from 'rxjs';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { MatDialog } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../apply-dialog/apply-dialog.component';
 import { DataService } from '../../services/data.service';
+import { CoursesNavBarOverlayComponent } from '../courses-nav-bar-overlay/courses-nav-bar-overlay.component';
 
 @Component({
   selector: 'app-header',
@@ -17,8 +24,10 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  isMenuOpen = false;
   active = false;
   verticalScrollValue: boolean = false;
+  showExpert = true;
   constructor(
     public themeService: ThemeService,
     public utilityService: UtilityService,
@@ -32,18 +41,22 @@ export class HeaderComponent implements OnInit {
   mindMapJson: any = {};
 
   ngOnInit(): void {
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(async(event: NavigationEnd) => {
-        if (event.url === '/') {
+    this.router.events.subscribe(async(ev) => {
+      if (ev instanceof NavigationStart) {
+        this.showExpert = ev.url === '/';
+      } else if (ev instanceof NavigationEnd) {
+        if (ev.url === '/') {
           this.utilityService.showFooterSet = true;
         }
 
         const currentUrl = window.location.href;
-        const parts = currentUrl.split('/');
-        this.courseName = parts[parts.length - 1];
-        await this.fetchMindMapData();
-      });
+        if (currentUrl.indexOf("course-details") != -1) {
+          const parts = currentUrl.split('/');
+          this.courseName = parts[parts.length - 1];
+          await this.fetchMindMapData();
+        }
+      }
+    });
 
     gsap.registerPlugin(ScrollToPlugin);
 
@@ -101,15 +114,47 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  openCoursesDialog() {
+    this.$gaService.event('click', 'Button', 'Open Apply dialog box', 1);
+    this.dialog.open(CoursesNavBarOverlayComponent, {
+      // width: 'clamp(20rem, 67vw, 64rem)',
+      height: '29rem',
+    });
+  }
+
   courseDetailsPage(): boolean {
     return this.router.url.includes('/course-details');
   }
 
   downloadPdf() {
-    this.$gaService.event('click', 'Button', 'Download PDF', this.mindMapJson.additionalData.pdfName)
+    this.$gaService.event(
+      'click',
+      'Button',
+      'Download PDF',
+      this.mindMapJson.additionalData.pdfName
+    );
     const anchor = document.createElement('a');
     anchor.href = this.mindMapJson.additionalData.pdfUrl;
     anchor.download = this.mindMapJson.additionalData.pdfName;
+    anchor.click();
+  }
+
+  openPayAfterPlacementPage() {
+    this.router.navigate([`/pay-after-placement`]);
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  openPayAfterPlacementPageAndCloseMenu() {
+    this.isMenuOpen = false;
+    this.router.navigate(['/pay-after-placement']);
+  }
+
+  openCoursesDialogAndCloseMenu() {
+    this.isMenuOpen = false;
+    this.openCoursesDialog();
   }
 
 }
