@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { UtilityService } from 'src/app/modules/shared/services/utility.service';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -33,5 +34,9 @@ export class HomeComponent implements OnInit {
   openUrl(url: any, type: string) {
     this.$gaService.event('click', 'Hyperlink', `${type} Url`, url);
     window.open(url, '_blank');
+  }
+
+  redirectToLogin(){
+    window.location.href = environment.studentloginURL;
   }
 }
