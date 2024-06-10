@@ -66,7 +66,7 @@ export class WhatWeOfferComponent implements OnInit, AfterViewInit {
       id: 4,
       img: 'monthsTraining',
       description:
-        'Enrol in a course featuring a 3-month training followed by a 3-month internship, offering a stipend of up to 5K during the internship period based on merit.',
+        'Enroll in a course featuring a 3-month training followed by a 3-month internship.',
       label: '6 Months Training',
     },
     {
