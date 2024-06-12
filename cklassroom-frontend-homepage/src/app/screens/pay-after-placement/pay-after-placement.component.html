@@ -1,43 +1,158 @@
 <div class="mt-24 md:mt-40 2xl:mt-24 xl:mx-36 pt-5 md:pt-7 lg:pt-10 xl:pt-12">
-    <div>
-        <div class="mb-5 xl:mb-2 font-bold underline-label md:text-xl xl:text-3xl pb-2 text-green">
-            Pay After Placement Program (PAPP)  -  ₹49,999 
-        </div>
-        <p class="font-medium text-base">Unlock your potential with our exclusive Pay After Placement Program, designed for ambitious individuals eager to launch their careers without financial barriers. This innovative online course ensures you only pay the fees after you secure a job, aligning our success with yours.</p>
+  <div>
+    <div
+      class="mb-5 xl:mb-2 font-bold underline-label md:text-xl xl:text-3xl pb-2 text-green"
+    >
+      Pay After Placement Program (PAP)
     </div>
+    <p class="font-medium text-base">
+      Unlock your potential with our exclusive Pay After Placement Program,
+      designed for ambitious individuals eager to launch their careers without
+      financial barriers. This innovative online course ensures you only pay the
+      fees after you secure a job, aligning our success with yours.
+    </p>
+  </div>
 
-    <div class="my-8 md:my-10">
-      <div class="border border-gray-400 rounded-2xl p-5 md:p-10 px-10 md:px-20">
-        <img
-          class="w-full h-full"
-          src="assets/images/payAfterPlacement/{{ learningPhaseImg }}.svg"
-          alt=""
-        />
-      </div>
+  <div class="my-8 md:my-10">
+    <div class="rounded-2xl">
+      <img
+        class="w-full h-full"
+        src="assets/images/payAfterPlacement/learningPhasesPAP.svg"
+        alt=""
+      />
     </div>
+  </div>
 
-    <div class="my-8 md:my-20 py-10 bg-gray-cards rounded-2xl">
+  <!-- <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div
+      class="rounded-2xl hover-card cursor-pointer shadow-md hover:scale-110 duration-300 overflow-hidden"
+      *ngFor="let item of coursesList"
+      (click)="openCourseDetailsPage(item.img)"
+    >
+      <img src="/assets/images/courses/{{ item?.img }}.svg" class="h-72" />
+      <button class="w-full bg-blue-600 text-white py-3">Explore more</button>
+    </div>
+  </div> -->
 
-      <div class="text-xl md:text-4xl text-center my-3 font-semibold text-green">
-        Key features of this program
-      </div>
-      <h2
-        class="text-sm md:text-base md:mx-10 lg:mx-40 xl:mx-60 text-center mb-8 md:mb-10 xl:mb-16 font-medium"
-      >
-      Join our Pay After Placement Program today and take the first step towards a rewarding career with confidence. Your success is our priority!
-      </h2>
-  
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div *ngFor="let item of keyFeatures" class="flex flex-col items-center p-7 md:mb-1 scroll-animation">
-          <img src="assets/images/payAfterPlacement/{{item.img}}.svg" class="" />
-          <div class="mt-3 mb-1 text-2xl font-bold w-60 text-center text-green">
-            {{ item.label }}
+  <mat-tab-group (selectedTabChange)="onTabChanged($event)">
+    <mat-tab *ngFor="let item of coursesList" [label]="item?.courseName">
+      <div class="flex flex-col lg:flex-row">
+        <div class="lg:w-2/3 p-3 md:p-6">
+          <h2 class="text-2xl font-semibold text-green">
+            {{ mindMapJson?.mindMapData?.meta?.name }}
+          </h2>
+          <p class="text-white-600 my-2 leading-7 text-base">
+            {{ mindMapJson?.additionalData?.description }}
+          </p>
+          <div class="relative">
+            <img
+              [src]="mindMapJson?.mindMapData?.data?.['background-image']"
+              alt="Course Thumbnail"
+              class="w-full rounded-lg mb-4 h-full"
+            />
           </div>
-          <span class="text-sm text-center">{{ item.description }}</span>
+          <div>
+            <mat-tab-group>
+              <mat-tab
+                *ngFor="let tab of mindMapJson?.additionalData?.tabs"
+                [label]="tab?.title"
+              >
+                <div *ngIf="tab?.content">
+                  <p class="my-4 leading-7 text-sm">{{ tab?.content }}</p>
+                </div>
+              </mat-tab>
+            </mat-tab-group>
+          </div>
+        </div>
+
+        <div class="lg:w-1/3 p-3 md:p-6">
+          <div
+            class="courses-card shadow-md p-4 rounded-xl md:flex md:flex-col md:space-y-6 mb-4"
+          >
+            <h2 class="font-semibold">Courses Overview</h2>
+            <div class="max-h-80 !mt-2 overflow-y-auto">
+              <mat-accordion>
+                <div
+                  *ngFor="
+                    let course of mindMapJson?.mindMapData?.data?.children
+                  "
+                  class="mb-2"
+                >
+                  <mat-expansion-panel
+                    class="bg-gray-cards !shadow-none rounded-xl py-1"
+                  >
+                    <mat-expansion-panel-header>
+                      <mat-panel-title class="text-sm">
+                        {{ course.topic }}
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <ul class="text-zinc-400 text-sm">
+                      <li *ngFor="let courseSub of course.children" class="p-2">
+                        {{ courseSub.topic }}
+                      </li>
+                    </ul>
+                  </mat-expansion-panel>
+                </div>
+              </mat-accordion>
+            </div>
+          </div>
+
+          <div
+            class="courses-card shadow-md p-4 rounded-xl md:flex md:flex-col md:space-y-6"
+          >
+            <h2 class="font-semibold">FAQs</h2>
+            <mat-accordion class="!mt-2">
+              <div
+                *ngFor="let faq of mindMapJson?.additionalData?.faqs"
+                class="mb-2"
+              >
+                <mat-expansion-panel
+                  class="bg-gray-cards !shadow-none rounded-xl py-1"
+                >
+                  <mat-expansion-panel-header>
+                    <mat-panel-title class="text-sm">
+                      {{ faq.question }}
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p class="pt-2 text-zinc-400 text-sm leading-6">
+                    {{ faq.answer }}
+                  </p>
+                </mat-expansion-panel>
+              </div>
+            </mat-accordion>
+          </div>
         </div>
       </div>
+    </mat-tab>
+  </mat-tab-group>
 
-      
-
+  <div class="my-8 md:my-10 py-10 bg-gray-cards rounded-2xl">
+    <div class="text-xl md:text-4xl text-center my-3 font-semibold text-green">
+      Key features of this program
     </div>
+    <h2
+      class="text-sm md:text-base md:mx-10 lg:mx-40 xl:mx-60 text-center mb-8 md:mb-10 xl:mb-16 font-medium"
+    >
+      Join our Pay After Placement Program today and take the first step towards
+      a rewarding career with confidence. Your success is our priority!
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div
+        *ngFor="let item of keyFeatures"
+        class="flex flex-col items-center p-7 md:mb-1 scroll-animation"
+      >
+        <img
+          src="assets/images/payAfterPlacement/{{ item.img }}.svg"
+          class=""
+        />
+        <div class="mt-3 mb-1 text-2xl font-bold w-60 text-center text-green">
+          {{ item.label }}
+        </div>
+        <span class="text-sm text-center">{{ item.description }}</span>
+      </div>
+    </div>
+  </div>
+
+  <app-testimonial></app-testimonial>
 </div>

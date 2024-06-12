@@ -20,7 +20,7 @@ export class CoursesComponent implements OnInit, AfterViewInit {
   getCourseList: any = [];
 
   ngOnInit(): void {
-    this.getCourses()
+    this.getCourses();
   }
 
   ngAfterViewInit(): void {
@@ -134,7 +134,7 @@ export class CoursesComponent implements OnInit, AfterViewInit {
   }
 
   openCourseDetailsPage(courseName) {
-    this.router.navigate([`/course-details/${courseName}`]);
+    window.open(`/course-details/${courseName}`);
     this.utilityService.showFooterSet = false;
   }
 }
