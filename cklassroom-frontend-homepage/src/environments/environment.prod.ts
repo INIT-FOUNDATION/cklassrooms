@@ -7,5 +7,6 @@ export const environment = {
   production: false,
   crm_prefix_url: `${CRM_BASE_URL}${API_CRM_PORT}/api/v1/common/crm/cklassroom`,
   landing_page_prefix: 'http://localhost:4200/',
-  ga: 'G-DHFBG5QNQ1'
+  ga: 'G-DHFBG5QNQ1',
+  studentloginURL: 'https://student.cklassrooms.com/login'
 };

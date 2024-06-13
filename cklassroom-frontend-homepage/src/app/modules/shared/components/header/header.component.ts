@@ -24,6 +24,7 @@ import { CoursesNavBarOverlayComponent } from '../courses-nav-bar-overlay/course
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  isMenuOpen = false;
   active = false;
   verticalScrollValue: boolean = false;
   showExpert = true;
@@ -40,23 +41,22 @@ export class HeaderComponent implements OnInit {
   mindMapJson: any = {};
 
   ngOnInit(): void {
-    this.router.events.subscribe((ev) => {
+    this.router.events.subscribe(async(ev) => {
       if (ev instanceof NavigationStart) {
         this.showExpert = ev.url === '/';
-      }
-    });
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(async (event: NavigationEnd) => {
-        if (event.url === '/') {
+      } else if (ev instanceof NavigationEnd) {
+        if (ev.url === '/') {
           this.utilityService.showFooterSet = true;
         }
 
         const currentUrl = window.location.href;
-        const parts = currentUrl.split('/');
-        this.courseName = parts[parts.length - 1];
-        await this.fetchMindMapData();
-      });
+        if (currentUrl.indexOf("course-details") != -1) {
+          const parts = currentUrl.split('/');
+          this.courseName = parts[parts.length - 1];
+          await this.fetchMindMapData();
+        }
+      }
+    });
 
     gsap.registerPlugin(ScrollToPlugin);
 
@@ -142,4 +142,19 @@ export class HeaderComponent implements OnInit {
   openPayAfterPlacementPage() {
     window.open(`/pay-after-placement`);
   }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  openPayAfterPlacementPageAndCloseMenu() {
+    this.isMenuOpen = false;
+    this.router.navigate(['/pay-after-placement']);
+  }
+
+  openCoursesDialogAndCloseMenu() {
+    this.isMenuOpen = false;
+    this.openCoursesDialog();
+  }
+
 }
