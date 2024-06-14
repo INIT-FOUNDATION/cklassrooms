@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
       setTimeout(() => {
         document.getElementsByClassName('pap-container')[0].classList.remove('animate__animated');
         document.getElementsByClassName('pap-container')[0].classList.remove('animate__bounceInDown');
-      }, 10);
+      }, 100);
     })
   }
 }
