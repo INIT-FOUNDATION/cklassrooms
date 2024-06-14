@@ -1,24 +1,37 @@
 @import "../../../theme/color";
-
 .bg-grey {
-    background-color: #f6f8fe;
+  background-color: #f6f8fe;
 }
 
 .features-text {
-    color: #374151;
+  color: #374151;
 }
 
 .bg-gray-cards {
-    background-color: $themeBoxShadow;
-    color: $themeFontColor;
-    border: 1px solid var(--themeHoverBoxShadow);
+  background-color: $themeBoxShadow;
+  color: $themeFontColor;
+  border: 1px solid var(--themeHoverBoxShadow);
 }
 
-.explore-card {
-    border-radius: 1rem;
+::ng-deep .mat-tab-label {
+  color: $themeFontColor !important;
 }
 
-.btn-border-radius {
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+::ng-deep .mat-expansion-panel-header {
+  height: auto;
+  padding: 0.3rem 0.9rem !important;
+}
+
+.courses-card,
+.courses-card-body {
+  border: 1px solid $themeBoxShadow;
+}
+
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"])
+  .mat-expansion-panel-header:hover {
+  background: transparent;
+}
+
+::ng-deep .mat-expansion-indicator::after {
+  border-color: $themeFontColor;
 }

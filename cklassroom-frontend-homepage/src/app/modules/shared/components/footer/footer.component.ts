@@ -35,7 +35,8 @@ export class FooterComponent implements OnInit {
   }
 
   openCourseDetailsPage(courseName) {
-    this.router.navigate([`/course-details/${courseName}`]);
+    window.open(`/course-details/${courseName}`);
+    // this.router.navigate([`/course-details/${courseName}`]);
     setTimeout(() => {
       window.location.reload();
     }, 100);

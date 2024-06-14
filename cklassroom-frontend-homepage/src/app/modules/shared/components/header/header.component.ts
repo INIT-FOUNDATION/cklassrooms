@@ -140,7 +140,7 @@ export class HeaderComponent implements OnInit {
   }
 
   openPayAfterPlacementPage() {
-    this.router.navigate([`/pay-after-placement`]);
+    window.open(`/pay-after-placement`);
   }
 
   toggleMenu() {

@@ -50,9 +50,19 @@
           </a>
         </div>
         <!-- <app-apply-button additionalClasses="px-5 py-3"></app-apply-button> -->
-        <div class="flex flex-col lg:flex-row lg:items-center md:flex-col items-center">
-          <app-apply-button additionalClasses="px-5 py-3 mb-4 lg:mb-0 w-80 lg:w-60 lg:mr-4"></app-apply-button>
-          <button type="button" class="border-button rounded-lg py-3 w-80 lg:w-60 font-bold" (click)="redirectToLogin()">Student Login</button>
+        <div
+          class="flex flex-col lg:flex-row lg:items-center md:flex-col items-center"
+        >
+          <app-apply-button
+            additionalClasses="px-5 py-3 mb-4 lg:mb-0 w-80 lg:w-60 lg:mr-4"
+          ></app-apply-button>
+          <button
+            type="button"
+            class="bg-theme-2 text-white rounded-lg py-3 w-80 lg:w-60 font-bold"
+            (click)="redirectToLogin()"
+          >
+            Student Login
+          </button>
         </div>
       </div>
     </div>
@@ -104,7 +114,7 @@
   <div class="my-8 md:my-40">
     <img
       class="w-full h-full"
-      src="assets/images/sixMonthsPhase/{{ learningPhaseImg }}.svg"
+      src="/assets/images/payAfterPlacement/learningPhasesPAP.svg"
       alt=""
     />
   </div>

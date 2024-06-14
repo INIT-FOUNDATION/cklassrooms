@@ -1,9 +1,9 @@
 <div class="flex flex-col lg:flex-row pt-28 mt-1">
   <div class="lg:w-2/3 p-3 md:p-6">
-    <h2 class="text-2xl font-semibold mb-4">
+    <h2 class="text-2xl font-semibold text-green">
       {{ mindMapJson?.mindMapData?.meta?.name }}
     </h2>
-    <p class="text-white-600 mb-4 text-green leading-7">
+    <p class="text-white-600 my-2 leading-7 text-base">
       {{ mindMapJson?.additionalData?.description }}
     </p>
     <div class="relative">
@@ -60,7 +60,7 @@
     <div
       class="courses-card shadow-md p-4 rounded-xl md:flex md:flex-col md:space-y-6 mb-4"
     >
-      <h2 class="text-xl font-semibold">Courses Overview</h2>
+      <h2 class="font-semibold">Courses Overview</h2>
       <div class="max-h-80 !mt-2 overflow-y-auto">
         <mat-accordion>
           <div
@@ -71,11 +71,11 @@
               class="bg-gray-cards !shadow-none rounded-xl py-1"
             >
               <mat-expansion-panel-header>
-                <mat-panel-title class="font-color accordion-header">
+                <mat-panel-title class="text-sm">
                   {{ course.topic }}
                 </mat-panel-title>
               </mat-expansion-panel-header>
-              <ul class="text-green">
+              <ul class="faq-desc text-sm">
                 <li *ngFor="let courseSub of course.children" class="p-2">
                   {{ courseSub.topic }}
                 </li>
@@ -89,18 +89,18 @@
     <div
       class="courses-card shadow-md p-4 rounded-xl md:flex md:flex-col md:space-y-6"
     >
-      <h2 class="text-xl font-semibold">FAQs</h2>
+      <h2 class="font-semibold">FAQs</h2>
       <mat-accordion class="!mt-2">
         <div *ngFor="let faq of mindMapJson?.additionalData?.faqs" class="mb-2">
           <mat-expansion-panel
             class="bg-gray-cards !shadow-none rounded-xl py-1"
           >
             <mat-expansion-panel-header>
-              <mat-panel-title class="font-color accordion-header">
+              <mat-panel-title class="text-sm">
                 {{ faq.question }}
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <p class="pt-4 text-green">
+            <p class="pt-2 faq-desc text-sm leading-6">
               {{ faq.answer }}
             </p>
           </mat-expansion-panel>

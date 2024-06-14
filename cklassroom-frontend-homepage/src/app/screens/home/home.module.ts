@@ -34,5 +34,6 @@ import { AchievementsComponent } from './components/achievements/achievements.co
     FormsModule,
     StarRatingModule.forRoot(),
   ],
+  exports: [TestimonialComponent],
 })
 export class HomeModule {}

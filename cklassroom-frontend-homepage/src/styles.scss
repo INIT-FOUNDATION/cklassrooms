@@ -86,23 +86,38 @@ button:focus-visible {
   font-family: "Montserrat" !important;
 }
 
-.jsmind-inner {
-  position: fixed !important;
-
-  // @media (max-width: 750px) {
-  //   left: -5rem;
-  // }
+.mat-expansion-panel-header-title {
+  font-size: 0.9rem !important;
 }
 
-jmexpander {
-  width: 15px;
-  height: 15px;
-  line-height: 15px;
-  font-size: 15px;
-  border-radius: 16px;
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header,
+.mat-expansion-panel {
+  color: $themeFontColor;
+  font: inherit;
 }
 
-jmnodes.theme-greensea jmnode {
-  background-repeat: no-repeat;
-  background-size: cover !important;
+.mat-expansion-panel-header.mat-expanded:hover {
+  background-color: unset;
+}
+
+.mat-accordion .mat-expansion-panel:last-of-type {
+  background-color: $themeBoxShadow;
+}
+
+.mat-expansion-panel:not([class*="mat-elevation-z"]) {
+  box-shadow: none;
+}
+
+.mat-expansion-panel-header {
+  min-height: 3rem;
+  height: unset;
+}
+
+.mat-expansion-panel-header.mat-expanded:focus{
+  background-color: transparent !important;
+}
+
+.faq-desc {
+  color: #747474;
 }
