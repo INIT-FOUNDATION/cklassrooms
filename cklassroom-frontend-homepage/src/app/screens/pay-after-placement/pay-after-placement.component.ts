@@ -198,4 +198,17 @@ export class PayAfterPlacementComponent implements OnInit, AfterViewInit {
       width: 'clamp(20rem, 60vw, 35rem)',
     });
   }
+
+  downloadPdf(pdfName: any, pdfUrl: string) {
+    this.$gaService.event(
+      'click',
+      'Button',
+      'Download PDF',
+      pdfName
+    );
+    const anchor = document.createElement('a');
+    anchor.href = pdfUrl;
+    anchor.download = pdfName;
+    anchor.click();
+  }
 }
