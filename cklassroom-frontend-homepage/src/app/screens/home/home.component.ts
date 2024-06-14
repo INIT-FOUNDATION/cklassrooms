@@ -56,13 +56,20 @@ export class HomeComponent implements OnInit {
   }
 
   openDialog() {
-    this.dialog.open(PapDialogComponent, {
+    const dialogRef = this.dialog.open(PapDialogComponent, {
       width: 'clamp(30rem, 60vw, 50rem)',
       panelClass: [
         'pap-container',
         'animate__animated',
         'animate__bounceInDown',
-      ],
+      ]
     });
+
+    dialogRef.afterOpened().subscribe(res => {
+      setTimeout(() => {
+        document.getElementsByClassName('pap-container')[0].classList.remove('animate__animated');
+        document.getElementsByClassName('pap-container')[0].classList.remove('animate__bounceInDown');
+      }, 10);
+    })
   }
 }
