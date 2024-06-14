@@ -75,7 +75,7 @@
                   {{ course.topic }}
                 </mat-panel-title>
               </mat-expansion-panel-header>
-              <ul class="text-zinc-400 text-sm">
+              <ul class="faq-desc text-sm">
                 <li *ngFor="let courseSub of course.children" class="p-2">
                   {{ courseSub.topic }}
                 </li>
@@ -100,7 +100,7 @@
                 {{ faq.question }}
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <p class="pt-2 text-zinc-400 text-sm leading-6">
+            <p class="pt-2 faq-desc text-sm leading-6">
               {{ faq.answer }}
             </p>
           </mat-expansion-panel>

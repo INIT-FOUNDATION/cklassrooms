@@ -18,30 +18,10 @@
   border: 1px solid $themeBoxShadow;
 }
 
-.mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"])
-  .mat-expansion-panel-header:hover {
-  background: transparent;
-}
-
-// .font-color {
-//   color: #8a8686;
-// }
-
-::ng-deep .mat-expansion-indicator::after {
-  border-color: $themeFontColor;
-}
-
 .swiper-height {
   height: 26rem;
 }
 
-.mat-expansion-panel-header-title {
-  font-size: 0.9rem !important;
-}
-
-.mat-expansion-panel-header-title,
-.mat-expansion-panel-header,
-.mat-expansion-panel {
-  color: $themeFontColor;
-  font: inherit;
+.faq-desc {
+  color: #747474;
 }

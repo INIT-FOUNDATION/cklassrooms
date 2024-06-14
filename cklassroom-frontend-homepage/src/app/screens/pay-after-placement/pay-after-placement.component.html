@@ -155,4 +155,46 @@
   </div>
 
   <app-testimonial></app-testimonial>
+
+  <div class="my-8 md:my-40">
+    <div class="my-5" *ngFor="let item of faqList">
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title> {{ item?.question }} </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p
+            class="faq-desc leading-6 font-medium"
+            *ngIf="item?.answer ? item?.answer : ''"
+          >
+            {{ item?.answer }}
+          </p>
+          <p
+            class="faq-desc leading-6 ps-3 py-3"
+            *ngIf="item?.answer1 ? item?.answer1 : ''"
+          >
+            * {{ item?.answer1 }}
+          </p>
+          <p
+            class="faq-desc leading-6 ps-3"
+            *ngIf="item?.answer2 ? item?.answer2 : ''"
+          >
+            * {{ item?.answer2 }}
+          </p>
+          <p
+            class="faq-desc leading-6 ps-3 py-3"
+            *ngIf="item?.answer3 ? item?.answer3 : ''"
+          >
+            * {{ item?.answer3 }}
+          </p>
+          <p
+            class="faq-desc leading-6 ps-3"
+            *ngIf="item?.answer4 ? item?.answer4 : ''"
+          >
+            * {{ item?.answer4 }}
+          </p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
 </div>

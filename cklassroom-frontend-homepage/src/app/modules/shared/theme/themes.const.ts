@@ -17,6 +17,6 @@ export const themes = {
     '--themeBoxShadow': '#73798129',
     '--themeHoverBoxShadow': '#1b1f24',
     '--themeDialogModal': '#112D4E',
-    '--themeButtonColor': '#849fff',
+    '--themeButtonColor': '#4167f0',
   },
 };
