@@ -39,6 +39,7 @@ import { IntegerInputDirective } from './directives/input-integer.directive';
 import { LoaderComponent } from './components/loader/loader.component';
 import { TestimonialDialogComponent } from './components/testimonial-dialog/testimonial-dialog.component';
 import { CoursesNavBarOverlayComponent } from './components/courses-nav-bar-overlay/courses-nav-bar-overlay.component';
+import { PapDialogComponent } from './components/pap-dialog/pap-dialog.component';
 /*------------------- DIRECTIVES ------------------------*/
 
 const MY_FORMATS = {
@@ -89,7 +90,7 @@ const export_material_modules = [
 ];
 
 @NgModule({
-  declarations: [...export_components, ...export_directives, TestimonialDialogComponent, CoursesNavBarOverlayComponent],
+  declarations: [...export_components, ...export_directives, TestimonialDialogComponent, CoursesNavBarOverlayComponent, PapDialogComponent],
   imports: [...export_material_modules, ToastrModule.forRoot()],
   exports: [
     FormsModule,

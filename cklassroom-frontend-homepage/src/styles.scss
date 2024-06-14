@@ -114,10 +114,33 @@ button:focus-visible {
   height: unset;
 }
 
-.mat-expansion-panel-header.mat-expanded:focus{
+.mat-expansion-panel-header.mat-expanded:focus {
   background-color: transparent !important;
 }
 
 .faq-desc {
   color: #747474;
+}
+
+.pap-container .mat-dialog-container {
+  @media (min-width: 768px) {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(1rem);
+  }
+  border-radius: 0.8rem;
+  overflow: visible;
+  position: relative;
+}
+
+.pap-container {
+  animation: pap-dialog 0.35s;
+}
+
+@keyframes pap-dialog {
+  0% {
+    top: -35rem;
+  }
+  100% {
+    top: 0rem;
+  }
 }

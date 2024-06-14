@@ -65,16 +65,33 @@
   background-color: $themeSecondary;
 }
 
-.download-icon{
+.download-icon {
   display: none;
 }
 
-@media screen and (max-width:425px) {
-  .download-btn{
-    display:none;
+@media screen and (max-width: 425px) {
+  .download-btn {
+    display: none;
   }
 
-  .download-icon{
-    display: flex
+  .download-icon {
+    display: flex;
+  }
+}
+
+.animate-hand {
+  animation: animate-hand 2s linear infinite;
+  position: relative;
+}
+
+@keyframes animate-hand {
+  0% {
+    left: -0.3rem;
+  }
+  50% {
+    left: 0.3rem;
+  }
+  100% {
+    left: -0.3rem;
   }
 }
