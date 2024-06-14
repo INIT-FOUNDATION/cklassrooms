@@ -1,4 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { ApplyDialogComponent } from 'src/app/modules/shared/components/apply-dialog/apply-dialog.component';
 import { DataService } from 'src/app/modules/shared/services/data.service';
 import { UtilityService } from 'src/app/modules/shared/services/utility.service';
 import { ThemeService } from 'src/app/modules/shared/theme/theme.service';
@@ -96,6 +99,14 @@ export class PayAfterPlacementComponent implements OnInit, AfterViewInit {
     },
     {
       id: 3,
+      question: 'I have more questions; how can I contact you?',
+      answer: "We're happy to help! You can reach us through various channels:",
+      answer1: 'Fill out the contact form on our website',
+      answer2: 'Call or WhatsApp us directly at +91-8527718187',
+      answer3: 'Schedule a call with our admissions team through the website',
+    },
+    {
+      id: 4,
       question: 'What is the duration of the Pay After Placement Program?',
       answer: 'The program is 6 months long, divided into two phases:',
       answer1:
@@ -104,7 +115,7 @@ export class PayAfterPlacementComponent implements OnInit, AfterViewInit {
         '3 months: Practical application through real-world project development, preparing you for the job market',
     },
     {
-      id: 4,
+      id: 5,
       question: 'What training modules are included in the program?',
       answer: 'The program offers comprehensive training in:',
       answer1:
@@ -113,7 +124,7 @@ export class PayAfterPlacementComponent implements OnInit, AfterViewInit {
         'Module 2: MEAN or MERN Stack (Basic to Advanced) - Choose your preferred stack (MongoDB, Express, Angular/React, Node.js) and master its functionalities',
     },
     {
-      id: 5,
+      id: 6,
       question:
         'What type of real-world projects will I work on in the program?',
       answer:
@@ -123,7 +134,7 @@ export class PayAfterPlacementComponent implements OnInit, AfterViewInit {
       answer3: 'Working on projects relevant to your career goals',
     },
     {
-      id: 6,
+      id: 7,
       question:
         'Is there a guarantee of placement after completing the program?',
       answer1:
@@ -138,7 +149,9 @@ export class PayAfterPlacementComponent implements OnInit, AfterViewInit {
   constructor(
     private themeService: ThemeService,
     private utilityService: UtilityService,
-    private dataService: DataService
+    private dataService: DataService,
+    private dialog: MatDialog,
+    private $gaService: GoogleAnalyticsService
   ) {}
   learningPhaseImg = 'sectionLight';
   courseName = 'htmlCssJs';
@@ -177,5 +190,12 @@ export class PayAfterPlacementComponent implements OnInit, AfterViewInit {
     this.mindMapJson = await this.dataService
       .loadMindMapData(this.courseName)
       .toPromise();
+  }
+
+  openDialog() {
+    this.$gaService.event('click', 'Button', 'Open Apply dialog box', 1);
+    this.dialog.open(ApplyDialogComponent, {
+      width: 'clamp(20rem, 60vw, 35rem)',
+    });
   }
 }

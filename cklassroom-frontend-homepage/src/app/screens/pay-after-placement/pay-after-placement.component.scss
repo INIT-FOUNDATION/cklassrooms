@@ -35,3 +35,15 @@
 ::ng-deep .mat-expansion-indicator::after {
   border-color: $themeFontColor;
 }
+
+.border-button {
+  border: 1px solid $themeButtonColor;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  color: $themeButtonColor;
+}
+
+.border-button:hover {
+  outline: none;
+  box-shadow: 3px 3px 0 0 $themeButtonColor;
+  transform: translate(-4px, -4px);
+}
