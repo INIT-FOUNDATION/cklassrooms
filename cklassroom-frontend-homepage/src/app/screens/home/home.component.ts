@@ -29,7 +29,9 @@ export class HomeComponent implements OnInit {
         res === 'light_theme' ? 'sectionLight' : 'sectionDark';
     });
 
-    this.openDialog()
+    setTimeout(() => {
+      this.openDialog();
+    }, 3000);
 
     this.utilityService.showFooterSet = true;
   }
@@ -56,7 +58,7 @@ export class HomeComponent implements OnInit {
   openDialog() {
     this.dialog.open(PapDialogComponent, {
       width: 'clamp(30rem, 60vw, 50rem)',
-      panelClass:['pap-container']
+      panelClass:['pap-container', 'animate__animated', 'animate__bounceInDown']
     });
   }
 }
