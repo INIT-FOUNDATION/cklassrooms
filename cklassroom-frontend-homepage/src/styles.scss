@@ -123,9 +123,16 @@ button:focus-visible {
 }
 
 .pap-container .mat-dialog-container {
-  // background: rgba(255, 255, 255, 0.25);
-  // backdrop-filter: blur(1rem);
+  @media (min-width: 768px) {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(1rem);
+  }
   border-radius: 0.8rem;
   overflow: visible;
   position: relative;
+}
+
+.pap-container {
+  -webkit-animation-fill-mode: none !important;
+  animation-fill-mode: none !important;
 }
