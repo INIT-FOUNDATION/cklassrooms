@@ -5,29 +5,42 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { UtilityService } from 'src/app/modules/shared/services/utility.service';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { environment } from 'src/environments/environment';
+import { MatDialog } from '@angular/material/dialog';
+import { PapDialogComponent } from 'src/app/modules/shared/components/pap-dialog/pap-dialog.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private themeService: ThemeService,
-              private utilityService: UtilityService,
-              private $gaService: GoogleAnalyticsService ) {}
+  constructor(
+    private themeService: ThemeService,
+    private utilityService: UtilityService,
+    private $gaService: GoogleAnalyticsService,
+    private dialog: MatDialog
+  ) {}
   learningPhaseImg = 'sectionLight';
 
   ngOnInit(): void {
     this.$gaService.pageView('/', 'Home');
     gsap.registerPlugin(ScrollToPlugin);
     this.themeService.getActiveTheme.subscribe((res: string) => {
-      this.learningPhaseImg = res === 'light_theme' ? 'sectionLight' : 'sectionDark';
+      this.learningPhaseImg =
+        res === 'light_theme' ? 'sectionLight' : 'sectionDark';
     });
+
+    this.openDialog()
 
     this.utilityService.showFooterSet = true;
   }
 
   scrollToTarget(target: string) {
-    this.$gaService.event('scroll', 'Page scroll' , `Scrolled to ${target}`, (target as any))
+    this.$gaService.event(
+      'scroll',
+      'Page scroll',
+      `Scrolled to ${target}`,
+      target as any
+    );
     gsap.to(window, { duration: 0.8, scrollTo: { y: `#${target}` } });
   }
 
@@ -36,7 +49,14 @@ export class HomeComponent implements OnInit {
     window.open(url, '_blank');
   }
 
-  redirectToLogin(){
+  redirectToLogin() {
     window.location.href = environment.studentloginURL;
+  }
+
+  openDialog() {
+    this.dialog.open(PapDialogComponent, {
+      width: 'clamp(30rem, 60vw, 50rem)',
+      panelClass:['pap-container']
+    });
   }
 }

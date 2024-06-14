@@ -13,22 +13,19 @@
     </p>
   </div>
 
-  <div class="my-8 md:my-10">
-    <div class="rounded-2xl">
-      <img
-        class="w-full h-full"
-        src="assets/images/payAfterPlacement/learningPhasesPAP.svg"
-        alt=""
-      />
-    </div>
+  <div class="rounded-2xl my-8">
+    <img
+      class="w-full h-full"
+      src="assets/images/payAfterPlacement/learningPhasesPAP.svg"
+      alt=""
+    />
   </div>
 
   <mat-tab-group (selectedTabChange)="onTabChanged($event)">
     <mat-tab *ngFor="let item of coursesList" [label]="item?.courseName">
       <div class="flex flex-col lg:flex-row">
-        <div class="lg:w-3/3 p-3 md:p-6">
-          <div class="flex items-center space-x-4">
-
+        <div class="lg:w-3/3 px-3 md:px-6">
+          <div class="flex items-end justify-between space-x-4">
             <h2 class="text-2xl font-semibold text-green">
               {{ mindMapJson?.mindMapData?.meta?.name }}
             </h2>
@@ -36,12 +33,17 @@
               <button
                 type="button"
                 class="hover-card px-5 py-3 rounded-xl text-sm font-medium mr-4 ms-4"
-                (click)="downloadPdf(mindMapJson?.additionalData?.pdfName, mindMapJson?.additionalData?.pdfUrl)"
+                (click)="
+                  downloadPdf(
+                    mindMapJson?.additionalData?.pdfName,
+                    mindMapJson?.additionalData?.pdfUrl
+                  )
+                "
               >
                 <h1 class="download-btn">Download PDF</h1>
                 <i class="fas fa-download download-icon"></i>
               </button>
-          
+
               <button
                 type="button"
                 class="hover-card px-5 py-3 rounded-xl text-sm font-medium"
@@ -69,7 +71,7 @@
                 [label]="tab?.title"
               >
                 <div *ngIf="tab?.content">
-                  <p class="my-4 leading-7 text-sm">{{ tab?.content }}</p>
+                  <p class="mt-4 leading-7 text-sm">{{ tab?.content }}</p>
                 </div>
               </mat-tab>
             </mat-tab-group>
@@ -117,7 +119,7 @@
     </div>
   </div>
 
-  <div class="flex justify-center items-center my-8 md:my-20">
+  <div class="flex justify-center items-center mt-8 md:mt-20">
     <button
       type="button"
       class="border-button rounded-lg py-5 w-80 mb-3 md:mb-0 font-bold md:mr-4 tracking-wider"
@@ -127,7 +129,7 @@
     </button>
   </div>
 
-  <app-testimonial></app-testimonial>
+  <app-testimonial [isFromPayAfterPlacement]="true"></app-testimonial>
 
   <div class="flex justify-center items-center my-8 md:my-20">
     <button
@@ -139,7 +141,7 @@
     </button>
   </div>
 
-  <div class="my-8 md:my-40">
+  <div class="my-8 md:my-20">
     <h1 class="md:text-xl text-center font-medium text-green mb-3">FAQ's</h1>
 
     <h2 class="text-sm md:text-base md:mx-10 lg:mx-40 xl:mx-60 text-center">

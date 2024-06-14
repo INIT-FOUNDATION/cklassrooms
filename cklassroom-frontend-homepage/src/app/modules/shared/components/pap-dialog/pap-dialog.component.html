@@ -1,0 +1,35 @@
+<div>
+  <div
+    class="flex items-center justify-between text-lg md:text-2xl font-semibold"
+  >
+    <span class="">Pay after placement</span>
+    <div class="cursor-pointer" (click)="closeModal()">
+      <i class="fa-solid fa-xmark" style="color: '#1b1f24'"></i>
+    </div>
+  </div>
+  <div class="text-base font-medium my-3 grid grid-cols-1 lg:grid-cols-3">
+    <span class="col-span-2">
+      Unlock your potential with our exclusive
+      <span class="underline">Pay After Placement Program</span>, designed for
+      ambitious individuals eager to launch their careers without financial
+      barriers. This innovative online course ensures you only pay the fees
+      after you secure a job, aligning our success with yours.</span
+    >
+    <img src="assets/images/payAfterPlacement/limitedTimeOffer.png" class="w-60 hidden lg:block" />
+  </div>
+
+  <div class="flex justify-end">
+    <button
+      type="button"
+      (click)="knowMore()"
+      class="btn-green text-white rounded-lg px-8 py-3 font-medium cursor-pointer"
+    >
+      Know more
+    </button>
+  </div>
+
+  <img
+    src="assets/images/payAfterPlacement/papDialogAvatar.png"
+    class="absolute top-0 h-60 dialog-image z-50 hidden md:block"
+  />
+</div>

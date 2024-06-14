@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { TestimonialDialogComponent } from 'src/app/modules/shared/components/testimonial-dialog/testimonial-dialog.component';
@@ -9,8 +9,12 @@ import { TestimonialDialogComponent } from 'src/app/modules/shared/components/te
   styleUrls: ['./testimonial.component.scss'],
 })
 export class TestimonialComponent implements OnInit {
-  constructor(private dialog: MatDialog,
-    private $gaService: GoogleAnalyticsService) {}
+  constructor(
+    private dialog: MatDialog,
+    private $gaService: GoogleAnalyticsService
+  ) {}
+
+  @Input() isFromPayAfterPlacement: boolean;
 
   testimonialList: any = [
     {
@@ -86,7 +90,7 @@ export class TestimonialComponent implements OnInit {
       linkedIn: 'https://www.linkedin.com/in/pillirajesh/',
       github: 'https://github.com/rajesh-orrizonte',
       desc1:
-        'I graduated with a bachelor\'s degree in Mechanical Engineering (ME) from Kolkata, transitioning from a non-IT background to becoming a proficient Full-stack developer seemed like an hopeless task.Transitioning from a mechanical engineering background to becoming a Full-stack developer has been a thrilling journey filled with challenges and opportunities for growth. However, my experience with the Full-stack development course at CKlassrooms has been nothing short of life-changing. Allow me to share my journey and the profound impact this course has had on my career trajectory.',
+        "I graduated with a bachelor's degree in Mechanical Engineering (ME) from Kolkata, transitioning from a non-IT background to becoming a proficient Full-stack developer seemed like an hopeless task.Transitioning from a mechanical engineering background to becoming a Full-stack developer has been a thrilling journey filled with challenges and opportunities for growth. However, my experience with the Full-stack development course at CKlassrooms has been nothing short of life-changing. Allow me to share my journey and the profound impact this course has had on my career trajectory.",
       desc2:
         'Before enrolling in the Full-stack Development course at CKlassrooms, my knowledge of coding was limited to basic HTML and CSS. The world of programming languages, server-side scripting, and database management felt like uncharted territory. Yet, from the onset, CKlassrooms comprehensive curriculum and supportive learning environment made this seemingly daunting journey accessible and rewarding. Moreover, CKlassrooms commitment to providing a supportive learning community fostered an environment of collaboration and growth. Through online forums, live coding sessions, and peer-to-peer feedback, I found myself surrounded by like-minded individuals who shared a passion for continuous learning and personal development. One of the distinguishing features of the course was its practical approach to learning. By working on real-world projects and collaborating with peers, I not only honed my technical skills but also developed the problem-solving mindset essential for success in the field of full-stack development.',
       desc3:
@@ -116,7 +120,12 @@ export class TestimonialComponent implements OnInit {
   ngOnInit(): void {}
 
   openDialog(data) {
-    this.$gaService.event('click', 'Hyperlink', 'Open testimonials dialog', (JSON.stringify(data) as any))
+    this.$gaService.event(
+      'click',
+      'Hyperlink',
+      'Open testimonials dialog',
+      JSON.stringify(data) as any
+    );
     this.dialog.open(TestimonialDialogComponent, {
       width: 'clamp(20rem, 80vw, 70rem)',
       data: data,
