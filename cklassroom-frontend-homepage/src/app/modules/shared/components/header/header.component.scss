@@ -80,11 +80,11 @@
 }
 
 .animate-hand {
-  animation: example 2s linear infinite;
+  animation: animate-hand 2s linear infinite;
   position: relative;
 }
 
-@keyframes example {
+@keyframes animate-hand {
   0% {
     left: -0.3rem;
   }
