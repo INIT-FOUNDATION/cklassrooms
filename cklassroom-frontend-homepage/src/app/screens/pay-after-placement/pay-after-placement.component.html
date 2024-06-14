@@ -126,6 +126,16 @@
     </mat-tab>
   </mat-tab-group>
 
+  <div class="flex justify-center items-center my-8 md:my-40">
+    <button
+      type="button"
+      class="border-button rounded-lg py-5 w-80 mb-3 md:mb-0 font-bold md:mr-4 tracking-wider"
+      (click)="openDialog()"
+    >
+      Limited Slots - Apply Now!
+    </button>
+  </div>
+
   <div class="my-8 md:my-10 py-10 bg-gray-cards rounded-2xl">
     <div class="text-xl md:text-4xl text-center my-3 font-semibold text-green">
       Key features of this program
@@ -154,10 +164,48 @@
     </div>
   </div>
 
+  <div class="flex justify-center items-center my-8 md:my-40">
+    <button
+      type="button"
+      class="border-button rounded-lg py-5 w-80 mb-3 md:mb-0 font-bold md:mr-4 tracking-wider"
+      (click)="openDialog()"
+    >
+      Limited Slots - Apply Now!
+    </button>
+  </div>
+
   <app-testimonial></app-testimonial>
 
+  <div class="flex justify-center items-center my-8 md:my-40">
+    <button
+      type="button"
+      class="border-button rounded-lg py-5 w-80 mb-3 md:mb-0 font-bold md:mr-4 tracking-wider"
+      (click)="openDialog()"
+    >
+      Limited Slots - Apply Now!
+    </button>
+  </div>
+
   <div class="my-8 md:my-40">
+    <h1 class="md:text-xl text-center font-medium text-green mb-3">FAQ's</h1>
+
+    <h2 class="text-sm md:text-base md:mx-10 lg:mx-40 xl:mx-60 text-center">
+      Common queries regarding PAP
+    </h2>
     <div class="my-5" *ngFor="let item of faqList">
+      <div class="mb-2 font-semibold">
+        {{
+          item?.id == 1
+            ? "General"
+            : item?.id == 4
+            ? "Course"
+            : item?.id == 6
+            ? "Project"
+            : item?.id == 7
+            ? "Placement"
+            : ""
+        }}
+      </div>
       <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
@@ -196,5 +244,15 @@
         </mat-expansion-panel>
       </mat-accordion>
     </div>
+  </div>
+
+  <div class="flex justify-center items-center my-8 md:my-40">
+    <button
+      type="button"
+      class="border-button rounded-lg py-5 w-80 mb-3 md:mb-0 font-bold md:mr-4 tracking-wider"
+      (click)="openDialog()"
+    >
+      Limited Slots - Apply Now!
+    </button>
   </div>
 </div>
