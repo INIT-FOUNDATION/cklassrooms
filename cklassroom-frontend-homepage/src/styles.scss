@@ -133,6 +133,14 @@ button:focus-visible {
 }
 
 .pap-container {
-  -webkit-animation-fill-mode: none !important;
-  animation-fill-mode: none !important;
+  animation: pap-dialog 0.35s;
+}
+
+@keyframes pap-dialog {
+  0% {
+    top: -35rem;
+  }
+  100% {
+    top: 0rem;
+  }
 }

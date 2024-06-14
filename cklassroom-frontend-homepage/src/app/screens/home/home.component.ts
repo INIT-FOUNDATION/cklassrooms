@@ -58,14 +58,7 @@ export class HomeComponent implements OnInit {
   openDialog() {
     const dialogRef = this.dialog.open(PapDialogComponent, {
       width: 'clamp(30rem, 60vw, 50rem)',
-      panelClass: ['pap-container','animate__animated','animate__bounceInDown']
+      panelClass: ['pap-container', '!relative', 'top-0', 'ease-in-out'],
     });
-
-    dialogRef.afterOpened().subscribe(res => {
-      setTimeout(() => {
-        document.getElementsByClassName('pap-container')[0].classList.remove('animate__animated');
-        document.getElementsByClassName('pap-container')[0].classList.remove('animate__bounceInDown');
-      }, 100);
-    })
   }
 }
