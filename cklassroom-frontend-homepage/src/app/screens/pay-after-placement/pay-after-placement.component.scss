@@ -47,17 +47,3 @@
   box-shadow: 3px 3px 0 0 $themeButtonColor;
   transform: translate(-4px, -4px);
 }
-
-.download-icon{
-  display: none;
-}
-
-@media screen and (max-width:425px) {
-  .download-btn{
-    display:none;
-  }
-
-  .download-icon{
-    display: flex
-  }
-}

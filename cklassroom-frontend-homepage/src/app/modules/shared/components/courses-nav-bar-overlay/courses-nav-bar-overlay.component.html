@@ -1,61 +1,99 @@
-<!-- <div class="flex flex-col md:flex-row">
-    <div class="w-full lg:w-1/4 flex align-center">
-      
+<div class="flex flex-col md:flex-row">
+  <div class="w-full lg:w-1/4 flex align-center">
+    <!-- Original list for larger screens -->
     <div class="hidden lg:block">
       <div class="p-4 md:border-r-2 md:border-gray-300">
         <div class="flex items-center mb-8">
-          <img src="./assets/images/coursesDialog/school.svg" alt="Category Icon" class="w-6 h-6 mr-2">
+          <img
+            src="./assets/images/coursesDialog/school.svg"
+            alt="Category Icon"
+            class="w-6 h-6 mr-2"
+          />
           <span class="text-base font-bold">Course Category</span>
         </div>
         <ul>
-          <li *ngFor="let category of courseCategory"
-              (click)="selectCategory(category)"
-              [class.text-blue-500]="category === selectedCategory"
-              class="cursor-pointer mb-8">
+          <li
+            *ngFor="let category of courseCategory"
+            (click)="selectCategory(category)"
+            [class.text-blue-500]="category === selectedCategory"
+            class="cursor-pointer mb-8"
+          >
             {{ category }}
           </li>
         </ul>
       </div>
     </div>
 
-
-   
-    <div class="block lg:hidden">
+    <!-- Accordion for smaller screens -->
+    <div class="block lg:hidden w-full">
       <div class="flex items-center mb-8">
-        <img src="./assets/images/coursesDialog/school.svg" alt="Category Icon" class="w-6 h-6 mr-2">
+        <img
+          src="./assets/images/coursesDialog/school.svg"
+          alt="Category Icon"
+          class="w-6 h-6 mr-2"
+        />
         <span class="text-base font-bold">Course Category</span>
       </div>
-      <mat-accordion>
-        <div *ngFor="let category of courseCategory; let i = index" (click)="selectCategory(category)"
-        [class.text-blue-500]="category === selectedCategory" class="mb-2">
-          <mat-expansion-panel class="bg-gray-cards !shadow-none rounded-xl py-1" [expanded]="i === 0">
+      <mat-accordion class="w-full">
+        <div
+          *ngFor="let category of courseCategory; let i = index"
+          (click)="selectCategory(category)"
+          [class.text-blue-500]="category === selectedCategory"
+          class="mb-2"
+        >
+          <mat-expansion-panel
+            class="bg-gray-100 shadow-none rounded-xl py-1"
+            [expanded]="i === 0"
+          >
             <mat-expansion-panel-header>
-              <mat-panel-title class="font-color accordion-header">
+              <mat-panel-title class="!text-gray-700">
                 {{ category }}
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <div>
-              <div class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-4">
-                <div *ngFor="let course of filteredCourses" class="border rounded-lg shadow mr-4 flex flex-col h-full cursor-pointer" (click)="openCourseDetailsPage(course.img)">
-                  <img [src]="course.image" alt="{{ course.name }}" class="mb-4 w-full h-48 lg:h-40 sm:h-60 object-cover rounded-t-lg">
-                  <div class="flex flex-col flex-1 px-1.5 pb-2">
-                    <div class="flex justify-between items-center">
-                      <span class="text-xs lg:text-sm md:text-xs sm:text-xs font-bold text-black">{{ course.courseName }}</span>
-                      <div class="border rounded-full px-2 py-1 text-xs bg-blue-700 text-white whitespace-nowrap">{{course.tag}}</div>
+            <div class="w-full">
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div
+                  *ngFor="let course of filteredCourses"
+                  class="border rounded-lg shadow flex flex-col h-full cursor-pointer"
+                  (click)="openCourseDetailsPage(course.img)"
+                >
+                  <img
+                    [src]="course.image"
+                    alt="{{ course.name }}"
+                    class="mb-4 w-full h-48 lg:h-40 sm:h-60 object-cover rounded-t-lg"
+                  />
+                  <div class="flex flex-col flex-1 p-2">
+                    <div class="flex justify-between items-center mb-2">
+                      <span class="text-xs lg:text-sm font-bold text-black">{{
+                        course.courseName
+                      }}</span>
+                      <div
+                        class="border rounded-full px-2 py-1 text-xs bg-blue-700 text-white"
+                      >
+                        {{ course.tag }}
+                      </div>
                     </div>
-                    <p class="text-xs text-justify mt-2 mb-8 flex-1 text-black">{{ course.desc }}</p>
-                    <div class="mt-auto flex justify-between items-center">
+                    <p class="text-xs text-justify flex-1 text-black">
+                      {{ course.desc }}
+                    </p>
+                    <div class="mt-auto flex justify-between items-center pt-2">
                       <div class="text-center">
-                        <span class="block font-bold text-xs text-black">₹{{ course.amount }}</span>
-                        <span class="text-slate-500 text-xs">Amount</span>
+                        <span class="block font-bold text-xs text-black"
+                          >₹{{ course.amount }}</span
+                        >
+                        <span class="text-gray-500 text-xs">Amount</span>
                       </div>
                       <div class="text-center">
-                        <span class="block font-bold text-xs text-black">{{ course.days }}</span>
-                        <span class="text-slate-500 text-xs">Days</span>
+                        <span class="block font-bold text-xs text-black">{{
+                          course.days
+                        }}</span>
+                        <span class="text-gray-500 text-xs">Days</span>
                       </div>
                       <div class="text-center">
-                        <span class="block font-bold text-xs text-black">{{ course.sessions }}+</span>
-                        <span class="text-slate-500 text-xs">Live Sessions</span>
+                        <span class="block font-bold text-xs text-black"
+                          >{{ course.sessions }}+</span
+                        >
+                        <span class="text-gray-500 text-xs">Sessions</span>
                       </div>
                     </div>
                   </div>
@@ -68,135 +106,55 @@
     </div>
   </div>
 
-
-  
-    <div class="w-full md:w-3/4 p-4 hidden lg:block">
-      <div class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-4">
-        <div *ngFor="let course of filteredCourses" class="border rounded-lg shadow mr-4 flex flex-col h-full cursor-pointer" (click)="openCourseDetailsPage(course.img)">
-          <img [src]="course.image" alt="{{ course.name }}" class="mb-4 w-full h-48 lg:h-40 sm:h-60 object-cover rounded-t-lg">
-          <div class="flex flex-col flex-1 px-1.5 pb-2">
-            <div class="flex justify-between items-center">
-              <span class="text-xs lg:text-sm md:text-xs sm:text-xs font-bold">{{ course.courseName }}</span>
-              <div class="border rounded-full px-2 py-1 text-xs bg-blue-700 text-white whitespace-nowrap">{{course.tag}}</div>
-            </div>
-            <p class="text-xs text-justify mt-2 mb-8 flex-1">{{ course.desc }}</p>
-            <div class="mt-auto flex justify-between items-center">
-              <div class="text-center">
-                <span class="block font-bold text-xs">₹{{ course.amount }}</span>
-                <span class="text-slate-500 text-xs">Amount</span>
-              </div>
-              <div class="text-center">
-                <span class="block font-bold text-xs">{{ course.days }}</span>
-                <span class="text-slate-500 text-xs">Days</span>
-              </div>
-              <div class="text-center">
-                <span class="block font-bold text-xs">{{ course.sessions }}+</span>
-                <span class="text-slate-500 text-xs">Sessions</span>
-              </div>
+  <!-- Grid layout for larger screens -->
+  <div class="w-full md:w-3/4 p-4 hidden lg:block">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div
+        *ngFor="let course of filteredCourses"
+        class="border rounded-lg shadow flex flex-col h-full cursor-pointer"
+        (click)="openCourseDetailsPage(course.img)"
+      >
+        <img
+          [src]="course.image"
+          alt="{{ course.name }}"
+          class="mb-4 w-full h-48 lg:h-40 sm:h-60 object-cover rounded-t-lg"
+        />
+        <div class="flex flex-col flex-1 p-2">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xs lg:text-sm font-bold text-black">{{
+              course.courseName
+            }}</span>
+            <div
+              class="border rounded-full px-2 py-1 text-xs bg-blue-700 text-white"
+            >
+              {{ course.tag }}
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
- 
-
-  <div class="flex flex-col md:flex-row">
-    <div class="w-full lg:w-1/4 flex align-center">
-      <!-- Original list for larger screens -->
-      <div class="hidden lg:block">
-        <div class="p-4 md:border-r-2 md:border-gray-300">
-          <div class="flex items-center mb-8">
-            <img src="./assets/images/coursesDialog/school.svg" alt="Category Icon" class="w-6 h-6 mr-2">
-            <span class="text-base font-bold">Course Category</span>
-          </div>
-          <ul>
-            <li *ngFor="let category of courseCategory"
-                (click)="selectCategory(category)"
-                [class.text-blue-500]="category === selectedCategory"
-                class="cursor-pointer mb-8">
-              {{ category }}
-            </li>
-          </ul>
-        </div>
-      </div>
-  
-      <!-- Accordion for smaller screens -->
-      <div class="block lg:hidden w-full">
-        <div class="flex items-center mb-8">
-          <img src="./assets/images/coursesDialog/school.svg" alt="Category Icon" class="w-6 h-6 mr-2">
-          <span class="text-base font-bold">Course Category</span>
-        </div>
-        <mat-accordion class="w-full">
-          <div *ngFor="let category of courseCategory; let i = index" (click)="selectCategory(category)"
-            [class.text-blue-500]="category === selectedCategory" class="mb-2">
-            <mat-expansion-panel class="bg-gray-100 shadow-none rounded-xl py-1" [expanded]="i === 0">
-              <mat-expansion-panel-header>
-                <mat-panel-title class="text-gray-700">
-                  {{ category }}
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <div class="w-full">
-                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  <div *ngFor="let course of filteredCourses" class="border rounded-lg shadow flex flex-col h-full cursor-pointer" (click)="openCourseDetailsPage(course.img)">
-                    <img [src]="course.image" alt="{{ course.name }}" class="mb-4 w-full h-48 lg:h-40 sm:h-60 object-cover rounded-t-lg">
-                    <div class="flex flex-col flex-1 p-2">
-                      <div class="flex justify-between items-center mb-2">
-                        <span class="text-xs lg:text-sm font-bold text-black">{{ course.courseName }}</span>
-                        <div class="border rounded-full px-2 py-1 text-xs bg-blue-700 text-white">{{ course.tag }}</div>
-                      </div>
-                      <p class="text-xs text-justify flex-1 text-black">{{ course.desc }}</p>
-                      <div class="mt-auto flex justify-between items-center pt-2">
-                        <div class="text-center">
-                          <span class="block font-bold text-xs text-black">₹{{ course.amount }}</span>
-                          <span class="text-gray-500 text-xs">Amount</span>
-                        </div>
-                        <div class="text-center">
-                          <span class="block font-bold text-xs text-black">{{ course.days }}</span>
-                          <span class="text-gray-500 text-xs">Days</span>
-                        </div>
-                        <div class="text-center">
-                          <span class="block font-bold text-xs text-black">{{ course.sessions }}+</span>
-                          <span class="text-gray-500 text-xs">Sessions</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </mat-expansion-panel>
-          </div>
-        </mat-accordion>
-      </div>
-    </div>
-  
-    <!-- Grid layout for larger screens -->
-    <div class="w-full md:w-3/4 p-4 hidden lg:block">
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div *ngFor="let course of filteredCourses" class="border rounded-lg shadow flex flex-col h-full cursor-pointer" (click)="openCourseDetailsPage(course.img)">
-          <img [src]="course.image" alt="{{ course.name }}" class="mb-4 w-full h-48 lg:h-40 sm:h-60 object-cover rounded-t-lg">
-          <div class="flex flex-col flex-1 p-2">
-            <div class="flex justify-between items-center mb-2">
-              <span class="text-xs lg:text-sm font-bold text-black">{{ course.courseName }}</span>
-              <div class="border rounded-full px-2 py-1 text-xs bg-blue-700 text-white">{{ course.tag }}</div>
+          <p class="text-xs text-justify flex-1 text-black">
+            {{ course.desc }}
+          </p>
+          <div class="mt-auto flex justify-between items-center pt-2">
+            <div class="text-center">
+              <span class="block font-bold text-xs text-black"
+                >₹{{ course.amount }}</span
+              >
+              <span class="text-gray-500 text-xs">Amount</span>
             </div>
-            <p class="text-xs text-justify flex-1 text-black">{{ course.desc }}</p>
-            <div class="mt-auto flex justify-between items-center pt-2">
-              <div class="text-center">
-                <span class="block font-bold text-xs text-black">₹{{ course.amount }}</span>
-                <span class="text-gray-500 text-xs">Amount</span>
-              </div>
-              <div class="text-center">
-                <span class="block font-bold text-xs text-black">{{ course.days }}</span>
-                <span class="text-gray-500 text-xs">Days</span>
-              </div>
-              <div class="text-center">
-                <span class="block font-bold text-xs text-black">{{ course.sessions }}+</span>
-                <span class="text-gray-500 text-xs">Sessions</span>
-              </div>
+            <div class="text-center">
+              <span class="block font-bold text-xs text-black">{{
+                course.days
+              }}</span>
+              <span class="text-gray-500 text-xs">Days</span>
+            </div>
+            <div class="text-center">
+              <span class="block font-bold text-xs text-black"
+                >{{ course.sessions }}+</span
+              >
+              <span class="text-gray-500 text-xs">Sessions</span>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
