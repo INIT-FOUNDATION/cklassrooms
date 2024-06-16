@@ -135,6 +135,5 @@ export class CoursesComponent implements OnInit, AfterViewInit {
 
   openCourseDetailsPage(courseName) {
     window.open(`/course-details/${courseName}`);
-    this.utilityService.showFooterSet = false;
   }
 }
