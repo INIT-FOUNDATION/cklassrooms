@@ -58,10 +58,6 @@ export class HeaderComponent implements OnInit {
       }
     });
 
-    console.log(
-      this.utilityService.showFooter$.subscribe((res) => console.log(res))
-    );
-
     gsap.registerPlugin(ScrollToPlugin);
 
     this.themeService.getActiveTheme.subscribe((res: string) => {

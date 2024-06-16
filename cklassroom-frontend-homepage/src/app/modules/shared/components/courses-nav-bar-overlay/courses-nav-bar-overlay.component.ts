@@ -34,7 +34,6 @@ export class CoursesNavBarOverlayComponent implements OnInit {
 
   selectCategory(category: string) {
     this.selectedCategory = category;
-    console.log(this.selectedCategory);
     
   }
 
