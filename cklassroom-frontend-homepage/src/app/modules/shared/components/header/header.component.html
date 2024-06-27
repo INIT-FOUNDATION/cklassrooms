@@ -74,7 +74,7 @@
       *ngIf="utilityService.showFooter$ | async"
     >
       <span
-        class="text-base animate__animated animate__fadeInDown cursor-pointer header-label hover:"
+        class="text-base animate__animated animate__fadeInDown cursor-pointer header-label"
         style="animation-duration: 0.65s"
         (click)="openPayAfterPlacementPage()"
       >
@@ -84,14 +84,14 @@
         Pay After Placement
       </span>
       <span
-        class="text-base mx-4 animate__animated animate__fadeInDown cursor-pointer header-label hover:"
+        class="text-base mx-4 animate__animated animate__fadeInDown cursor-pointer header-label"
         style="animation-duration: 0.8s"
         (click)="openCoursesDialog()"
       >
         Courses
       </span>
       <span
-        class="text-base me-4 animate__animated animate__fadeInDown cursor-pointer header-label hover:"
+        class="text-base me-4 animate__animated animate__fadeInDown cursor-pointer header-label"
         style="animation-duration: 0.8s"
         (click)="openDialog()"
       >
@@ -130,9 +130,17 @@
       >Pay After Placement</span
     >
     <span
-      class="text-base mt-2 cursor-pointer header-label hover:text-yellow-300"
+      class="text-base my-2 cursor-pointer header-label hover:text-yellow-300"
       (click)="openCoursesDialogAndCloseMenu()"
       >Courses</span
     >
+
+    <span
+      class="text-base my-2 cursor-pointer header-label hover:text-yellow-300"
+      style="animation-duration: 0.8s"
+      (click)="openDialog()"
+    >
+      Contact us
+    </span>
   </div>
 </div>
