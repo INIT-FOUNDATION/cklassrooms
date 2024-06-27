@@ -41,7 +41,7 @@ export class HeaderComponent implements OnInit {
   mindMapJson: any = {};
 
   ngOnInit(): void {
-    this.router.events.subscribe(async(ev) => {
+    this.router.events.subscribe(async (ev) => {
       if (ev instanceof NavigationStart) {
         this.showExpert = ev.url === '/';
       } else if (ev instanceof NavigationEnd) {
@@ -50,7 +50,7 @@ export class HeaderComponent implements OnInit {
         }
 
         const currentUrl = window.location.href;
-        if (currentUrl.indexOf("course-details") != -1) {
+        if (currentUrl.indexOf('course-details') != -1) {
           const parts = currentUrl.split('/');
           this.courseName = parts[parts.length - 1];
           await this.fetchMindMapData();
@@ -156,5 +156,4 @@ export class HeaderComponent implements OnInit {
     this.isMenuOpen = false;
     this.openCoursesDialog();
   }
-
 }

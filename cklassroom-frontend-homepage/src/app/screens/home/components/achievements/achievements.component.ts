@@ -11,7 +11,7 @@ export class AchievementsComponent implements OnInit {
       id: 1,
       img: 'fa-code',
       value: '10+',
-      label: 'Academic/Online Programs',
+      label: 'In Demand Courses',
     },
     {
       id: 2,
@@ -22,8 +22,8 @@ export class AchievementsComponent implements OnInit {
     {
       id: 3,
       img: 'fa-users',
-      value: '100+',
-      label: 'Enrolled Students',
+      value: '100%',
+      label: 'Placement Assistance',
     },
   ];
   constructor() {}

@@ -199,6 +199,23 @@ export class DataService {
       h4: 'Security is integrated throughout the DevOps lifecycle, from code development to deployment and beyond.',
       color: '#1970a3',
     },
+    {
+      id: 12,
+      category: 'Expert',
+      courseName: 'Full Stack',
+      tag: 'Expert',
+      image: 'assets/images/coursesDialog/devOpsCourse.png',
+      desc: 'Full stack developers handle both front-end (user interface) and back-end (server-side) aspects of web development.',
+      amount: 49999,
+      days: 180,
+      sessions: 80,
+      img: 'fullStack',
+      h1: 'DevOps automates SDLC, covering deployment, provisioning, testing, and monitoring.',
+      h2: 'DevOps fosters collaboration among development, operations, and stakeholders for smoother software delivery.',
+      h3: 'DevOps focuses on real-time monitoring, feedback collection, and data-driven decision-making for continuous improvement.',
+      h4: 'Security is integrated throughout the DevOps lifecycle, from code development to deployment and beyond.',
+      color: '#4f25a5b5',
+    },
   ];
 
   constructor(private http: HttpClient) {}

@@ -169,7 +169,7 @@ export class CourseDetailsComponent implements OnInit, AfterViewInit {
       centeredSlides: false,
       loop: true,
       pagination: {
-        el: ".swiper-pagination",
+        el: '.swiper-pagination',
         dynamicBullets: true,
       },
       autoplay: {
