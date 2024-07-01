@@ -1,5 +1,13 @@
 @import "../../../theme/color";
 
+.bg-theme-1 {
+  background-color: $themePrimary;
+}
+
+.bg-theme-2 {
+  background-color: $themePrimary-2;
+}
+
 .banner-image {
   -webkit-animation: profile 8s ease-in-out infinite;
   animation: profile 8s ease-in-out infinite;
@@ -47,6 +55,6 @@
   transform: translate(-4px, -4px);
 }
 
-.bg-theme-2 {
+.btn-theme-2 {
   background-color: $themeButtonColor;
 }

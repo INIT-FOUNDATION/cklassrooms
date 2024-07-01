@@ -3,8 +3,8 @@
     We Train You Well
   </h1>
 
-  <div class="text-xl md:text-4xl text-center my-3">
-    Our Commitment to Your Development.
+  <div class="text-xl md:text-4xl text-center my-3 font-semibold">
+    Our Commitment to Your Development
   </div>
   <div
     class="mt-5 lg:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
@@ -40,7 +40,8 @@
           {{ item?.desc }}
         </div>
       </div>
-      <div *ngIf="item?.id !== 12"
+      <div
+        *ngIf="item?.id !== 12"
         class="overlay absolute w-full h-full top-0 right-full z-10 p-5 flex flex-col text-white text-xs"
         [ngStyle]="{ background: item?.color }"
       >

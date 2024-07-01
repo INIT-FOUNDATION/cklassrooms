@@ -1,7 +1,6 @@
 @import "../../../../../theme/color";
 
 .bg-gray-cards {
-  background-color: $themeBoxShadow;
+  background-color: $themePrimary;
   color: $themeFontColor;
-  border: 1px solid var(--themeHoverBoxShadow);
 }

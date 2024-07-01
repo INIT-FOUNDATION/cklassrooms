@@ -9,7 +9,6 @@
 html,
 body {
   font-family: "Montserrat" !important;
-  background-color: $themePrimary;
   color: $themeFontColor;
   letter-spacing: 0.04rem;
   scroll-behavior: smooth;
@@ -23,7 +22,6 @@ body {
   }
 
   &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     -webkit-border-radius: 0.4rem;
     border-radius: 0.4rem;
   }
@@ -32,11 +30,10 @@ body {
     -webkit-border-radius: 0.4rem;
     border-radius: 0.4rem;
     background: rgba(142, 142, 142, 0.8);
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   }
 
   &::-webkit-scrollbar-thumb:window-inactive {
-    background: rgba(187, 187, 187, 0.4);
+    background-color: rgba(187, 187, 187, 0.4);
   }
 }
 
