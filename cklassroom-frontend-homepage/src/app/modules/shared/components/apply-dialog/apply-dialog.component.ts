@@ -167,9 +167,6 @@ export class ApplyDialogComponent implements OnInit {
       );
 
       this.dataService.enquiry(payload).subscribe((res) => {
-        this.utilityService.showSuccessMessage(
-          'Request submitted successfully'
-        );
         this.dialog.open(ThankYouDialogComponent, {
           width: 'clamp(20rem, 60vw, 47rem)',
         });
