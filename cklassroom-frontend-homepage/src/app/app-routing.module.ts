@@ -9,7 +9,6 @@ const routes: Routes = [
       import('./screens/home/home.module').then((m) => m.HomeModule),
     canActivate: [AuthGuard],
   },
-
   {
     path: 'course-details',
     loadChildren: () =>
@@ -18,7 +17,6 @@ const routes: Routes = [
       ),
     canActivate: [AuthGuard],
   },
-
   {
     path: 'pay-after-placement',
     loadChildren: () =>
@@ -27,7 +25,6 @@ const routes: Routes = [
       ),
     canActivate: [AuthGuard],
   },
-
   {
     path: 'terms-and-condition',
     loadChildren: () =>
@@ -36,12 +33,19 @@ const routes: Routes = [
       ),
     canActivate: [AuthGuard],
   },
-
   {
     path: 'privacy-policy',
     loadChildren: () =>
       import('./screens/privacy-policy/privacy-policy.module').then(
         (m) => m.PrivacyPolicyModule
+      ),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () =>
+      import('./screens/contact-us/contact-us.module').then(
+        (m) => m.ContactUsModule
       ),
     canActivate: [AuthGuard],
   },

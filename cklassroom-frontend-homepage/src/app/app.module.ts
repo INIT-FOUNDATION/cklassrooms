@@ -12,9 +12,10 @@ import { LoaderInterceptor } from './interceptor/loader.interceptor';
 import { ThemeModule } from './modules/shared/theme/theme.module';
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 import { environment } from 'src/environments/environment';
+import { ContactUsComponent } from './screens/contact-us/contact-us.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ContactUsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

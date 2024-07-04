@@ -90,7 +90,13 @@ const export_material_modules = [
 ];
 
 @NgModule({
-  declarations: [...export_components, ...export_directives, TestimonialDialogComponent, CoursesNavBarOverlayComponent, PapDialogComponent],
+  declarations: [
+    ...export_components,
+    ...export_directives,
+    TestimonialDialogComponent,
+    CoursesNavBarOverlayComponent,
+    PapDialogComponent,
+  ],
   imports: [...export_material_modules, ToastrModule.forRoot()],
   exports: [
     FormsModule,
@@ -99,6 +105,7 @@ const export_material_modules = [
     ...export_material_modules,
     ...export_directives,
     ToastrModule,
+    ApplyDialogComponent,
   ],
   providers: [{ provide: MAT_DATE_FORMATS, useValue: MY_FORMATS }],
 })

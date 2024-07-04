@@ -37,6 +37,14 @@ body {
   }
 }
 
+.bg-theme-1 {
+  background-color: $themePrimary;
+}
+
+.bg-theme-2 {
+  background-color: $themePrimary-2;
+}
+
 .text-green {
   color: $themeSecondary;
 }

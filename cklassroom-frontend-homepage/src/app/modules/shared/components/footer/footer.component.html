@@ -12,27 +12,37 @@
 
       <div>
         <ng-container *ngFor="let item of categories">
-          <div class="text-sm pb-2.5">{{item}} Courses - 
-          
+          <div class="text-sm pb-2.5">
+            {{ item }} Courses -
+
             <ng-container *ngFor="let course of categoryWiseCourses[item]">
-              <a class="font-medium underline underline-offset-4 cursor-pointer" (click)="openCourseDetailsPage(course.img)">{{course.courseName}}</a> |
+              <a
+                class="font-medium underline underline-offset-4 cursor-pointer"
+                (click)="openCourseDetailsPage(course.img)"
+                >{{ course.courseName }}</a
+              >
+              |
             </ng-container>
           </div>
         </ng-container>
-        <div class="text-sm pb-2 5">For Freshers - 
-          <a class="font-medium underline underline-offset-4 cursor-pointer" [routerLink]="['/pay-after-placement']">
+        <div class="text-sm pb-2 5">
+          For Freshers -
+          <a
+            class="font-medium underline underline-offset-4 cursor-pointer"
+            [routerLink]="['/pay-after-placement']"
+          >
             Pay After Placement
           </a>
         </div>
       </div>
     </div>
-  
+
     <div class="text-sm md:col-end-7 md:col-span-2 mb-3 md:mb-0">
       <div class="">Contact</div>
       <div class="font-semibold my-1">
         CKlassrooms by Orrizonte Technologies Pvt Ltd
       </div>
-      <div class="leading-7">
+      <div class="leading-5">
         Assotech Business Cresterra, Sector 135, Noida, Uttar Pradesh 201304.
       </div>
 
@@ -41,15 +51,16 @@
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
-    <div class="text-xs md:col-start-1 md:col-end-5">
+    <div class="text-xs md:col-start-1 md:col-end-5 leading-5">
       Copyright <i class="fa-solid fa-copyright text-green"></i>
       {{ currentYear }}
       ORRIZONTE TECHNOLOGIES PRIVATE LIMITED
     </div>
 
-    <div class="text-sm md:col-end-7 md:col-span-2">
-      <a href="terms-and-condition" class="me-5">Terms and conditions</a>
-      <a href="privacy-policy">Privacy policy</a>
+    <div class="text-sm md:col-end-7 md:col-span-2 leading-6">
+      <a href="terms-and-condition">Terms and conditions</a>
+      <a href="privacy-policy" class="mx-5">Privacy policy</a>
+      <a href="contact-us"> Contact us </a>
     </div>
   </div>
 </div>

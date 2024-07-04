@@ -1,9 +1,5 @@
 @import "../../../theme/color";
 
-.bg-theme-1 {
-  background-color: $themePrimary;
-}
-
 ::ng-deep .mat-tab-label {
   color: $themeFontColor !important;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 // import * as jobRolesData from '../../../../../assets/json/job_roles.json';
@@ -15,11 +15,12 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
   styleUrls: ['./apply-dialog.component.scss'],
 })
 export class ApplyDialogComponent implements OnInit {
+  @Input() isModal: boolean = true;
   activeScreen = 'step1';
   step1Form: FormGroup;
   step2Form: FormGroup;
   form1Submitted = false;
-  
+
   filteredEducationDegreeOptions: Observable<any[]>;
   educationDegrees: any[] = [];
 
@@ -29,43 +30,60 @@ export class ApplyDialogComponent implements OnInit {
   filteredCompaniesOptions: Observable<any[]>;
   companies = [];
 
-  publicIp = "";
-  
+  publicIp = '';
+
   startYear = 2002;
   endYear = 2028;
-  graduation_year_list = Array.from({ length: this.endYear - this.startYear + 1 }, (_, index) => this.endYear - index);
+  graduation_year_list = Array.from(
+    { length: this.endYear - this.startYear + 1 },
+    (_, index) => this.endYear - index
+  );
 
-  constructor(private dialog: MatDialog,
-              private dataService: DataService,
-              private utilityService: UtilityService,
-              private $gaService: GoogleAnalyticsService) {}
+  constructor(
+    private dialog: MatDialog,
+    private dataService: DataService,
+    private utilityService: UtilityService,
+    private $gaService: GoogleAnalyticsService
+  ) {}
 
   ngOnInit(): void {
     this.initForms();
     this.loadAllStaticData();
-    this.filteredEducationDegreeOptions = this.step2Form.get("education").valueChanges.pipe(
-      startWith(''),
-      map(value => {
-        const name = typeof value === 'string' ? value : value?.name;
-        return name ? this._filter(name as string, this.educationDegrees, 'name') : this.educationDegrees.slice();
-      }),
-    );
+    this.filteredEducationDegreeOptions = this.step2Form
+      .get('education')
+      .valueChanges.pipe(
+        startWith(''),
+        map((value) => {
+          const name = typeof value === 'string' ? value : value?.name;
+          return name
+            ? this._filter(name as string, this.educationDegrees, 'name')
+            : this.educationDegrees.slice();
+        })
+      );
 
-    this.filteredJobRolesOptions = this.step2Form.get("job_role").valueChanges.pipe(
-      startWith(''),
-      map(value => {
-        const name = typeof value === 'string' ? value : value?.name;
-        return name ? this._filter(name as string, this.jobRoles, 'title') : this.jobRoles.slice();
-      }),
-    );
+    this.filteredJobRolesOptions = this.step2Form
+      .get('job_role')
+      .valueChanges.pipe(
+        startWith(''),
+        map((value) => {
+          const name = typeof value === 'string' ? value : value?.name;
+          return name
+            ? this._filter(name as string, this.jobRoles, 'title')
+            : this.jobRoles.slice();
+        })
+      );
 
-    this.filteredCompaniesOptions = this.step2Form.get("company").valueChanges.pipe(
-      startWith(''),
-      map(value => {
-        const name = typeof value === 'string' ? value : value?.name;
-        return name ? this._filter(name as string, this.companies, null) : this.companies.slice();
-      }),
-    );
+    this.filteredCompaniesOptions = this.step2Form
+      .get('company')
+      .valueChanges.pipe(
+        startWith(''),
+        map((value) => {
+          const name = typeof value === 'string' ? value : value?.name;
+          return name
+            ? this._filter(name as string, this.companies, null)
+            : this.companies.slice();
+        })
+      );
   }
 
   loadAllStaticData() {
@@ -73,19 +91,23 @@ export class ApplyDialogComponent implements OnInit {
       educationDegrees: this.dataService.getEducationDegrees(),
       jobRoles: this.dataService.getJobRoles(),
       companies: this.dataService.getCompanies(),
-      publicIp: this.dataService.getPublicIp()
+      publicIp: this.dataService.getPublicIp(),
     }).subscribe((res: any) => {
       this.educationDegrees = res.educationDegrees;
       this.jobRoles = res.jobRoles;
       this.companies = res.companies['Companies'];
       this.publicIp = res.publicIp['ip'];
-    })
+    });
   }
 
   private _filter(name: string, allValues: any[], filterOn: string): any[] {
     const filterValue = name.toLowerCase();
 
-    return allValues.filter(option =>  filterOn ? option[filterOn].toLowerCase().includes(filterValue) : option.toLowerCase().includes(filterValue));
+    return allValues.filter((option) =>
+      filterOn
+        ? option[filterOn].toLowerCase().includes(filterValue)
+        : option.toLowerCase().includes(filterValue)
+    );
   }
 
   initForms() {
@@ -131,15 +153,22 @@ export class ApplyDialogComponent implements OnInit {
       const payload: any = {
         ...form1Value,
         ...form2Value,
-        client_ip: this.publicIp
-      }
+        client_ip: this.publicIp,
+      };
 
-      this.$gaService.event('submit', 'Form', 'Apply form step 2', (JSON.stringify(payload) as any));
+      this.$gaService.event(
+        'submit',
+        'Form',
+        'Apply form step 2',
+        JSON.stringify(payload) as any
+      );
 
-      this.dataService.enquiry(payload).subscribe(res=> {
-        this.utilityService.showSuccessMessage("Request submitted successfully");
+      this.dataService.enquiry(payload).subscribe((res) => {
+        this.utilityService.showSuccessMessage(
+          'Request submitted successfully'
+        );
         this.dialog.closeAll();
-      })
+      });
     }
   }
 
@@ -147,8 +176,13 @@ export class ApplyDialogComponent implements OnInit {
     if (name === 'step2') {
       this.form1Submitted = true;
       const step1FormValid = this.step1Form.valid;
-      const data: any = this.step1Form.getRawValue()
-      this.$gaService.event('submit', 'Form', 'Apply form step 1', (JSON.stringify(data) as any));
+      const data: any = this.step1Form.getRawValue();
+      this.$gaService.event(
+        'submit',
+        'Form',
+        'Apply form step 1',
+        JSON.stringify(data) as any
+      );
       if (step1FormValid) {
         this.activeScreen = name;
       }
