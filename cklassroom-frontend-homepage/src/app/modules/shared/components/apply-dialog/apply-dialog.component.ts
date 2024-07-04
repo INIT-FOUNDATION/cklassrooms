@@ -16,7 +16,7 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
 })
 export class ApplyDialogComponent implements OnInit {
   @Input() isModal: boolean = true;
-  activeScreen = 'step3';
+  activeScreen = 'step1';
   step1Form: FormGroup;
   step2Form: FormGroup;
   form1Submitted = false;
