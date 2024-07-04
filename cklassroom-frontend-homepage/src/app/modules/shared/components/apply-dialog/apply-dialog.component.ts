@@ -8,6 +8,8 @@ import { Observable, forkJoin, map, startWith } from 'rxjs';
 import { DataService } from '../../services/data.service';
 import { UtilityService } from '../../services/utility.service';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
+import { ThankYouDialogComponent } from '../thank-you-dialog/thank-you-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-apply-dialog',
@@ -43,7 +45,8 @@ export class ApplyDialogComponent implements OnInit {
     private dialog: MatDialog,
     private dataService: DataService,
     private utilityService: UtilityService,
-    private $gaService: GoogleAnalyticsService
+    private $gaService: GoogleAnalyticsService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -167,8 +170,14 @@ export class ApplyDialogComponent implements OnInit {
         this.utilityService.showSuccessMessage(
           'Request submitted successfully'
         );
-        this.activeScreen = 'step3';
-        this.dialog.closeAll();
+        this.dialog.open(ThankYouDialogComponent, {
+          width: 'clamp(20rem, 60vw, 47rem)',
+        });
+  
+        setTimeout(() => {
+          this.dialog.closeAll();
+          this.router.navigate(['/']);
+        }, 5000);
       });
     }
   }

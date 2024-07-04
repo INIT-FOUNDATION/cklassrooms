@@ -40,6 +40,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { TestimonialDialogComponent } from './components/testimonial-dialog/testimonial-dialog.component';
 import { CoursesNavBarOverlayComponent } from './components/courses-nav-bar-overlay/courses-nav-bar-overlay.component';
 import { PapDialogComponent } from './components/pap-dialog/pap-dialog.component';
+import { ThankYouDialogComponent } from './components/thank-you-dialog/thank-you-dialog.component';
 /*------------------- DIRECTIVES ------------------------*/
 
 const MY_FORMATS = {
@@ -96,6 +97,7 @@ const export_material_modules = [
     TestimonialDialogComponent,
     CoursesNavBarOverlayComponent,
     PapDialogComponent,
+    ThankYouDialogComponent,
   ],
   imports: [...export_material_modules, ToastrModule.forRoot()],
   exports: [
