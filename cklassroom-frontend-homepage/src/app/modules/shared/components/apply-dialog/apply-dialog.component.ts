@@ -16,7 +16,7 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
 })
 export class ApplyDialogComponent implements OnInit {
   @Input() isModal: boolean = true;
-  activeScreen = 'step1';
+  activeScreen = 'step3';
   step1Form: FormGroup;
   step2Form: FormGroup;
   form1Submitted = false;
@@ -167,6 +167,7 @@ export class ApplyDialogComponent implements OnInit {
         this.utilityService.showSuccessMessage(
           'Request submitted successfully'
         );
+        this.activeScreen = 'step3';
         this.dialog.closeAll();
       });
     }

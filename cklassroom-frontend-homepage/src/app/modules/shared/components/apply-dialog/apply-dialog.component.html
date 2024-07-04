@@ -1,7 +1,7 @@
 <div
   class="text-center text-lg md:text-2xl font-semibold text-header flex items-center justify-between pb-4"
 >
-  <h1>Book your free assessment</h1>
+  <h1 *ngIf="activeScreen !== 'step3'">Book your free assessment</h1>
 
   <div class="cursor-pointer" (click)="closeModal()" *ngIf="isModal">
     <i class="fa-solid fa-xmark" style="color: '#1b1f24'"></i>
@@ -253,5 +253,40 @@
         </mat-form-field>
       </ng-container>
     </form>
+
+    <div class="flex items-center" *ngSwitchCase="'step3'">
+      <img src="assets/images/thankyou/thankyouImage.png" alt="" />
+      <div class="flex flex-col ms-6">
+        <div class="text-2xl font-semibold">Thank You for contacting us!</div>
+        <span class="text-sm">We have received your message.</span>
+        <div class="text-sm">We'll reach you out immediately!</div>
+
+        <a
+          href=""
+          class="btn-green text-white rounded-lg py-3 text-center w-40 my-6"
+          >Explore more</a
+        >
+
+        <div class="text-base font-medium">Other social handles</div>
+        <div class="flex items-center">
+          <a
+            href="https://www.linkedin.com/company/cklassrooms/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin text-blue-600 text-2xl"></i
+          ></a>
+          <a
+            class="mx-3"
+            href="https://www.instagram.com/cklassrooms?igsh=MTY0OW9hdWlwbWM3cw=="
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram text-orange-600 text-2xl"></i>
+          </a>
+          <a href="https://www.youtube.com/@CKlassrooms" target="_blank">
+            <i class="fa-brands fa-youtube text-red-500 text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
   </ng-container>
 </ng-template>
