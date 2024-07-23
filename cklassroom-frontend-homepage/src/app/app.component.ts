@@ -4,11 +4,20 @@ import { ThemeService } from './modules/shared/theme/theme.service';
 import { CookieService } from './modules/shared/services/cookies.service';
 import { UtilityService } from './modules/shared/services/utility.service';
 import { NavigationEnd, Router } from '@angular/router';
+import { SharedModule } from './modules/shared/shared.module';
+import { ThemeModule } from './modules/shared/theme/theme.module';
+import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [
+    SharedModule,
+    ThemeModule
+  ]
 })
 export class AppComponent implements OnInit, AfterViewInit {
   display = false;

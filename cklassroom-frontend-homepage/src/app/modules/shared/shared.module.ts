@@ -11,7 +11,6 @@ import { ApplyDialogComponent } from './components/apply-dialog/apply-dialog.com
 import { MatExpansionModule } from '@angular/material/expansion';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { ToastrModule } from 'ngx-toastr';
 
 /*------------------- MATERIAL COMPONENTS ------------------------*/
 import { MatDialogModule } from '@angular/material/dialog';
@@ -28,7 +27,6 @@ import { RangeLengthDirective } from './directives/range-length.directive';
 import { MaxDirective } from './directives/max.directive';
 import { MinDirective } from './directives/min.directive';
 import {
-  InpuTrimValidator,
   InputTrimDirective,
 } from './directives/input-trim.directive';
 import { InputCharDirective } from './directives/input-char.directive';
@@ -91,15 +89,16 @@ const export_material_modules = [
 
 @NgModule({
   declarations: [...export_components, ...export_directives, TestimonialDialogComponent, CoursesNavBarOverlayComponent, PapDialogComponent],
-  imports: [...export_material_modules, ToastrModule.forRoot()],
+  imports: [...export_material_modules],
   exports: [
     FormsModule,
     ReactiveFormsModule,
     ...export_components,
     ...export_material_modules,
     ...export_directives,
-    ToastrModule,
   ],
-  providers: [{ provide: MAT_DATE_FORMATS, useValue: MY_FORMATS }],
+  providers: [
+    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS }
+  ],
 })
 export class SharedModule {}
