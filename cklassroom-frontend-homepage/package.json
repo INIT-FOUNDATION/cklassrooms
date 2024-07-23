@@ -26,7 +26,7 @@
     "gsap": "^3.12.5",
     "jquery": "^3.6.4",
     "moment": "^2.29.4",
-    "ngx-device-detector": "^5.0.0",
+    "ngx-device-detector": "^8.0.0",
     "ngx-google-analytics": "~14.0.1",
     "ngx-spinner": "^15.0.1",
     "ngx-toastr": "^15.0.0",
