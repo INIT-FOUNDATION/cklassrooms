@@ -112,16 +112,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "cklassroom-frontend-homepage:build:production"
+              "buildTarget": "cklassroom-frontend-homepage:build:production"
             },
             "production_beta": {
-              "browserTarget": "cklassroom-frontend-homepage:build:production_beta"
+              "buildTarget": "cklassroom-frontend-homepage:build:production_beta"
             },
             "dev": {
-              "browserTarget": "cklassroom-frontend-homepage:build:dev"
+              "buildTarget": "cklassroom-frontend-homepage:build:dev"
             },
             "development": {
-              "browserTarget": "cklassroom-frontend-homepage:build:development"
+              "buildTarget": "cklassroom-frontend-homepage:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -129,7 +129,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cklassroom-frontend-homepage:build"
+            "buildTarget": "cklassroom-frontend-homepage:build"
           }
         },
         "test": {
