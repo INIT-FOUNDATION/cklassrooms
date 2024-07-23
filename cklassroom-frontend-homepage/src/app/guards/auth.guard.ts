@@ -1,21 +1,27 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
+import { CanActivateFn } from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 
-export class AuthGuard implements CanActivate {
-  constructor(private router: Router,
-  ) {
-  }
-  exclude_urls = ['/login'];
-  urls_can_visit_bfr_login = ['/login', '/home'];
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): boolean {
+// export class AuthGuard  {
+//   constructor(private router: Router,
+//   ) {
+//   }
+//   exclude_urls = ['/login'];
+//   urls_can_visit_bfr_login = ['/login', '/home'];
+//   canActivate(
+//     next: ActivatedRouteSnapshot,
+//     state: RouterStateSnapshot): boolean {
   
-    return true;
-  }
+//     return true;
+//   }
 
+// }
+
+
+export const AuthGuardFn: CanActivateFn = (route: ActivatedRouteSnapshot,state: RouterStateSnapshot) => {
+  return true;
 }

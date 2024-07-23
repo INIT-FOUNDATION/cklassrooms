@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './guards/auth.guard';
+import { AuthGuardFn } from './guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
       import('./screens/home/home.module').then((m) => m.HomeModule),
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuardFn],
   },
 
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
       import('./screens/course-details/course-details.module').then(
         (m) => m.CourseDetailsModule
       ),
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuardFn],
   },
 
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
       import('./screens/pay-after-placement/pay-after-placement.module').then(
         (m) => m.PayAfterPlacementModule
       ),
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuardFn],
   },
 
   {
@@ -34,7 +34,7 @@ const routes: Routes = [
       import('./screens/terms-and-conditions/terms-and-conditions.module').then(
         (m) => m.TermsAndConditionsModule
       ),
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuardFn],
   },
 
   {
@@ -43,7 +43,7 @@ const routes: Routes = [
       import('./screens/privacy-policy/privacy-policy.module').then(
         (m) => m.PrivacyPolicyModule
       ),
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuardFn],
   },
 ];
 
