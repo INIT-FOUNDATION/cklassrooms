@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/modules/shared/shared.module';
-import { StarRatingModule } from 'angular-star-rating';
 import { FormsModule } from '@angular/forms';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { WhatWeOfferComponent } from './components/what-we-offer/what-we-offer.component';
@@ -31,8 +30,7 @@ import { AchievementsComponent } from './components/achievements/achievements.co
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    FormsModule,
-    StarRatingModule.forRoot(),
+    FormsModule
   ],
   exports: [TestimonialComponent],
 })
