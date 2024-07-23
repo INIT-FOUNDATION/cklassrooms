@@ -10,31 +10,32 @@
     class="w-full h-full my-5 md:mt-10"
     src="/assets/images/payAfterPlacement/learningPhasesPAP.svg"
     alt=""
-  />
+    />
   <h3 class="text-sm md:text-base md:mx-10 lg:mx-40 xl:mx-60 md:mt-20 text-center">
     Mastering in-demand technologies directly from the Dedicated
     <!-- <a
-      href="https://www.cowin.gov.in/"
-      target="_blank"
-      class="text-green font-medium"
-      >CoWIN</a
+    href="https://www.cowin.gov.in/"
+    target="_blank"
+    class="text-green font-medium"
+    >CoWIN</a
     > -->
     Technical Team, learn building world class large scale applications
   </h3>
   <div
     class="mt-5 lg:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-  >
-    <div
-      *ngFor="let item of jobPlacements"
-      [id]="item?.id"
-      class="hover-card rounded-3xl p-5 shadow-md"
     >
-      <img
-        src="assets/images/jobTraining/{{ item?.img }}.svg"
-        class="w-20 h-20"
-      />
-      <div class="font-medium mt-3 text-base">{{ item?.label }}</div>
-      <span class="text-sm">{{ item?.description }}</span>
-    </div>
+    @for (item of jobPlacements; track item) {
+      <div
+        [id]="item?.id"
+        class="hover-card rounded-3xl p-5 shadow-md"
+        >
+        <img
+          src="assets/images/jobTraining/{{ item?.img }}.svg"
+          class="w-20 h-20"
+          />
+        <div class="font-medium mt-3 text-base">{{ item?.label }}</div>
+        <span class="text-sm">{{ item?.description }}</span>
+      </div>
+    }
   </div>
 </div>

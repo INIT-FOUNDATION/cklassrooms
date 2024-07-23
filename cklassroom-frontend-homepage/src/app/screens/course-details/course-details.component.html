@@ -11,100 +11,111 @@
         [src]="mindMapJson?.mindMapData?.data?.['background-image']"
         alt="Course Thumbnail"
         class="w-full rounded-lg mb-4 h-full"
-      />
+        />
     </div>
     <div>
-   
+
       <div class="hidden lg:block">
         <mat-tab-group>
-          <mat-tab
-            *ngFor="let tab of mindMapJson?.additionalData?.tabs"
-            [label]="tab?.title"
-          >
-            <div *ngIf="tab?.content">
-              <p class="my-4 leading-7 text-sm">{{ tab?.content }}</p>
-            </div>
-          </mat-tab>
+          @for (tab of mindMapJson?.additionalData?.tabs; track tab) {
+            <mat-tab
+              [label]="tab?.title"
+              >
+              @if (tab?.content) {
+                <div>
+                  <p class="my-4 leading-7 text-sm">{{ tab?.content }}</p>
+                </div>
+              }
+            </mat-tab>
+          }
         </mat-tab-group>
       </div>
-      
+
       <div class="block lg:hidden">
         <mat-accordion>
-          <div
-            *ngFor="let tab of mindMapJson?.additionalData?.tabs; let i = index"
-            class="mb-2"
-          >
-            <mat-expansion-panel
-              class="bg-gray-cards !shadow-none rounded-xl py-1"
-              [expanded]="i === 0"
-            >
-              <mat-expansion-panel-header>
-                <mat-panel-title class="font-color accordion-header">
-                  {{ tab?.title }}
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <ul class="text-green">
-                <li *ngIf="tab?.content" class="p-2">
-                  {{ tab?.content }}
-                </li>
-              </ul>
-            </mat-expansion-panel>
-          </div>
+          @for (tab of mindMapJson?.additionalData?.tabs; track tab; let i = $index) {
+            <div
+              class="mb-2"
+              >
+              <mat-expansion-panel
+                class="bg-gray-cards !shadow-none rounded-xl py-1"
+                [expanded]="i === 0"
+                >
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="font-color accordion-header">
+                    {{ tab?.title }}
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ul class="text-green">
+                  @if (tab?.content) {
+                    <li class="p-2">
+                      {{ tab?.content }}
+                    </li>
+                  }
+                </ul>
+              </mat-expansion-panel>
+            </div>
+          }
         </mat-accordion>
       </div>
     </div>
   </div>
-  
+
 
   <div class="lg:w-1/3 p-3 md:p-6">
     <div
       class="courses-card shadow-md p-4 rounded-xl md:flex md:flex-col md:space-y-6 mb-4"
-    >
+      >
       <h2 class="font-semibold">Courses Overview</h2>
       <div class="max-h-80 !mt-2 overflow-y-auto">
         <mat-accordion>
-          <div
-            *ngFor="let course of mindMapJson?.mindMapData?.data?.children"
-            class="mb-2"
-          >
-            <mat-expansion-panel
-              class="bg-gray-cards !shadow-none rounded-xl py-1"
-            >
-              <mat-expansion-panel-header>
-                <mat-panel-title class="text-sm">
-                  {{ course.topic }}
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <ul class="faq-desc text-sm">
-                <li *ngFor="let courseSub of course.children" class="p-2">
-                  {{ courseSub.topic }}
-                </li>
-              </ul>
-            </mat-expansion-panel>
-          </div>
+          @for (course of mindMapJson?.mindMapData?.data?.children; track course) {
+            <div
+              class="mb-2"
+              >
+              <mat-expansion-panel
+                class="bg-gray-cards !shadow-none rounded-xl py-1"
+                >
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="text-sm">
+                    {{ course.topic }}
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ul class="faq-desc text-sm">
+                  @for (courseSub of course.children; track courseSub) {
+                    <li class="p-2">
+                      {{ courseSub.topic }}
+                    </li>
+                  }
+                </ul>
+              </mat-expansion-panel>
+            </div>
+          }
         </mat-accordion>
       </div>
     </div>
 
     <div
       class="courses-card shadow-md p-4 rounded-xl md:flex md:flex-col md:space-y-6"
-    >
+      >
       <h2 class="font-semibold">FAQs</h2>
       <mat-accordion class="!mt-2">
-        <div *ngFor="let faq of mindMapJson?.additionalData?.faqs" class="mb-2">
-          <mat-expansion-panel
-            class="bg-gray-cards !shadow-none rounded-xl py-1"
-          >
-            <mat-expansion-panel-header>
-              <mat-panel-title class="text-sm">
-                {{ faq.question }}
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <p class="pt-2 faq-desc text-sm leading-6">
-              {{ faq.answer }}
-            </p>
-          </mat-expansion-panel>
-        </div>
+        @for (faq of mindMapJson?.additionalData?.faqs; track faq) {
+          <div class="mb-2">
+            <mat-expansion-panel
+              class="bg-gray-cards !shadow-none rounded-xl py-1"
+              >
+              <mat-expansion-panel-header>
+                <mat-panel-title class="text-sm">
+                  {{ faq.question }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="pt-2 faq-desc text-sm leading-6">
+                {{ faq.answer }}
+              </p>
+            </mat-expansion-panel>
+          </div>
+        }
       </mat-accordion>
     </div>
   </div>
@@ -114,69 +125,72 @@
   <span>Recommended courses</span>
   <div class="swiper mySwiper mt-3">
     <div class="swiper-wrapper swiper-height">
-      <div
-        class="swiper-slide relative courses-card-body overflow-hidden h-96 rounded-xl"
-        *ngFor="let item of filteredCourses"
-      >
-        <div class="flex items-center flex-col">
-          <img
-            *ngIf="item?.id !== 9 && item?.id !== 10"
-            class="pt-3 h-56"
-            src="assets/images/courses/{{ item?.img }}.svg"
-          />
-          <div
-            *ngIf="item?.id == 9 || item?.id == 10"
-            class="bg-no-repeat bg-cover w-full flex items-center justify-center h-56"
+      @for (item of filteredCourses; track item) {
+        <div
+          class="swiper-slide relative courses-card-body overflow-hidden h-96 rounded-xl"
+          >
+          <div class="flex items-center flex-col">
+            @if (item?.id !== 9 && item?.id !== 10) {
+              <img
+                class="pt-3 h-56"
+                src="assets/images/courses/{{ item?.img }}.svg"
+                />
+            }
+            @if (item?.id == 9 || item?.id == 10) {
+              <div
+                class="bg-no-repeat bg-cover w-full flex items-center justify-center h-56"
             [ngStyle]="{
               'background-image': item.img
                 ? 'url(assets/images/courses/' + item.img + '.svg)'
                 : ''
             }"
-          ></div>
+              ></div>
+            }
+            <div
+              class="py-2 self-start font-semibold w-full px-5 text-white text-center text-md"
+              [ngStyle]="{ background: item?.color }"
+              >
+              {{ item?.courseName }}
+            </div>
+            <div class="pb-2 font-medium text-sm leading-6 px-5">
+              {{ item?.desc }}
+            </div>
+          </div>
           <div
-            class="py-2 self-start font-semibold w-full px-5 text-white text-center text-md"
+            class="overlay absolute w-full h-full top-0 right-full z-10 p-5 flex flex-col text-white text-xs"
             [ngStyle]="{ background: item?.color }"
-          >
-            {{ item?.courseName }}
-          </div>
-          <div class="pb-2 font-medium text-sm leading-6 px-5">
-            {{ item?.desc }}
-          </div>
-        </div>
-        <div
-          class="overlay absolute w-full h-full top-0 right-full z-10 p-5 flex flex-col text-white text-xs"
-          [ngStyle]="{ background: item?.color }"
-        >
-          <div class="flex items-start">
-            <i class="fa-solid fa-circle pe-3 mt-1"></i>
-            <div>{{ item?.h1 }}</div>
-          </div>
-          <div class="flex items-start py-3">
-            <i class="fa-solid fa-circle pe-3 mt-1"></i>
-            <div>{{ item?.h2 }}</div>
-          </div>
-          <div class="flex items-start">
-            <i class="fa-solid fa-circle pe-3 mt-1"></i>
-            <div>{{ item?.h3 }}</div>
-          </div>
-          <div class="flex items-start pt-3">
-            <i class="fa-solid fa-circle pe-3 mt-1"></i>
-            <div>{{ item?.h4 }}</div>
-          </div>
-          <div
-            class="flex items-start justify-end pt-3 absolute bottom-4 right-4"
-          >
-            <button
-              type="button"
-              class="btn bg-white px-5 py-3 rounded-lg font-medium"
-              [ngStyle]="{ color: item?.color }"
-              (click)="openCourseDetailsPage(item.img)"
             >
-              Learn More
-            </button>
+            <div class="flex items-start">
+              <i class="fa-solid fa-circle pe-3 mt-1"></i>
+              <div>{{ item?.h1 }}</div>
+            </div>
+            <div class="flex items-start py-3">
+              <i class="fa-solid fa-circle pe-3 mt-1"></i>
+              <div>{{ item?.h2 }}</div>
+            </div>
+            <div class="flex items-start">
+              <i class="fa-solid fa-circle pe-3 mt-1"></i>
+              <div>{{ item?.h3 }}</div>
+            </div>
+            <div class="flex items-start pt-3">
+              <i class="fa-solid fa-circle pe-3 mt-1"></i>
+              <div>{{ item?.h4 }}</div>
+            </div>
+            <div
+              class="flex items-start justify-end pt-3 absolute bottom-4 right-4"
+              >
+              <button
+                type="button"
+                class="btn bg-white px-5 py-3 rounded-lg font-medium"
+                [ngStyle]="{ color: item?.color }"
+                (click)="openCourseDetailsPage(item.img)"
+                >
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      }
     </div>
   </div>
   <div class="swiper-pagination mt-8"></div>

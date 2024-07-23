@@ -3,13 +3,13 @@
   [ngClass]="{
     'shadow-lg': verticalScrollValue
   }"
->
+  >
   <div class="flex justify-between items-center bg-green">
     <img
       class="hidden md:block w-20 md:w-40"
       src="assets/images/header/headerLeftCelebration.webp"
       alt=""
-    />
+      />
     <span
       class="text-xs md:text-base xl:text-2xl font-bold p-2 text-white leading-4"
       >Explore a complimentary Job Placement Consultation -
@@ -17,130 +17,133 @@
         class="text-yellow-300 underline underline-offset-2 cursor-pointer"
         (click)="openDialog()"
         >Book Now!</span
-      >
-    </span>
-    <img
-      class="w-20 md:w-40"
-      src="assets/images/header/headerRightCelebration.webp"
-      alt=""
-    />
-  </div>
-
-  <div class="flex justify-between px-5 pt-3 md:px-10">
-    <div
-      class="text-xl animate__animated animate__fadeInDown cursor-pointer"
-      style="animation-duration: 0.5s"
-      (click)="goBack()"
-    >
-      <img src="assets/images/header/{{ headerLogo }}.svg" class="w-40" />
+        >
+      </span>
+      <img
+        class="w-20 md:w-40"
+        src="assets/images/header/headerRightCelebration.webp"
+        alt=""
+        />
     </div>
 
-    <div class="flex">
-      <button
-        *ngIf="courseDetailsPage()"
-        type="button"
-        class="hover-card px-5 py-3 rounded-xl text-sm font-medium mr-4 ms-4"
-        (click)="downloadPdf()"
-      >
-        <h1 class="download-btn">Download PDF</h1>
-        <i class="fas fa-download download-icon"></i>
-      </button>
+    <div class="flex justify-between px-5 pt-3 md:px-10">
+      <div
+        class="text-xl animate__animated animate__fadeInDown cursor-pointer"
+        style="animation-duration: 0.5s"
+        (click)="goBack()"
+        >
+        <img src="assets/images/header/{{ headerLogo }}.svg" class="w-40" />
+      </div>
 
-      <button
-        *ngIf="courseDetailsPage()"
-        type="button"
-        class="hover-card px-5 py-3 rounded-xl text-sm font-medium"
-        (click)="openDialog()"
-      >
-        <h1 class="download-btn">Know More</h1>
-        <i class="fa-solid fa-circle-info download-icon"></i>
-      </button>
-    </div>
+      <div class="flex">
+        @if (courseDetailsPage()) {
+          <button
+            type="button"
+            class="hover-card px-5 py-3 rounded-xl text-sm font-medium mr-4 ms-4"
+            (click)="downloadPdf()"
+            >
+            <h1 class="download-btn">Download PDF</h1>
+            <i class="fas fa-download download-icon"></i>
+          </button>
+        }
 
-    <button class="md:hidden p-2" (click)="toggleMenu()">
-      <i
+        @if (courseDetailsPage()) {
+          <button
+            type="button"
+            class="hover-card px-5 py-3 rounded-xl text-sm font-medium"
+            (click)="openDialog()"
+            >
+            <h1 class="download-btn">Know More</h1>
+            <i class="fa-solid fa-circle-info download-icon"></i>
+          </button>
+        }
+      </div>
+
+      <button class="md:hidden p-2" (click)="toggleMenu()">
+        <i
         [ngClass]="{
           'fa-bars': !isMenuOpen,
           'fa-times': isMenuOpen,
           'text-black': !active,
           'text-white': active
         }"
-        class="fas text-2xl"
-      ></i>
-    </button>
-
-    <div
-      class="hidden md:flex items-center"
-      *ngIf="utilityService.showFooter$ | async"
-    >
-      <span
-        class="text-base animate__animated animate__fadeInDown cursor-pointer header-label"
-        style="animation-duration: 0.65s"
-        (click)="openPayAfterPlacementPage()"
-      >
-        <i
-          class="fa-solid fa-hand-point-right text-green text-lg ms-2 animate-hand"
+          class="fas text-2xl"
         ></i>
-        Pay After Placement
-      </span>
-      <span
-        class="text-base mx-4 animate__animated animate__fadeInDown cursor-pointer header-label"
-        style="animation-duration: 0.8s"
-        (click)="openCoursesDialog()"
-      >
-        Courses
-      </span>
-      <span
-        class="text-base me-4 animate__animated animate__fadeInDown cursor-pointer header-label"
-        style="animation-duration: 0.8s"
-        (click)="openDialog()"
-      >
-        Contact us
-      </span>
-      <div
-        class="toggle-switch-container border-2 border-zinc-400 px-10 rounded-3xl animate__animated animate__fadeInDown"
-        style="animation-duration: 0.95s"
-      >
-        <input
-          (change)="switchTheme()"
-          [(ngModel)]="active"
-          type="checkbox"
-          id="themeCheckbox"
-          class="opacity-0 absolute"
-        />
-        <label
-          for="themeCheckbox"
-          class="toggle-body relative cursor-pointer rounded-3xl shadow"
-        >
-          <span class="toggle-button absolute rounded-2xl"></span>
-          <span class="absolute toggle-image-light"></span>
-          <span class="absolute toggle-image-dark"></span>
-        </label>
-      </div>
+      </button>
+
+      @if (utilityService.showFooter$ | async) {
+        <div
+          class="hidden md:flex items-center"
+          >
+          <span
+            class="text-base animate__animated animate__fadeInDown cursor-pointer header-label"
+            style="animation-duration: 0.65s"
+            (click)="openPayAfterPlacementPage()"
+            >
+            <i
+              class="fa-solid fa-hand-point-right text-green text-lg ms-2 animate-hand"
+            ></i>
+            Pay After Placement
+          </span>
+          <span
+            class="text-base mx-4 animate__animated animate__fadeInDown cursor-pointer header-label"
+            style="animation-duration: 0.8s"
+            (click)="openCoursesDialog()"
+            >
+            Courses
+          </span>
+          <span
+            class="text-base me-4 animate__animated animate__fadeInDown cursor-pointer header-label"
+            style="animation-duration: 0.8s"
+            (click)="openDialog()"
+            >
+            Contact us
+          </span>
+          <div
+            class="toggle-switch-container border-2 border-zinc-400 px-10 rounded-3xl animate__animated animate__fadeInDown"
+            style="animation-duration: 0.95s"
+            >
+            <input
+              (change)="switchTheme()"
+              [(ngModel)]="active"
+              type="checkbox"
+              id="themeCheckbox"
+              class="opacity-0 absolute"
+              />
+            <label
+              for="themeCheckbox"
+              class="toggle-body relative cursor-pointer rounded-3xl shadow"
+              >
+              <span class="toggle-button absolute rounded-2xl"></span>
+              <span class="absolute toggle-image-light"></span>
+              <span class="absolute toggle-image-dark"></span>
+            </label>
+          </div>
+        </div>
+      }
     </div>
-  </div>
 
-  <div
-    *ngIf="isMenuOpen"
-    class="md:hidden flex flex-col items-start bg-green px-5 py-3"
-  >
-    <span
-      class="text-base cursor-pointer header-label hover:text-yellow-300"
-      (click)="openPayAfterPlacementPageAndCloseMenu()"
-      >Pay After Placement</span
-    >
-    <span
-      class="text-base my-2 cursor-pointer header-label hover:text-yellow-300"
-      (click)="openCoursesDialogAndCloseMenu()"
-      >Courses</span
-    >
-
-    <span
-      class="text-base my-2 cursor-pointer header-label hover:text-yellow-300"
-      style="animation-duration: 0.8s"
-      (click)="openDialog()"
-    >
-      Contact us
-    </span>
-  </div>
-</div>
+    @if (isMenuOpen) {
+      <div
+        class="md:hidden flex flex-col items-start bg-green px-5 py-3"
+        >
+        <span
+          class="text-base cursor-pointer header-label hover:text-yellow-300"
+          (click)="openPayAfterPlacementPageAndCloseMenu()"
+          >Pay After Placement</span
+          >
+          <span
+            class="text-base my-2 cursor-pointer header-label hover:text-yellow-300"
+            (click)="openCoursesDialogAndCloseMenu()"
+            >Courses</span
+            >
+            <span
+              class="text-base my-2 cursor-pointer header-label hover:text-yellow-300"
+              style="animation-duration: 0.8s"
+              (click)="openDialog()"
+              >
+              Contact us
+            </span>
+          </div>
+        }
+      </div>

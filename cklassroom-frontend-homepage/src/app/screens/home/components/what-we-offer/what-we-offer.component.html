@@ -1,9 +1,9 @@
 <div class="my-8 md:my-40">
-  <ng-container *ngFor="let item of whatWeOffer">
+  @for (item of whatWeOffer; track item) {
     <ng-container
       *ngTemplateOutlet="whatweofferTemplate; context: { offer: item }"
     ></ng-container>
-  </ng-container>
+  }
 
   <div class="my-8 md:my-40">
     <h1 class="md:text-xl text-center font-medium text-green">What we offer</h1>
@@ -13,7 +13,7 @@
     </div>
     <h2
       class="text-sm md:text-base md:mx-10 lg:mx-40 xl:mx-60 text-center mb-8 md:mb-10 xl:mb-16"
-    >
+      >
       Embark on a journey of discovery with us as you explore our vast
       expertise. From industry insights to specialized skills, we offer a wealth
       of knowledge tailored to your needs. Let us guide you towards new horizons
@@ -21,84 +21,88 @@
     </h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div
-        *ngFor="let item of moreOffering"
-        [id]="item?.id"
-        class="flex flex-col items-start hover-card rounded-3xl p-5 shadow-md md:mb-1 scroll-animation"
-      >
-        <img
-          src="assets/images/whatWeOffer/{{ item?.img }}.svg"
-          class="w-20 h-20"
-        />
-        <div class="text-green text-base font-medium mt-3 mb-1">
-          {{ item?.label }}
+      @for (item of moreOffering; track item) {
+        <div
+          [id]="item?.id"
+          class="flex flex-col items-start hover-card rounded-3xl p-5 shadow-md md:mb-1 scroll-animation"
+          >
+          <img
+            src="assets/images/whatWeOffer/{{ item?.img }}.svg"
+            class="w-20 h-20"
+            />
+          <div class="text-green text-base font-medium mt-3 mb-1">
+            {{ item?.label }}
+          </div>
+          <span class="text-sm">{{ item?.description }}</span>
         </div>
-        <span class="text-sm">{{ item?.description }}</span>
-      </div>
+      }
     </div>
   </div>
 </div>
 
 <ng-template let-offer="offer" #whatweofferTemplate>
-  <ng-container [ngSwitch]="offer.placement">
-    <div
-      class="flex items-center flex-col md:flex-row {{ offer.mainDivClass }}"
-      *ngSwitchCase="'left'"
-    >
-      <div class="">
-        <img
-          src="assets/images/whatWeOffer/{{ offer.image }}"
-          style="width: 40rem"
-        />
-      </div>
-      <div class="text-right text-slate-400">
-        <div class="text-green mb-2 font-medium lg:text-4xl mb-2">
-          {{ offer.title }}
+  @switch (offer.placement) {
+    @case ('left') {
+      <div
+        class="flex items-center flex-col md:flex-row {{ offer.mainDivClass }}"
+        >
+        <div class="">
+          <img
+            src="assets/images/whatWeOffer/{{ offer.image }}"
+            style="width: 40rem"
+            />
         </div>
+        <div class="text-right text-slate-400">
+          <div class="text-green mb-2 font-medium lg:text-4xl mb-2">
+            {{ offer.title }}
+          </div>
+          <div
+            class="bg-gray-cards text-white p-4 leading-7 rounded text-start mb-3 shadow-md"
+            >
+            {{ offer.description }}
+          </div>
+          @for (tag of offer.tags; track tag) {
+            <span
+              class="mr-4 text-xs md:text-sm lg:text-base"
+              >{{ tag }}</span
+              >
+            }
+            <!-- <span class="text-xs md:text-sm lg:text-base">Personal Tranings</span> -->
+          </div>
+        </div>
+      }
+      @case ('right') {
         <div
-          class="bg-gray-cards text-white p-4 leading-7 rounded text-start mb-3 shadow-md"
-        >
-          {{ offer.description }}
-        </div>
-        <span
-          class="mr-4 text-xs md:text-sm lg:text-base"
-          *ngFor="let tag of offer.tags"
-          >{{ tag }}</span
-        >
-        <!-- <span class="text-xs md:text-sm lg:text-base">Personal Tranings</span> -->
-      </div>
-    </div>
-
-    <div
       class="flex items-center flex-col-reverse md:flex-row my-16 {{
         offer.mainDivClass
       }}"
-      *ngSwitchCase="'right'"
-    >
-      <div class="mt-2 md:mt-0 text-slate-400">
-        <div class="text-green mb-2 font-medium lg:text-4xl mb-2">
-          {{ offer.title }}
-        </div>
-        <div
-          class="bg-gray-cards text-white p-4 leading-7 rounded mb-3 shadow-md"
-        >
-          {{ offer.description }}
-        </div>
-        <span
-          class="mr-4 text-xs md:text-sm lg:text-base"
-          *ngFor="let tag of offer.tags"
-          >{{ tag }}</span
-        >
-        <!-- <span class="text-xs md:text-sm lg:text-base"
-          >One-to-One Counselling</span
-        > -->
-      </div>
-      <div class="">
-        <img
-          src="assets/images/whatWeOffer/{{ offer.image }}"
-          style="width: 40rem"
-        />
-      </div>
-    </div>
-  </ng-container>
-</ng-template>
+          >
+          <div class="mt-2 md:mt-0 text-slate-400">
+            <div class="text-green mb-2 font-medium lg:text-4xl mb-2">
+              {{ offer.title }}
+            </div>
+            <div
+              class="bg-gray-cards text-white p-4 leading-7 rounded mb-3 shadow-md"
+              >
+              {{ offer.description }}
+            </div>
+            @for (tag of offer.tags; track tag) {
+              <span
+                class="mr-4 text-xs md:text-sm lg:text-base"
+                >{{ tag }}</span
+                >
+              }
+              <!-- <span class="text-xs md:text-sm lg:text-base"
+              >One-to-One Counselling</span
+              > -->
+            </div>
+            <div class="">
+              <img
+                src="assets/images/whatWeOffer/{{ offer.image }}"
+                style="width: 40rem"
+                />
+            </div>
+          </div>
+        }
+      }
+    </ng-template>

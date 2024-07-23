@@ -8,78 +8,83 @@
   </div>
   <div
     class="mt-5 lg:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
-  >
-    <div
-      class="courses-card relative overflow-hidden shadow-md rounded-xl min-h-80"
-      *ngFor="let item of getCourseList"
     >
-      <div class="flex items-center justify-center flex-col">
-        <img
-          *ngIf="item?.id !== 9 && item?.id !== 10 && item?.id !== 12"
-          class="w-96 pt-3"
-          style="height: 25vh"
-          src="assets/images/courses/{{ item?.img }}.svg"
-        />
-        <div
-          *ngIf="item?.id == 9 || item?.id == 10 || item?.id == 12"
-          class="bg-no-repeat bg-cover w-full flex items-center justify-center"
-          style="height: 25vh"
+    @for (item of getCourseList; track item) {
+      <div
+        class="courses-card relative overflow-hidden shadow-md rounded-xl min-h-80"
+        >
+        <div class="flex items-center justify-center flex-col">
+          @if (item?.id !== 9 && item?.id !== 10 && item?.id !== 12) {
+            <img
+              class="w-96 pt-3"
+              style="height: 25vh"
+              src="assets/images/courses/{{ item?.img }}.svg"
+              />
+          }
+          @if (item?.id == 9 || item?.id == 10 || item?.id == 12) {
+            <div
+              class="bg-no-repeat bg-cover w-full flex items-center justify-center"
+              style="height: 25vh"
           [ngStyle]="{
             'background-image': item.img
               ? 'url(assets/images/courses/' + item.img + '.svg)'
               : ''
           }"
-        ></div>
-        <div
-          class="py-2 self-start font-semibold w-full px-5 text-white text-center text-md"
-          [ngStyle]="{ background: item?.color }"
-        >
-          {{ item?.courseName }}
-        </div>
-        <div class="pb-2 font-medium text-sm leading-6 px-5">
-          {{ item?.desc }}
-        </div>
-      </div>
-      <div *ngIf="item?.id !== 12"
-        class="overlay absolute w-full h-full top-0 right-full z-10 p-5 flex flex-col text-white text-xs"
-        [ngStyle]="{ background: item?.color }"
-      >
-        <div class="flex items-start">
-          <i class="fa-solid fa-circle pe-3 mt-1"></i>
-          <div>{{ item?.h1 }}</div>
-        </div>
-        <div class="flex items-start py-3">
-          <i class="fa-solid fa-circle pe-3 mt-1"></i>
-          <div>{{ item?.h2 }}</div>
-        </div>
-        <div class="flex items-start">
-          <i class="fa-solid fa-circle pe-3 mt-1"></i>
-          <div>{{ item?.h3 }}</div>
-        </div>
-        <div class="flex items-start pt-3">
-          <i class="fa-solid fa-circle pe-3 mt-1"></i>
-          <div>{{ item?.h4 }}</div>
-        </div>
-        <div
-          class="flex items-start justify-end pt-3 absolute bottom-4 right-4"
-        >
-          <!-- <button
-            type="button"
-            class="btn text-white border border-white px-5 py-3 me-5 rounded-lg font-medium"
+            ></div>
+          }
+          <div
+            class="py-2 self-start font-semibold w-full px-5 text-white text-center text-md"
             [ngStyle]="{ background: item?.color }"
-          >
-            Buy Course
-          </button> -->
-          <button
-            type="button"
-            class="btn bg-white px-5 py-3 rounded-lg font-medium"
-            [ngStyle]="{ color: item?.color }"
-            (click)="openCourseDetailsPage(item.img)"
-          >
-            Learn More
-          </button>
+            >
+            {{ item?.courseName }}
+          </div>
+          <div class="pb-2 font-medium text-sm leading-6 px-5">
+            {{ item?.desc }}
+          </div>
         </div>
-      </div>
+        @if (item?.id !== 12) {
+          <div
+            class="overlay absolute w-full h-full top-0 right-full z-10 p-5 flex flex-col text-white text-xs"
+            [ngStyle]="{ background: item?.color }"
+            >
+            <div class="flex items-start">
+              <i class="fa-solid fa-circle pe-3 mt-1"></i>
+              <div>{{ item?.h1 }}</div>
+            </div>
+            <div class="flex items-start py-3">
+              <i class="fa-solid fa-circle pe-3 mt-1"></i>
+              <div>{{ item?.h2 }}</div>
+            </div>
+            <div class="flex items-start">
+              <i class="fa-solid fa-circle pe-3 mt-1"></i>
+              <div>{{ item?.h3 }}</div>
+            </div>
+            <div class="flex items-start pt-3">
+              <i class="fa-solid fa-circle pe-3 mt-1"></i>
+              <div>{{ item?.h4 }}</div>
+            </div>
+            <div
+              class="flex items-start justify-end pt-3 absolute bottom-4 right-4"
+              >
+              <!-- <button
+              type="button"
+              class="btn text-white border border-white px-5 py-3 me-5 rounded-lg font-medium"
+              [ngStyle]="{ background: item?.color }"
+              >
+              Buy Course
+            </button> -->
+            <button
+              type="button"
+              class="btn bg-white px-5 py-3 rounded-lg font-medium"
+              [ngStyle]="{ color: item?.color }"
+              (click)="openCourseDetailsPage(item.img)"
+              >
+              Learn More
+            </button>
+          </div>
+        </div>
+      }
     </div>
-  </div>
+  }
+</div>
 </div>

@@ -5,28 +5,27 @@
       <div class="text-sm md:text-base mt-3 pb-2">
         An initiative by the Dedicated
         <!-- <a href="https://www.cowin.gov.in/" target="_blank" class="text-green"
-          >CoWIN</a
+        >CoWIN</a
         > -->
         Technical Team.
       </div>
 
       <div>
-        <ng-container *ngFor="let item of categories">
-          <div class="text-sm pb-2.5">{{item}} Courses - 
-          
-            <ng-container *ngFor="let course of categoryWiseCourses[item]">
+        @for (item of categories; track item) {
+          <div class="text-sm pb-2.5">{{item}} Courses -
+            @for (course of categoryWiseCourses[item]; track course) {
               <a class="font-medium underline underline-offset-4 cursor-pointer" (click)="openCourseDetailsPage(course.img)">{{course.courseName}}</a> |
-            </ng-container>
+            }
           </div>
-        </ng-container>
-        <div class="text-sm pb-2 5">For Freshers - 
+        }
+        <div class="text-sm pb-2 5">For Freshers -
           <a class="font-medium underline underline-offset-4 cursor-pointer" [routerLink]="['/pay-after-placement']">
             Pay After Placement
           </a>
         </div>
       </div>
     </div>
-  
+
     <div class="text-sm md:col-end-7 md:col-span-2 mb-3 md:mb-0">
       <div class="">Contact</div>
       <div class="font-semibold my-1">
