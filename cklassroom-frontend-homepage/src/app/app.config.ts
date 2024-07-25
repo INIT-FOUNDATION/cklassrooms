@@ -11,11 +11,15 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 import { environment } from 'src/environments/environment';
 import { provideToastr } from 'ngx-toastr';
+import { SharedModule } from './modules/shared/shared.module';
+import { CommonModule } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     importProvidersFrom(
-      NgxGoogleAnalyticsModule.forRoot(environment.ga)
+      NgxGoogleAnalyticsModule.forRoot(environment.ga),
+      SharedModule,
+      CommonModule
     ),
     provideToastr(),
     provideAnimations(),

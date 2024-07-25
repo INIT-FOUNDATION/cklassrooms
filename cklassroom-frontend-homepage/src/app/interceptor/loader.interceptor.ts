@@ -1,4 +1,4 @@
-import { Inject } from '@angular/core';
+import { inject } from '@angular/core';
 import {
   HttpResponse,
   HttpRequest,
@@ -17,7 +17,7 @@ const loaderRequireGetApi: string | string[] = [
 
 export const LoaderInterceptor: HttpInterceptorFn = (req: HttpRequest<any>, next: HttpHandlerFn): Observable<HttpEvent<any>>  => {
     const requests: HttpRequest<any>[] = [];
-    const loaderService: LoaderService = Inject(LoaderService);
+    const loaderService: LoaderService = inject(LoaderService);
 
     const removeRequest = (req: HttpRequest<any>) => {
         const i = requests.indexOf(req);

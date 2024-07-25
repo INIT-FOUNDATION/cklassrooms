@@ -1,11 +1,11 @@
-import { Inject } from '@angular/core';
+import { inject } from '@angular/core';
 import { HttpRequest, HttpInterceptorFn, HttpHandlerFn} from '@angular/common/http';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 
 
 export const TokenInterceptor: HttpInterceptorFn = (request: HttpRequest<any>, next: HttpHandlerFn) => {
-    const deviceService =  Inject(DeviceDetectorService)
+    const deviceService =  inject(DeviceDetectorService)
     const deviceInfo = deviceService.getDeviceInfo();
     const isMobile = deviceService.isMobile();
     const isTablet = deviceService.isTablet();

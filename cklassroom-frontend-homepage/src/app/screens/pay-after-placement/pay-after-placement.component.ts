@@ -1,14 +1,23 @@
+import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { ApplyDialogComponent } from 'src/app/modules/shared/components/apply-dialog/apply-dialog.component';
 import { DataService } from 'src/app/modules/shared/services/data.service';
 import { UtilityService } from 'src/app/modules/shared/services/utility.service';
+import { SharedModule } from 'src/app/modules/shared/shared.module';
 import { ThemeService } from 'src/app/modules/shared/theme/theme.service';
+import { TestimonialComponent } from '../home/components/testimonial/testimonial.component';
 @Component({
   selector: 'app-pay-after-placement',
   templateUrl: './pay-after-placement.component.html',
   styleUrls: ['./pay-after-placement.component.scss'],
+  standalone: true,
+  imports: [
+    SharedModule,
+    CommonModule,
+    TestimonialComponent
+  ]
 })
 export class PayAfterPlacementComponent implements OnInit, AfterViewInit {
   keyFeatures: any[] = [

@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-achievements',
   templateUrl: './achievements.component.html',
   styleUrls: ['./achievements.component.scss'],
+  standalone: true
 })
 export class AchievementsComponent implements OnInit {
   getTestimonials: any = [

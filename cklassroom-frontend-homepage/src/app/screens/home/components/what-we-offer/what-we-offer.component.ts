@@ -5,6 +5,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
   selector: 'app-what-we-offer',
   templateUrl: './what-we-offer.component.html',
   styleUrls: ['./what-we-offer.component.scss'],
+  standalone: true
 })
 export class WhatWeOfferComponent implements OnInit, AfterViewInit {
   whatWeOffer: any = [

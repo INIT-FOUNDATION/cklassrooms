@@ -7,10 +7,33 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { environment } from 'src/environments/environment';
 import { MatDialog } from '@angular/material/dialog';
 import { PapDialogComponent } from 'src/app/modules/shared/components/pap-dialog/pap-dialog.component';
+import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { CommonModule } from '@angular/common';
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
+import { WhatWeOfferComponent } from './components/what-we-offer/what-we-offer.component';
+import { ExpertsTeamComponent } from './components/experts-team/experts-team.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { JobPlacementsComponent } from './components/job-placements/job-placements.component';
+import { PlacementSupportComponent } from './components/placement-support/placement-support.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { AchievementsComponent } from './components/achievements/achievements.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  standalone: true,
+  imports: [
+    SharedModule,
+    CommonModule,
+    TestimonialComponent,
+    WhatWeOfferComponent,
+    ExpertsTeamComponent,
+    CoursesComponent,
+    JobPlacementsComponent,
+    PlacementSupportComponent,
+    FaqComponent,
+    AchievementsComponent,
+  ]
 })
 export class HomeComponent implements OnInit {
   constructor(

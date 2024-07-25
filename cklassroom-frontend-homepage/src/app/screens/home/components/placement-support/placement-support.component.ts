@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-placement-support',
   templateUrl: './placement-support.component.html',
   styleUrls: ['./placement-support.component.scss'],
+  standalone: true
 })
 export class PlacementSupportComponent implements OnInit {
   careerPlacementSupport: any = [

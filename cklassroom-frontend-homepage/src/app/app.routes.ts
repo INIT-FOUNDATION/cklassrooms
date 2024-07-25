@@ -1,47 +1,39 @@
 import { Routes } from '@angular/router';
 import { AuthGuardFn } from './guards/auth.guard';
+import { CourseDetailsComponent } from './screens/course-details/course-details.component';
+import { HomeComponent } from './screens/home/home.component';
+import { PayAfterPlacementComponent } from './screens/pay-after-placement/pay-after-placement.component';
+import { TermsAndConditionsComponent } from './screens/terms-and-conditions/terms-and-conditions.component';
+import { PrivacyPolicyComponent } from './screens/privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
     {
       path: '',
-      loadChildren: () =>
-        import('./screens/home/home.module').then((m) => m.HomeModule),
+      component: HomeComponent,
       canActivate: [AuthGuardFn],
     },
   
     {
-      path: 'course-details',
-      loadChildren: () =>
-        import('./screens/course-details/course-details.module').then(
-          (m) => m.CourseDetailsModule
-        ),
+      path: 'course-details/:courseName',
+      component: CourseDetailsComponent,
       canActivate: [AuthGuardFn],
     },
   
     {
       path: 'pay-after-placement',
-      loadChildren: () =>
-        import('./screens/pay-after-placement/pay-after-placement.module').then(
-          (m) => m.PayAfterPlacementModule
-        ),
+      component: PayAfterPlacementComponent,
       canActivate: [AuthGuardFn],
     },
   
     {
       path: 'terms-and-condition',
-      loadChildren: () =>
-        import('./screens/terms-and-conditions/terms-and-conditions.module').then(
-          (m) => m.TermsAndConditionsModule
-        ),
+      component: TermsAndConditionsComponent,
       canActivate: [AuthGuardFn],
     },
   
     {
       path: 'privacy-policy',
-      loadChildren: () =>
-        import('./screens/privacy-policy/privacy-policy.module').then(
-          (m) => m.PrivacyPolicyModule
-        ),
+      component: PrivacyPolicyComponent,
       canActivate: [AuthGuardFn],
     },
   ];

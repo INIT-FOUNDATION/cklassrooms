@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-faq',
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.scss'],
+  standalone: true
 })
 export class FaqComponent implements OnInit {
   faqAccordianList: any = [

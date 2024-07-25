@@ -1,5 +1,5 @@
 import { AppPreferencesService } from './../modules/shared/services/preferences.service';
-import { Inject } from '@angular/core';
+import { inject } from '@angular/core';
 import { HttpEvent, HttpRequest, HttpErrorResponse, HttpInterceptorFn, HttpHandlerFn } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -14,10 +14,10 @@ export const ErrorHandlerInterceptor: HttpInterceptorFn = (request: HttpRequest<
 }
 
 const errorHandler = (response: HttpEvent<any>): Observable<HttpEvent<any>> => {
-  const router = Inject(Router);
-  const appPreferences = Inject(AppPreferencesService);
-  const dialog = Inject(MatDialog);
-  const utilityService = Inject(UtilityService);
+  const router = inject(Router);
+  const appPreferences = inject(AppPreferencesService);
+  const dialog = inject(MatDialog);
+  const utilityService = inject(UtilityService);
 
   const isJson = (str: string) => {
     try {

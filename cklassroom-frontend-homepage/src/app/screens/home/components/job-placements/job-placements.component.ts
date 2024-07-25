@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-job-placements',
   templateUrl: './job-placements.component.html',
   styleUrls: ['./job-placements.component.scss'],
+  standalone: true
 })
 export class JobPlacementsComponent implements OnInit {
   jobPlacements: any = [

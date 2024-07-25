@@ -7,14 +7,18 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DataService } from 'src/app/modules/shared/services/data.service';
-import { UtilityService } from 'src/app/modules/shared/services/utility.service';
 import { TweenMax } from 'gsap';
+import { DataService } from '../../modules/shared/services/data.service';
+import { UtilityService } from '../../modules/shared/services/utility.service';
+import { SharedModule } from 'src/app/modules/shared/shared.module';
+import { CommonModule } from '@angular/common';
 declare var Swiper;
 @Component({
   selector: 'app-course-details',
   templateUrl: './course-details.component.html',
   styleUrls: ['./course-details.component.scss'],
+  standalone: true,
+  imports: [SharedModule, CommonModule]
 })
 export class CourseDetailsComponent implements OnInit, AfterViewInit {
   panelOpenState = false;

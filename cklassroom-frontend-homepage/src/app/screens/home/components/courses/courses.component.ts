@@ -8,6 +8,7 @@ import { UtilityService } from 'src/app/modules/shared/services/utility.service'
   selector: 'app-courses',
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss'],
+  standalone: true
 })
 export class CoursesComponent implements OnInit, AfterViewInit {
   constructor(

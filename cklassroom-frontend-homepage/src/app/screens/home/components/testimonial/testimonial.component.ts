@@ -1,3 +1,4 @@
+import { CommonModule, NgClass } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { GoogleAnalyticsService } from 'ngx-google-analytics';
@@ -7,6 +8,8 @@ import { TestimonialDialogComponent } from 'src/app/modules/shared/components/te
   selector: 'app-testimonial',
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.scss'],
+  standalone: true,
+  imports: [NgClass]
 })
 export class TestimonialComponent implements OnInit {
   constructor(

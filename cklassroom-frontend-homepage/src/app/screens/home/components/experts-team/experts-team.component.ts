@@ -5,6 +5,7 @@ import { GoogleAnalyticsService } from 'ngx-google-analytics';
   selector: 'app-experts-team',
   templateUrl: './experts-team.component.html',
   styleUrls: ['./experts-team.component.scss'],
+  standalone: true
 })
 export class ExpertsTeamComponent implements OnInit {
   expertTeam: any = [
